@@ -1,0 +1,750 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>DocBlox Documentation</title><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" href="css/jquery-ui.css" type="text/css"></link><link rel="stylesheet" href="css/docblox/jquery-ui-1.8.16.custom.css" type="text/css"></link><link rel="stylesheet" href="css/jquery.treeview.css" type="text/css"></link><link rel="stylesheet" href="css/theme.css" type="text/css"></link><script type="text/javascript" src="js/jquery-1.4.2.min.js"></script><script type="text/javascript" src="js/jquery-ui-1.8.2.custom.min.js"></script><script type="text/javascript" src="js/jquery.tools.min.js"></script><script type="text/javascript" src="js/jquery.cookie.js"></script><script type="text/javascript" src="js/jquery.treeview.js"></script><script type="text/javascript">
+            $(document).ready(function() {
+                $(".filetree").treeview({
+                    collapsed: true,
+                    persist: "cookie"
+                });
+
+                $("#accordion").accordion({
+                    collapsible: true,
+                    autoHeight:  false,
+                    fillSpace:   true
+                });
+
+                $(".tabs").tabs();
+            });
+        </script></head><body><div xmlns="" id="content">
+<script xmlns:dbx="http://docblox-project.org/xsl/functions">
+
+      function filterElements()
+      {
+        inherited = !$('#show-inherited').hasClass('deselected');
+        public    = !$('#show-public').hasClass('deselected');
+        protected = !$('#show-protected').hasClass('deselected');
+        private   = !$('#show-private').hasClass('deselected');
+
+        $('div.public').each(function(index, val) {
+            $(val).toggle(public && !($(val).hasClass('inherited_from') && !inherited));
+        });
+        $('div.protected').each(function(index, val) {
+            $(val).toggle(protected && !($(val).hasClass('inherited_from') && !inherited));
+        });
+        $('div.private').each(function(index, val) {
+            $(val).toggle(private && !($(val).hasClass('inherited_from') && !inherited));
+        });
+      }
+
+      $(document).ready(function() {
+        $('a.gripper').click(function() {
+            $(this).nextAll('div.code-tabs').slideToggle();
+            $(this).children('img').toggle();
+            return false;
+        });
+
+        $('div.method code span.highlight,div.function code span.highlight,div.constant code span.highlight,div.property code span.highlight').css('cursor', 'pointer');
+
+        $('div.method code span.highlight,div.function code span.highlight,div.constant code span.highlight,div.property code span.highlight').click(function() {
+            $(this).parent().nextAll('div.code-tabs').slideToggle();
+            $(this).parent().prevAll('a.gripper').children('img').toggle();
+            return false;
+        });
+
+        $('div.code-tabs').hide();
+        $('a.gripper').show();
+        $('div.code-tabs:empty').prevAll('a.gripper').html('');
+
+        $('#show-public, #show-protected, #show-private, #show-inherited')
+            .css('cursor', 'pointer')
+            .click(function(){
+                $(this).toggleClass('deselected');
+                if ($(this).hasClass('deselected')) {
+                  $(this).fadeTo('fast', '0.4');
+                } else {
+                  $(this).fadeTo('fast', '1.0');
+                }
+                filterElements();
+                return false;
+            });
+        $('#show-protected, #show-private').click();
+
+        // add the sliding behaviour to the file navigation and show it
+        // it is initially hidden for non-JS users.
+        $("#file-nav-box").show().hover(function() {
+            $("#file-nav-container").slideDown(400);
+        }, function() {
+            $("#file-nav-container").slideUp(400);
+        });
+      });
+
+      
+    </script><h1 xmlns:dbx="http://docblox-project.org/xsl/functions" class="file">library/ImboClient/ImageUrl/ImageUrlInterface.php</h1>
+<div xmlns:dbx="http://docblox-project.org/xsl/functions" id="file-nav-box">
+<div id="file-nav-options">
+              Show:
+              <img src="images/icons/visibility_public.png" id="show-public"><img src="images/icons/visibility_protected.png" id="show-protected"><img src="images/icons/visibility_private.png" id="show-private"><span class="attribute" id="show-inherited">inherited</span>
+</div>
+<div id="file-nav-container">
+<ul id="file-nav"></ul>
+<div style="clear: left;"></div>
+</div>
+<div id="file-nav-tab">
+              Table of Contents
+          </div>
+</div>
+<a xmlns:dbx="http://docblox-project.org/xsl/functions" name="top" class="anchor"></a><div id="file-description">
+<p xmlns:dbx="http://docblox-project.org/xsl/functions" class="short-description">ImboClient</p>
+<div xmlns:dbx="http://docblox-project.org/xsl/functions" class="long-description"><p>Copyright (c) 2011-2012, Christer Edvartsen <a href="&#x6d;&#x61;&#105;&#108;&#x74;&#x6f;&#58;&#99;o&#x67;&#x6f;&#64;&#115;&#x74;&#x61;&#114;&#122;i&#x6e;&#x67;&#101;&#114;&#x2e;&#x6e;&#101;&#116;">&#99;o&#x67;&#x6f;&#64;&#115;&#x74;&#x61;&#114;&#122;i&#x6e;&#x67;&#101;&#114;&#x2e;&#x6e;&#101;&#116;</a></p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to
+deal in the Software without restriction, including without limitation the
+rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+sell copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:</p>
+
+<ul>
+<li>The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.</li>
+</ul>
+
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.</p></div>
+</div>
+<dl class="file-info">
+<dt xmlns:dbx="http://docblox-project.org/xsl/functions">Author</dt>
+<dd xmlns:dbx="http://docblox-project.org/xsl/functions">
+<a href="mailto:cogo@starzinger.net">Christer Edvartsen</a>
+         
+    </dd>
+<dt xmlns:dbx="http://docblox-project.org/xsl/functions">Copyright</dt>
+<dd xmlns:dbx="http://docblox-project.org/xsl/functions">Copyright (c) 2011-2012, Christer Edvartsen <cogo@starzinger.net>
+         
+    </dd>
+<dt xmlns:dbx="http://docblox-project.org/xsl/functions">License</dt>
+<dd xmlns:dbx="http://docblox-project.org/xsl/functions">
+<a href="http://www.opensource.org/licenses/mit-license">MIT License</a>
+         
+    </dd>
+<dt xmlns:dbx="http://docblox-project.org/xsl/functions">Link</dt>
+<dd xmlns:dbx="http://docblox-project.org/xsl/functions">
+<a href="https://github.com/christeredvartsen/imboclient-php">https://github.com/christeredvartsen/imboclient-php</a>
+         
+    </dd>
+<dt xmlns:dbx="http://docblox-project.org/xsl/functions">Package</dt>
+<dd xmlns:dbx="http://docblox-project.org/xsl/functions">Interfaces
+         
+    </dd>
+<dt xmlns:dbx="http://docblox-project.org/xsl/functions">Subpackage</dt>
+<dd xmlns:dbx="http://docblox-project.org/xsl/functions">Client\ImageUrl
+         
+    </dd>
+</dl>
+<a name="interfaces" class="anchor"></a><a xmlns:dbx="http://docblox-project.org/xsl/functions" id="\ImboClient\ImageUrl\ImageUrlInterface" class="anchor"></a><h2 xmlns:dbx="http://docblox-project.org/xsl/functions" class="interface">\ImboClient\ImageUrl\ImageUrlInterface<div class="to-top"><a href="#top">jump to top</a></div>
+</h2>
+<div xmlns:dbx="http://docblox-project.org/xsl/functions" class="class">
+<small class="package"><b>Package: </b>Interfaces\Client\ImageUrl</small><p class="short-description">Interface for the image url</p>
+<div class="long-description"></div>
+<dl class="class-info">
+<dt>Children</dt>
+<dd><a href="db_library_ImboClient_ImageUrl_ImageUrl.html#%5CImboClient%5CImageUrl%5CImageUrl">\ImboClient\ImageUrl\ImageUrl</a></dd>
+<dt>Author</dt>
+<dd>
+<a href="mailto:cogo@starzinger.net">Christer Edvartsen</a>
+         
+    </dd>
+<dt>Copyright</dt>
+<dd>Copyright (c) 2011-2012, Christer Edvartsen <cogo@starzinger.net>
+         
+    </dd>
+<dt>License</dt>
+<dd>
+<a href="http://www.opensource.org/licenses/mit-license">MIT License</a>
+         
+    </dd>
+<dt>Link</dt>
+<dd>
+<a href="https://github.com/christeredvartsen/imboclient-php">https://github.com/christeredvartsen/imboclient-php</a>
+         
+    </dd>
+</dl>
+<h3>Methods</h3>
+<div>
+<a id="\ImboClient\ImageUrl\ImageUrlInterface::__toString()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">__toString</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description"><p class="short_description">Proxies to getUrl()</p></div>
+<div class="code-tabs">
+<div class="long-description"></div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\ImboClient\ImageUrl\ImageUrlInterface::border()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">border</span><span class="nb-faded-text">(
+          string $color
+              =
+              '000000', int $width
+              =
+              1, int $height
+              =
+              1
+          )
+        </span>
+        :
+          <a href="db_library_ImboClient_ImageUrl_ImageUrlInterface.html#%5CImboClient%5CImageUrl%5CImageUrlInterface">\ImboClient\ImageUrl\ImageUrlInterface</a></code><div class="description"><p class="short_description">Append a query that triggers a border transformation</p></div>
+<div class="code-tabs">
+<div class="long-description"></div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$color</th>
+<td>string</td>
+<td><em><p>Color of the border</p></em></td>
+</tr>
+<tr>
+<th>$width</th>
+<td>int</td>
+<td><em><p>Width of the left and right sides of the border</p></em></td>
+</tr>
+<tr>
+<th>$height</th>
+<td>int</td>
+<td><em><p>Height of the top and bottom parts of the border</p></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_library_ImboClient_ImageUrl_ImageUrlInterface.html#%5CImboClient%5CImageUrl%5CImageUrlInterface">\ImboClient\ImageUrl\ImageUrlInterface</a></td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\ImboClient\ImageUrl\ImageUrlInterface::canvas()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">canvas</span><span class="nb-faded-text">(
+          int $width, int $height, string $mode
+              =
+              null, int $x
+              =
+              null, int $y
+              =
+              null, string $bg
+              =
+              null
+          )
+        </span>
+        :
+          <a href="db_library_ImboClient_ImageUrl_ImageUrlInterface.html#%5CImboClient%5CImageUrl%5CImageUrlInterface">\ImboClient\ImageUrl\ImageUrlInterface</a></code><div class="description"><p class="short_description">Trigger a canvas transformation</p></div>
+<div class="code-tabs">
+<div class="long-description"></div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$width</th>
+<td>int</td>
+<td><em><p>Width of the new canvas</p></em></td>
+</tr>
+<tr>
+<th>$height</th>
+<td>int</td>
+<td><em><p>Height of the new canvas</p></em></td>
+</tr>
+<tr>
+<th>$mode</th>
+<td>string</td>
+<td><em><p>The placement mode</p></em></td>
+</tr>
+<tr>
+<th>$x</th>
+<td>int</td>
+<td><em><p>X coordinate of the placement of the upper left corner of the existing image</p></em></td>
+</tr>
+<tr>
+<th>$y</th>
+<td>int</td>
+<td><em><p>Y coordinate of the placement of the upper left corner of the existing image</p></em></td>
+</tr>
+<tr>
+<th>$bg</th>
+<td>string</td>
+<td><em><p>Background color of the canvas</p></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_library_ImboClient_ImageUrl_ImageUrlInterface.html#%5CImboClient%5CImageUrl%5CImageUrlInterface">\ImboClient\ImageUrl\ImageUrlInterface</a></td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\ImboClient\ImageUrl\ImageUrlInterface::compress()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">compress</span><span class="nb-faded-text">(
+          int $quality
+              =
+              75
+          )
+        </span>
+        :
+          <a href="db_library_ImboClient_ImageUrl_ImageUrlInterface.html#%5CImboClient%5CImageUrl%5CImageUrlInterface">\ImboClient\ImageUrl\ImageUrlInterface</a></code><div class="description"><p class="short_description">Append a query that triggers a compress transformation</p></div>
+<div class="code-tabs">
+<div class="long-description"></div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$quality</th>
+<td>int</td>
+<td><em><p>A value between 0 and 100 where 100 is the best</p></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_library_ImboClient_ImageUrl_ImageUrlInterface.html#%5CImboClient%5CImageUrl%5CImageUrlInterface">\ImboClient\ImageUrl\ImageUrlInterface</a></td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\ImboClient\ImageUrl\ImageUrlInterface::convert()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">convert</span><span class="nb-faded-text">(
+          string $type
+          )
+        </span>
+        :
+          <a href="db_library_ImboClient_ImageUrl_ImageUrlInterface.html#%5CImboClient%5CImageUrl%5CImageUrlInterface">\ImboClient\ImageUrl\ImageUrlInterface</a></code><div class="description"><p class="short_description">Change the url to trigger the convert transformation</p></div>
+<div class="code-tabs">
+<div class="long-description"></div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$type</th>
+<td>string</td>
+<td><em><p>The type to convert to</p></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_library_ImboClient_ImageUrl_ImageUrlInterface.html#%5CImboClient%5CImageUrl%5CImageUrlInterface">\ImboClient\ImageUrl\ImageUrlInterface</a></td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\ImboClient\ImageUrl\ImageUrlInterface::crop()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">crop</span><span class="nb-faded-text">(
+          int $x, int $y, int $width, int $height
+          )
+        </span>
+        :
+          <a href="db_library_ImboClient_ImageUrl_ImageUrlInterface.html#%5CImboClient%5CImageUrl%5CImageUrlInterface">\ImboClient\ImageUrl\ImageUrlInterface</a></code><div class="description"><p class="short_description">Trigger a crop transformation</p></div>
+<div class="code-tabs">
+<div class="long-description"></div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$x</th>
+<td>int</td>
+<td><em><p>X coordinate of the top left corner of the crop</p></em></td>
+</tr>
+<tr>
+<th>$y</th>
+<td>int</td>
+<td><em><p>Y coordinate of the top left corner of the crop</p></em></td>
+</tr>
+<tr>
+<th>$width</th>
+<td>int</td>
+<td><em><p>Width of the crop</p></em></td>
+</tr>
+<tr>
+<th>$height</th>
+<td>int</td>
+<td><em><p>Height of the crop</p></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_library_ImboClient_ImageUrl_ImageUrlInterface.html#%5CImboClient%5CImageUrl%5CImageUrlInterface">\ImboClient\ImageUrl\ImageUrlInterface</a></td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\ImboClient\ImageUrl\ImageUrlInterface::flipHorizontally()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">flipHorizontally</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          <a href="db_library_ImboClient_ImageUrl_ImageUrlInterface.html#%5CImboClient%5CImageUrl%5CImageUrlInterface">\ImboClient\ImageUrl\ImageUrlInterface</a></code><div class="description"><p class="short_description">Trigger a flip horizontally transformation</p></div>
+<div class="code-tabs">
+<div class="long-description"></div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_library_ImboClient_ImageUrl_ImageUrlInterface.html#%5CImboClient%5CImageUrl%5CImageUrlInterface">\ImboClient\ImageUrl\ImageUrlInterface</a></td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\ImboClient\ImageUrl\ImageUrlInterface::flipVertically()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">flipVertically</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          <a href="db_library_ImboClient_ImageUrl_ImageUrlInterface.html#%5CImboClient%5CImageUrl%5CImageUrlInterface">\ImboClient\ImageUrl\ImageUrlInterface</a></code><div class="description"><p class="short_description">Trigger a flip vertically transformation</p></div>
+<div class="code-tabs">
+<div class="long-description"></div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_library_ImboClient_ImageUrl_ImageUrlInterface.html#%5CImboClient%5CImageUrl%5CImageUrlInterface">\ImboClient\ImageUrl\ImageUrlInterface</a></td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\ImboClient\ImageUrl\ImageUrlInterface::getUrl()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getUrl</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description"><p class="short_description">Represent the complete image url as a string</p></div>
+<div class="code-tabs">
+<div class="long-description"></div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\ImboClient\ImageUrl\ImageUrlInterface::getUrlEncoded()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getUrlEncoded</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description"><p class="short_description">Represent the complete image url as an URL-encoded string</p></div>
+<div class="code-tabs">
+<div class="long-description"></div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\ImboClient\ImageUrl\ImageUrlInterface::gif()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">gif</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          <a href="db_library_ImboClient_ImageUrl_ImageUrlInterface.html#%5CImboClient%5CImageUrl%5CImageUrlInterface">\ImboClient\ImageUrl\ImageUrlInterface</a></code><div class="description"><p class="short_description">Convenience method to trigger gif conversion</p></div>
+<div class="code-tabs">
+<div class="long-description"></div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_library_ImboClient_ImageUrl_ImageUrlInterface.html#%5CImboClient%5CImageUrl%5CImageUrlInterface">\ImboClient\ImageUrl\ImageUrlInterface</a></td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\ImboClient\ImageUrl\ImageUrlInterface::jpg()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">jpg</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          <a href="db_library_ImboClient_ImageUrl_ImageUrlInterface.html#%5CImboClient%5CImageUrl%5CImageUrlInterface">\ImboClient\ImageUrl\ImageUrlInterface</a></code><div class="description"><p class="short_description">Convenience method to trigger jpg conversion</p></div>
+<div class="code-tabs">
+<div class="long-description"></div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_library_ImboClient_ImageUrl_ImageUrlInterface.html#%5CImboClient%5CImageUrl%5CImageUrlInterface">\ImboClient\ImageUrl\ImageUrlInterface</a></td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\ImboClient\ImageUrl\ImageUrlInterface::png()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">png</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          <a href="db_library_ImboClient_ImageUrl_ImageUrlInterface.html#%5CImboClient%5CImageUrl%5CImageUrlInterface">\ImboClient\ImageUrl\ImageUrlInterface</a></code><div class="description"><p class="short_description">Convenience method to trigger png conversion</p></div>
+<div class="code-tabs">
+<div class="long-description"></div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_library_ImboClient_ImageUrl_ImageUrlInterface.html#%5CImboClient%5CImageUrl%5CImageUrlInterface">\ImboClient\ImageUrl\ImageUrlInterface</a></td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\ImboClient\ImageUrl\ImageUrlInterface::reset()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">reset</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          <a href="db_library_ImboClient_ImageUrl_ImageUrlInterface.html#%5CImboClient%5CImageUrl%5CImageUrlInterface">\ImboClient\ImageUrl\ImageUrlInterface</a></code><div class="description"><p class="short_description">Resets the URL - removes all transformations</p></div>
+<div class="code-tabs">
+<div class="long-description"></div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_library_ImboClient_ImageUrl_ImageUrlInterface.html#%5CImboClient%5CImageUrl%5CImageUrlInterface">\ImboClient\ImageUrl\ImageUrlInterface</a></td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\ImboClient\ImageUrl\ImageUrlInterface::resize()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">resize</span><span class="nb-faded-text">(
+          int $width
+              =
+              null, int $height
+              =
+              null
+          )
+        </span>
+        :
+          <a href="db_library_ImboClient_ImageUrl_ImageUrlInterface.html#%5CImboClient%5CImageUrl%5CImageUrlInterface">\ImboClient\ImageUrl\ImageUrlInterface</a></code><div class="description"><p class="short_description">Trigger a resize transformation</p></div>
+<div class="code-tabs">
+<div class="long-description"></div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$width</th>
+<td>int</td>
+<td><em><p>Width of the resized image</p></em></td>
+</tr>
+<tr>
+<th>$height</th>
+<td>int</td>
+<td><em><p>Height of the resized image</p></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_library_ImboClient_ImageUrl_ImageUrlInterface.html#%5CImboClient%5CImageUrl%5CImageUrlInterface">\ImboClient\ImageUrl\ImageUrlInterface</a></td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\ImboClient\ImageUrl\ImageUrlInterface::rotate()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">rotate</span><span class="nb-faded-text">(
+          int $angle, string $bg
+              =
+              '000000'
+          )
+        </span>
+        :
+          <a href="db_library_ImboClient_ImageUrl_ImageUrlInterface.html#%5CImboClient%5CImageUrl%5CImageUrlInterface">\ImboClient\ImageUrl\ImageUrlInterface</a></code><div class="description"><p class="short_description">Trigger a rotate transformation</p></div>
+<div class="code-tabs">
+<div class="long-description"></div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$angle</th>
+<td>int</td>
+<td><em><p>The angle to rotate</p></em></td>
+</tr>
+<tr>
+<th>$bg</th>
+<td>string</td>
+<td><em><p>Background color of the rotated image</p></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_library_ImboClient_ImageUrl_ImageUrlInterface.html#%5CImboClient%5CImageUrl%5CImageUrlInterface">\ImboClient\ImageUrl\ImageUrlInterface</a></td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\ImboClient\ImageUrl\ImageUrlInterface::thumbnail()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">thumbnail</span><span class="nb-faded-text">(
+          int $width
+              =
+              50, int $height
+              =
+              50, string $fit
+              =
+              'outbound'
+          )
+        </span>
+        :
+          <a href="db_library_ImboClient_ImageUrl_ImageUrlInterface.html#%5CImboClient%5CImageUrl%5CImageUrlInterface">\ImboClient\ImageUrl\ImageUrlInterface</a></code><div class="description"><p class="short_description">Trigger a thumbnail transformation</p></div>
+<div class="code-tabs">
+<div class="long-description"></div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$width</th>
+<td>int</td>
+<td><em><p>Width of the thumbnail</p></em></td>
+</tr>
+<tr>
+<th>$height</th>
+<td>int</td>
+<td><em><p>Height of the thumbnail</p></em></td>
+</tr>
+<tr>
+<th>$fit</th>
+<td>string</td>
+<td><em><p>Fit type. 'outbound' or 'inset'</p>
+</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_library_ImboClient_ImageUrl_ImageUrlInterface.html#%5CImboClient%5CImageUrl%5CImageUrlInterface">\ImboClient\ImageUrl\ImageUrlInterface</a></td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+</div>
+</div>
+<small xmlns="" class="footer">Documentation was generated by <a href="http://docblox-project.org">DocBlox 0.18.1</a>.
+    </small></body></html>
