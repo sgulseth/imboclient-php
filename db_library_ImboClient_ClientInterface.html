@@ -132,7 +132,7 @@ IN THE SOFTWARE.</p></div>
     </dd>
 <dt xmlns:dbx="http://docblox-project.org/xsl/functions">Link</dt>
 <dd xmlns:dbx="http://docblox-project.org/xsl/functions">
-<a href="https://github.com/christeredvartsen/imboclient-php">https://github.com/christeredvartsen/imboclient-php</a>
+<a href="https://github.com/imbo/imboclient-php">https://github.com/imbo/imboclient-php</a>
          
     </dd>
 <dt xmlns:dbx="http://docblox-project.org/xsl/functions">Package</dt>
@@ -168,7 +168,7 @@ IN THE SOFTWARE.</p></div>
     </dd>
 <dt>Link</dt>
 <dd>
-<a href="https://github.com/christeredvartsen/imboclient-php">https://github.com/christeredvartsen/imboclient-php</a>
+<a href="https://github.com/imbo/imboclient-php">https://github.com/imbo/imboclient-php</a>
          
     </dd>
 </dl>
@@ -237,6 +237,41 @@ IN THE SOFTWARE.</p></div>
 <th>$image</th>
 <td>string</td>
 <td><em><p>The actual image data to add to the server</p></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_library_ImboClient_Http_Response_ResponseInterface.html#%5CImboClient%5CHttp%5CResponse%5CResponseInterface">\ImboClient\Http\Response\ResponseInterface</a></td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\ImboClient\ClientInterface::addImageFromUrl()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">addImageFromUrl</span><span class="nb-faded-text">(
+          <a href="db_library_ImboClient_ImageUrl_ImageUrlInterface.html#%5CImboClient%5CImageUrl%5CImageUrlInterface">\ImboClient\ImageUrl\ImageUrlInterface</a> | string $url
+          )
+        </span>
+        :
+          <a href="db_library_ImboClient_Http_Response_ResponseInterface.html#%5CImboClient%5CHttp%5CResponse%5CResponseInterface">\ImboClient\Http\Response\ResponseInterface</a></code><div class="description"><p class="short_description">Add a new image to the server by specifying a URL to an existing image</p></div>
+<div class="code-tabs">
+<div class="long-description"></div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$url</th>
+<td>
+<a href="db_library_ImboClient_ImageUrl_ImageUrlInterface.html#%5CImboClient%5CImageUrl%5CImageUrlInterface">\ImboClient\ImageUrl\ImageUrlInterface</a> | string</td>
+<td><em><p>URL to the image you want to add</p></em></td>
 </tr>
 </table>
 <strong>Returns</strong><table class="argument-info">
@@ -563,7 +598,7 @@ IN THE SOFTWARE.</p></div>
 <tr>
 <th>$asString</th>
 <td>boolean</td>
-<td><em><p>Set this to false to get the url as a string</p></em></td>
+<td><em><p>Set this to true to get the URL as a string</p></em></td>
 </tr>
 </table>
 <strong>Returns</strong><table class="argument-info">
@@ -623,7 +658,7 @@ IN THE SOFTWARE.</p></div>
           )
         </span>
         :
-          string</code><div class="description"><p class="short_description">Get the url to the images resource of the current user</p></div>
+          string</code><div class="description"><p class="short_description">Get the URL to the images resource of the current user</p></div>
 <div class="code-tabs">
 <div class="long-description"></div>
 <strong>Returns</strong><table class="argument-info">
@@ -679,7 +714,7 @@ IN THE SOFTWARE.</p></div>
           )
         </span>
         :
-          string</code><div class="description"><p class="short_description">Fetch the metadata url to a given image</p></div>
+          string</code><div class="description"><p class="short_description">Fetch the metadata URL to a given image</p></div>
 <div class="code-tabs">
 <div class="long-description"></div>
 <strong>Parameters</strong><table class="argument-info">
@@ -735,7 +770,7 @@ IN THE SOFTWARE.</p></div>
           )
         </span>
         :
-          string</code><div class="description"><p class="short_description">Get the url to the current user</p></div>
+          string</code><div class="description"><p class="short_description">Get the URL to the current user</p></div>
 <div class="code-tabs">
 <div class="long-description"></div>
 <strong>Returns</strong><table class="argument-info">
@@ -791,7 +826,7 @@ IN THE SOFTWARE.</p></div>
           )
         </span>
         :
-          boolean</code><div class="description"><p class="short_description">Checks if a given image exists on the server already</p></div>
+          boolean</code><div class="description"><p class="short_description">Checks if a given image exists on the server already by specifying a local path</p></div>
 <div class="code-tabs">
 <div class="long-description"></div>
 <strong>Parameters</strong><table class="argument-info">

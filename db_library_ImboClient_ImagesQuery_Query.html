@@ -141,7 +141,7 @@ IN THE SOFTWARE.</p></div>
     </dd>
 <dt xmlns:dbx="http://docblox-project.org/xsl/functions">Link</dt>
 <dd xmlns:dbx="http://docblox-project.org/xsl/functions">
-<a href="https://github.com/christeredvartsen/imboclient-php">https://github.com/christeredvartsen/imboclient-php</a>
+<a href="https://github.com/imbo/imboclient-php">https://github.com/imbo/imboclient-php</a>
          
     </dd>
 <dt xmlns:dbx="http://docblox-project.org/xsl/functions">Package</dt>
@@ -178,7 +178,7 @@ IN THE SOFTWARE.</p></div>
     </dd>
 <dt>Link</dt>
 <dd>
-<a href="https://github.com/christeredvartsen/imboclient-php">https://github.com/christeredvartsen/imboclient-php</a>
+<a href="https://github.com/imbo/imboclient-php">https://github.com/imbo/imboclient-php</a>
          
     </dd>
 </dl>
@@ -198,6 +198,20 @@ IN THE SOFTWARE.</p></div>
 </div>
 <div class="clear"></div>
 </div>
+<a id="\ImboClient\ImagesQuery\Query::$limit" class="anchor"></a><div class="property private">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_private.png" style="margin-right: 5px" alt="private">int
+                 <span class="highlight">$limit</span>= '20'
+                </code><div class="description">
+<p class="short-description">Number of images to get</p></div>
+<div class="code-tabs">
+<div class="long-description"></div>
+<strong>Default value</strong><code>20</code><strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd>int</dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
 <a id="\ImboClient\ImagesQuery\Query::$metadataQuery" class="anchor"></a><div class="property private">
 <a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_private.png" style="margin-right: 5px" alt="private">array
                  <span class="highlight">$metadataQuery</span>= 'array()'
@@ -208,20 +222,6 @@ IN THE SOFTWARE.</p></div>
 <strong>Default value</strong><code>array()</code><strong>Details</strong><dl class="property-info">
 <dt>Type</dt>
 <dd>array</dd>
-</dl>
-</div>
-<div class="clear"></div>
-</div>
-<a id="\ImboClient\ImagesQuery\Query::$num" class="anchor"></a><div class="property private">
-<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_private.png" style="margin-right: 5px" alt="private">int
-                 <span class="highlight">$num</span>= '20'
-                </code><div class="description">
-<p class="short-description">Number of images to get</p></div>
-<div class="code-tabs">
-<div class="long-description"></div>
-<strong>Default value</strong><code>20</code><strong>Details</strong><dl class="property-info">
-<dt>Type</dt>
-<dd>int</dd>
 </dl>
 </div>
 <div class="clear"></div>
@@ -304,6 +304,39 @@ IN THE SOFTWARE.</p></div>
 </div>
 <div class="clear"></div>
 </div>
+<a id="\ImboClient\ImagesQuery\Query::limit()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">limit</span><span class="nb-faded-text">(
+           $limit
+              =
+              null
+          )
+        </span>
+        :
+          void</code><div class="description"><p class="short_description"></p></div>
+<div class="code-tabs">
+<div class="long-description"></div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$limit</th>
+<td></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>See</dt>
+<dd>
+<a href="db_library_ImboClient_ImagesQuery_QueryInterface.html#%5CImboClient%5CImagesQuery%5CQueryInterface::limit()">\ImboClient\ImagesQuery\QueryInterface::limit()</a>
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
 <a id="\ImboClient\ImagesQuery\Query::metadataQuery()" class="anchor"></a><div class="method public">
 <a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">metadataQuery</span><span class="nb-faded-text">(
            $metadataQuery
@@ -331,39 +364,6 @@ IN THE SOFTWARE.</p></div>
 <dt>See</dt>
 <dd>
 <a href="db_library_ImboClient_ImagesQuery_QueryInterface.html#%5CImboClient%5CImagesQuery%5CQueryInterface::metadataQuery()">\ImboClient\ImagesQuery\QueryInterface::metadataQuery()</a>
-         
-    </dd>
-</dl>
-</div>
-<div class="clear"></div>
-</div>
-<a id="\ImboClient\ImagesQuery\Query::num()" class="anchor"></a><div class="method public">
-<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">num</span><span class="nb-faded-text">(
-           $num
-              =
-              null
-          )
-        </span>
-        :
-          void</code><div class="description"><p class="short_description"></p></div>
-<div class="code-tabs">
-<div class="long-description"></div>
-<strong>Parameters</strong><table class="argument-info">
-<thead><tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr></thead>
-<tr>
-<th>$num</th>
-<td></td>
-<td><em></em></td>
-</tr>
-</table>
-<strong>Details</strong><dl class="function-info">
-<dt>See</dt>
-<dd>
-<a href="db_library_ImboClient_ImagesQuery_QueryInterface.html#%5CImboClient%5CImagesQuery%5CQueryInterface::num()">\ImboClient\ImagesQuery\QueryInterface::num()</a>
          
     </dd>
 </dl>

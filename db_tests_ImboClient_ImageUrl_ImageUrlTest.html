@@ -125,6 +125,11 @@ IN THE SOFTWARE.</p></div>
 <a href="mailto:cogo@starzinger.net">Christer Edvartsen</a>
          
     </dd>
+<dt xmlns:dbx="http://docblox-project.org/xsl/functions">Author</dt>
+<dd xmlns:dbx="http://docblox-project.org/xsl/functions">
+<a href="mailto:espen@hovlandsdal.com">Espen Hovlandsdal</a>
+         
+    </dd>
 <dt xmlns:dbx="http://docblox-project.org/xsl/functions">Copyright</dt>
 <dd xmlns:dbx="http://docblox-project.org/xsl/functions">Copyright (c) 2011-2012, Christer Edvartsen <cogo@starzinger.net>
          
@@ -136,14 +141,10 @@ IN THE SOFTWARE.</p></div>
     </dd>
 <dt xmlns:dbx="http://docblox-project.org/xsl/functions">Link</dt>
 <dd xmlns:dbx="http://docblox-project.org/xsl/functions">
-<a href="https://github.com/christeredvartsen/imboclient-php">https://github.com/christeredvartsen/imboclient-php</a>
+<a href="https://github.com/imbo/imboclient-php">https://github.com/imbo/imboclient-php</a>
          
     </dd>
 <dt xmlns:dbx="http://docblox-project.org/xsl/functions">Package</dt>
-<dd xmlns:dbx="http://docblox-project.org/xsl/functions">ImboClient
-         
-    </dd>
-<dt xmlns:dbx="http://docblox-project.org/xsl/functions">Subpackage</dt>
 <dd xmlns:dbx="http://docblox-project.org/xsl/functions">Unittests
          
     </dd>
@@ -151,7 +152,7 @@ IN THE SOFTWARE.</p></div>
 <a name="classes" class="anchor"></a><a xmlns:dbx="http://docblox-project.org/xsl/functions" id="\ImboClient\ImageUrl\ImageUrlTest" class="anchor"></a><h2 xmlns:dbx="http://docblox-project.org/xsl/functions" class="class">\ImboClient\ImageUrl\ImageUrlTest<div class="to-top"><a href="#top">jump to top</a></div>
 </h2>
 <div xmlns:dbx="http://docblox-project.org/xsl/functions" class="class">
-<small class="package"><b>Package: </b>ImboClient\Unittests</small><p class="short-description"></p>
+<small class="package"><b>Package: </b>Unittests</small><p class="short-description"></p>
 <div class="long-description"></div>
 <dl class="class-info">
 <dt>Parent(s)</dt>
@@ -159,6 +160,11 @@ IN THE SOFTWARE.</p></div>
 <dt>Author</dt>
 <dd>
 <a href="mailto:cogo@starzinger.net">Christer Edvartsen</a>
+         
+    </dd>
+<dt>Author</dt>
+<dd>
+<a href="mailto:espen@hovlandsdal.com">Espen Hovlandsdal</a>
          
     </dd>
 <dt>Copyright</dt>
@@ -172,7 +178,7 @@ IN THE SOFTWARE.</p></div>
     </dd>
 <dt>Link</dt>
 <dd>
-<a href="https://github.com/christeredvartsen/imboclient-php">https://github.com/christeredvartsen/imboclient-php</a>
+<a href="https://github.com/imbo/imboclient-php">https://github.com/imbo/imboclient-php</a>
          
     </dd>
 </dl>
@@ -182,7 +188,7 @@ IN THE SOFTWARE.</p></div>
 <a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_private.png" style="margin-right: 5px" alt="private">string
                  <span class="highlight">$baseUrl</span>= ''http://host''
                 </code><div class="description">
-<p class="short-description">Base url</p></div>
+<p class="short-description">Base URL</p></div>
 <div class="code-tabs">
 <div class="long-description"></div>
 <strong>Default value</strong><code>'http://host'</code><strong>Details</strong><dl class="property-info">
@@ -238,7 +244,7 @@ IN THE SOFTWARE.</p></div>
 <a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_private.png" style="margin-right: 5px" alt="private">\ImboClient\ImageUrl\ImageUrl
                  <span class="highlight">$url</span>= ''
                 </code><div class="description">
-<p class="short-description">Url instance</p></div>
+<p class="short-description">URL instance</p></div>
 <div class="code-tabs">
 <div class="long-description"></div>
 <strong>Details</strong><dl class="property-info">
@@ -2851,6 +2857,60 @@ IN THE SOFTWARE.</p></div>
 <strong>Details</strong><dl class="function-info">
 <dt>Covers</dt>
 <dd>ImboClient\ImageUrl\ImageUrl::jpg
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\ImboClient\ImageUrl\ImageUrlTest::testMaxSize()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">testMaxSize</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          void</code><div class="description"><p class="short_description"></p></div>
+<div class="code-tabs">
+<div class="long-description"></div>
+<strong>Details</strong><dl class="function-info">
+<dt>Covers</dt>
+<dd>ImboClient\ImageUrl\ImageUrl::maxSize
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\ImboClient\ImageUrl\ImageUrlTest::testMaxSizeWithOnlyHeight()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">testMaxSizeWithOnlyHeight</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          void</code><div class="description"><p class="short_description"></p></div>
+<div class="code-tabs">
+<div class="long-description"></div>
+<strong>Details</strong><dl class="function-info">
+<dt>Covers</dt>
+<dd>ImboClient\ImageUrl\ImageUrl::maxSize
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\ImboClient\ImageUrl\ImageUrlTest::testMaxSizeWithOnlyWidth()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">testMaxSizeWithOnlyWidth</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          void</code><div class="description"><p class="short_description"></p></div>
+<div class="code-tabs">
+<div class="long-description"></div>
+<strong>Details</strong><dl class="function-info">
+<dt>Covers</dt>
+<dd>ImboClient\ImageUrl\ImageUrl::maxSize
          
     </dd>
 </dl>

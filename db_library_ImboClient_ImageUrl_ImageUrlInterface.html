@@ -132,7 +132,7 @@ IN THE SOFTWARE.</p></div>
     </dd>
 <dt xmlns:dbx="http://docblox-project.org/xsl/functions">Link</dt>
 <dd xmlns:dbx="http://docblox-project.org/xsl/functions">
-<a href="https://github.com/christeredvartsen/imboclient-php">https://github.com/christeredvartsen/imboclient-php</a>
+<a href="https://github.com/imbo/imboclient-php">https://github.com/imbo/imboclient-php</a>
          
     </dd>
 <dt xmlns:dbx="http://docblox-project.org/xsl/functions">Package</dt>
@@ -147,7 +147,7 @@ IN THE SOFTWARE.</p></div>
 <a name="interfaces" class="anchor"></a><a xmlns:dbx="http://docblox-project.org/xsl/functions" id="\ImboClient\ImageUrl\ImageUrlInterface" class="anchor"></a><h2 xmlns:dbx="http://docblox-project.org/xsl/functions" class="interface">\ImboClient\ImageUrl\ImageUrlInterface<div class="to-top"><a href="#top">jump to top</a></div>
 </h2>
 <div xmlns:dbx="http://docblox-project.org/xsl/functions" class="class">
-<small class="package"><b>Package: </b>Interfaces\Client\ImageUrl</small><p class="short-description">Interface for the image url</p>
+<small class="package"><b>Package: </b>Interfaces\Client\ImageUrl</small><p class="short-description">Interface for the image URL</p>
 <div class="long-description"></div>
 <dl class="class-info">
 <dt>Children</dt>
@@ -168,7 +168,7 @@ IN THE SOFTWARE.</p></div>
     </dd>
 <dt>Link</dt>
 <dd>
-<a href="https://github.com/christeredvartsen/imboclient-php">https://github.com/christeredvartsen/imboclient-php</a>
+<a href="https://github.com/imbo/imboclient-php">https://github.com/imbo/imboclient-php</a>
          
     </dd>
 </dl>
@@ -355,7 +355,7 @@ IN THE SOFTWARE.</p></div>
           )
         </span>
         :
-          <a href="db_library_ImboClient_ImageUrl_ImageUrlInterface.html#%5CImboClient%5CImageUrl%5CImageUrlInterface">\ImboClient\ImageUrl\ImageUrlInterface</a></code><div class="description"><p class="short_description">Change the url to trigger the convert transformation</p></div>
+          <a href="db_library_ImboClient_ImageUrl_ImageUrlInterface.html#%5CImboClient%5CImageUrl%5CImageUrlInterface">\ImboClient\ImageUrl\ImageUrlInterface</a></code><div class="description"><p class="short_description">Change the URL to trigger the convert transformation</p></div>
 <div class="code-tabs">
 <div class="long-description"></div>
 <strong>Parameters</strong><table class="argument-info">
@@ -482,7 +482,7 @@ IN THE SOFTWARE.</p></div>
           )
         </span>
         :
-          string</code><div class="description"><p class="short_description">Represent the complete image url as a string</p></div>
+          string</code><div class="description"><p class="short_description">Represent the complete image URL as a string</p></div>
 <div class="code-tabs">
 <div class="long-description"></div>
 <strong>Returns</strong><table class="argument-info">
@@ -504,7 +504,7 @@ IN THE SOFTWARE.</p></div>
           )
         </span>
         :
-          string</code><div class="description"><p class="short_description">Represent the complete image url as an URL-encoded string</p></div>
+          string</code><div class="description"><p class="short_description">Represent the complete image URL as an URL-encoded string</p></div>
 <div class="code-tabs">
 <div class="long-description"></div>
 <strong>Returns</strong><table class="argument-info">
@@ -551,6 +551,49 @@ IN THE SOFTWARE.</p></div>
           <a href="db_library_ImboClient_ImageUrl_ImageUrlInterface.html#%5CImboClient%5CImageUrl%5CImageUrlInterface">\ImboClient\ImageUrl\ImageUrlInterface</a></code><div class="description"><p class="short_description">Convenience method to trigger jpg conversion</p></div>
 <div class="code-tabs">
 <div class="long-description"></div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_library_ImboClient_ImageUrl_ImageUrlInterface.html#%5CImboClient%5CImageUrl%5CImageUrlInterface">\ImboClient\ImageUrl\ImageUrlInterface</a></td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\ImboClient\ImageUrl\ImageUrlInterface::maxSize()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">maxSize</span><span class="nb-faded-text">(
+          int $maxWidth
+              =
+              null, int $maxHeight
+              =
+              null
+          )
+        </span>
+        :
+          <a href="db_library_ImboClient_ImageUrl_ImageUrlInterface.html#%5CImboClient%5CImageUrl%5CImageUrlInterface">\ImboClient\ImageUrl\ImageUrlInterface</a></code><div class="description"><p class="short_description">Trigger a maxSize transformation</p></div>
+<div class="code-tabs">
+<div class="long-description"></div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$maxWidth</th>
+<td>int</td>
+<td><em><p>Max width of the resized image</p></em></td>
+</tr>
+<tr>
+<th>$maxHeight</th>
+<td>int</td>
+<td><em><p>Max height of the resized image</p></em></td>
+</tr>
+</table>
 <strong>Returns</strong><table class="argument-info">
 <thead><tr>
 <th>Type</th>
