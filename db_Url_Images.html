@@ -221,6 +221,27 @@ IN THE SOFTWARE.</p></div>
 </div>
 <div class="clear"></div>
 </div>
+<a id="\ImboClient\Url\Images::$customParams" class="anchor"></a><div class="property private inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_private.png" style="margin-right: 5px" alt="private">array
+                 <span class="highlight">$customParams</span>= ''
+                </code><div class="description">
+<span class="attribute">inherited</span><p class="short-description">Custom query params that can be set via __call</p><small>Inherited from:
+                        <a href="db_Url_Url.html#%5CImboClient%5CUrl%5CUrl::%24%24customParams">\ImboClient\Url\Url::$$customParams</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"></div>
+<strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd>array</dd>
+<dt>Inherited_from</dt>
+<dd>
+<a href="db_Url_Url.html#%5CImboClient%5CUrl%5CUrl::%24%24customParams">\ImboClient\Url\Url::$$customParams</a>
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
 <a id="\ImboClient\Url\Images::$privateKey" class="anchor"></a><div class="property private inherited_from ">
 <a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_private.png" style="margin-right: 5px" alt="private">string
                  <span class="highlight">$privateKey</span>= ''
@@ -266,6 +287,50 @@ IN THE SOFTWARE.</p></div>
 </div>
 <h3>Methods</h3>
 <div>
+<a id="\ImboClient\Url\Images::__call()" class="anchor"></a><div class="method public inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">__call</span><span class="nb-faded-text">(
+          string $method, array $args
+          )
+        </span>
+        :
+          <a href="db_Url_UrlInterface.html#%5CImboClient%5CUrl%5CUrlInterface">\ImboClient\Url\UrlInterface</a></code><div class="description">
+<span class="attribute">inherited</span><p class="short_description">Magic call method that can be used to add custom query parameters</p>
+<small>Inherited from:
+                    <a href="db_Url_Url.html#%5CImboClient%5CUrl%5CUrl::__call()">\ImboClient\Url\Url::__call()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"></div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$method</th>
+<td>string</td>
+<td><em><p>The method called (will be used as query parameter name)</p>
+</em></td>
+</tr>
+<tr>
+<th>$args</th>
+<td>array</td>
+<td><em><p>Arguments to the method. The first argument will be used as query parameter value</p></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Url_UrlInterface.html#%5CImboClient%5CUrl%5CUrlInterface">\ImboClient\Url\UrlInterface</a></td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
 <a id="\ImboClient\Url\Images::__construct()" class="anchor"></a><div class="method public inherited_from ">
 <a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">__construct</span><span class="nb-faded-text">(
           string $baseUrl, string $publicKey, string $privateKey
