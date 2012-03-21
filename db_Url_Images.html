@@ -1,0 +1,476 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>DocBlox Documentation</title><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" href="css/jquery-ui.css" type="text/css"></link><link rel="stylesheet" href="css/docblox/jquery-ui-1.8.16.custom.css" type="text/css"></link><link rel="stylesheet" href="css/jquery.treeview.css" type="text/css"></link><link rel="stylesheet" href="css/theme.css" type="text/css"></link><script type="text/javascript" src="js/jquery-1.4.2.min.js"></script><script type="text/javascript" src="js/jquery-ui-1.8.2.custom.min.js"></script><script type="text/javascript" src="js/jquery.tools.min.js"></script><script type="text/javascript" src="js/jquery.cookie.js"></script><script type="text/javascript" src="js/jquery.treeview.js"></script><script type="text/javascript">
+            $(document).ready(function() {
+                $(".filetree").treeview({
+                    collapsed: true,
+                    persist: "cookie"
+                });
+
+                $("#accordion").accordion({
+                    collapsible: true,
+                    autoHeight:  false,
+                    fillSpace:   true
+                });
+
+                $(".tabs").tabs();
+            });
+        </script></head><body><div xmlns="" id="content">
+<script xmlns:dbx="http://docblox-project.org/xsl/functions">
+
+      function filterElements()
+      {
+        inherited = !$('#show-inherited').hasClass('deselected');
+        public    = !$('#show-public').hasClass('deselected');
+        protected = !$('#show-protected').hasClass('deselected');
+        private   = !$('#show-private').hasClass('deselected');
+
+        $('div.public').each(function(index, val) {
+            $(val).toggle(public && !($(val).hasClass('inherited_from') && !inherited));
+        });
+        $('div.protected').each(function(index, val) {
+            $(val).toggle(protected && !($(val).hasClass('inherited_from') && !inherited));
+        });
+        $('div.private').each(function(index, val) {
+            $(val).toggle(private && !($(val).hasClass('inherited_from') && !inherited));
+        });
+      }
+
+      $(document).ready(function() {
+        $('a.gripper').click(function() {
+            $(this).nextAll('div.code-tabs').slideToggle();
+            $(this).children('img').toggle();
+            return false;
+        });
+
+        $('div.method code span.highlight,div.function code span.highlight,div.constant code span.highlight,div.property code span.highlight').css('cursor', 'pointer');
+
+        $('div.method code span.highlight,div.function code span.highlight,div.constant code span.highlight,div.property code span.highlight').click(function() {
+            $(this).parent().nextAll('div.code-tabs').slideToggle();
+            $(this).parent().prevAll('a.gripper').children('img').toggle();
+            return false;
+        });
+
+        $('div.code-tabs').hide();
+        $('a.gripper').show();
+        $('div.code-tabs:empty').prevAll('a.gripper').html('');
+
+        $('#show-public, #show-protected, #show-private, #show-inherited')
+            .css('cursor', 'pointer')
+            .click(function(){
+                $(this).toggleClass('deselected');
+                if ($(this).hasClass('deselected')) {
+                  $(this).fadeTo('fast', '0.4');
+                } else {
+                  $(this).fadeTo('fast', '1.0');
+                }
+                filterElements();
+                return false;
+            });
+        $('#show-protected, #show-private').click();
+
+        // add the sliding behaviour to the file navigation and show it
+        // it is initially hidden for non-JS users.
+        $("#file-nav-box").show().hover(function() {
+            $("#file-nav-container").slideDown(400);
+        }, function() {
+            $("#file-nav-container").slideUp(400);
+        });
+      });
+
+      
+    </script><h1 xmlns:dbx="http://docblox-project.org/xsl/functions" class="file">Url/Images.php</h1>
+<div xmlns:dbx="http://docblox-project.org/xsl/functions" id="file-nav-box">
+<div id="file-nav-options">
+              Show:
+              <img src="images/icons/visibility_public.png" id="show-public"><img src="images/icons/visibility_protected.png" id="show-protected"><img src="images/icons/visibility_private.png" id="show-private"><span class="attribute" id="show-inherited">inherited</span>
+</div>
+<div id="file-nav-container">
+<ul id="file-nav"><li>
+<a href="#classes"><img src="images/icons/class.png" height="14">
+                          Classes
+                      </a><ul><li><a href="#%5CImboClient%5CUrl%5CImages">\ImboClient\Url\Images</a></li></ul>
+</li></ul>
+<div style="clear: left;"></div>
+</div>
+<div id="file-nav-tab">
+              Table of Contents
+          </div>
+</div>
+<a xmlns:dbx="http://docblox-project.org/xsl/functions" name="top" class="anchor"></a><div id="file-description">
+<p xmlns:dbx="http://docblox-project.org/xsl/functions" class="short-description">ImboClient</p>
+<div xmlns:dbx="http://docblox-project.org/xsl/functions" class="long-description"><p>Copyright (c) 2011-2012, Christer Edvartsen <a href="&#x6d;&#x61;&#105;&#108;&#x74;&#x6f;&#58;&#99;o&#x67;&#x6f;&#64;&#115;&#x74;&#x61;&#114;&#122;i&#x6e;&#x67;&#101;&#114;&#x2e;&#x6e;&#101;&#116;">&#99;o&#x67;&#x6f;&#64;&#115;&#x74;&#x61;&#114;&#122;i&#x6e;&#x67;&#101;&#114;&#x2e;&#x6e;&#101;&#116;</a></p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to
+deal in the Software without restriction, including without limitation the
+rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+sell copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:</p>
+
+<ul>
+<li>The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.</li>
+</ul>
+
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.</p></div>
+</div>
+<dl class="file-info">
+<dt xmlns:dbx="http://docblox-project.org/xsl/functions">Author</dt>
+<dd xmlns:dbx="http://docblox-project.org/xsl/functions">
+<a href="mailto:cogo@starzinger.net">Christer Edvartsen</a>
+         
+    </dd>
+<dt xmlns:dbx="http://docblox-project.org/xsl/functions">Copyright</dt>
+<dd xmlns:dbx="http://docblox-project.org/xsl/functions">Copyright (c) 2011-2012, Christer Edvartsen <cogo@starzinger.net>
+         
+    </dd>
+<dt xmlns:dbx="http://docblox-project.org/xsl/functions">License</dt>
+<dd xmlns:dbx="http://docblox-project.org/xsl/functions">
+<a href="http://www.opensource.org/licenses/mit-license">MIT License</a>
+         
+    </dd>
+<dt xmlns:dbx="http://docblox-project.org/xsl/functions">Link</dt>
+<dd xmlns:dbx="http://docblox-project.org/xsl/functions">
+<a href="https://github.com/imbo/imboclient-php">https://github.com/imbo/imboclient-php</a>
+         
+    </dd>
+<dt xmlns:dbx="http://docblox-project.org/xsl/functions">Package</dt>
+<dd xmlns:dbx="http://docblox-project.org/xsl/functions">Url
+         
+    </dd>
+</dl>
+<a name="classes" class="anchor"></a><a xmlns:dbx="http://docblox-project.org/xsl/functions" id="\ImboClient\Url\Images" class="anchor"></a><h2 xmlns:dbx="http://docblox-project.org/xsl/functions" class="class">\ImboClient\Url\Images<div class="to-top"><a href="#top">jump to top</a></div>
+</h2>
+<div xmlns:dbx="http://docblox-project.org/xsl/functions" class="class">
+<small class="package"><b>Package: </b>Url</small><p class="short-description">Images URL</p>
+<div class="long-description"></div>
+<dl class="class-info">
+<dt>Parent(s)</dt>
+<dd>
+<a href="db_Url_UrlInterface.html#%5CImboClient%5CUrl%5CUrlInterface">\ImboClient\Url\UrlInterface</a>
+            &lt;
+            <a href="db_Url_UrlInterface.html#%5CImboClient%5CUrl%5CUrlInterface" style="color: gray; font-size: 0.8em
+                ">\ImboClient\Url\UrlInterface</a>
+</dd>
+<dt>Author</dt>
+<dd>
+<a href="mailto:cogo@starzinger.net">Christer Edvartsen</a>
+         
+    </dd>
+<dt>Copyright</dt>
+<dd>Copyright (c) 2011-2012, Christer Edvartsen <cogo@starzinger.net>
+         
+    </dd>
+<dt>License</dt>
+<dd>
+<a href="http://www.opensource.org/licenses/mit-license">MIT License</a>
+         
+    </dd>
+<dt>Link</dt>
+<dd>
+<a href="https://github.com/imbo/imboclient-php">https://github.com/imbo/imboclient-php</a>
+         
+    </dd>
+</dl>
+<h3>Properties</h3>
+<div>
+<a id="\ImboClient\Url\Images::$accessToken" class="anchor"></a><div class="property private inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_private.png" style="margin-right: 5px" alt="private">\ImboClient\Url\AccessTokenInterface
+                 <span class="highlight">$accessToken</span>= ''
+                </code><div class="description">
+<span class="attribute">inherited</span><p class="short-description">Access token generator</p><small>Inherited from:
+                        <a href="db_Url_Url.html#%5CImboClient%5CUrl%5CUrl::%24%24accessToken">\ImboClient\Url\Url::$$accessToken</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"></div>
+<strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd><a href="db_Url_AccessTokenInterface.html#%5CImboClient%5CUrl%5CAccessTokenInterface">\ImboClient\Url\AccessTokenInterface</a></dd>
+<dt>Inherited_from</dt>
+<dd>
+<a href="db_Url_Url.html#%5CImboClient%5CUrl%5CUrl::%24%24accessToken">\ImboClient\Url\Url::$$accessToken</a>
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\ImboClient\Url\Images::$baseUrl" class="anchor"></a><div class="property protected inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected">string
+                 <span class="highlight">$baseUrl</span>= ''
+                </code><div class="description">
+<span class="attribute">inherited</span><p class="short-description">Base URL</p><small>Inherited from:
+                        <a href="db_Url_Url.html#%5CImboClient%5CUrl%5CUrl::%24%24baseUrl">\ImboClient\Url\Url::$$baseUrl</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"></div>
+<strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd>string</dd>
+<dt>Inherited_from</dt>
+<dd>
+<a href="db_Url_Url.html#%5CImboClient%5CUrl%5CUrl::%24%24baseUrl">\ImboClient\Url\Url::$$baseUrl</a>
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\ImboClient\Url\Images::$privateKey" class="anchor"></a><div class="property private inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_private.png" style="margin-right: 5px" alt="private">string
+                 <span class="highlight">$privateKey</span>= ''
+                </code><div class="description">
+<span class="attribute">inherited</span><p class="short-description">Private key</p><small>Inherited from:
+                        <a href="db_Url_Url.html#%5CImboClient%5CUrl%5CUrl::%24%24privateKey">\ImboClient\Url\Url::$$privateKey</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"></div>
+<strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd>string</dd>
+<dt>Inherited_from</dt>
+<dd>
+<a href="db_Url_Url.html#%5CImboClient%5CUrl%5CUrl::%24%24privateKey">\ImboClient\Url\Url::$$privateKey</a>
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\ImboClient\Url\Images::$publicKey" class="anchor"></a><div class="property protected inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected">string
+                 <span class="highlight">$publicKey</span>= ''
+                </code><div class="description">
+<span class="attribute">inherited</span><p class="short-description">Public key</p><small>Inherited from:
+                        <a href="db_Url_Url.html#%5CImboClient%5CUrl%5CUrl::%24%24publicKey">\ImboClient\Url\Url::$$publicKey</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"></div>
+<strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd>string</dd>
+<dt>Inherited_from</dt>
+<dd>
+<a href="db_Url_Url.html#%5CImboClient%5CUrl%5CUrl::%24%24publicKey">\ImboClient\Url\Url::$$publicKey</a>
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+<h3>Methods</h3>
+<div>
+<a id="\ImboClient\Url\Images::__construct()" class="anchor"></a><div class="method public inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">__construct</span><span class="nb-faded-text">(
+          string $baseUrl, string $publicKey, string $privateKey
+          )
+        </span>
+        :
+          void</code><div class="description">
+<span class="attribute">inherited</span><p class="short_description">Class constructor</p>
+<small>Inherited from:
+                    <a href="db_Url_Url.html#%5CImboClient%5CUrl%5CUrl::__construct()">\ImboClient\Url\Url::__construct()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"></div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$baseUrl</th>
+<td>string</td>
+<td><em><p>The base URL to use</p></em></td>
+</tr>
+<tr>
+<th>$publicKey</th>
+<td>string</td>
+<td><em><p>The public key to use</p></em></td>
+</tr>
+<tr>
+<th>$privateKey</th>
+<td>string</td>
+<td><em><p>The private key to use</p></em></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\ImboClient\Url\Images::__toString()" class="anchor"></a><div class="method public inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">__toString</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          void</code><div class="description">
+<span class="attribute">inherited</span><p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Url_Url.html#%5CImboClient%5CUrl%5CUrl::__toString()">\ImboClient\Url\Url::__toString()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"></div>
+<strong>Details</strong><dl class="function-info">
+<dt>See</dt>
+<dd>
+<a href="db_Url_UrlInterface.html#%5CImboClient%5CUrl%5CUrlInterface::__toString()">\ImboClient\Url\UrlInterface::__toString()</a>
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\ImboClient\Url\Images::getAccessToken()" class="anchor"></a><div class="method public inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getAccessToken</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          <a href="db_Url_AccessTokenInterface.html#%5CImboClient%5CUrl%5CAccessTokenInterface">\ImboClient\Url\AccessTokenInterface</a></code><div class="description">
+<span class="attribute">inherited</span><p class="short_description">Get an instance of the access token</p>
+<small>Inherited from:
+                    <a href="db_Url_Url.html#%5CImboClient%5CUrl%5CUrl::getAccessToken()">\ImboClient\Url\Url::getAccessToken()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"><p>If no instance have been provided prior to calling this method, this method must instantiate
+the ImboClient\Url\AccessToken class and return that instance.</p></div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Url_AccessTokenInterface.html#%5CImboClient%5CUrl%5CAccessTokenInterface">\ImboClient\Url\AccessTokenInterface</a></td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\ImboClient\Url\Images::getRawUrl()" class="anchor"></a><div class="method protected">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected"><span class="highlight">getRawUrl</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description"><p class="short_description">Get the raw URL (with no access token appended)</p></div>
+<div class="code-tabs">
+<div class="long-description"></div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td></td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>See</dt>
+<dd>
+<a href="db_Url_Url.html#%5CImboClient%5CUrl%5CUrl::getRawUrl()">\ImboClient\Url\Url::getRawUrl()</a>
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\ImboClient\Url\Images::getUrl()" class="anchor"></a><div class="method public inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getUrl</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          void</code><div class="description">
+<span class="attribute">inherited</span><p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Url_Url.html#%5CImboClient%5CUrl%5CUrl::getUrl()">\ImboClient\Url\Url::getUrl()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"></div>
+<strong>Details</strong><dl class="function-info">
+<dt>See</dt>
+<dd>
+<a href="db_Url_UrlInterface.html#%5CImboClient%5CUrl%5CUrlInterface::getUrl()">\ImboClient\Url\UrlInterface::getUrl()</a>
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\ImboClient\Url\Images::getUrlEncoded()" class="anchor"></a><div class="method public inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getUrlEncoded</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          void</code><div class="description">
+<span class="attribute">inherited</span><p class="short_description"></p>
+<small>Inherited from:
+                    <a href="db_Url_Url.html#%5CImboClient%5CUrl%5CUrl::getUrlEncoded()">\ImboClient\Url\Url::getUrlEncoded()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"></div>
+<strong>Details</strong><dl class="function-info">
+<dt>See</dt>
+<dd>
+<a href="db_Url_UrlInterface.html#%5CImboClient%5CUrl%5CUrlInterface::getUrlEncoded()">\ImboClient\Url\UrlInterface::getUrlEncoded()</a>
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\ImboClient\Url\Images::setAccessToken()" class="anchor"></a><div class="method public inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">setAccessToken</span><span class="nb-faded-text">(
+           $accessToken
+          )
+        </span>
+        :
+          <a href="db_Url_AccessTokenInterface.html#%5CImboClient%5CUrl%5CAccessTokenInterface">\ImboClient\Url\AccessTokenInterface</a><a href="db_Url_UrlInterface.html#%5CImboClient%5CUrl%5CUrlInterface">\ImboClient\Url\UrlInterface</a></code><div class="description">
+<span class="attribute">inherited</span><p class="short_description">Set an instance of the access token</p>
+<small>Inherited from:
+                    <a href="db_Url_Url.html#%5CImboClient%5CUrl%5CUrl::setAccessToken()">\ImboClient\Url\Url::setAccessToken()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"></div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$accessToken</th>
+<td></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>
+<a href="db_Url_AccessTokenInterface.html#%5CImboClient%5CUrl%5CAccessTokenInterface">\ImboClient\Url\AccessTokenInterface</a><a href="db_Url_UrlInterface.html#%5CImboClient%5CUrl%5CUrlInterface">\ImboClient\Url\UrlInterface</a>
+</td>
+<td>$accessToken An instance of the access token</td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+</div>
+</div>
+<small xmlns="" class="footer">Documentation was generated by <a href="http://docblox-project.org">DocBlox 0.18.1</a>.
+    </small></body></html>
