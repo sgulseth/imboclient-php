@@ -207,20 +207,6 @@ IN THE SOFTWARE.</p></div>
 </div>
 <div class="clear"></div>
 </div>
-<a id="\ImboClient\Url\Url::$customParams" class="anchor"></a><div class="property private">
-<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_private.png" style="margin-right: 5px" alt="private">array
-                 <span class="highlight">$customParams</span>= ''
-                </code><div class="description">
-<p class="short-description">Custom query params that can be set via __call</p></div>
-<div class="code-tabs">
-<div class="long-description"></div>
-<strong>Details</strong><dl class="property-info">
-<dt>Type</dt>
-<dd>array</dd>
-</dl>
-</div>
-<div class="clear"></div>
-</div>
 <a id="\ImboClient\Url\Url::$privateKey" class="anchor"></a><div class="property private">
 <a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_private.png" style="margin-right: 5px" alt="private">string
                  <span class="highlight">$privateKey</span>= ''
@@ -249,16 +235,30 @@ IN THE SOFTWARE.</p></div>
 </div>
 <div class="clear"></div>
 </div>
+<a id="\ImboClient\Url\Url::$queryParams" class="anchor"></a><div class="property private">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/property.png" alt="Property"><img src="images/icons/visibility_private.png" style="margin-right: 5px" alt="private">array
+                 <span class="highlight">$queryParams</span>= ''
+                </code><div class="description">
+<p class="short-description">Query params for the URL</p></div>
+<div class="code-tabs">
+<div class="long-description"></div>
+<strong>Details</strong><dl class="property-info">
+<dt>Type</dt>
+<dd>array</dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
 </div>
 <h3>Methods</h3>
 <div>
 <a id="\ImboClient\Url\Url::__call()" class="anchor"></a><div class="method public">
 <a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">__call</span><span class="nb-faded-text">(
-          string $method, array $args
+           $method,  $args
           )
         </span>
         :
-          <a href="db_Url_UrlInterface.html#%5CImboClient%5CUrl%5CUrlInterface">\ImboClient\Url\UrlInterface</a></code><div class="description"><p class="short_description">Magic call method that can be used to add custom query parameters</p></div>
+          void</code><div class="description"><p class="short_description"></p></div>
 <div class="code-tabs">
 <div class="long-description"></div>
 <strong>Parameters</strong><table class="argument-info">
@@ -269,26 +269,22 @@ IN THE SOFTWARE.</p></div>
 </tr></thead>
 <tr>
 <th>$method</th>
-<td>string</td>
-<td><em><p>The method called (will be used as query parameter name)</p>
-</em></td>
+<td></td>
+<td><em></em></td>
 </tr>
 <tr>
 <th>$args</th>
-<td>array</td>
-<td><em><p>Arguments to the method. The first argument will be used as query parameter value</p></em></td>
-</tr>
-</table>
-<strong>Returns</strong><table class="argument-info">
-<thead><tr>
-<th>Type</th>
-<th>Description</th>
-</tr></thead>
-<tr>
-<td><a href="db_Url_UrlInterface.html#%5CImboClient%5CUrl%5CUrlInterface">\ImboClient\Url\UrlInterface</a></td>
 <td></td>
+<td><em></em></td>
 </tr>
 </table>
+<strong>Details</strong><dl class="function-info">
+<dt>See</dt>
+<dd>
+<a href="db_Url_UrlInterface.html#%5CImboClient%5CUrl%5CUrlInterface::__call()">\ImboClient\Url\UrlInterface::__call()</a>
+         
+    </dd>
+</dl>
 </div>
 <div class="clear"></div>
 </div>
@@ -345,6 +341,42 @@ IN THE SOFTWARE.</p></div>
 </div>
 <div class="clear"></div>
 </div>
+<a id="\ImboClient\Url\Url::addQueryParam()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">addQueryParam</span><span class="nb-faded-text">(
+           $key,  $value
+          )
+        </span>
+        :
+          void</code><div class="description"><p class="short_description"></p></div>
+<div class="code-tabs">
+<div class="long-description"></div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$key</th>
+<td></td>
+<td><em></em></td>
+</tr>
+<tr>
+<th>$value</th>
+<td></td>
+<td><em></em></td>
+</tr>
+</table>
+<strong>Details</strong><dl class="function-info">
+<dt>See</dt>
+<dd>
+<a href="db_Url_UrlInterface.html#%5CImboClient%5CUrl%5CUrlInterface::addQueryParam()">\ImboClient\Url\UrlInterface::addQueryParam()</a>
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
 <a id="\ImboClient\Url\Url::getAccessToken()" class="anchor"></a><div class="method public">
 <a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getAccessToken</span><span class="nb-faded-text">(
           
@@ -368,8 +400,30 @@ the ImboClient\Url\AccessToken class and return that instance.</p></div>
 </div>
 <div class="clear"></div>
 </div>
-<a id="\ImboClient\Url\Url::getRawUrl()" class="anchor"></a><div class="method protected">
-<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected"><span class="highlight">getRawUrl</span><span class="nb-faded-text">(
+<a id="\ImboClient\Url\Url::getQueryString()" class="anchor"></a><div class="method private">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_private.png" style="margin-right: 5px" alt="private"><span class="highlight">getQueryString</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          string</code><div class="description"><p class="short_description">Return the query string</p></div>
+<div class="code-tabs">
+<div class="long-description"></div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td>string</td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\ImboClient\Url\Url::getResourceUrl()" class="anchor"></a><div class="method protected">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_protected.png" style="margin-right: 5px" alt="protected"><span class="highlight">getResourceUrl</span><span class="nb-faded-text">(
           
           )
         </span>
@@ -424,6 +478,25 @@ the ImboClient\Url\AccessToken class and return that instance.</p></div>
 <dt>See</dt>
 <dd>
 <a href="db_Url_UrlInterface.html#%5CImboClient%5CUrl%5CUrlInterface::getUrlEncoded()">\ImboClient\Url\UrlInterface::getUrlEncoded()</a>
+         
+    </dd>
+</dl>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\ImboClient\Url\Url::reset()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">reset</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          void</code><div class="description"><p class="short_description"></p></div>
+<div class="code-tabs">
+<div class="long-description"></div>
+<strong>Details</strong><dl class="function-info">
+<dt>See</dt>
+<dd>
+<a href="db_Url_UrlInterface.html#%5CImboClient%5CUrl%5CUrlInterface::reset()">\ImboClient\Url\UrlInterface::reset()</a>
          
     </dd>
 </dl>

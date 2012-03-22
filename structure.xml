@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project version="0.18.1" title="">
-  <file path="Client.php" hash="c2e76c6f6d5b55f24cfec96bb8e095b2" package="Client">
+  <file path="Client.php" hash="2ee85d52712b1ff632cf4aa4726502c6" package="Client">
     <docblock line="2">
       <description><![CDATA[ImboClient]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2011-2012, Christer Edvartsen <a href="&#x6d;&#x61;&#105;&#108;&#x74;&#x6f;&#58;&#99;o&#x67;&#x6f;&#64;&#115;&#x74;&#x61;&#114;&#122;i&#x6e;&#x67;&#101;&#114;&#x2e;&#x6e;&#101;&#116;">&#99;o&#x67;&#x6f;&#64;&#115;&#x74;&#x61;&#114;&#122;i&#x6e;&#x67;&#101;&#114;&#x2e;&#x6e;&#101;&#116;</a></p>
@@ -613,7 +613,7 @@ IN THE SOFTWARE.</p>]]></long-description>
       </method>
     </class>
   </file>
-  <file path="Url/Metadata.php" hash="59175c861b4ab80959a713bdabc69ea7" package="Url">
+  <file path="Url/Metadata.php" hash="9640f10ab7e474bb77f262a86b554dde" package="Url">
     <docblock line="2">
       <description><![CDATA[ImboClient]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2011-2012, Christer Edvartsen <a href="&#x6d;&#x61;&#105;&#108;&#x74;&#x6f;&#58;&#99;o&#x67;&#x6f;&#64;&#115;&#x74;&#x61;&#114;&#122;i&#x6e;&#x67;&#101;&#114;&#x2e;&#x6e;&#101;&#116;">&#99;o&#x67;&#x6f;&#64;&#115;&#x74;&#x61;&#114;&#122;i&#x6e;&#x67;&#101;&#114;&#x2e;&#x6e;&#101;&#116;</a></p>
@@ -648,7 +648,7 @@ IN THE SOFTWARE.</p>]]></long-description>
       <error line="51" code="50015">Argument $publicKey is missing from the Docblock of __construct()</error>
       <error line="51" code="50015">Argument $privateKey is missing from the Docblock of __construct()</error>
       <error line="51" code="50015">Argument $imageIdentifier is missing from the Docblock of __construct()</error>
-      <error line="63" code="50012">No short description for method getRawUrl()</error>
+      <error line="63" code="50012">No short description for method getResourceUrl()</error>
     </parse_markers>
     <class final="false" abstract="false" namespace="ImboClient\Url" line="43" package="Url">
       <name>Metadata</name>
@@ -708,17 +708,17 @@ IN THE SOFTWARE.</p>]]></long-description>
         </argument>
       </method>
       <method final="false" abstract="false" static="false" visibility="protected" namespace="ImboClient\Url" line="66" package="Default">
-        <name>getRawUrl</name>
+        <name>getResourceUrl</name>
         <type>function</type>
         <docblock line="63">
           <description><![CDATA[]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="63" name="see" description="\ImboClient\Url\Url::getRawUrl()" refers="\ImboClient\Url\Url::getRawUrl()"/>
+          <tag line="63" name="see" description="\ImboClient\Url\Url::getResourceUrl()" refers="\ImboClient\Url\Url::getResourceUrl()"/>
         </docblock>
       </method>
     </class>
   </file>
-  <file path="Url/Image.php" hash="0bbf625056ada0e11d97318588683cd5" package="Url">
+  <file path="Url/Image.php" hash="844ea17c09f85d8161b6202f97d19419" package="Url">
     <docblock line="2">
       <description><![CDATA[ImboClient]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2011-2012, Christer Edvartsen <a href="&#x6d;&#x61;&#105;&#108;&#x74;&#x6f;&#58;&#99;o&#x67;&#x6f;&#64;&#115;&#x74;&#x61;&#114;&#122;i&#x6e;&#x67;&#101;&#114;&#x2e;&#x6e;&#101;&#116;">&#99;o&#x67;&#x6f;&#64;&#115;&#x74;&#x61;&#114;&#122;i&#x6e;&#x67;&#101;&#114;&#x2e;&#x6e;&#101;&#116;</a></p>
@@ -749,50 +749,50 @@ IN THE SOFTWARE.</p>]]></long-description>
       <tag line="2" name="link" description="https://github.com/imbo/imboclient-php" link="https://github.com/imbo/imboclient-php"/>
     </docblock>
     <parse_markers>
-      <error line="58" code="50014">Name of argument $baseUrl does not match with the DocBlock's name $imageIdentifier in __construct()</error>
-      <error line="58" code="50015">Argument $publicKey is missing from the Docblock of __construct()</error>
-      <error line="58" code="50015">Argument $privateKey is missing from the Docblock of __construct()</error>
-      <error line="58" code="50015">Argument $imageIdentifier is missing from the Docblock of __construct()</error>
-      <error line="70" code="50012">No short description for method getRawUrl()</error>
-      <error line="85" code="50012">No short description for method border()</error>
-      <error line="85" code="50015">Argument $color is missing from the Docblock of border()</error>
-      <error line="85" code="50015">Argument $width is missing from the Docblock of border()</error>
-      <error line="85" code="50015">Argument $height is missing from the Docblock of border()</error>
-      <error line="92" code="50012">No short description for method compress()</error>
-      <error line="92" code="50015">Argument $quality is missing from the Docblock of compress()</error>
-      <error line="99" code="50012">No short description for method convert()</error>
-      <error line="99" code="50015">Argument $type is missing from the Docblock of convert()</error>
-      <error line="108" code="50012">No short description for method gif()</error>
-      <error line="115" code="50012">No short description for method jpg()</error>
-      <error line="122" code="50012">No short description for method png()</error>
-      <error line="129" code="50012">No short description for method crop()</error>
-      <error line="129" code="50015">Argument $x is missing from the Docblock of crop()</error>
-      <error line="129" code="50015">Argument $y is missing from the Docblock of crop()</error>
-      <error line="129" code="50015">Argument $width is missing from the Docblock of crop()</error>
-      <error line="129" code="50015">Argument $height is missing from the Docblock of crop()</error>
-      <error line="136" code="50012">No short description for method flipHorizontally()</error>
-      <error line="143" code="50012">No short description for method flipVertically()</error>
-      <error line="150" code="50012">No short description for method resize()</error>
-      <error line="150" code="50015">Argument $width is missing from the Docblock of resize()</error>
-      <error line="150" code="50015">Argument $height is missing from the Docblock of resize()</error>
-      <error line="167" code="50012">No short description for method maxSize()</error>
-      <error line="167" code="50015">Argument $maxWidth is missing from the Docblock of maxSize()</error>
-      <error line="167" code="50015">Argument $maxHeight is missing from the Docblock of maxSize()</error>
-      <error line="184" code="50012">No short description for method rotate()</error>
-      <error line="184" code="50015">Argument $angle is missing from the Docblock of rotate()</error>
-      <error line="184" code="50015">Argument $bg is missing from the Docblock of rotate()</error>
-      <error line="191" code="50012">No short description for method thumbnail()</error>
-      <error line="191" code="50015">Argument $width is missing from the Docblock of thumbnail()</error>
-      <error line="191" code="50015">Argument $height is missing from the Docblock of thumbnail()</error>
-      <error line="191" code="50015">Argument $fit is missing from the Docblock of thumbnail()</error>
-      <error line="198" code="50012">No short description for method canvas()</error>
-      <error line="198" code="50015">Argument $width is missing from the Docblock of canvas()</error>
-      <error line="198" code="50015">Argument $height is missing from the Docblock of canvas()</error>
-      <error line="198" code="50015">Argument $mode is missing from the Docblock of canvas()</error>
-      <error line="198" code="50015">Argument $x is missing from the Docblock of canvas()</error>
-      <error line="198" code="50015">Argument $y is missing from the Docblock of canvas()</error>
-      <error line="198" code="50015">Argument $bg is missing from the Docblock of canvas()</error>
-      <error line="226" code="50012">No short description for method reset()</error>
+      <error line="51" code="50014">Name of argument $baseUrl does not match with the DocBlock's name $imageIdentifier in __construct()</error>
+      <error line="51" code="50015">Argument $publicKey is missing from the Docblock of __construct()</error>
+      <error line="51" code="50015">Argument $privateKey is missing from the Docblock of __construct()</error>
+      <error line="51" code="50015">Argument $imageIdentifier is missing from the Docblock of __construct()</error>
+      <error line="63" code="50012">No short description for method border()</error>
+      <error line="63" code="50015">Argument $color is missing from the Docblock of border()</error>
+      <error line="63" code="50015">Argument $width is missing from the Docblock of border()</error>
+      <error line="63" code="50015">Argument $height is missing from the Docblock of border()</error>
+      <error line="70" code="50012">No short description for method compress()</error>
+      <error line="70" code="50015">Argument $quality is missing from the Docblock of compress()</error>
+      <error line="77" code="50012">No short description for method convert()</error>
+      <error line="77" code="50015">Argument $type is missing from the Docblock of convert()</error>
+      <error line="86" code="50012">No short description for method gif()</error>
+      <error line="93" code="50012">No short description for method jpg()</error>
+      <error line="100" code="50012">No short description for method png()</error>
+      <error line="107" code="50012">No short description for method crop()</error>
+      <error line="107" code="50015">Argument $x is missing from the Docblock of crop()</error>
+      <error line="107" code="50015">Argument $y is missing from the Docblock of crop()</error>
+      <error line="107" code="50015">Argument $width is missing from the Docblock of crop()</error>
+      <error line="107" code="50015">Argument $height is missing from the Docblock of crop()</error>
+      <error line="114" code="50012">No short description for method flipHorizontally()</error>
+      <error line="121" code="50012">No short description for method flipVertically()</error>
+      <error line="128" code="50012">No short description for method resize()</error>
+      <error line="128" code="50015">Argument $width is missing from the Docblock of resize()</error>
+      <error line="128" code="50015">Argument $height is missing from the Docblock of resize()</error>
+      <error line="145" code="50012">No short description for method maxSize()</error>
+      <error line="145" code="50015">Argument $maxWidth is missing from the Docblock of maxSize()</error>
+      <error line="145" code="50015">Argument $maxHeight is missing from the Docblock of maxSize()</error>
+      <error line="162" code="50012">No short description for method rotate()</error>
+      <error line="162" code="50015">Argument $angle is missing from the Docblock of rotate()</error>
+      <error line="162" code="50015">Argument $bg is missing from the Docblock of rotate()</error>
+      <error line="169" code="50012">No short description for method thumbnail()</error>
+      <error line="169" code="50015">Argument $width is missing from the Docblock of thumbnail()</error>
+      <error line="169" code="50015">Argument $height is missing from the Docblock of thumbnail()</error>
+      <error line="169" code="50015">Argument $fit is missing from the Docblock of thumbnail()</error>
+      <error line="176" code="50012">No short description for method canvas()</error>
+      <error line="176" code="50015">Argument $width is missing from the Docblock of canvas()</error>
+      <error line="176" code="50015">Argument $height is missing from the Docblock of canvas()</error>
+      <error line="176" code="50015">Argument $mode is missing from the Docblock of canvas()</error>
+      <error line="176" code="50015">Argument $x is missing from the Docblock of canvas()</error>
+      <error line="176" code="50015">Argument $y is missing from the Docblock of canvas()</error>
+      <error line="176" code="50015">Argument $bg is missing from the Docblock of canvas()</error>
+      <error line="204" code="50012">No short description for method reset()</error>
+      <error line="216" code="50012">No short description for method getResourceUrl()</error>
     </parse_markers>
     <class final="false" abstract="false" namespace="ImboClient\Url" line="43" package="Url">
       <name>Image</name>
@@ -819,346 +819,306 @@ IN THE SOFTWARE.</p>]]></long-description>
           </tag>
         </docblock>
       </property>
-      <property final="false" static="false" visibility="private" line="56" package="Default">
-        <name>$data</name>
-        <default><![CDATA[]]></default>
-        <docblock line="51">
-          <description><![CDATA[Query data]]></description>
-          <long-description><![CDATA[]]></long-description>
-          <tag line="51" name="var" description="" type="array">
-            <type by_reference="false">array</type>
-          </tag>
-        </docblock>
-      </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient\Url" line="64" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient\Url" line="57" package="Default">
         <name>__construct</name>
         <type>function</type>
-        <docblock line="58">
+        <docblock line="51">
           <description><![CDATA[Class constructor]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="58" name="see" description="\ImboClient\Url\Url::__construct()" refers="\ImboClient\Url\Url::__construct()"/>
-          <tag line="58" name="param" description="The image identifier to use in the URL" type="string" variable="$imageIdentifier">
+          <tag line="51" name="see" description="\ImboClient\Url\Url::__construct()" refers="\ImboClient\Url\Url::__construct()"/>
+          <tag line="51" name="param" description="The image identifier to use in the URL" type="string" variable="$imageIdentifier">
             <type by_reference="false">string</type>
           </tag>
         </docblock>
-        <argument line="64">
+        <argument line="57">
           <name>$baseUrl</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
-        <argument line="64">
+        <argument line="57">
           <name>$publicKey</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
-        <argument line="64">
+        <argument line="57">
           <name>$privateKey</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
-        <argument line="64">
+        <argument line="57">
           <name>$imageIdentifier</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="ImboClient\Url" line="73" package="Default">
-        <name>getRawUrl</name>
-        <type>function</type>
-        <docblock line="70">
-          <description><![CDATA[]]></description>
-          <long-description><![CDATA[]]></long-description>
-          <tag line="70" name="see" description="\ImboClient\Url\Url::getRawUrl()" refers="\ImboClient\Url\Url::getRawUrl()"/>
-        </docblock>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient\Url" line="88" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient\Url" line="66" package="Default">
         <name>border</name>
         <type>function</type>
-        <docblock line="85">
+        <docblock line="63">
           <description><![CDATA[]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="85" name="see" description="\ImboClient\Url\ImageInterface::border()" refers="\ImboClient\Url\ImageInterface::border()"/>
+          <tag line="63" name="see" description="\ImboClient\Url\ImageInterface::border()" refers="\ImboClient\Url\ImageInterface::border()"/>
         </docblock>
-        <argument line="88">
+        <argument line="66">
           <name>$color</name>
           <default><![CDATA['000000']]></default>
           <type/>
         </argument>
-        <argument line="88">
+        <argument line="66">
           <name>$width</name>
           <default><![CDATA[1]]></default>
           <type/>
         </argument>
-        <argument line="88">
+        <argument line="66">
           <name>$height</name>
           <default><![CDATA[1]]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient\Url" line="95" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient\Url" line="73" package="Default">
         <name>compress</name>
         <type>function</type>
-        <docblock line="92">
+        <docblock line="70">
           <description><![CDATA[]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="92" name="see" description="\ImboClient\Url\ImageInterface::compress()" refers="\ImboClient\Url\ImageInterface::compress()"/>
+          <tag line="70" name="see" description="\ImboClient\Url\ImageInterface::compress()" refers="\ImboClient\Url\ImageInterface::compress()"/>
         </docblock>
-        <argument line="95">
+        <argument line="73">
           <name>$quality</name>
           <default><![CDATA[75]]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient\Url" line="102" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient\Url" line="80" package="Default">
         <name>convert</name>
         <type>function</type>
-        <docblock line="99">
+        <docblock line="77">
           <description><![CDATA[]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="99" name="see" description="\ImboClient\Url\ImageInterface::convert()" refers="\ImboClient\Url\ImageInterface::convert()"/>
+          <tag line="77" name="see" description="\ImboClient\Url\ImageInterface::convert()" refers="\ImboClient\Url\ImageInterface::convert()"/>
         </docblock>
-        <argument line="102">
+        <argument line="80">
           <name>$type</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient\Url" line="111" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient\Url" line="89" package="Default">
         <name>gif</name>
         <type>function</type>
-        <docblock line="108">
+        <docblock line="86">
           <description><![CDATA[]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="108" name="see" description="\ImboClient\Url\ImageInterface::gif()" refers="\ImboClient\Url\ImageInterface::gif()"/>
+          <tag line="86" name="see" description="\ImboClient\Url\ImageInterface::gif()" refers="\ImboClient\Url\ImageInterface::gif()"/>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient\Url" line="118" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient\Url" line="96" package="Default">
         <name>jpg</name>
         <type>function</type>
-        <docblock line="115">
+        <docblock line="93">
           <description><![CDATA[]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="115" name="see" description="\ImboClient\Url\ImageInterface::jpg()" refers="\ImboClient\Url\ImageInterface::jpg()"/>
+          <tag line="93" name="see" description="\ImboClient\Url\ImageInterface::jpg()" refers="\ImboClient\Url\ImageInterface::jpg()"/>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient\Url" line="125" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient\Url" line="103" package="Default">
         <name>png</name>
         <type>function</type>
-        <docblock line="122">
+        <docblock line="100">
           <description><![CDATA[]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="122" name="see" description="\ImboClient\Url\ImageInterface::png()" refers="\ImboClient\Url\ImageInterface::png()"/>
+          <tag line="100" name="see" description="\ImboClient\Url\ImageInterface::png()" refers="\ImboClient\Url\ImageInterface::png()"/>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient\Url" line="132" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient\Url" line="110" package="Default">
         <name>crop</name>
         <type>function</type>
-        <docblock line="129">
+        <docblock line="107">
           <description><![CDATA[]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="129" name="see" description="\ImboClient\Url\ImageInterface::crop()" refers="\ImboClient\Url\ImageInterface::crop()"/>
+          <tag line="107" name="see" description="\ImboClient\Url\ImageInterface::crop()" refers="\ImboClient\Url\ImageInterface::crop()"/>
         </docblock>
-        <argument line="132">
+        <argument line="110">
           <name>$x</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
-        <argument line="132">
+        <argument line="110">
           <name>$y</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
-        <argument line="132">
+        <argument line="110">
           <name>$width</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
-        <argument line="132">
+        <argument line="110">
           <name>$height</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient\Url" line="139" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient\Url" line="117" package="Default">
         <name>flipHorizontally</name>
         <type>function</type>
-        <docblock line="136">
+        <docblock line="114">
           <description><![CDATA[]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="136" name="see" description="\ImboClient\Url\ImageInterface::flipHorizontally()" refers="\ImboClient\Url\ImageInterface::flipHorizontally()"/>
+          <tag line="114" name="see" description="\ImboClient\Url\ImageInterface::flipHorizontally()" refers="\ImboClient\Url\ImageInterface::flipHorizontally()"/>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient\Url" line="146" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient\Url" line="124" package="Default">
         <name>flipVertically</name>
         <type>function</type>
-        <docblock line="143">
+        <docblock line="121">
           <description><![CDATA[]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="143" name="see" description="\ImboClient\Url\ImageInterface::flipVertically()" refers="\ImboClient\Url\ImageInterface::flipVertically()"/>
+          <tag line="121" name="see" description="\ImboClient\Url\ImageInterface::flipVertically()" refers="\ImboClient\Url\ImageInterface::flipVertically()"/>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient\Url" line="153" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient\Url" line="131" package="Default">
         <name>resize</name>
         <type>function</type>
-        <docblock line="150">
+        <docblock line="128">
           <description><![CDATA[]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="150" name="see" description="\ImboClient\Url\ImageInterface::resize()" refers="\ImboClient\Url\ImageInterface::resize()"/>
+          <tag line="128" name="see" description="\ImboClient\Url\ImageInterface::resize()" refers="\ImboClient\Url\ImageInterface::resize()"/>
         </docblock>
-        <argument line="153">
+        <argument line="131">
           <name>$width</name>
           <default><![CDATA[null]]></default>
           <type/>
         </argument>
-        <argument line="153">
+        <argument line="131">
           <name>$height</name>
           <default><![CDATA[null]]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient\Url" line="170" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient\Url" line="148" package="Default">
         <name>maxSize</name>
         <type>function</type>
-        <docblock line="167">
+        <docblock line="145">
           <description><![CDATA[]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="167" name="see" description="\ImboClient\Url\ImageInterface::maxSize()" refers="\ImboClient\Url\ImageInterface::maxSize()"/>
+          <tag line="145" name="see" description="\ImboClient\Url\ImageInterface::maxSize()" refers="\ImboClient\Url\ImageInterface::maxSize()"/>
         </docblock>
-        <argument line="170">
+        <argument line="148">
           <name>$maxWidth</name>
           <default><![CDATA[null]]></default>
           <type/>
         </argument>
-        <argument line="170">
+        <argument line="148">
           <name>$maxHeight</name>
           <default><![CDATA[null]]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient\Url" line="187" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient\Url" line="165" package="Default">
         <name>rotate</name>
         <type>function</type>
-        <docblock line="184">
+        <docblock line="162">
           <description><![CDATA[]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="184" name="see" description="\ImboClient\Url\ImageInterface::rotate()" refers="\ImboClient\Url\ImageInterface::rotate()"/>
+          <tag line="162" name="see" description="\ImboClient\Url\ImageInterface::rotate()" refers="\ImboClient\Url\ImageInterface::rotate()"/>
         </docblock>
-        <argument line="187">
+        <argument line="165">
           <name>$angle</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
-        <argument line="187">
+        <argument line="165">
           <name>$bg</name>
           <default><![CDATA['000000']]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient\Url" line="194" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient\Url" line="172" package="Default">
         <name>thumbnail</name>
         <type>function</type>
-        <docblock line="191">
+        <docblock line="169">
           <description><![CDATA[]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="191" name="see" description="\ImboClient\Url\ImageInterface::thumbnail()" refers="\ImboClient\Url\ImageInterface::thumbnail()"/>
+          <tag line="169" name="see" description="\ImboClient\Url\ImageInterface::thumbnail()" refers="\ImboClient\Url\ImageInterface::thumbnail()"/>
         </docblock>
-        <argument line="194">
+        <argument line="172">
           <name>$width</name>
           <default><![CDATA[50]]></default>
           <type/>
         </argument>
-        <argument line="194">
+        <argument line="172">
           <name>$height</name>
           <default><![CDATA[50]]></default>
           <type/>
         </argument>
-        <argument line="194">
+        <argument line="172">
           <name>$fit</name>
           <default><![CDATA['outbound']]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient\Url" line="201" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient\Url" line="179" package="Default">
         <name>canvas</name>
         <type>function</type>
-        <docblock line="198">
+        <docblock line="176">
           <description><![CDATA[]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="198" name="see" description="\ImboClient\Url\ImageInterface::canvas()" refers="\ImboClient\Url\ImageInterface::canvas()"/>
+          <tag line="176" name="see" description="\ImboClient\Url\ImageInterface::canvas()" refers="\ImboClient\Url\ImageInterface::canvas()"/>
         </docblock>
-        <argument line="201">
+        <argument line="179">
           <name>$width</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
-        <argument line="201">
+        <argument line="179">
           <name>$height</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
-        <argument line="201">
+        <argument line="179">
           <name>$mode</name>
           <default><![CDATA[null]]></default>
           <type/>
         </argument>
-        <argument line="201">
+        <argument line="179">
           <name>$x</name>
           <default><![CDATA[null]]></default>
           <type/>
         </argument>
-        <argument line="201">
+        <argument line="179">
           <name>$y</name>
           <default><![CDATA[null]]></default>
           <type/>
         </argument>
-        <argument line="201">
+        <argument line="179">
           <name>$bg</name>
           <default><![CDATA[null]]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient\Url" line="229" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient\Url" line="208" package="Default">
         <name>reset</name>
         <type>function</type>
-        <docblock line="226">
+        <docblock line="204">
           <description><![CDATA[]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="226" name="see" description="\ImboClient\Url\ImageInterface::reset()" refers="\ImboClient\Url\ImageInterface::reset()"/>
+          <tag line="204" name="see" description="\ImboClient\Url\Url::reset()" refers="\ImboClient\Url\Url::reset()"/>
+          <tag line="204" name="see" description="\ImboClient\Url\UrlInterface::reset()" refers="\ImboClient\Url\UrlInterface::reset()"/>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="ImboClient\Url" line="242" package="Default">
-        <name>append</name>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="ImboClient\Url" line="219" package="Default">
+        <name>getResourceUrl</name>
         <type>function</type>
-        <docblock line="236">
-          <description><![CDATA[Append a string to the query]]></description>
+        <docblock line="216">
+          <description><![CDATA[]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="236" name="param" description="The string to append" type="string" variable="$part">
-            <type by_reference="false">string</type>
-          </tag>
-          <tag line="236" name="return" description="" type="\ImboClient\Url\ImageInterface">
-            <type by_reference="false">\ImboClient\Url\ImageInterface</type>
-          </tag>
-        </docblock>
-        <argument line="242">
-          <name>$part</name>
-          <default><![CDATA[]]></default>
-          <type/>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="ImboClient\Url" line="253" package="Default">
-        <name>getQueryString</name>
-        <type>function</type>
-        <docblock line="248">
-          <description><![CDATA[Return the query string]]></description>
-          <long-description><![CDATA[]]></long-description>
-          <tag line="248" name="return" description="" type="string">
-            <type by_reference="false">string</type>
-          </tag>
+          <tag line="216" name="see" description="\ImboClient\Url\Url::getResourceUrl()" refers="\ImboClient\Url\Url::getResourceUrl()"/>
         </docblock>
       </method>
     </class>
   </file>
-  <file path="Url/User.php" hash="e3d06f04218c2cbfe44c7521aeb53164" package="Url">
+  <file path="Url/User.php" hash="0f6a51cb13172a2c4bc49615d07204e8" package="Url">
     <docblock line="2">
       <description><![CDATA[ImboClient]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2011-2012, Christer Edvartsen <a href="&#x6d;&#x61;&#105;&#108;&#x74;&#x6f;&#58;&#99;o&#x67;&#x6f;&#64;&#115;&#x74;&#x61;&#114;&#122;i&#x6e;&#x67;&#101;&#114;&#x2e;&#x6e;&#101;&#116;">&#99;o&#x67;&#x6f;&#64;&#115;&#x74;&#x61;&#114;&#122;i&#x6e;&#x67;&#101;&#114;&#x2e;&#x6e;&#101;&#116;</a></p>
@@ -1189,7 +1149,7 @@ IN THE SOFTWARE.</p>]]></long-description>
       <tag line="2" name="link" description="https://github.com/imbo/imboclient-php" link="https://github.com/imbo/imboclient-php"/>
     </docblock>
     <parse_markers>
-      <error line="44" code="50012">No short description for method getRawUrl()</error>
+      <error line="44" code="50012">No short description for method getResourceUrl()</error>
     </parse_markers>
     <class final="false" abstract="false" namespace="ImboClient\Url" line="43" package="Url">
       <name>User</name>
@@ -1206,17 +1166,17 @@ IN THE SOFTWARE.</p>]]></long-description>
         <tag line="34" name="link" description="https://github.com/imbo/imboclient-php" link="https://github.com/imbo/imboclient-php"/>
       </docblock>
       <method final="false" abstract="false" static="false" visibility="protected" namespace="ImboClient\Url" line="47" package="Default">
-        <name>getRawUrl</name>
+        <name>getResourceUrl</name>
         <type>function</type>
         <docblock line="44">
           <description><![CDATA[]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="44" name="see" description="\ImboClient\Url\Url::getRawUrl()" refers="\ImboClient\Url\Url::getRawUrl()"/>
+          <tag line="44" name="see" description="\ImboClient\Url\Url::getResourceUrl()" refers="\ImboClient\Url\Url::getResourceUrl()"/>
         </docblock>
       </method>
     </class>
   </file>
-  <file path="Url/ImageInterface.php" hash="d7b6c5dba5fc05f2a8dc3e35c30649d8" package="Interfaces\Url">
+  <file path="Url/ImageInterface.php" hash="a2285e077adbba60c5cafccf942e9b12" package="Interfaces\Url">
     <docblock line="2">
       <description><![CDATA[ImboClient]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2011-2012, Christer Edvartsen <a href="&#x6d;&#x61;&#105;&#108;&#x74;&#x6f;&#58;&#99;o&#x67;&#x6f;&#64;&#115;&#x74;&#x61;&#114;&#122;i&#x6e;&#x67;&#101;&#114;&#x2e;&#x6e;&#101;&#116;">&#99;o&#x67;&#x6f;&#64;&#115;&#x74;&#x61;&#114;&#122;i&#x6e;&#x67;&#101;&#114;&#x2e;&#x6e;&#101;&#116;</a></p>
@@ -1265,7 +1225,7 @@ IN THE SOFTWARE.</p>]]></long-description>
         <name>border</name>
         <type>function</type>
         <docblock line="46">
-          <description><![CDATA[Append a query that triggers a border transformation]]></description>
+          <description><![CDATA[Append a border transformation query parameter to the URL]]></description>
           <long-description><![CDATA[]]></long-description>
           <tag line="46" name="param" description="Color of the border" type="string" variable="$color">
             <type by_reference="false">string</type>
@@ -1300,7 +1260,7 @@ IN THE SOFTWARE.</p>]]></long-description>
         <name>compress</name>
         <type>function</type>
         <docblock line="56">
-          <description><![CDATA[Append a query that triggers a compress transformation]]></description>
+          <description><![CDATA[Append a compress transformation query parameter to the URL]]></description>
           <long-description><![CDATA[]]></long-description>
           <tag line="56" name="param" description="A value between 0 and 100 where 100 is the best" type="int" variable="$quality">
             <type by_reference="false">int</type>
@@ -1371,7 +1331,7 @@ IN THE SOFTWARE.</p>]]></long-description>
         <name>crop</name>
         <type>function</type>
         <docblock line="93">
-          <description><![CDATA[Trigger a crop transformation]]></description>
+          <description><![CDATA[Append a crop transformation query parameter to the URL]]></description>
           <long-description><![CDATA[]]></long-description>
           <tag line="93" name="param" description="X coordinate of the top left corner of the crop" type="int" variable="$x">
             <type by_reference="false">int</type>
@@ -1414,7 +1374,7 @@ IN THE SOFTWARE.</p>]]></long-description>
         <name>flipHorizontally</name>
         <type>function</type>
         <docblock line="104">
-          <description><![CDATA[Trigger a flip horizontally transformation]]></description>
+          <description><![CDATA[Append a flipHorizontally transformation query parameter to the URL]]></description>
           <long-description><![CDATA[]]></long-description>
           <tag line="104" name="return" description="" type="\ImboClient\Url\ImageInterface">
             <type by_reference="false">\ImboClient\Url\ImageInterface</type>
@@ -1425,7 +1385,7 @@ IN THE SOFTWARE.</p>]]></long-description>
         <name>flipVertically</name>
         <type>function</type>
         <docblock line="111">
-          <description><![CDATA[Trigger a flip vertically transformation]]></description>
+          <description><![CDATA[Append a flipVertically transformation query parameter to the URL]]></description>
           <long-description><![CDATA[]]></long-description>
           <tag line="111" name="return" description="" type="\ImboClient\Url\ImageInterface">
             <type by_reference="false">\ImboClient\Url\ImageInterface</type>
@@ -1436,7 +1396,7 @@ IN THE SOFTWARE.</p>]]></long-description>
         <name>resize</name>
         <type>function</type>
         <docblock line="118">
-          <description><![CDATA[Trigger a resize transformation]]></description>
+          <description><![CDATA[Append a resize transformation query parameter to the URL]]></description>
           <long-description><![CDATA[]]></long-description>
           <tag line="118" name="param" description="Width of the resized image" type="int" variable="$width">
             <type by_reference="false">int</type>
@@ -1463,7 +1423,7 @@ IN THE SOFTWARE.</p>]]></long-description>
         <name>maxSize</name>
         <type>function</type>
         <docblock line="127">
-          <description><![CDATA[Trigger a maxSize transformation]]></description>
+          <description><![CDATA[Append a maxSize transformation query parameter to the URL]]></description>
           <long-description><![CDATA[]]></long-description>
           <tag line="127" name="param" description="Max width of the resized image" type="int" variable="$maxWidth">
             <type by_reference="false">int</type>
@@ -1490,7 +1450,7 @@ IN THE SOFTWARE.</p>]]></long-description>
         <name>rotate</name>
         <type>function</type>
         <docblock line="136">
-          <description><![CDATA[Trigger a rotate transformation]]></description>
+          <description><![CDATA[Append a rotate transformation query parameter to the URL]]></description>
           <long-description><![CDATA[]]></long-description>
           <tag line="136" name="param" description="The angle to rotate" type="int" variable="$angle">
             <type by_reference="false">int</type>
@@ -1517,7 +1477,7 @@ IN THE SOFTWARE.</p>]]></long-description>
         <name>thumbnail</name>
         <type>function</type>
         <docblock line="145">
-          <description><![CDATA[Trigger a thumbnail transformation]]></description>
+          <description><![CDATA[Append a thumbnail transformation query parameter to the URL]]></description>
           <long-description><![CDATA[]]></long-description>
           <tag line="145" name="param" description="Width of the thumbnail" type="int" variable="$width">
             <type by_reference="false">int</type>
@@ -1552,7 +1512,7 @@ IN THE SOFTWARE.</p>]]></long-description>
         <name>canvas</name>
         <type>function</type>
         <docblock line="155">
-          <description><![CDATA[Trigger a canvas transformation]]></description>
+          <description><![CDATA[Append a canvas transformation query parameter to the URL]]></description>
           <long-description><![CDATA[]]></long-description>
           <tag line="155" name="param" description="Width of the new canvas" type="int" variable="$width">
             <type by_reference="false">int</type>
@@ -1607,20 +1567,9 @@ IN THE SOFTWARE.</p>]]></long-description>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient\Url" line="173" package="Default">
-        <name>reset</name>
-        <type>function</type>
-        <docblock line="168">
-          <description><![CDATA[Resets the URL - removes all transformations]]></description>
-          <long-description><![CDATA[]]></long-description>
-          <tag line="168" name="return" description="" type="\ImboClient\Url\ImageInterface">
-            <type by_reference="false">\ImboClient\Url\ImageInterface</type>
-          </tag>
-        </docblock>
-      </method>
     </interface>
   </file>
-  <file path="Url/UrlInterface.php" hash="1dac7f9d5b9a19e1414c5abc7907f169" package="Interfaces\Url">
+  <file path="Url/UrlInterface.php" hash="39b0737fece1881c61b8d9eb53153a48" package="Interfaces\Url">
     <docblock line="2">
       <description><![CDATA[ImboClient]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2011-2012, Christer Edvartsen <a href="&#x6d;&#x61;&#105;&#108;&#x74;&#x6f;&#58;&#99;o&#x67;&#x6f;&#64;&#115;&#x74;&#x61;&#114;&#122;i&#x6e;&#x67;&#101;&#114;&#x2e;&#x6e;&#101;&#116;">&#99;o&#x67;&#x6f;&#64;&#115;&#x74;&#x61;&#114;&#122;i&#x6e;&#x67;&#101;&#114;&#x2e;&#x6e;&#101;&#116;</a></p>
@@ -1669,7 +1618,7 @@ IN THE SOFTWARE.</p>]]></long-description>
         <name>getUrl</name>
         <type>function</type>
         <docblock line="46">
-          <description><![CDATA[Fetch the complete URL]]></description>
+          <description><![CDATA[Fetch the complete URL including optional query parameters]]></description>
           <long-description><![CDATA[]]></long-description>
           <tag line="46" name="return" description="" type="string">
             <type by_reference="false">string</type>
@@ -1687,13 +1636,85 @@ IN THE SOFTWARE.</p>]]></long-description>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient\Url" line="67" package="Default">
-        <name>__toString</name>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient\Url" line="65" package="Default">
+        <name>reset</name>
         <type>function</type>
         <docblock line="60">
+          <description><![CDATA[Resets the URL - removes all query parameters]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="60" name="return" description="" type="\ImboClient\Url\UrlInterface">
+            <type by_reference="false">\ImboClient\Url\UrlInterface</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient\Url" line="74" package="Default">
+        <name>addQueryParam</name>
+        <type>function</type>
+        <docblock line="67">
+          <description><![CDATA[Method for adding query parameters to the URL]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="67" name="param" description="The name of the param. For instance &quot;page&quot; or &quot;t[]&quot;" type="string" variable="$key">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="67" name="param" description="The value of the param. For instance &quot;10&quot; or &quot;border:width=50,height=50&quot;" type="string" variable="$value">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="67" name="return" description="" type="\ImboClient\Url\UrlInterface">
+            <type by_reference="false">\ImboClient\Url\UrlInterface</type>
+          </tag>
+        </docblock>
+        <argument line="74">
+          <name>$key</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="74">
+          <name>$value</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient\Url" line="93" package="Default">
+        <name>__call</name>
+        <type>function</type>
+        <docblock line="76">
+          <description><![CDATA[Magic call method that can be used to add simple query parameters to the URL]]></description>
+          <long-description><![CDATA[<p>This method must be implemented in such a fashion that users can call non-existing methods
+on the URL instance that will be added as query parameters.</p>
+
+<pre><code>$url = new ImboClient\Url\Images('http://imbo', 'publicKey', 'privateKey');
+$url-&gt;page(2)-&gt;limit(10);
+
+echo $url; // http://imbo/users/publicKey/images?page=2&amp;limit=10
+</code></pre>]]></long-description>
+          <tag line="76" name="param" description="The method called (will be used as query parameter name)" type="string" variable="$method">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="76" name="param" description="Arguments to the method. The first argument will be used as query parameter value" type="array" variable="$args">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="76" name="return" description="" type="\ImboClient\Url\UrlInterface">
+            <type by_reference="false">\ImboClient\Url\UrlInterface</type>
+          </tag>
+        </docblock>
+        <argument line="93">
+          <name>$method</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="93">
+          <name>$args</name>
+          <default><![CDATA[]]></default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient\Url" line="102" package="Default">
+        <name>__toString</name>
+        <type>function</type>
+        <docblock line="95">
           <description><![CDATA[Magic to string method]]></description>
           <long-description><![CDATA[<p>This method should proxy to getUrl()</p>]]></long-description>
-          <tag line="60" name="return" description="" type="string">
+          <tag line="95" name="return" description="" type="string">
             <type by_reference="false">string</type>
           </tag>
         </docblock>
@@ -2841,7 +2862,7 @@ IN THE SOFTWARE.</p>]]></long-description>
       </method>
     </class>
   </file>
-  <file path="Url/Url.php" hash="d4a6ea0a143e25350549b57a58a05e14" package="Url">
+  <file path="Url/Url.php" hash="906cdc62092f788191825322f9c5df7f" package="Url">
     <docblock line="2">
       <description><![CDATA[ImboClient]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2011-2012, Christer Edvartsen <a href="&#x6d;&#x61;&#105;&#108;&#x74;&#x6f;&#58;&#99;o&#x67;&#x6f;&#64;&#115;&#x74;&#x61;&#114;&#122;i&#x6e;&#x67;&#101;&#114;&#x2e;&#x6e;&#101;&#116;">&#99;o&#x67;&#x6f;&#64;&#115;&#x74;&#x61;&#114;&#122;i&#x6e;&#x67;&#101;&#114;&#x2e;&#x6e;&#101;&#116;</a></p>
@@ -2875,7 +2896,14 @@ IN THE SOFTWARE.</p>]]></long-description>
       <error line="92" code="50012">No short description for method getUrl()</error>
       <error line="109" code="50012">No short description for method getUrlEncoded()</error>
       <error line="122" code="50012">No short description for method __toString()</error>
-      <error line="161" code="50015">Argument $accessToken is missing from the Docblock of setAccessToken()</error>
+      <error line="129" code="50012">No short description for method __call()</error>
+      <error line="129" code="50015">Argument $method is missing from the Docblock of __call()</error>
+      <error line="129" code="50015">Argument $args is missing from the Docblock of __call()</error>
+      <error line="140" code="50012">No short description for method addQueryParam()</error>
+      <error line="140" code="50015">Argument $key is missing from the Docblock of addQueryParam()</error>
+      <error line="140" code="50015">Argument $value is missing from the Docblock of addQueryParam()</error>
+      <error line="149" code="50012">No short description for method reset()</error>
+      <error line="174" code="50015">Argument $accessToken is missing from the Docblock of setAccessToken()</error>
     </parse_markers>
     <class final="false" abstract="true" namespace="ImboClient\Url" line="43" package="Url">
       <name>Url</name>
@@ -2936,10 +2964,10 @@ IN THE SOFTWARE.</p>]]></long-description>
         </docblock>
       </property>
       <property final="false" static="false" visibility="private" line="77" package="Default">
-        <name>$customParams</name>
+        <name>$queryParams</name>
         <default><![CDATA[]]></default>
         <docblock line="72">
-          <description><![CDATA[Custom query params that can be set via __call]]></description>
+          <description><![CDATA[Query params for the URL]]></description>
           <long-description><![CDATA[]]></long-description>
           <tag line="72" name="var" description="" type="array">
             <type by_reference="false">array</type>
@@ -3005,78 +3033,109 @@ IN THE SOFTWARE.</p>]]></long-description>
           <tag line="122" name="see" description="\ImboClient\Url\UrlInterface::__toString()" refers="\ImboClient\Url\UrlInterface::__toString()"/>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient\Url" line="137" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient\Url" line="132" package="Default">
         <name>__call</name>
         <type>function</type>
         <docblock line="129">
-          <description><![CDATA[Magic call method that can be used to add custom query parameters]]></description>
+          <description><![CDATA[]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="129" name="param" description="The method called (will be used as query parameter name)" type="string" variable="$method">
-            <type by_reference="false">string</type>
-          </tag>
-          <tag line="129" name="param" description="Arguments to the method. The first argument will be used as query parameter value" type="array" variable="$args">
-            <type by_reference="false">array</type>
-          </tag>
-          <tag line="129" name="return" description="" type="\ImboClient\Url\UrlInterface">
-            <type by_reference="false">\ImboClient\Url\UrlInterface</type>
-          </tag>
+          <tag line="129" name="see" description="\ImboClient\Url\UrlInterface::__call()" refers="\ImboClient\Url\UrlInterface::__call()"/>
         </docblock>
-        <argument line="137">
+        <argument line="132">
           <name>$method</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
-        <argument line="137">
+        <argument line="132">
           <name>$args</name>
           <default><![CDATA[]]></default>
           <type>array</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient\Url" line="153" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient\Url" line="143" package="Default">
+        <name>addQueryParam</name>
+        <type>function</type>
+        <docblock line="140">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="140" name="see" description="\ImboClient\Url\UrlInterface::addQueryParam()" refers="\ImboClient\Url\UrlInterface::addQueryParam()"/>
+        </docblock>
+        <argument line="143">
+          <name>$key</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="143">
+          <name>$value</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient\Url" line="152" package="Default">
+        <name>reset</name>
+        <type>function</type>
+        <docblock line="149">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="149" name="see" description="\ImboClient\Url\UrlInterface::reset()" refers="\ImboClient\Url\UrlInterface::reset()"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient\Url" line="166" package="Default">
         <name>getAccessToken</name>
         <type>function</type>
-        <docblock line="145">
+        <docblock line="158">
           <description><![CDATA[Get an instance of the access token]]></description>
           <long-description><![CDATA[<p>If no instance have been provided prior to calling this method, this method must instantiate
 the ImboClient\Url\AccessToken class and return that instance.</p>]]></long-description>
-          <tag line="145" name="return" description="" type="\ImboClient\Url\AccessTokenInterface">
+          <tag line="158" name="return" description="" type="\ImboClient\Url\AccessTokenInterface">
             <type by_reference="false">\ImboClient\Url\AccessTokenInterface</type>
           </tag>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient\Url" line="167" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient\Url" line="180" package="Default">
         <name>setAccessToken</name>
         <type>function</type>
-        <docblock line="161">
+        <docblock line="174">
           <description><![CDATA[Set an instance of the access token]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="161" name="return" description="$accessToken An instance of the access token" type="\ImboClient\Url\AccessTokenInterface">
+          <tag line="174" name="return" description="$accessToken An instance of the access token" type="\ImboClient\Url\AccessTokenInterface">
             <type by_reference="false">\ImboClient\Url\AccessTokenInterface</type>
           </tag>
-          <tag line="161" name="return" description="" type="\ImboClient\Url\UrlInterface">
+          <tag line="174" name="return" description="" type="\ImboClient\Url\UrlInterface">
             <type by_reference="false">\ImboClient\Url\UrlInterface</type>
           </tag>
         </docblock>
-        <argument line="167">
+        <argument line="180">
           <name>$accessToken</name>
           <default><![CDATA[]]></default>
           <type>AccessTokenInterface</type>
         </argument>
       </method>
-      <method final="false" abstract="true" static="false" visibility="protected" namespace="ImboClient\Url" line="178" package="Default">
-        <name>getRawUrl</name>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="ImboClient\Url" line="191" package="Default">
+        <name>getQueryString</name>
         <type>function</type>
-        <docblock line="173">
+        <docblock line="186">
+          <description><![CDATA[Return the query string]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="186" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="true" static="false" visibility="protected" namespace="ImboClient\Url" line="204" package="Default">
+        <name>getResourceUrl</name>
+        <type>function</type>
+        <docblock line="199">
           <description><![CDATA[Get the raw URL (with no access token appended)]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="173" name="return" description="" type="string">
+          <tag line="199" name="return" description="" type="string">
             <type by_reference="false">string</type>
           </tag>
         </docblock>
       </method>
     </class>
   </file>
-  <file path="Url/Images.php" hash="1c6d8c079d4264b9c6286767c7494596" package="Url">
+  <file path="Url/Images.php" hash="919025316a1bd8b5c940e9618feaa638" package="Url">
     <docblock line="2">
       <description><![CDATA[ImboClient]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2011-2012, Christer Edvartsen <a href="&#x6d;&#x61;&#105;&#108;&#x74;&#x6f;&#58;&#99;o&#x67;&#x6f;&#64;&#115;&#x74;&#x61;&#114;&#122;i&#x6e;&#x67;&#101;&#114;&#x2e;&#x6e;&#101;&#116;">&#99;o&#x67;&#x6f;&#64;&#115;&#x74;&#x61;&#114;&#122;i&#x6e;&#x67;&#101;&#114;&#x2e;&#x6e;&#101;&#116;</a></p>
@@ -3107,7 +3166,7 @@ IN THE SOFTWARE.</p>]]></long-description>
       <tag line="2" name="link" description="https://github.com/imbo/imboclient-php" link="https://github.com/imbo/imboclient-php"/>
     </docblock>
     <parse_markers>
-      <error line="44" code="50012">No short description for method getRawUrl()</error>
+      <error line="44" code="50012">No short description for method getResourceUrl()</error>
     </parse_markers>
     <class final="false" abstract="false" namespace="ImboClient\Url" line="43" package="Url">
       <name>Images</name>
@@ -3124,12 +3183,12 @@ IN THE SOFTWARE.</p>]]></long-description>
         <tag line="34" name="link" description="https://github.com/imbo/imboclient-php" link="https://github.com/imbo/imboclient-php"/>
       </docblock>
       <method final="false" abstract="false" static="false" visibility="protected" namespace="ImboClient\Url" line="47" package="Default">
-        <name>getRawUrl</name>
+        <name>getResourceUrl</name>
         <type>function</type>
         <docblock line="44">
           <description><![CDATA[]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="44" name="see" description="\ImboClient\Url\Url::getRawUrl()" refers="\ImboClient\Url\Url::getRawUrl()"/>
+          <tag line="44" name="see" description="\ImboClient\Url\Url::getResourceUrl()" refers="\ImboClient\Url\Url::getResourceUrl()"/>
         </docblock>
       </method>
     </class>

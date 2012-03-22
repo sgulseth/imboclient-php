@@ -178,6 +178,53 @@ IN THE SOFTWARE.</p></div>
 </dl>
 <h3>Methods</h3>
 <div>
+<a id="\ImboClient\Url\UrlInterface::__call()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">__call</span><span class="nb-faded-text">(
+          string $method, array $args
+          )
+        </span>
+        :
+          <a href="db_Url_UrlInterface.html#%5CImboClient%5CUrl%5CUrlInterface">\ImboClient\Url\UrlInterface</a></code><div class="description"><p class="short_description">Magic call method that can be used to add simple query parameters to the URL</p></div>
+<div class="code-tabs">
+<div class="long-description"><p>This method must be implemented in such a fashion that users can call non-existing methods
+on the URL instance that will be added as query parameters.</p>
+
+<pre><code>$url = new ImboClient\Url\Images('http://imbo', 'publicKey', 'privateKey');
+$url-&gt;page(2)-&gt;limit(10);
+
+echo $url; // http://imbo/users/publicKey/images?page=2&amp;limit=10
+</code></pre></div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$method</th>
+<td>string</td>
+<td><em><p>The method called (will be used as query parameter name)</p>
+</em></td>
+</tr>
+<tr>
+<th>$args</th>
+<td>array</td>
+<td><em><p>Arguments to the method. The first argument will be used as query parameter value</p></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Url_UrlInterface.html#%5CImboClient%5CUrl%5CUrlInterface">\ImboClient\Url\UrlInterface</a></td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
 <a id="\ImboClient\Url\UrlInterface::__toString()" class="anchor"></a><div class="method public">
 <a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">__toString</span><span class="nb-faded-text">(
           
@@ -200,13 +247,54 @@ IN THE SOFTWARE.</p></div>
 </div>
 <div class="clear"></div>
 </div>
+<a id="\ImboClient\Url\UrlInterface::addQueryParam()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">addQueryParam</span><span class="nb-faded-text">(
+          string $key, string $value
+          )
+        </span>
+        :
+          <a href="db_Url_UrlInterface.html#%5CImboClient%5CUrl%5CUrlInterface">\ImboClient\Url\UrlInterface</a></code><div class="description"><p class="short_description">Method for adding query parameters to the URL</p></div>
+<div class="code-tabs">
+<div class="long-description"></div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$key</th>
+<td>string</td>
+<td><em><p>The name of the param. For instance "page" or "t[]"</p>
+</em></td>
+</tr>
+<tr>
+<th>$value</th>
+<td>string</td>
+<td><em><p>The value of the param. For instance "10" or "border:width=50,height=50"</p>
+</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Url_UrlInterface.html#%5CImboClient%5CUrl%5CUrlInterface">\ImboClient\Url\UrlInterface</a></td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
 <a id="\ImboClient\Url\UrlInterface::getUrl()" class="anchor"></a><div class="method public">
 <a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">getUrl</span><span class="nb-faded-text">(
           
           )
         </span>
         :
-          string</code><div class="description"><p class="short_description">Fetch the complete URL</p></div>
+          string</code><div class="description"><p class="short_description">Fetch the complete URL including optional query parameters</p></div>
 <div class="code-tabs">
 <div class="long-description"></div>
 <strong>Returns</strong><table class="argument-info">
@@ -238,6 +326,28 @@ IN THE SOFTWARE.</p></div>
 </tr></thead>
 <tr>
 <td>string</td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
+<a id="\ImboClient\Url\UrlInterface::reset()" class="anchor"></a><div class="method public">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">reset</span><span class="nb-faded-text">(
+          
+          )
+        </span>
+        :
+          <a href="db_Url_UrlInterface.html#%5CImboClient%5CUrl%5CUrlInterface">\ImboClient\Url\UrlInterface</a></code><div class="description"><p class="short_description">Resets the URL - removes all query parameters</p></div>
+<div class="code-tabs">
+<div class="long-description"></div>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Url_UrlInterface.html#%5CImboClient%5CUrl%5CUrlInterface">\ImboClient\Url\UrlInterface</a></td>
 <td></td>
 </tr>
 </table>

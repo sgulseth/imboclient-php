@@ -176,6 +176,57 @@ IN THE SOFTWARE.</p></div>
 </dl>
 <h3>Methods</h3>
 <div>
+<a id="\ImboClient\Url\ImageInterface::__call()" class="anchor"></a><div class="method public inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">__call</span><span class="nb-faded-text">(
+          string $method, array $args
+          )
+        </span>
+        :
+          <a href="db_Url_UrlInterface.html#%5CImboClient%5CUrl%5CUrlInterface">\ImboClient\Url\UrlInterface</a></code><div class="description">
+<span class="attribute">inherited</span><p class="short_description">Magic call method that can be used to add simple query parameters to the URL</p>
+<small>Inherited from:
+                    <a href="db_Url_UrlInterface.html#%5CImboClient%5CUrl%5CUrlInterface::__call()">\ImboClient\Url\UrlInterface::__call()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"><p>This method must be implemented in such a fashion that users can call non-existing methods
+on the URL instance that will be added as query parameters.</p>
+
+<pre><code>$url = new ImboClient\Url\Images('http://imbo', 'publicKey', 'privateKey');
+$url-&gt;page(2)-&gt;limit(10);
+
+echo $url; // http://imbo/users/publicKey/images?page=2&amp;limit=10
+</code></pre></div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$method</th>
+<td>string</td>
+<td><em><p>The method called (will be used as query parameter name)</p>
+</em></td>
+</tr>
+<tr>
+<th>$args</th>
+<td>array</td>
+<td><em><p>Arguments to the method. The first argument will be used as query parameter value</p></em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Url_UrlInterface.html#%5CImboClient%5CUrl%5CUrlInterface">\ImboClient\Url\UrlInterface</a></td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
 <a id="\ImboClient\Url\ImageInterface::__toString()" class="anchor"></a><div class="method public inherited_from ">
 <a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">__toString</span><span class="nb-faded-text">(
           
@@ -202,6 +253,51 @@ IN THE SOFTWARE.</p></div>
 </div>
 <div class="clear"></div>
 </div>
+<a id="\ImboClient\Url\ImageInterface::addQueryParam()" class="anchor"></a><div class="method public inherited_from ">
+<a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">addQueryParam</span><span class="nb-faded-text">(
+          string $key, string $value
+          )
+        </span>
+        :
+          <a href="db_Url_UrlInterface.html#%5CImboClient%5CUrl%5CUrlInterface">\ImboClient\Url\UrlInterface</a></code><div class="description">
+<span class="attribute">inherited</span><p class="short_description">Method for adding query parameters to the URL</p>
+<small>Inherited from:
+                    <a href="db_Url_UrlInterface.html#%5CImboClient%5CUrl%5CUrlInterface::addQueryParam()">\ImboClient\Url\UrlInterface::addQueryParam()</a></small>
+</div>
+<div class="code-tabs">
+<div class="long-description"></div>
+<strong>Parameters</strong><table class="argument-info">
+<thead><tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<th>$key</th>
+<td>string</td>
+<td><em><p>The name of the param. For instance "page" or "t[]"</p>
+</em></td>
+</tr>
+<tr>
+<th>$value</th>
+<td>string</td>
+<td><em><p>The value of the param. For instance "10" or "border:width=50,height=50"</p>
+</em></td>
+</tr>
+</table>
+<strong>Returns</strong><table class="argument-info">
+<thead><tr>
+<th>Type</th>
+<th>Description</th>
+</tr></thead>
+<tr>
+<td><a href="db_Url_UrlInterface.html#%5CImboClient%5CUrl%5CUrlInterface">\ImboClient\Url\UrlInterface</a></td>
+<td></td>
+</tr>
+</table>
+</div>
+<div class="clear"></div>
+</div>
 <a id="\ImboClient\Url\ImageInterface::border()" class="anchor"></a><div class="method public">
 <a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">border</span><span class="nb-faded-text">(
           string $color
@@ -214,7 +310,7 @@ IN THE SOFTWARE.</p></div>
           )
         </span>
         :
-          <a href="db_Url_ImageInterface.html#%5CImboClient%5CUrl%5CImageInterface">\ImboClient\Url\ImageInterface</a></code><div class="description"><p class="short_description">Append a query that triggers a border transformation</p></div>
+          <a href="db_Url_ImageInterface.html#%5CImboClient%5CUrl%5CImageInterface">\ImboClient\Url\ImageInterface</a></code><div class="description"><p class="short_description">Append a border transformation query parameter to the URL</p></div>
 <div class="code-tabs">
 <div class="long-description"></div>
 <strong>Parameters</strong><table class="argument-info">
@@ -266,7 +362,7 @@ IN THE SOFTWARE.</p></div>
           )
         </span>
         :
-          <a href="db_Url_ImageInterface.html#%5CImboClient%5CUrl%5CImageInterface">\ImboClient\Url\ImageInterface</a></code><div class="description"><p class="short_description">Trigger a canvas transformation</p></div>
+          <a href="db_Url_ImageInterface.html#%5CImboClient%5CUrl%5CImageInterface">\ImboClient\Url\ImageInterface</a></code><div class="description"><p class="short_description">Append a canvas transformation query parameter to the URL</p></div>
 <div class="code-tabs">
 <div class="long-description"></div>
 <strong>Parameters</strong><table class="argument-info">
@@ -327,7 +423,7 @@ IN THE SOFTWARE.</p></div>
           )
         </span>
         :
-          <a href="db_Url_ImageInterface.html#%5CImboClient%5CUrl%5CImageInterface">\ImboClient\Url\ImageInterface</a></code><div class="description"><p class="short_description">Append a query that triggers a compress transformation</p></div>
+          <a href="db_Url_ImageInterface.html#%5CImboClient%5CUrl%5CImageInterface">\ImboClient\Url\ImageInterface</a></code><div class="description"><p class="short_description">Append a compress transformation query parameter to the URL</p></div>
 <div class="code-tabs">
 <div class="long-description"></div>
 <strong>Parameters</strong><table class="argument-info">
@@ -395,7 +491,7 @@ IN THE SOFTWARE.</p></div>
           )
         </span>
         :
-          <a href="db_Url_ImageInterface.html#%5CImboClient%5CUrl%5CImageInterface">\ImboClient\Url\ImageInterface</a></code><div class="description"><p class="short_description">Trigger a crop transformation</p></div>
+          <a href="db_Url_ImageInterface.html#%5CImboClient%5CUrl%5CImageInterface">\ImboClient\Url\ImageInterface</a></code><div class="description"><p class="short_description">Append a crop transformation query parameter to the URL</p></div>
 <div class="code-tabs">
 <div class="long-description"></div>
 <strong>Parameters</strong><table class="argument-info">
@@ -444,7 +540,7 @@ IN THE SOFTWARE.</p></div>
           )
         </span>
         :
-          <a href="db_Url_ImageInterface.html#%5CImboClient%5CUrl%5CImageInterface">\ImboClient\Url\ImageInterface</a></code><div class="description"><p class="short_description">Trigger a flip horizontally transformation</p></div>
+          <a href="db_Url_ImageInterface.html#%5CImboClient%5CUrl%5CImageInterface">\ImboClient\Url\ImageInterface</a></code><div class="description"><p class="short_description">Append a flipHorizontally transformation query parameter to the URL</p></div>
 <div class="code-tabs">
 <div class="long-description"></div>
 <strong>Returns</strong><table class="argument-info">
@@ -466,7 +562,7 @@ IN THE SOFTWARE.</p></div>
           )
         </span>
         :
-          <a href="db_Url_ImageInterface.html#%5CImboClient%5CUrl%5CImageInterface">\ImboClient\Url\ImageInterface</a></code><div class="description"><p class="short_description">Trigger a flip vertically transformation</p></div>
+          <a href="db_Url_ImageInterface.html#%5CImboClient%5CUrl%5CImageInterface">\ImboClient\Url\ImageInterface</a></code><div class="description"><p class="short_description">Append a flipVertically transformation query parameter to the URL</p></div>
 <div class="code-tabs">
 <div class="long-description"></div>
 <strong>Returns</strong><table class="argument-info">
@@ -489,7 +585,7 @@ IN THE SOFTWARE.</p></div>
         </span>
         :
           string</code><div class="description">
-<span class="attribute">inherited</span><p class="short_description">Fetch the complete URL</p>
+<span class="attribute">inherited</span><p class="short_description">Fetch the complete URL including optional query parameters</p>
 <small>Inherited from:
                     <a href="db_Url_UrlInterface.html#%5CImboClient%5CUrl%5CUrlInterface::getUrl()">\ImboClient\Url\UrlInterface::getUrl()</a></small>
 </div>
@@ -588,7 +684,7 @@ IN THE SOFTWARE.</p></div>
           )
         </span>
         :
-          <a href="db_Url_ImageInterface.html#%5CImboClient%5CUrl%5CImageInterface">\ImboClient\Url\ImageInterface</a></code><div class="description"><p class="short_description">Trigger a maxSize transformation</p></div>
+          <a href="db_Url_ImageInterface.html#%5CImboClient%5CUrl%5CImageInterface">\ImboClient\Url\ImageInterface</a></code><div class="description"><p class="short_description">Append a maxSize transformation query parameter to the URL</p></div>
 <div class="code-tabs">
 <div class="long-description"></div>
 <strong>Parameters</strong><table class="argument-info">
@@ -643,13 +739,17 @@ IN THE SOFTWARE.</p></div>
 </div>
 <div class="clear"></div>
 </div>
-<a id="\ImboClient\Url\ImageInterface::reset()" class="anchor"></a><div class="method public">
+<a id="\ImboClient\Url\ImageInterface::reset()" class="anchor"></a><div class="method public inherited_from ">
 <a href="#" class="gripper"><img src="images/icons/arrow_right.png"><img src="images/icons/arrow_down.png" style="display: none;"></a><code><img src="images/icons/method.png" alt="method"><img src="images/icons/visibility_public.png" style="margin-right: 5px" alt="public"><span class="highlight">reset</span><span class="nb-faded-text">(
           
           )
         </span>
         :
-          <a href="db_Url_ImageInterface.html#%5CImboClient%5CUrl%5CImageInterface">\ImboClient\Url\ImageInterface</a></code><div class="description"><p class="short_description">Resets the URL - removes all transformations</p></div>
+          <a href="db_Url_UrlInterface.html#%5CImboClient%5CUrl%5CUrlInterface">\ImboClient\Url\UrlInterface</a></code><div class="description">
+<span class="attribute">inherited</span><p class="short_description">Resets the URL - removes all query parameters</p>
+<small>Inherited from:
+                    <a href="db_Url_UrlInterface.html#%5CImboClient%5CUrl%5CUrlInterface::reset()">\ImboClient\Url\UrlInterface::reset()</a></small>
+</div>
 <div class="code-tabs">
 <div class="long-description"></div>
 <strong>Returns</strong><table class="argument-info">
@@ -658,7 +758,7 @@ IN THE SOFTWARE.</p></div>
 <th>Description</th>
 </tr></thead>
 <tr>
-<td><a href="db_Url_ImageInterface.html#%5CImboClient%5CUrl%5CImageInterface">\ImboClient\Url\ImageInterface</a></td>
+<td><a href="db_Url_UrlInterface.html#%5CImboClient%5CUrl%5CUrlInterface">\ImboClient\Url\UrlInterface</a></td>
 <td></td>
 </tr>
 </table>
@@ -675,7 +775,7 @@ IN THE SOFTWARE.</p></div>
           )
         </span>
         :
-          <a href="db_Url_ImageInterface.html#%5CImboClient%5CUrl%5CImageInterface">\ImboClient\Url\ImageInterface</a></code><div class="description"><p class="short_description">Trigger a resize transformation</p></div>
+          <a href="db_Url_ImageInterface.html#%5CImboClient%5CUrl%5CImageInterface">\ImboClient\Url\ImageInterface</a></code><div class="description"><p class="short_description">Append a resize transformation query parameter to the URL</p></div>
 <div class="code-tabs">
 <div class="long-description"></div>
 <strong>Parameters</strong><table class="argument-info">
@@ -716,7 +816,7 @@ IN THE SOFTWARE.</p></div>
           )
         </span>
         :
-          <a href="db_Url_ImageInterface.html#%5CImboClient%5CUrl%5CImageInterface">\ImboClient\Url\ImageInterface</a></code><div class="description"><p class="short_description">Trigger a rotate transformation</p></div>
+          <a href="db_Url_ImageInterface.html#%5CImboClient%5CUrl%5CImageInterface">\ImboClient\Url\ImageInterface</a></code><div class="description"><p class="short_description">Append a rotate transformation query parameter to the URL</p></div>
 <div class="code-tabs">
 <div class="long-description"></div>
 <strong>Parameters</strong><table class="argument-info">
@@ -761,7 +861,7 @@ IN THE SOFTWARE.</p></div>
           )
         </span>
         :
-          <a href="db_Url_ImageInterface.html#%5CImboClient%5CUrl%5CImageInterface">\ImboClient\Url\ImageInterface</a></code><div class="description"><p class="short_description">Trigger a thumbnail transformation</p></div>
+          <a href="db_Url_ImageInterface.html#%5CImboClient%5CUrl%5CImageInterface">\ImboClient\Url\ImageInterface</a></code><div class="description"><p class="short_description">Append a thumbnail transformation query parameter to the URL</p></div>
 <div class="code-tabs">
 <div class="long-description"></div>
 <strong>Parameters</strong><table class="argument-info">
