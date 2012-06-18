@@ -1,0 +1,366 @@
+<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \ImboClient\Driver\Curl</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/ImboClient.html"><i class="icon-th"></i> ImboClient</a></li>
+<li><a>Packages</a></li>
+<li><a href="../packages/Client.html"><i class="icon-folder-open"></i> Client</a></li>
+<li><a href="../packages/Driver.html"><i class="icon-folder-open"></i> Driver</a></li>
+<li><a href="../packages/Http.html"><i class="icon-folder-open"></i> Http</a></li>
+<li><a href="../packages/Interfaces.html"><i class="icon-folder-open"></i> Interfaces</a></li>
+<li><a href="../packages/Url.html"><i class="icon-folder-open"></i> Url</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">218</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods</li>
+<li class="method public "><a href="#__construct" title="__construct :: Class constructor"><span class="description">Class constructor</span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#__destruct" title="__destruct :: Class destructor"><span class="description">Class destructor</span><pre>__destruct()</pre></a></li>
+<li class="method public "><a href="#addRequestHeader" title="addRequestHeader :: "><span class="description">addRequestHeader()
+        </span><pre>addRequestHeader()</pre></a></li>
+<li class="method public "><a href="#addRequestHeaders" title="addRequestHeaders :: "><span class="description">addRequestHeaders()
+        </span><pre>addRequestHeaders()</pre></a></li>
+<li class="method public "><a href="#delete" title="delete :: "><span class="description">delete()
+        </span><pre>delete()</pre></a></li>
+<li class="method public "><a href="#get" title="get :: "><span class="description">get()
+        </span><pre>get()</pre></a></li>
+<li class="method public "><a href="#head" title="head :: "><span class="description">head()
+        </span><pre>head()</pre></a></li>
+<li class="method public "><a href="#post" title="post :: "><span class="description">post()
+        </span><pre>post()</pre></a></li>
+<li class="method public "><a href="#put" title="put :: "><span class="description">put()
+        </span><pre>put()</pre></a></li>
+<li class="method public "><a href="#putData" title="putData :: "><span class="description">putData()
+        </span><pre>putData()</pre></a></li>
+<li class="nav-header protected">» Protected</li>
+<li class="method protected "><a href="#request" title="request :: Make a request"><span class="description">Make a request</span><pre>request()</pre></a></li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties</li>
+<li class="nav-header private">» Private</li>
+<li class="property private "><a href="#%24curlHandle" title="$curlHandle :: "><span class="description">$curlHandle</span><pre>$curlHandle</pre></a></li>
+<li class="property private "><a href="#%24headers" title="$headers :: "><span class="description">$headers</span><pre>$headers</pre></a></li>
+<li class="property private "><a href="#%24params" title="$params :: "><span class="description">$params</span><pre>$params</pre></a></li>
+</ul>
+</div>
+<div class="span8">
+<a name="%5CImboClient%5CDriver%5CCurl" id="\ImboClient\Driver\Curl"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/ImboClient.html">ImboClient</a></li>
+<span class="divider">\</span><li><a href="../namespaces/ImboClient.Driver.html">Driver</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/ImboClient.Driver.Curl.html">Curl</a>
+</li>
+</ul>
+<div href="../classes/ImboClient.Driver.Curl.html" class="element class">
+<p class="short_description">cURL client driver</p>
+<div class="details">
+<p class="long_description"><p>This class is a driver for the client using the cURL functions.</p></p>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/Driver.html">Driver</a></td>
+</tr>
+<tr>
+<th>author</th>
+<td><a href="mailto:cogo@starzinger.net">Christer Edvartsen</a></td>
+</tr>
+<tr>
+<th>copyright</th>
+<td>Copyright (c) 2011-2012, Christer Edvartsen &lt;cogo@starzinger.net&gt;</td>
+</tr>
+<tr>
+<th>license</th>
+<td><a href="http://www.opensource.org/licenses/mit-license">MIT License</a></td>
+</tr>
+<tr>
+<th>link</th>
+<td><a href="https://github.com/imbo/imboclient-php">https://github.com/imbo/imboclient-php</a></td>
+</tr>
+</table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a name="__construct" id="__construct"></a><div class="element clickable method public __construct" data-toggle="collapse" data-target=".__construct .collapse">
+<h2>Class constructor</h2>
+<pre>__construct(array $params, array $curlOptions) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code><p>Parameters for the driver</p></div>
+<div class="subelement argument">
+<h4>$curlOptions</h4>
+<code>array</code><p>Optional extra cURL options (ref: http://no2.php.net/curl_setopt)</p>
+</div>
+</div></div>
+</div>
+<a name="__destruct" id="__destruct"></a><div class="element clickable method public __destruct" data-toggle="collapse" data-target=".__destruct .collapse">
+<h2>Class destructor</h2>
+<pre>__destruct() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="addRequestHeader" id="addRequestHeader"></a><div class="element clickable method public addRequestHeader" data-toggle="collapse" data-target=".addRequestHeader .collapse">
+<h2>addRequestHeader()
+        </h2>
+<pre>addRequestHeader($key, $value) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td>\ImboClient\Driver\DriverInterface::addRequestHeader()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$key</h4>
+<code></code>
+</div>
+<div class="subelement argument">
+<h4>$value</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="addRequestHeaders" id="addRequestHeaders"></a><div class="element clickable method public addRequestHeaders" data-toggle="collapse" data-target=".addRequestHeaders .collapse">
+<h2>addRequestHeaders()
+        </h2>
+<pre>addRequestHeaders(array $headers) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td>\ImboClient\Driver\DriverInterface::addRequestHeaders()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$headers</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="delete" id="delete"></a><div class="element clickable method public delete" data-toggle="collapse" data-target=".delete .collapse">
+<h2>delete()
+        </h2>
+<pre>delete($url) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td>\ImboClient\Driver\DriverInterface::delete()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$url</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="get" id="get"></a><div class="element clickable method public get" data-toggle="collapse" data-target=".get .collapse">
+<h2>get()
+        </h2>
+<pre>get($url) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td>\ImboClient\Driver\DriverInterface::get()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$url</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="head" id="head"></a><div class="element clickable method public head" data-toggle="collapse" data-target=".head .collapse">
+<h2>head()
+        </h2>
+<pre>head($url) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td>\ImboClient\Driver\DriverInterface::head()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$url</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="post" id="post"></a><div class="element clickable method public post" data-toggle="collapse" data-target=".post .collapse">
+<h2>post()
+        </h2>
+<pre>post($url, $metadata) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td>\ImboClient\Driver\DriverInterface::post()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$url</h4>
+<code></code>
+</div>
+<div class="subelement argument">
+<h4>$metadata</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="put" id="put"></a><div class="element clickable method public put" data-toggle="collapse" data-target=".put .collapse">
+<h2>put()
+        </h2>
+<pre>put($url, $filePath) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td>\ImboClient\Driver\DriverInterface::put()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$url</h4>
+<code></code>
+</div>
+<div class="subelement argument">
+<h4>$filePath</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="putData" id="putData"></a><div class="element clickable method public putData" data-toggle="collapse" data-target=".putData .collapse">
+<h2>putData()
+        </h2>
+<pre>putData($url, $data) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td>\ImboClient\Driver\DriverInterface::putData()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$url</h4>
+<code></code>
+</div>
+<div class="subelement argument">
+<h4>$data</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="request" id="request"></a><div class="element clickable method protected request" data-toggle="collapse" data-target=".request .collapse">
+<h2>Make a request</h2>
+<pre>request(resource $handle, string $url) : <a href="../classes/ImboClient.Http.Response.ResponseInterface.html">\ImboClient\Http\Response\ResponseInterface</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"><p>This method will make a request to $url with the current options set in the cURL handle
+resource.</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$handle</h4>
+<code>resource</code><p>A cURL handle</p></div>
+<div class="subelement argument">
+<h4>$url</h4>
+<code>string</code><p>The URL to request</p></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="http://php.net/manual/en/class.runtimeexception.php">\RuntimeException</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/ImboClient.Http.Response.ResponseInterface.html">\ImboClient\Http\Response\ResponseInterface</a></code></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a name="%24curlHandle" id="$curlHandle"> </a><div class="element clickable property private $curlHandle" data-toggle="collapse" data-target=".$curlHandle .collapse">
+<h2>$curlHandle</h2>
+<pre>$curlHandle </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24headers" id="$headers"> </a><div class="element clickable property private $headers" data-toggle="collapse" data-target=".$headers .collapse">
+<h2>$headers</h2>
+<pre>$headers </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24params" id="$params"> </a><div class="element clickable property private $params" data-toggle="collapse" data-target=".$params .collapse">
+<h2>$params</h2>
+<pre>$params </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a5</a> and<br>
+            generated on 2012-06-18T21:44:12+02:00.<br></footer></div>
+</div>
+</body>
+</html>

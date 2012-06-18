@@ -1,0 +1,756 @@
+<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \ImboClient\Client</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/ImboClient.html"><i class="icon-th"></i> ImboClient</a></li>
+<li><a>Packages</a></li>
+<li><a href="../packages/Client.html"><i class="icon-folder-open"></i> Client</a></li>
+<li><a href="../packages/Driver.html"><i class="icon-folder-open"></i> Driver</a></li>
+<li><a href="../packages/Http.html"><i class="icon-folder-open"></i> Http</a></li>
+<li><a href="../packages/Interfaces.html"><i class="icon-folder-open"></i> Interfaces</a></li>
+<li><a href="../packages/Url.html"><i class="icon-folder-open"></i> Url</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">218</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods</li>
+<li class="method public "><a href="#__construct" title="__construct :: Class constructor"><span class="description">Class constructor</span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#addImage" title="addImage :: "><span class="description">addImage()
+        </span><pre>addImage()</pre></a></li>
+<li class="method public "><a href="#addImageFromString" title="addImageFromString :: "><span class="description">addImageFromString()
+        </span><pre>addImageFromString()</pre></a></li>
+<li class="method public "><a href="#addImageFromUrl" title="addImageFromUrl :: "><span class="description">addImageFromUrl()
+        </span><pre>addImageFromUrl()</pre></a></li>
+<li class="method public "><a href="#deleteImage" title="deleteImage :: "><span class="description">deleteImage()
+        </span><pre>deleteImage()</pre></a></li>
+<li class="method public "><a href="#deleteMetadata" title="deleteMetadata :: "><span class="description">deleteMetadata()
+        </span><pre>deleteMetadata()</pre></a></li>
+<li class="method public "><a href="#editMetadata" title="editMetadata :: "><span class="description">editMetadata()
+        </span><pre>editMetadata()</pre></a></li>
+<li class="method public "><a href="#getImageData" title="getImageData :: "><span class="description">getImageData()
+        </span><pre>getImageData()</pre></a></li>
+<li class="method public "><a href="#getImageDataFromUrl" title="getImageDataFromUrl :: "><span class="description">getImageDataFromUrl()
+        </span><pre>getImageDataFromUrl()</pre></a></li>
+<li class="method public "><a href="#getImageIdentifier" title="getImageIdentifier :: "><span class="description">getImageIdentifier()
+        </span><pre>getImageIdentifier()</pre></a></li>
+<li class="method public "><a href="#getImageIdentifierFromString" title="getImageIdentifierFromString :: "><span class="description">getImageIdentifierFromString()
+        </span><pre>getImageIdentifierFromString()</pre></a></li>
+<li class="method public "><a href="#getImageProperties" title="getImageProperties :: "><span class="description">getImageProperties()
+        </span><pre>getImageProperties()</pre></a></li>
+<li class="method public "><a href="#getImageUrl" title="getImageUrl :: "><span class="description">getImageUrl()
+        </span><pre>getImageUrl()</pre></a></li>
+<li class="method public "><a href="#getImages" title="getImages :: "><span class="description">getImages()
+        </span><pre>getImages()</pre></a></li>
+<li class="method public "><a href="#getImagesUrl" title="getImagesUrl :: "><span class="description">getImagesUrl()
+        </span><pre>getImagesUrl()</pre></a></li>
+<li class="method public "><a href="#getMetadata" title="getMetadata :: "><span class="description">getMetadata()
+        </span><pre>getMetadata()</pre></a></li>
+<li class="method public "><a href="#getMetadataUrl" title="getMetadataUrl :: "><span class="description">getMetadataUrl()
+        </span><pre>getMetadataUrl()</pre></a></li>
+<li class="method public "><a href="#getNumImages" title="getNumImages :: "><span class="description">getNumImages()
+        </span><pre>getNumImages()</pre></a></li>
+<li class="method public "><a href="#getServerStatus" title="getServerStatus :: "><span class="description">getServerStatus()
+        </span><pre>getServerStatus()</pre></a></li>
+<li class="method public "><a href="#getServerUrls" title="getServerUrls :: "><span class="description">getServerUrls()
+        </span><pre>getServerUrls()</pre></a></li>
+<li class="method public "><a href="#getStatusUrl" title="getStatusUrl :: "><span class="description">getStatusUrl()
+        </span><pre>getStatusUrl()</pre></a></li>
+<li class="method public "><a href="#getUserUrl" title="getUserUrl :: "><span class="description">getUserUrl()
+        </span><pre>getUserUrl()</pre></a></li>
+<li class="method public "><a href="#headImage" title="headImage :: "><span class="description">headImage()
+        </span><pre>headImage()</pre></a></li>
+<li class="method public "><a href="#imageExists" title="imageExists :: "><span class="description">imageExists()
+        </span><pre>imageExists()</pre></a></li>
+<li class="method public "><a href="#replaceMetadata" title="replaceMetadata :: "><span class="description">replaceMetadata()
+        </span><pre>replaceMetadata()</pre></a></li>
+<li class="method public "><a href="#setDriver" title="setDriver :: "><span class="description">setDriver()
+        </span><pre>setDriver()</pre></a></li>
+<li class="nav-header private">» Private</li>
+<li class="method private "><a href="#generateImageIdentifier" title="generateImageIdentifier :: Generate an image identifier based on the data of the image"><span class="description">Generate an image identifier based on the data of the image</span><pre>generateImageIdentifier()</pre></a></li>
+<li class="method private "><a href="#generateSignature" title="generateSignature :: Generate a signature that can be sent to the server"><span class="description">Generate a signature that can be sent to the server</span><pre>generateSignature()</pre></a></li>
+<li class="method private "><a href="#getHostForImageIdentifier" title="getHostForImageIdentifier :: Get a predictable hostname for the given image identifier"><span class="description">Get a predictable hostname for the given image identifier</span><pre>getHostForImageIdentifier()</pre></a></li>
+<li class="method private "><a href="#getSignedUrl" title="getSignedUrl :: Get a signed URL"><span class="description">Get a signed URL</span><pre>getSignedUrl()</pre></a></li>
+<li class="method private "><a href="#parseUrls" title="parseUrls :: Parse server host URLs and prepare them for usage"><span class="description">Parse server host URLs and prepare them for usage</span><pre>parseUrls()</pre></a></li>
+<li class="method private "><a href="#validateLocalFile" title="validateLocalFile :: Helper method to make sure a local file exists, and that it is not empty"><span class="description">Helper method to make sure a local file exists, and that it is not empty</span><pre>validateLocalFile()</pre></a></li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties</li>
+<li class="nav-header private">» Private</li>
+<li class="property private "><a href="#%24driver" title="$driver :: "><span class="description">$driver</span><pre>$driver</pre></a></li>
+<li class="property private "><a href="#%24privateKey" title="$privateKey :: "><span class="description">$privateKey</span><pre>$privateKey</pre></a></li>
+<li class="property private "><a href="#%24publicKey" title="$publicKey :: "><span class="description">$publicKey</span><pre>$publicKey</pre></a></li>
+<li class="property private "><a href="#%24serverUrls" title="$serverUrls :: "><span class="description">$serverUrls</span><pre>$serverUrls</pre></a></li>
+</ul>
+</div>
+<div class="span8">
+<a name="%5CImboClient%5CClient" id="\ImboClient\Client"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/ImboClient.html">ImboClient</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/ImboClient.Client.html">Client</a>
+</li>
+</ul>
+<div href="../classes/ImboClient.Client.html" class="element class">
+<p class="short_description">Client that interacts with Imbo servers</p>
+<div class="details">
+<p class="long_description"><p>This client includes methods that can be used to easily interact with Imbo servers.</p></p>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/Client.html">Client</a></td>
+</tr>
+<tr>
+<th>author</th>
+<td><a href="mailto:cogo@starzinger.net">Christer Edvartsen</a></td>
+</tr>
+<tr>
+<th>copyright</th>
+<td>Copyright (c) 2011-2012, Christer Edvartsen &lt;cogo@starzinger.net&gt;</td>
+</tr>
+<tr>
+<th>license</th>
+<td><a href="http://www.opensource.org/licenses/mit-license">MIT License</a></td>
+</tr>
+<tr>
+<th>link</th>
+<td><a href="https://github.com/imbo/imboclient-php">https://github.com/imbo/imboclient-php</a></td>
+</tr>
+</table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a name="__construct" id="__construct"></a><div class="element clickable method public __construct" data-toggle="collapse" data-target=".__construct .collapse">
+<h2>Class constructor</h2>
+<pre>__construct(array | string $serverUrls, string $publicKey, string $privateKey, ImboClient\Driver\DriverInterface $driver, ImboClient\Version $version) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$serverUrls</h4>
+<code>arraystring</code><p>One or more URLs to the Imbo server, including protocol</p></div>
+<div class="subelement argument">
+<h4>$publicKey</h4>
+<code>string</code><p>The public key to use</p></div>
+<div class="subelement argument">
+<h4>$privateKey</h4>
+<code>string</code><p>The private key to use</p></div>
+<div class="subelement argument">
+<h4>$driver</h4>
+<code><a href="../classes/ImboClient.Driver.DriverInterface.html">\ImboClient\Driver\DriverInterface</a></code><p>Optional driver to set</p></div>
+<div class="subelement argument">
+<h4>$version</h4>
+<code><a href="../classes/ImboClient.Version.html">\ImboClient\Version</a></code><p>A version instance</p></div>
+</div></div>
+</div>
+<a name="addImage" id="addImage"></a><div class="element clickable method public addImage" data-toggle="collapse" data-target=".addImage .collapse">
+<h2>addImage()
+        </h2>
+<pre>addImage($path) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td>\ImboClient\ClientInterface::addImage()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$path</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="addImageFromString" id="addImageFromString"></a><div class="element clickable method public addImageFromString" data-toggle="collapse" data-target=".addImageFromString .collapse">
+<h2>addImageFromString()
+        </h2>
+<pre>addImageFromString($image) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td>\ImboClient\ClientInterface::addImageFromString()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$image</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="addImageFromUrl" id="addImageFromUrl"></a><div class="element clickable method public addImageFromUrl" data-toggle="collapse" data-target=".addImageFromUrl .collapse">
+<h2>addImageFromUrl()
+        </h2>
+<pre>addImageFromUrl($url) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td>\ImboClient\ClientInterface::addImageFromUrl()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$url</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="deleteImage" id="deleteImage"></a><div class="element clickable method public deleteImage" data-toggle="collapse" data-target=".deleteImage .collapse">
+<h2>deleteImage()
+        </h2>
+<pre>deleteImage($imageIdentifier) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td>\ImboClient\ClientInterface::deleteImage()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$imageIdentifier</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="deleteMetadata" id="deleteMetadata"></a><div class="element clickable method public deleteMetadata" data-toggle="collapse" data-target=".deleteMetadata .collapse">
+<h2>deleteMetadata()
+        </h2>
+<pre>deleteMetadata($imageIdentifier) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td>\ImboClient\ClientInterface::deleteMetadata()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$imageIdentifier</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="editMetadata" id="editMetadata"></a><div class="element clickable method public editMetadata" data-toggle="collapse" data-target=".editMetadata .collapse">
+<h2>editMetadata()
+        </h2>
+<pre>editMetadata($imageIdentifier, array $metadata) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td>\ImboClient\ClientInterface::editMetadata()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$imageIdentifier</h4>
+<code></code>
+</div>
+<div class="subelement argument">
+<h4>$metadata</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="getImageData" id="getImageData"></a><div class="element clickable method public getImageData" data-toggle="collapse" data-target=".getImageData .collapse">
+<h2>getImageData()
+        </h2>
+<pre>getImageData($imageIdentifier) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td>\ImboClient\ClientInterface::getImageData()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$imageIdentifier</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="getImageDataFromUrl" id="getImageDataFromUrl"></a><div class="element clickable method public getImageDataFromUrl" data-toggle="collapse" data-target=".getImageDataFromUrl .collapse">
+<h2>getImageDataFromUrl()
+        </h2>
+<pre>getImageDataFromUrl(ImboClient\Url\ImageInterface $url) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td>\ImboClient\ClientInterface::getImageDataFromUrl()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$url</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="getImageIdentifier" id="getImageIdentifier"></a><div class="element clickable method public getImageIdentifier" data-toggle="collapse" data-target=".getImageIdentifier .collapse">
+<h2>getImageIdentifier()
+        </h2>
+<pre>getImageIdentifier($path) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td>\ImboClient\ClientInterface::getImageIdentifier()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$path</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="getImageIdentifierFromString" id="getImageIdentifierFromString"></a><div class="element clickable method public getImageIdentifierFromString" data-toggle="collapse" data-target=".getImageIdentifierFromString .collapse">
+<h2>getImageIdentifierFromString()
+        </h2>
+<pre>getImageIdentifierFromString($image) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td>\ImboClient\ClientInterface::getImageIdentifierFromString()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$image</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="getImageProperties" id="getImageProperties"></a><div class="element clickable method public getImageProperties" data-toggle="collapse" data-target=".getImageProperties .collapse">
+<h2>getImageProperties()
+        </h2>
+<pre>getImageProperties($imageIdentifier) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td>\ImboClient\ClientInterface::getImageProperties()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$imageIdentifier</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="getImageUrl" id="getImageUrl"></a><div class="element clickable method public getImageUrl" data-toggle="collapse" data-target=".getImageUrl .collapse">
+<h2>getImageUrl()
+        </h2>
+<pre>getImageUrl($imageIdentifier) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td>\ImboClient\ClientInterface::getImageUrl()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$imageIdentifier</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="getImages" id="getImages"></a><div class="element clickable method public getImages" data-toggle="collapse" data-target=".getImages .collapse">
+<h2>getImages()
+        </h2>
+<pre>getImages(ImboClient\Url\Images\QueryInterface $query) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td>\ImboClient\ClientInterface::getImages()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$query</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="getImagesUrl" id="getImagesUrl"></a><div class="element clickable method public getImagesUrl" data-toggle="collapse" data-target=".getImagesUrl .collapse">
+<h2>getImagesUrl()
+        </h2>
+<pre>getImagesUrl() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td>\ImboClient\ClientInterface::getImagesUrl()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="getMetadata" id="getMetadata"></a><div class="element clickable method public getMetadata" data-toggle="collapse" data-target=".getMetadata .collapse">
+<h2>getMetadata()
+        </h2>
+<pre>getMetadata($imageIdentifier) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td>\ImboClient\ClientInterface::getMetadata()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$imageIdentifier</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="getMetadataUrl" id="getMetadataUrl"></a><div class="element clickable method public getMetadataUrl" data-toggle="collapse" data-target=".getMetadataUrl .collapse">
+<h2>getMetadataUrl()
+        </h2>
+<pre>getMetadataUrl($imageIdentifier) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td>\ImboClient\ClientInterface::getMetadataUrl()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$imageIdentifier</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="getNumImages" id="getNumImages"></a><div class="element clickable method public getNumImages" data-toggle="collapse" data-target=".getNumImages .collapse">
+<h2>getNumImages()
+        </h2>
+<pre>getNumImages() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td>\ImboClient\ClientInterface::getNumImages()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="getServerStatus" id="getServerStatus"></a><div class="element clickable method public getServerStatus" data-toggle="collapse" data-target=".getServerStatus .collapse">
+<h2>getServerStatus()
+        </h2>
+<pre>getServerStatus() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td>\ImboClient\ClientInterface::getServerStatus()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="getServerUrls" id="getServerUrls"></a><div class="element clickable method public getServerUrls" data-toggle="collapse" data-target=".getServerUrls .collapse">
+<h2>getServerUrls()
+        </h2>
+<pre>getServerUrls() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td>\ImboClient\ClientInterface::getServerUrls()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="getStatusUrl" id="getStatusUrl"></a><div class="element clickable method public getStatusUrl" data-toggle="collapse" data-target=".getStatusUrl .collapse">
+<h2>getStatusUrl()
+        </h2>
+<pre>getStatusUrl() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td>\ImboClient\ClientInterface::getStatusUrl()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="getUserUrl" id="getUserUrl"></a><div class="element clickable method public getUserUrl" data-toggle="collapse" data-target=".getUserUrl .collapse">
+<h2>getUserUrl()
+        </h2>
+<pre>getUserUrl() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td>\ImboClient\ClientInterface::getUserUrl()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="headImage" id="headImage"></a><div class="element clickable method public headImage" data-toggle="collapse" data-target=".headImage .collapse">
+<h2>headImage()
+        </h2>
+<pre>headImage($imageIdentifier) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td>\ImboClient\ClientInterface::headImage()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$imageIdentifier</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="imageExists" id="imageExists"></a><div class="element clickable method public imageExists" data-toggle="collapse" data-target=".imageExists .collapse">
+<h2>imageExists()
+        </h2>
+<pre>imageExists($path) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td>\ImboClient\ClientInterface::imageExists()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$path</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="replaceMetadata" id="replaceMetadata"></a><div class="element clickable method public replaceMetadata" data-toggle="collapse" data-target=".replaceMetadata .collapse">
+<h2>replaceMetadata()
+        </h2>
+<pre>replaceMetadata($imageIdentifier, array $metadata) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td>\ImboClient\ClientInterface::replaceMetadata()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$imageIdentifier</h4>
+<code></code>
+</div>
+<div class="subelement argument">
+<h4>$metadata</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="setDriver" id="setDriver"></a><div class="element clickable method public setDriver" data-toggle="collapse" data-target=".setDriver .collapse">
+<h2>setDriver()
+        </h2>
+<pre>setDriver(ImboClient\Driver\DriverInterface $driver) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td>\ImboClient\ClientInterface::setDriver()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$driver</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="generateImageIdentifier" id="generateImageIdentifier"></a><div class="element clickable method private generateImageIdentifier" data-toggle="collapse" data-target=".generateImageIdentifier .collapse">
+<h2>Generate an image identifier based on the data of the image</h2>
+<pre>generateImageIdentifier(string $data) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$data</h4>
+<code>string</code><p>The actual image data</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a name="generateSignature" id="generateSignature"></a><div class="element clickable method private generateSignature" data-toggle="collapse" data-target=".generateSignature .collapse">
+<h2>Generate a signature that can be sent to the server</h2>
+<pre>generateSignature(string $method, string $url, string $timestamp) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$method</h4>
+<code>string</code><p>HTTP method (PUT, POST or DELETE)</p>
+</div>
+<div class="subelement argument">
+<h4>$url</h4>
+<code>string</code><p>The URL to send a request to</p></div>
+<div class="subelement argument">
+<h4>$timestamp</h4>
+<code>string</code><p>UTC timestamp</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a name="getHostForImageIdentifier" id="getHostForImageIdentifier"></a><div class="element clickable method private getHostForImageIdentifier" data-toggle="collapse" data-target=".getHostForImageIdentifier .collapse">
+<h2>Get a predictable hostname for the given image identifier</h2>
+<pre>getHostForImageIdentifier(string $imageIdentifier) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$imageIdentifier</h4>
+<code>string</code><p>The image identifier</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a name="getSignedUrl" id="getSignedUrl"></a><div class="element clickable method private getSignedUrl" data-toggle="collapse" data-target=".getSignedUrl .collapse">
+<h2>Get a signed URL</h2>
+<pre>getSignedUrl(string $method, string $url) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$method</h4>
+<code>string</code><p>HTTP method</p></div>
+<div class="subelement argument">
+<h4>$url</h4>
+<code>string</code><p>The URL to send a request to</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>Returns a string with the necessary parts for authenticating</div>
+</div></div>
+</div>
+<a name="parseUrls" id="parseUrls"></a><div class="element clickable method private parseUrls" data-toggle="collapse" data-target=".parseUrls .collapse">
+<h2>Parse server host URLs and prepare them for usage</h2>
+<pre>parseUrls(array | string $urls) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$urls</h4>
+<code>arraystring</code><p>One or more URLs to an Imbo server</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>Returns an array of URLs</div>
+</div></div>
+</div>
+<a name="validateLocalFile" id="validateLocalFile"></a><div class="element clickable method private validateLocalFile" data-toggle="collapse" data-target=".validateLocalFile .collapse">
+<h2>Helper method to make sure a local file exists, and that it is not empty</h2>
+<pre>validateLocalFile(string $path) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$path</h4>
+<code>string</code><p>The path to a local file</p></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="http://php.net/manual/en/class.invalidargumentexception.php">\InvalidArgumentException</a></code></th>
+<td></td>
+</tr></table>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a name="%24driver" id="$driver"> </a><div class="element clickable property private $driver" data-toggle="collapse" data-target=".$driver .collapse">
+<h2>$driver</h2>
+<pre>$driver </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24privateKey" id="$privateKey"> </a><div class="element clickable property private $privateKey" data-toggle="collapse" data-target=".$privateKey .collapse">
+<h2>$privateKey</h2>
+<pre>$privateKey </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24publicKey" id="$publicKey"> </a><div class="element clickable property private $publicKey" data-toggle="collapse" data-target=".$publicKey .collapse">
+<h2>$publicKey</h2>
+<pre>$publicKey </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+<a name="%24serverUrls" id="$serverUrls"> </a><div class="element clickable property private $serverUrls" data-toggle="collapse" data-target=".$serverUrls .collapse">
+<h2>$serverUrls</h2>
+<pre>$serverUrls </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a5</a> and<br>
+            generated on 2012-06-18T21:44:12+02:00.<br></footer></div>
+</div>
+</body>
+</html>
