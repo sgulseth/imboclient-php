@@ -3508,7 +3508,7 @@ the ImboClient\Url\AccessToken class and return that instance.</p>]]></long-desc
       </method>
     </interface>
   </file>
-  <file path="Driver/Curl.php" hash="22656e299a5a626a90f9fcd98095797d" package="Default">
+  <file path="Driver/Curl.php" hash="0cbaeb52b559ae30c386ca31d8594a5e" package="Default">
     <namespace-alias name="Response">ImboClient\Http\Response\Response</namespace-alias>
     <namespace-alias name="HeaderContainer">ImboClient\Http\HeaderContainer</namespace-alias>
     <namespace-alias name="RuntimeException">RuntimeException</namespace-alias>
