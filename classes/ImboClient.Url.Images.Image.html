@@ -24,6 +24,7 @@
 <li><a>Packages</a></li>
 <li><a href="../packages/Client.html"><i class="icon-folder-open"></i> Client</a></li>
 <li><a href="../packages/Driver.html"><i class="icon-folder-open"></i> Driver</a></li>
+<li><a href="../packages/Exceptions.html"><i class="icon-folder-open"></i> Exceptions</a></li>
 <li><a href="../packages/Http.html"><i class="icon-folder-open"></i> Http</a></li>
 <li><a href="../packages/Interfaces.html"><i class="icon-folder-open"></i> Interfaces</a></li>
 <li><a href="../packages/Url.html"><i class="icon-folder-open"></i> Url</a></li>
@@ -37,7 +38,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">218</span></a></li>
+                <span class="label label-info">192</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -62,26 +63,16 @@
 <li class="nav-header">
 <i class="icon-custom icon-method"></i> Methods</li>
 <li class="method public "><a href="#__construct" title="__construct :: Creates a new Image instance from passed data"><span class="description">Creates a new Image instance from passed data</span><pre>__construct()</pre></a></li>
-<li class="method public "><a href="#getAddedDate" title="getAddedDate :: "><span class="description">getAddedDate()
-        </span><pre>getAddedDate()</pre></a></li>
-<li class="method public "><a href="#getChecksum" title="getChecksum :: "><span class="description">getChecksum()
-        </span><pre>getChecksum()</pre></a></li>
-<li class="method public "><a href="#getExtension" title="getExtension :: "><span class="description">getExtension()
-        </span><pre>getExtension()</pre></a></li>
-<li class="method public "><a href="#getHeight" title="getHeight :: "><span class="description">getHeight()
-        </span><pre>getHeight()</pre></a></li>
-<li class="method public "><a href="#getIdentifier" title="getIdentifier :: "><span class="description">getIdentifier()
-        </span><pre>getIdentifier()</pre></a></li>
-<li class="method public "><a href="#getMimeType" title="getMimeType :: "><span class="description">getMimeType()
-        </span><pre>getMimeType()</pre></a></li>
-<li class="method public "><a href="#getPublicKey" title="getPublicKey :: "><span class="description">getPublicKey()
-        </span><pre>getPublicKey()</pre></a></li>
-<li class="method public "><a href="#getSize" title="getSize :: "><span class="description">getSize()
-        </span><pre>getSize()</pre></a></li>
-<li class="method public "><a href="#getUpdatedDate" title="getUpdatedDate :: "><span class="description">getUpdatedDate()
-        </span><pre>getUpdatedDate()</pre></a></li>
-<li class="method public "><a href="#getWidth" title="getWidth :: "><span class="description">getWidth()
-        </span><pre>getWidth()</pre></a></li>
+<li class="method public "><a href="#getAddedDate" title="getAddedDate :: Returns the date which the image which added"><span class="description">Returns the date which the image which added</span><pre>getAddedDate()</pre></a></li>
+<li class="method public "><a href="#getChecksum" title="getChecksum :: Returns an MD5 checksum of the image data"><span class="description">Returns an MD5 checksum of the image data</span><pre>getChecksum()</pre></a></li>
+<li class="method public "><a href="#getExtension" title="getExtension :: Returns the original extension for the image"><span class="description">Returns the original extension for the image</span><pre>getExtension()</pre></a></li>
+<li class="method public "><a href="#getHeight" title="getHeight :: Returns the height of the image, in pixels"><span class="description">Returns the height of the image, in pixels</span><pre>getHeight()</pre></a></li>
+<li class="method public "><a href="#getIdentifier" title="getIdentifier :: Returns the image identifier for the image"><span class="description">Returns the image identifier for the image</span><pre>getIdentifier()</pre></a></li>
+<li class="method public "><a href="#getMimeType" title="getMimeType :: Returns the mime type of the image"><span class="description">Returns the mime type of the image</span><pre>getMimeType()</pre></a></li>
+<li class="method public "><a href="#getPublicKey" title="getPublicKey :: Returns the public key in which the image is catalogued under"><span class="description">Returns the public key in which the image is catalogued under</span><pre>getPublicKey()</pre></a></li>
+<li class="method public "><a href="#getSize" title="getSize :: Returns the size of the image, in bytes"><span class="description">Returns the size of the image, in bytes</span><pre>getSize()</pre></a></li>
+<li class="method public "><a href="#getUpdatedDate" title="getUpdatedDate :: Returns the date which the image was last updated"><span class="description">Returns the date which the image was last updated</span><pre>getUpdatedDate()</pre></a></li>
+<li class="method public "><a href="#getWidth" title="getWidth :: Returns the width of the image, in pixels"><span class="description">Returns the width of the image, in pixels</span><pre>getWidth()</pre></a></li>
 <li class="nav-header private">» Private</li>
 <li class="method private "><a href="#populate" title="populate :: Populate this instance"><span class="description">Populate this instance</span><pre>populate()</pre></a></li>
 <li class="method private "><a href="#setAddedDate" title="setAddedDate :: Set date when image was added to the server, as unix timestamp"><span class="description">Set date when image was added to the server, as unix timestamp</span><pre>setAddedDate()</pre></a></li>
@@ -97,16 +88,16 @@
 <li class="nav-header">
 <i class="icon-custom icon-property"></i> Properties</li>
 <li class="nav-header private">» Private</li>
-<li class="property private "><a href="#%24addedDate" title="$addedDate :: "><span class="description">$addedDate</span><pre>$addedDate</pre></a></li>
-<li class="property private "><a href="#%24checksum" title="$checksum :: "><span class="description">$checksum</span><pre>$checksum</pre></a></li>
-<li class="property private "><a href="#%24extension" title="$extension :: "><span class="description">$extension</span><pre>$extension</pre></a></li>
-<li class="property private "><a href="#%24height" title="$height :: "><span class="description">$height</span><pre>$height</pre></a></li>
-<li class="property private "><a href="#%24identifier" title="$identifier :: "><span class="description">$identifier</span><pre>$identifier</pre></a></li>
-<li class="property private "><a href="#%24mimeType" title="$mimeType :: "><span class="description">$mimeType</span><pre>$mimeType</pre></a></li>
-<li class="property private "><a href="#%24publicKey" title="$publicKey :: "><span class="description">$publicKey</span><pre>$publicKey</pre></a></li>
-<li class="property private "><a href="#%24size" title="$size :: "><span class="description">$size</span><pre>$size</pre></a></li>
-<li class="property private "><a href="#%24updatedDate" title="$updatedDate :: "><span class="description">$updatedDate</span><pre>$updatedDate</pre></a></li>
-<li class="property private "><a href="#%24width" title="$width :: "><span class="description">$width</span><pre>$width</pre></a></li>
+<li class="property private "><a href="#%24addedDate" title="$addedDate :: Date which the image was added"><span class="description">Date which the image was added</span><pre>$addedDate</pre></a></li>
+<li class="property private "><a href="#%24checksum" title="$checksum :: MD5 checksum for the original image"><span class="description">MD5 checksum for the original image</span><pre>$checksum</pre></a></li>
+<li class="property private "><a href="#%24extension" title="$extension :: Extension of original image"><span class="description">Extension of original image</span><pre>$extension</pre></a></li>
+<li class="property private "><a href="#%24height" title="$height :: Height of the image, in pixels"><span class="description">Height of the image, in pixels</span><pre>$height</pre></a></li>
+<li class="property private "><a href="#%24identifier" title="$identifier :: Image identifier"><span class="description">Image identifier</span><pre>$identifier</pre></a></li>
+<li class="property private "><a href="#%24mimeType" title="$mimeType :: Mime type of original image"><span class="description">Mime type of original image</span><pre>$mimeType</pre></a></li>
+<li class="property private "><a href="#%24publicKey" title="$publicKey :: Public key for this image"><span class="description">Public key for this image</span><pre>$publicKey</pre></a></li>
+<li class="property private "><a href="#%24size" title="$size :: Size of image, in bytes"><span class="description">Size of image, in bytes</span><pre>$size</pre></a></li>
+<li class="property private "><a href="#%24updatedDate" title="$updatedDate :: Date which the image was last updated"><span class="description">Date which the image was last updated</span><pre>$updatedDate</pre></a></li>
+<li class="property private "><a href="#%24width" title="$width :: Width of the image, in pixels"><span class="description">Width of the image, in pixels</span><pre>$width</pre></a></li>
 </ul>
 </div>
 <div class="span8">
@@ -140,7 +131,7 @@
 </tr>
 <tr>
 <th>copyright</th>
-<td>Copyright (c) 2011-2012, Christer Edvartsen &lt;cogo@starzinger.net&gt;</td>
+<td>Copyright (c) 2011-2012, Christer Edvartsen <cogo@starzinger.net></td>
 </tr>
 <tr>
 <th>license</th>
@@ -166,9 +157,8 @@
 </div></div>
 </div>
 <a name="getAddedDate" id="getAddedDate"></a><div class="element clickable method public getAddedDate" data-toggle="collapse" data-target=".getAddedDate .collapse">
-<h2>getAddedDate()
-        </h2>
-<pre>getAddedDate() </pre>
+<h2>Returns the date which the image which added</h2>
+<pre>getAddedDate() : \ImboClient\Url\Images\DateTime</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <p class="long_description"></p>
@@ -176,12 +166,13 @@
 <th>see</th>
 <td>\ImboClient\Url\Images\ImageInterface::getAddedDate()</td>
 </tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>\ImboClient\Url\Images\DateTime</code></div>
 </div></div>
 </div>
 <a name="getChecksum" id="getChecksum"></a><div class="element clickable method public getChecksum" data-toggle="collapse" data-target=".getChecksum .collapse">
-<h2>getChecksum()
-        </h2>
-<pre>getChecksum() </pre>
+<h2>Returns an MD5 checksum of the image data</h2>
+<pre>getChecksum() : string</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <p class="long_description"></p>
@@ -189,12 +180,13 @@
 <th>see</th>
 <td>\ImboClient\Url\Images\ImageInterface::getChecksum()</td>
 </tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
 </div></div>
 </div>
 <a name="getExtension" id="getExtension"></a><div class="element clickable method public getExtension" data-toggle="collapse" data-target=".getExtension .collapse">
-<h2>getExtension()
-        </h2>
-<pre>getExtension() </pre>
+<h2>Returns the original extension for the image</h2>
+<pre>getExtension() : string</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <p class="long_description"></p>
@@ -202,12 +194,13 @@
 <th>see</th>
 <td>\ImboClient\Url\Images\ImageInterface::getExtension()</td>
 </tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
 </div></div>
 </div>
 <a name="getHeight" id="getHeight"></a><div class="element clickable method public getHeight" data-toggle="collapse" data-target=".getHeight .collapse">
-<h2>getHeight()
-        </h2>
-<pre>getHeight() </pre>
+<h2>Returns the height of the image, in pixels</h2>
+<pre>getHeight() : int</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <p class="long_description"></p>
@@ -215,12 +208,13 @@
 <th>see</th>
 <td>\ImboClient\Url\Images\ImageInterface::getHeight()</td>
 </tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>int</code></div>
 </div></div>
 </div>
 <a name="getIdentifier" id="getIdentifier"></a><div class="element clickable method public getIdentifier" data-toggle="collapse" data-target=".getIdentifier .collapse">
-<h2>getIdentifier()
-        </h2>
-<pre>getIdentifier() </pre>
+<h2>Returns the image identifier for the image</h2>
+<pre>getIdentifier() : string</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <p class="long_description"></p>
@@ -228,12 +222,13 @@
 <th>see</th>
 <td>\ImboClient\Url\Images\ImageInterface::getIdentifier()</td>
 </tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
 </div></div>
 </div>
 <a name="getMimeType" id="getMimeType"></a><div class="element clickable method public getMimeType" data-toggle="collapse" data-target=".getMimeType .collapse">
-<h2>getMimeType()
-        </h2>
-<pre>getMimeType() </pre>
+<h2>Returns the mime type of the image</h2>
+<pre>getMimeType() : string</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <p class="long_description"></p>
@@ -241,12 +236,13 @@
 <th>see</th>
 <td>\ImboClient\Url\Images\ImageInterface::getMimeType()</td>
 </tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
 </div></div>
 </div>
 <a name="getPublicKey" id="getPublicKey"></a><div class="element clickable method public getPublicKey" data-toggle="collapse" data-target=".getPublicKey .collapse">
-<h2>getPublicKey()
-        </h2>
-<pre>getPublicKey() </pre>
+<h2>Returns the public key in which the image is catalogued under</h2>
+<pre>getPublicKey() : string</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <p class="long_description"></p>
@@ -254,12 +250,13 @@
 <th>see</th>
 <td>\ImboClient\Url\Images\ImageInterface::getPublicKey()</td>
 </tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
 </div></div>
 </div>
 <a name="getSize" id="getSize"></a><div class="element clickable method public getSize" data-toggle="collapse" data-target=".getSize .collapse">
-<h2>getSize()
-        </h2>
-<pre>getSize() </pre>
+<h2>Returns the size of the image, in bytes</h2>
+<pre>getSize() : int</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <p class="long_description"></p>
@@ -267,12 +264,13 @@
 <th>see</th>
 <td>\ImboClient\Url\Images\ImageInterface::getSize()</td>
 </tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>int</code></div>
 </div></div>
 </div>
 <a name="getUpdatedDate" id="getUpdatedDate"></a><div class="element clickable method public getUpdatedDate" data-toggle="collapse" data-target=".getUpdatedDate .collapse">
-<h2>getUpdatedDate()
-        </h2>
-<pre>getUpdatedDate() </pre>
+<h2>Returns the date which the image was last updated</h2>
+<pre>getUpdatedDate() : \ImboClient\Url\Images\DateTime</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <p class="long_description"></p>
@@ -280,12 +278,13 @@
 <th>see</th>
 <td>\ImboClient\Url\Images\ImageInterface::getUpdatedDate()</td>
 </tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>\ImboClient\Url\Images\DateTime</code></div>
 </div></div>
 </div>
 <a name="getWidth" id="getWidth"></a><div class="element clickable method public getWidth" data-toggle="collapse" data-target=".getWidth .collapse">
-<h2>getWidth()
-        </h2>
-<pre>getWidth() </pre>
+<h2>Returns the width of the image, in pixels</h2>
+<pre>getWidth() : int</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <p class="long_description"></p>
@@ -293,6 +292,8 @@
 <th>see</th>
 <td>\ImboClient\Url\Images\ImageInterface::getWidth()</td>
 </tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>int</code></div>
 </div></div>
 </div>
 <a name="populate" id="populate"></a><div class="element clickable method private populate" data-toggle="collapse" data-target=".populate .collapse">
@@ -440,62 +441,62 @@
 <h3>
 <i class="icon-custom icon-property"></i> Properties</h3>
 <a name="%24addedDate" id="$addedDate"> </a><div class="element clickable property private $addedDate" data-toggle="collapse" data-target=".$addedDate .collapse">
-<h2>$addedDate</h2>
-<pre>$addedDate </pre>
+<h2>Date which the image was added</h2>
+<pre>$addedDate : <a href="http://php.net/manual/en/class.datetime.php">\DateTime</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
 </div>
 <a name="%24checksum" id="$checksum"> </a><div class="element clickable property private $checksum" data-toggle="collapse" data-target=".$checksum .collapse">
-<h2>$checksum</h2>
-<pre>$checksum </pre>
+<h2>MD5 checksum for the original image</h2>
+<pre>$checksum : string</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
 </div>
 <a name="%24extension" id="$extension"> </a><div class="element clickable property private $extension" data-toggle="collapse" data-target=".$extension .collapse">
-<h2>$extension</h2>
-<pre>$extension </pre>
+<h2>Extension of original image</h2>
+<pre>$extension : string</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
 </div>
 <a name="%24height" id="$height"> </a><div class="element clickable property private $height" data-toggle="collapse" data-target=".$height .collapse">
-<h2>$height</h2>
-<pre>$height </pre>
+<h2>Height of the image, in pixels</h2>
+<pre>$height : int</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
 </div>
 <a name="%24identifier" id="$identifier"> </a><div class="element clickable property private $identifier" data-toggle="collapse" data-target=".$identifier .collapse">
-<h2>$identifier</h2>
-<pre>$identifier </pre>
+<h2>Image identifier</h2>
+<pre>$identifier : string</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
 </div>
 <a name="%24mimeType" id="$mimeType"> </a><div class="element clickable property private $mimeType" data-toggle="collapse" data-target=".$mimeType .collapse">
-<h2>$mimeType</h2>
-<pre>$mimeType </pre>
+<h2>Mime type of original image</h2>
+<pre>$mimeType : string</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
 </div>
 <a name="%24publicKey" id="$publicKey"> </a><div class="element clickable property private $publicKey" data-toggle="collapse" data-target=".$publicKey .collapse">
-<h2>$publicKey</h2>
-<pre>$publicKey </pre>
+<h2>Public key for this image</h2>
+<pre>$publicKey : string</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
 </div>
 <a name="%24size" id="$size"> </a><div class="element clickable property private $size" data-toggle="collapse" data-target=".$size .collapse">
-<h2>$size</h2>
-<pre>$size </pre>
+<h2>Size of image, in bytes</h2>
+<pre>$size : int</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
 </div>
 <a name="%24updatedDate" id="$updatedDate"> </a><div class="element clickable property private $updatedDate" data-toggle="collapse" data-target=".$updatedDate .collapse">
-<h2>$updatedDate</h2>
-<pre>$updatedDate </pre>
+<h2>Date which the image was last updated</h2>
+<pre>$updatedDate : <a href="http://php.net/manual/en/class.datetime.php">\DateTime</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
 </div>
 <a name="%24width" id="$width"> </a><div class="element clickable property private $width" data-toggle="collapse" data-target=".$width .collapse">
-<h2>$width</h2>
-<pre>$width </pre>
+<h2>Width of the image, in pixels</h2>
+<pre>$width : int</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
 </div>
@@ -505,8 +506,8 @@
 </div>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
-            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a5</a> and<br>
-            generated on 2012-06-21T22:53:27+02:00.<br></footer></div>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a10</a> and<br>
+            generated on 2012-08-31T13:33:30+02:00.<br></footer></div>
 </div>
 </body>
 </html>

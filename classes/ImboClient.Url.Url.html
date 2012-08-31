@@ -24,6 +24,7 @@
 <li><a>Packages</a></li>
 <li><a href="../packages/Client.html"><i class="icon-folder-open"></i> Client</a></li>
 <li><a href="../packages/Driver.html"><i class="icon-folder-open"></i> Driver</a></li>
+<li><a href="../packages/Exceptions.html"><i class="icon-folder-open"></i> Exceptions</a></li>
 <li><a href="../packages/Http.html"><i class="icon-folder-open"></i> Http</a></li>
 <li><a href="../packages/Interfaces.html"><i class="icon-folder-open"></i> Interfaces</a></li>
 <li><a href="../packages/Url.html"><i class="icon-folder-open"></i> Url</a></li>
@@ -37,7 +38,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">218</span></a></li>
+                <span class="label label-info">192</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -61,20 +62,14 @@
 <ul class="side-nav nav nav-list">
 <li class="nav-header">
 <i class="icon-custom icon-method"></i> Methods</li>
-<li class="method public "><a href="#__call" title="__call :: "><span class="description">__call()
-        </span><pre>__call()</pre></a></li>
+<li class="method public "><a href="#__call" title="__call :: Magic call method that can be used to add simple query parameters to the URL"><span class="description">Magic call method that can be used to add simple query parameters to the URL</span><pre>__call()</pre></a></li>
 <li class="method public "><a href="#__construct" title="__construct :: Class constructor"><span class="description">Class constructor</span><pre>__construct()</pre></a></li>
-<li class="method public "><a href="#__toString" title="__toString :: "><span class="description">__toString()
-        </span><pre>__toString()</pre></a></li>
-<li class="method public "><a href="#addQueryParam" title="addQueryParam :: "><span class="description">addQueryParam()
-        </span><pre>addQueryParam()</pre></a></li>
+<li class="method public "><a href="#__toString" title="__toString :: Magic to string method"><span class="description">Magic to string method</span><pre>__toString()</pre></a></li>
+<li class="method public "><a href="#addQueryParam" title="addQueryParam :: Method for adding query parameters to the URL"><span class="description">Method for adding query parameters to the URL</span><pre>addQueryParam()</pre></a></li>
 <li class="method public "><a href="#getAccessToken" title="getAccessToken :: Get an instance of the access token"><span class="description">Get an instance of the access token</span><pre>getAccessToken()</pre></a></li>
-<li class="method public "><a href="#getUrl" title="getUrl :: "><span class="description">getUrl()
-        </span><pre>getUrl()</pre></a></li>
-<li class="method public "><a href="#getUrlEncoded" title="getUrlEncoded :: "><span class="description">getUrlEncoded()
-        </span><pre>getUrlEncoded()</pre></a></li>
-<li class="method public "><a href="#reset" title="reset :: "><span class="description">reset()
-        </span><pre>reset()</pre></a></li>
+<li class="method public "><a href="#getUrl" title="getUrl :: Fetch the complete URL including optional query parameters"><span class="description">Fetch the complete URL including optional query parameters</span><pre>getUrl()</pre></a></li>
+<li class="method public "><a href="#getUrlEncoded" title="getUrlEncoded :: Get the complete URL as an URL-encoded string"><span class="description">Get the complete URL as an URL-encoded string</span><pre>getUrlEncoded()</pre></a></li>
+<li class="method public "><a href="#reset" title="reset :: Resets the URL - removes all query parameters"><span class="description">Resets the URL - removes all query parameters</span><pre>reset()</pre></a></li>
 <li class="method public "><a href="#setAccessToken" title="setAccessToken :: Set an instance of the access token"><span class="description">Set an instance of the access token</span><pre>setAccessToken()</pre></a></li>
 <li class="nav-header protected">» Protected</li>
 <li class="method protected "><a href="#getResourceUrl" title="getResourceUrl :: Get the raw URL (with no access token appended)"><span class="description">Get the raw URL (with no access token appended)</span><pre>getResourceUrl()</pre></a></li>
@@ -83,12 +78,12 @@
 <li class="nav-header">
 <i class="icon-custom icon-property"></i> Properties</li>
 <li class="nav-header protected">» Protected</li>
-<li class="property protected "><a href="#%24baseUrl" title="$baseUrl :: "><span class="description">$baseUrl</span><pre>$baseUrl</pre></a></li>
-<li class="property protected "><a href="#%24publicKey" title="$publicKey :: "><span class="description">$publicKey</span><pre>$publicKey</pre></a></li>
+<li class="property protected "><a href="#%24baseUrl" title="$baseUrl :: Base URL"><span class="description">Base URL</span><pre>$baseUrl</pre></a></li>
+<li class="property protected "><a href="#%24publicKey" title="$publicKey :: Public key"><span class="description">Public key</span><pre>$publicKey</pre></a></li>
 <li class="nav-header private">» Private</li>
-<li class="property private "><a href="#%24accessToken" title="$accessToken :: "><span class="description">$accessToken</span><pre>$accessToken</pre></a></li>
-<li class="property private "><a href="#%24privateKey" title="$privateKey :: "><span class="description">$privateKey</span><pre>$privateKey</pre></a></li>
-<li class="property private "><a href="#%24queryParams" title="$queryParams :: "><span class="description">$queryParams</span><pre>$queryParams</pre></a></li>
+<li class="property private "><a href="#%24accessToken" title="$accessToken :: Access token generator"><span class="description">Access token generator</span><pre>$accessToken</pre></a></li>
+<li class="property private "><a href="#%24privateKey" title="$privateKey :: Private key"><span class="description">Private key</span><pre>$privateKey</pre></a></li>
+<li class="property private "><a href="#%24queryParams" title="$queryParams :: Query params for the URL"><span class="description">Query params for the URL</span><pre>$queryParams</pre></a></li>
 </ul>
 </div>
 <div class="span8">
@@ -117,7 +112,7 @@
 </tr>
 <tr>
 <th>copyright</th>
-<td>Copyright (c) 2011-2012, Christer Edvartsen &lt;cogo@starzinger.net&gt;</td>
+<td>Copyright (c) 2011-2012, Christer Edvartsen <cogo@starzinger.net></td>
 </tr>
 <tr>
 <th>license</th>
@@ -131,12 +126,18 @@
 <h3>
 <i class="icon-custom icon-method"></i> Methods</h3>
 <a name="__call" id="__call"></a><div class="element clickable method public __call" data-toggle="collapse" data-target=".__call .collapse">
-<h2>__call()
-        </h2>
-<pre>__call($method, array $args) </pre>
+<h2>Magic call method that can be used to add simple query parameters to the URL</h2>
+<pre>__call(string $method, array $args) : \ImboClient\Url\ImboClient\Url\UrlInterface</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<p class="long_description"><p>This method must be implemented in such a fashion that users can call non-existing methods
+on the URL instance that will be added as query parameters.</p>
+
+<pre><code>$url = new ImboClient\Url\Images('http://imbo', 'publicKey', 'privateKey');
+$url-&gt;page(2)-&gt;limit(10);
+
+echo $url; // http://imbo/users/publicKey/images?page=2&amp;limit=10
+</code></pre></p>
 <table class="table table-bordered"><tr>
 <th>see</th>
 <td>\ImboClient\Url\UrlInterface::__call()</td>
@@ -144,12 +145,13 @@
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$method</h4>
-<code></code>
+<code>string</code><p>The method called (will be used as query parameter name)</p>
 </div>
 <div class="subelement argument">
 <h4>$args</h4>
-<code></code>
-</div>
+<code>array</code><p>Arguments to the method. The first argument will be used as query parameter value</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\ImboClient\Url\ImboClient\Url\UrlInterface</code></div>
 </div></div>
 </div>
 <a name="__construct" id="__construct"></a><div class="element clickable method public __construct" data-toggle="collapse" data-target=".__construct .collapse">
@@ -171,22 +173,22 @@
 </div></div>
 </div>
 <a name="__toString" id="__toString"></a><div class="element clickable method public __toString" data-toggle="collapse" data-target=".__toString .collapse">
-<h2>__toString()
-        </h2>
-<pre>__toString() </pre>
+<h2>Magic to string method</h2>
+<pre>__toString() : string</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<p class="long_description"><p>This method should proxy to getUrl()</p></p>
 <table class="table table-bordered"><tr>
 <th>see</th>
 <td>\ImboClient\Url\UrlInterface::__toString()</td>
 </tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
 </div></div>
 </div>
 <a name="addQueryParam" id="addQueryParam"></a><div class="element clickable method public addQueryParam" data-toggle="collapse" data-target=".addQueryParam .collapse">
-<h2>addQueryParam()
-        </h2>
-<pre>addQueryParam($key, $value) </pre>
+<h2>Method for adding query parameters to the URL</h2>
+<pre>addQueryParam(string $key, string $value) : \ImboClient\Url\ImboClient\Url\UrlInterface</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <p class="long_description"></p>
@@ -197,29 +199,30 @@
 <h3>Parameters</h3>
 <div class="subelement argument">
 <h4>$key</h4>
-<code></code>
+<code>string</code><p>The name of the param. For instance "page" or "t[]"</p>
 </div>
 <div class="subelement argument">
 <h4>$value</h4>
-<code></code>
+<code>string</code><p>The value of the param. For instance "10" or "border:width=50,height=50"</p>
 </div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\ImboClient\Url\ImboClient\Url\UrlInterface</code></div>
 </div></div>
 </div>
 <a name="getAccessToken" id="getAccessToken"></a><div class="element clickable method public getAccessToken" data-toggle="collapse" data-target=".getAccessToken .collapse">
 <h2>Get an instance of the access token</h2>
-<pre>getAccessToken() : <a href="../classes/ImboClient.Url.AccessTokenInterface.html">\ImboClient\Url\AccessTokenInterface</a></pre>
+<pre>getAccessToken() : \ImboClient\Url\ImboClient\Url\AccessTokenInterface</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <p class="long_description"><p>If no instance have been provided prior to calling this method, this method must instantiate
 the ImboClient\Url\AccessToken class and return that instance.</p></p>
 <h3>Returns</h3>
-<div class="subelement response"><code><a href="../classes/ImboClient.Url.AccessTokenInterface.html">\ImboClient\Url\AccessTokenInterface</a></code></div>
+<div class="subelement response"><code>\ImboClient\Url\ImboClient\Url\AccessTokenInterface</code></div>
 </div></div>
 </div>
 <a name="getUrl" id="getUrl"></a><div class="element clickable method public getUrl" data-toggle="collapse" data-target=".getUrl .collapse">
-<h2>getUrl()
-        </h2>
-<pre>getUrl() </pre>
+<h2>Fetch the complete URL including optional query parameters</h2>
+<pre>getUrl() : string</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <p class="long_description"></p>
@@ -227,12 +230,13 @@ the ImboClient\Url\AccessToken class and return that instance.</p></p>
 <th>see</th>
 <td>\ImboClient\Url\UrlInterface::getUrl()</td>
 </tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
 </div></div>
 </div>
 <a name="getUrlEncoded" id="getUrlEncoded"></a><div class="element clickable method public getUrlEncoded" data-toggle="collapse" data-target=".getUrlEncoded .collapse">
-<h2>getUrlEncoded()
-        </h2>
-<pre>getUrlEncoded() </pre>
+<h2>Get the complete URL as an URL-encoded string</h2>
+<pre>getUrlEncoded() : string</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <p class="long_description"></p>
@@ -240,12 +244,13 @@ the ImboClient\Url\AccessToken class and return that instance.</p></p>
 <th>see</th>
 <td>\ImboClient\Url\UrlInterface::getUrlEncoded()</td>
 </tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
 </div></div>
 </div>
 <a name="reset" id="reset"></a><div class="element clickable method public reset" data-toggle="collapse" data-target=".reset .collapse">
-<h2>reset()
-        </h2>
-<pre>reset() </pre>
+<h2>Resets the URL - removes all query parameters</h2>
+<pre>reset() : \ImboClient\Url\ImboClient\Url\UrlInterface</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <p class="long_description"></p>
@@ -253,23 +258,22 @@ the ImboClient\Url\AccessToken class and return that instance.</p></p>
 <th>see</th>
 <td>\ImboClient\Url\UrlInterface::reset()</td>
 </tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>\ImboClient\Url\ImboClient\Url\UrlInterface</code></div>
 </div></div>
 </div>
 <a name="setAccessToken" id="setAccessToken"></a><div class="element clickable method public setAccessToken" data-toggle="collapse" data-target=".setAccessToken .collapse">
 <h2>Set an instance of the access token</h2>
-<pre>setAccessToken(ImboClient\Url\AccessTokenInterface $accessToken) : <a href="../classes/ImboClient.Url.AccessTokenInterface.html">\ImboClient\Url\AccessTokenInterface</a>: <a href="../classes/ImboClient.Url.UrlInterface.html">\ImboClient\Url\UrlInterface</a></pre>
+<pre>setAccessToken(\ImboClient\Url\AccessTokenInterface $accessToken) : \ImboClient\Url\ImboClient\Url\AccessTokenInterface: \ImboClient\Url\ImboClient\Url\UrlInterface</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <p class="long_description"></p>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$accessToken</h4>
-<code></code>
-</div>
+<div class="subelement argument"><h4>$accessToken</h4></div>
 <h3>Returns</h3>
 <div class="subelement response">
-<code><a href="../classes/ImboClient.Url.AccessTokenInterface.html">\ImboClient\Url\AccessTokenInterface</a></code>$accessToken An instance of the access token</div>
-<div class="subelement response"><code><a href="../classes/ImboClient.Url.UrlInterface.html">\ImboClient\Url\UrlInterface</a></code></div>
+<code>\ImboClient\Url\ImboClient\Url\AccessTokenInterface</code>$accessToken An instance of the access token</div>
+<div class="subelement response"><code>\ImboClient\Url\ImboClient\Url\UrlInterface</code></div>
 </div></div>
 </div>
 <a name="getResourceUrl" id="getResourceUrl"></a><div class="element clickable method protected getResourceUrl" data-toggle="collapse" data-target=".getResourceUrl .collapse">
@@ -295,32 +299,32 @@ the ImboClient\Url\AccessToken class and return that instance.</p></p>
 <h3>
 <i class="icon-custom icon-property"></i> Properties</h3>
 <a name="%24baseUrl" id="$baseUrl"> </a><div class="element clickable property protected $baseUrl" data-toggle="collapse" data-target=".$baseUrl .collapse">
-<h2>$baseUrl</h2>
-<pre>$baseUrl </pre>
+<h2>Base URL</h2>
+<pre>$baseUrl : string</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
 </div>
 <a name="%24publicKey" id="$publicKey"> </a><div class="element clickable property protected $publicKey" data-toggle="collapse" data-target=".$publicKey .collapse">
-<h2>$publicKey</h2>
-<pre>$publicKey </pre>
+<h2>Public key</h2>
+<pre>$publicKey : string</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
 </div>
 <a name="%24accessToken" id="$accessToken"> </a><div class="element clickable property private $accessToken" data-toggle="collapse" data-target=".$accessToken .collapse">
-<h2>$accessToken</h2>
-<pre>$accessToken </pre>
+<h2>Access token generator</h2>
+<pre>$accessToken : \ImboClient\Url\ImboClient\Url\AccessTokenInterface</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
 </div>
 <a name="%24privateKey" id="$privateKey"> </a><div class="element clickable property private $privateKey" data-toggle="collapse" data-target=".$privateKey .collapse">
-<h2>$privateKey</h2>
-<pre>$privateKey </pre>
+<h2>Private key</h2>
+<pre>$privateKey : string</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
 </div>
 <a name="%24queryParams" id="$queryParams"> </a><div class="element clickable property private $queryParams" data-toggle="collapse" data-target=".$queryParams .collapse">
-<h2>$queryParams</h2>
-<pre>$queryParams </pre>
+<h2>Query params for the URL</h2>
+<pre>$queryParams : array</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><p class="long_description"></p></div></div>
 </div>
@@ -330,8 +334,8 @@ the ImboClient\Url\AccessToken class and return that instance.</p></p>
 </div>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
-            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a5</a> and<br>
-            generated on 2012-06-21T22:53:27+02:00.<br></footer></div>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a10</a> and<br>
+            generated on 2012-08-31T13:33:30+02:00.<br></footer></div>
 </div>
 </body>
 </html>

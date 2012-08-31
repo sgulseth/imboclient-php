@@ -24,6 +24,7 @@
 <li><a>Packages</a></li>
 <li><a href="packages/Client.html"><i class="icon-folder-open"></i> Client</a></li>
 <li><a href="packages/Driver.html"><i class="icon-folder-open"></i> Driver</a></li>
+<li><a href="packages/Exceptions.html"><i class="icon-folder-open"></i> Exceptions</a></li>
 <li><a href="packages/Http.html"><i class="icon-folder-open"></i> Http</a></li>
 <li><a href="packages/Interfaces.html"><i class="icon-folder-open"></i> Interfaces</a></li>
 <li><a href="packages/Url.html"><i class="icon-folder-open"></i> Url</a></li>
@@ -37,7 +38,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">218</span></a></li>
+                <span class="label label-info">192</span></a></li>
 <li><a href="markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -60,7 +61,6 @@
 <button class="btn critical">Critical</button><button class="btn error">Error</button><button class="btn notice">Notice</button>
 </div></li>
 <li class="nav-header">Navigation</li>
-<li><a href="#Version.php"><i class="icon-file"></i>Version.php</a></li>
 <li><a href="#Client.php"><i class="icon-file"></i>Client.php</a></li>
 <li><a href="#Url/Status.php"><i class="icon-file"></i>Url/Status.php</a></li>
 <li><a href="#Url/Metadata.php"><i class="icon-file"></i>Url/Metadata.php</a></li>
@@ -72,8 +72,10 @@
 <li><a href="#Url/Images/Query.php"><i class="icon-file"></i>Url/Images/Query.php</a></li>
 <li><a href="#Url/Url.php"><i class="icon-file"></i>Url/Url.php</a></li>
 <li><a href="#Url/Images.php"><i class="icon-file"></i>Url/Images.php</a></li>
-<li><a href="#Driver/Curl.php"><i class="icon-file"></i>Driver/Curl.php</a></li>
+<li><a href="#ClientInterface.php"><i class="icon-file"></i>ClientInterface.php</a></li>
+<li><a href="#Driver/cURL.php"><i class="icon-file"></i>Driver/cURL.php</a></li>
 <li><a href="#Http/Response/Response.php"><i class="icon-file"></i>Http/Response/Response.php</a></li>
+<li><a href="#Http/Response/ResponseInterface.php"><i class="icon-file"></i>Http/Response/ResponseInterface.php</a></li>
 <li><a href="#Http/HeaderContainer.php"><i class="icon-file"></i>Http/HeaderContainer.php</a></li>
 </ul></div>
 <div class="span8">
@@ -83,26 +85,13 @@
 </li>
 <li>Compilation Errors</li>
 </ul>
-<div class="package-contents">
-<a name="Version.php" id="Version.php"></a><h3>
-<i class="icon-file"></i>Version.php<small style="float: right;padding-right: 10px;">1</small>
-</h3>
-<div><table class="table markers table-bordered">
-<thead><tr>
-<th>Type</th>
-<th>Line</th>
-<th>Description</th>
-</tr></thead>
-<tbody><tr class="error">
-<td>error</td>
-<td>51</td>
-<td>No DocBlock was found for property $version</td>
-</tr></tbody>
-</table></div>
-</div>
+<div class="package-contents"></div>
+<div class="package-contents"></div>
+<div class="package-contents"></div>
+<div class="package-contents"></div>
 <div class="package-contents">
 <a name="Client.php" id="Client.php"></a><h3>
-<i class="icon-file"></i>Client.php<small style="float: right;padding-right: 10px;">50</small>
+<i class="icon-file"></i>Client.php<small style="float: right;padding-right: 10px;">48</small>
 </h3>
 <div><table class="table markers table-bordered">
 <thead><tr>
@@ -113,252 +102,242 @@
 <tbody>
 <tr class="error">
 <td>error</td>
-<td>58</td>
-<td>No DocBlock was found for property $serverUrls</td>
+<td>81</td>
+<td>The type hint of the argument is incorrect for the type definition of the @param tag with argument $driver in __construct()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>65</td>
-<td>No DocBlock was found for property $driver</td>
+<td>81</td>
+<td>The type hint of the argument is incorrect for the type definition of the @param tag with argument $version in __construct()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>72</td>
-<td>No DocBlock was found for property $publicKey</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>79</td>
-<td>No DocBlock was found for property $privateKey</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>114</td>
+<td>111</td>
 <td>No short description for method getServerUrls()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>121</td>
+<td>118</td>
 <td>No short description for method setDriver()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>121</td>
+<td>118</td>
 <td>Argument $driver is missing from the Docblock of setDriver()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>130</td>
+<td>127</td>
 <td>No short description for method getStatusUrl()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>137</td>
+<td>134</td>
 <td>No short description for method getUserUrl()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>144</td>
+<td>141</td>
 <td>No short description for method getImagesUrl()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>151</td>
+<td>148</td>
 <td>No short description for method getImageUrl()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>151</td>
+<td>148</td>
 <td>Argument $imageIdentifier is missing from the Docblock of getImageUrl()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>160</td>
+<td>157</td>
 <td>No short description for method getMetadataUrl()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>160</td>
+<td>157</td>
 <td>Argument $imageIdentifier is missing from the Docblock of getMetadataUrl()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>169</td>
+<td>166</td>
 <td>No short description for method addImage()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>169</td>
+<td>166</td>
 <td>Argument $path is missing from the Docblock of addImage()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>181</td>
+<td>178</td>
 <td>No short description for method addImageFromString()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>181</td>
+<td>178</td>
 <td>Argument $image is missing from the Docblock of addImageFromString()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>193</td>
+<td>190</td>
 <td>No short description for method addImageFromUrl()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>193</td>
+<td>190</td>
 <td>Argument $url is missing from the Docblock of addImageFromUrl()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>211</td>
+<td>208</td>
 <td>No short description for method imageExists()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>211</td>
+<td>208</td>
 <td>Argument $path is missing from the Docblock of imageExists()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>221</td>
+<td>218</td>
 <td>No short description for method headImage()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>221</td>
+<td>218</td>
 <td>Argument $imageIdentifier is missing from the Docblock of headImage()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>230</td>
+<td>227</td>
 <td>No short description for method deleteImage()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>230</td>
+<td>227</td>
 <td>Argument $imageIdentifier is missing from the Docblock of deleteImage()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>240</td>
+<td>237</td>
 <td>No short description for method editMetadata()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>240</td>
+<td>237</td>
 <td>Argument $imageIdentifier is missing from the Docblock of editMetadata()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>240</td>
+<td>237</td>
 <td>Argument $metadata is missing from the Docblock of editMetadata()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>258</td>
+<td>253</td>
 <td>No short description for method replaceMetadata()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>258</td>
+<td>253</td>
 <td>Argument $imageIdentifier is missing from the Docblock of replaceMetadata()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>258</td>
+<td>253</td>
 <td>Argument $metadata is missing from the Docblock of replaceMetadata()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>276</td>
+<td>269</td>
 <td>No short description for method deleteMetadata()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>276</td>
+<td>269</td>
 <td>Argument $imageIdentifier is missing from the Docblock of deleteMetadata()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>286</td>
+<td>279</td>
 <td>No short description for method getMetadata()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>286</td>
+<td>279</td>
 <td>Argument $imageIdentifier is missing from the Docblock of getMetadata()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>295</td>
+<td>288</td>
 <td>No short description for method getNumImages()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>311</td>
+<td>304</td>
 <td>No short description for method getImages()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>311</td>
+<td>304</td>
 <td>Argument $query is missing from the Docblock of getImages()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>360</td>
+<td>353</td>
 <td>No short description for method getImageData()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>360</td>
+<td>353</td>
 <td>Argument $imageIdentifier is missing from the Docblock of getImageData()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>369</td>
+<td>362</td>
 <td>No short description for method getImageDataFromUrl()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>369</td>
+<td>362</td>
 <td>Argument $url is missing from the Docblock of getImageDataFromUrl()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>382</td>
+<td>375</td>
 <td>No short description for method getImageProperties()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>382</td>
+<td>375</td>
 <td>Argument $imageIdentifier is missing from the Docblock of getImageProperties()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>401</td>
+<td>394</td>
 <td>No short description for method getImageIdentifier()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>401</td>
+<td>394</td>
 <td>Argument $path is missing from the Docblock of getImageIdentifier()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>412</td>
+<td>405</td>
 <td>No short description for method getImageIdentifierFromString()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>412</td>
+<td>405</td>
 <td>Argument $image is missing from the Docblock of getImageIdentifierFromString()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>419</td>
+<td>412</td>
 <td>No short description for method getServerStatus()</td>
 </tr>
 </tbody>
@@ -376,14 +355,14 @@
 </tr></thead>
 <tbody><tr class="error">
 <td>error</td>
-<td>47</td>
+<td>44</td>
 <td>No short description for method getResourceUrl()</td>
 </tr></tbody>
 </table></div>
 </div>
 <div class="package-contents">
 <a name="Url/Metadata.php" id="Url/Metadata.php"></a><h3>
-<i class="icon-file"></i>Url/Metadata.php<small style="float: right;padding-right: 10px;">6</small>
+<i class="icon-file"></i>Url/Metadata.php<small style="float: right;padding-right: 10px;">5</small>
 </h3>
 <div><table class="table markers table-bordered">
 <thead><tr>
@@ -394,32 +373,27 @@
 <tbody>
 <tr class="error">
 <td>error</td>
-<td>49</td>
-<td>No DocBlock was found for property $imageIdentifier</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>57</td>
+<td>51</td>
 <td>Name of argument $baseUrl does not match with the DocBlock's name $imageIdentifier in __construct()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>57</td>
+<td>51</td>
 <td>Argument $publicKey is missing from the Docblock of __construct()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>57</td>
+<td>51</td>
 <td>Argument $privateKey is missing from the Docblock of __construct()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>57</td>
+<td>51</td>
 <td>Argument $imageIdentifier is missing from the Docblock of __construct()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>66</td>
+<td>63</td>
 <td>No short description for method getResourceUrl()</td>
 </tr>
 </tbody>
@@ -427,7 +401,7 @@
 </div>
 <div class="package-contents">
 <a name="Url/Image.php" id="Url/Image.php"></a><h3>
-<i class="icon-file"></i>Url/Image.php<small style="float: right;padding-right: 10px;">47</small>
+<i class="icon-file"></i>Url/Image.php<small style="float: right;padding-right: 10px;">46</small>
 </h3>
 <div><table class="table markers table-bordered">
 <thead><tr>
@@ -438,237 +412,232 @@
 <tbody>
 <tr class="error">
 <td>error</td>
-<td>49</td>
-<td>No DocBlock was found for property $imageIdentifier</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>57</td>
+<td>51</td>
 <td>Name of argument $baseUrl does not match with the DocBlock's name $imageIdentifier in __construct()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>57</td>
+<td>51</td>
 <td>Argument $publicKey is missing from the Docblock of __construct()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>57</td>
+<td>51</td>
 <td>Argument $privateKey is missing from the Docblock of __construct()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>57</td>
+<td>51</td>
 <td>Argument $imageIdentifier is missing from the Docblock of __construct()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>66</td>
+<td>63</td>
 <td>No short description for method border()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>66</td>
+<td>63</td>
 <td>Argument $color is missing from the Docblock of border()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>66</td>
+<td>63</td>
 <td>Argument $width is missing from the Docblock of border()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>66</td>
+<td>63</td>
 <td>Argument $height is missing from the Docblock of border()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>73</td>
+<td>70</td>
 <td>No short description for method compress()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>73</td>
+<td>70</td>
 <td>Argument $quality is missing from the Docblock of compress()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>80</td>
+<td>77</td>
 <td>No short description for method convert()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>80</td>
+<td>77</td>
 <td>Argument $type is missing from the Docblock of convert()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>89</td>
+<td>86</td>
 <td>No short description for method gif()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>96</td>
+<td>93</td>
 <td>No short description for method jpg()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>103</td>
+<td>100</td>
 <td>No short description for method png()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>110</td>
+<td>107</td>
 <td>No short description for method crop()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>110</td>
+<td>107</td>
 <td>Argument $x is missing from the Docblock of crop()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>110</td>
+<td>107</td>
 <td>Argument $y is missing from the Docblock of crop()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>110</td>
+<td>107</td>
 <td>Argument $width is missing from the Docblock of crop()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>110</td>
+<td>107</td>
 <td>Argument $height is missing from the Docblock of crop()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>117</td>
+<td>114</td>
 <td>No short description for method flipHorizontally()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>124</td>
+<td>121</td>
 <td>No short description for method flipVertically()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>131</td>
+<td>128</td>
 <td>No short description for method resize()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>131</td>
+<td>128</td>
 <td>Argument $width is missing from the Docblock of resize()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>131</td>
+<td>128</td>
 <td>Argument $height is missing from the Docblock of resize()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>148</td>
+<td>145</td>
 <td>No short description for method maxSize()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>148</td>
+<td>145</td>
 <td>Argument $maxWidth is missing from the Docblock of maxSize()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>148</td>
+<td>145</td>
 <td>Argument $maxHeight is missing from the Docblock of maxSize()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>165</td>
+<td>162</td>
 <td>No short description for method rotate()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>165</td>
+<td>162</td>
 <td>Argument $angle is missing from the Docblock of rotate()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>165</td>
+<td>162</td>
 <td>Argument $bg is missing from the Docblock of rotate()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>172</td>
+<td>169</td>
 <td>No short description for method thumbnail()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>172</td>
+<td>169</td>
 <td>Argument $width is missing from the Docblock of thumbnail()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>172</td>
+<td>169</td>
 <td>Argument $height is missing from the Docblock of thumbnail()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>172</td>
+<td>169</td>
 <td>Argument $fit is missing from the Docblock of thumbnail()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>179</td>
+<td>176</td>
 <td>No short description for method canvas()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>179</td>
+<td>176</td>
 <td>Argument $width is missing from the Docblock of canvas()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>179</td>
+<td>176</td>
 <td>Argument $height is missing from the Docblock of canvas()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>179</td>
+<td>176</td>
 <td>Argument $mode is missing from the Docblock of canvas()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>179</td>
+<td>176</td>
 <td>Argument $x is missing from the Docblock of canvas()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>179</td>
+<td>176</td>
 <td>Argument $y is missing from the Docblock of canvas()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>179</td>
+<td>176</td>
 <td>Argument $bg is missing from the Docblock of canvas()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>207</td>
+<td>204</td>
 <td>No short description for method transpose()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>214</td>
+<td>211</td>
 <td>No short description for method transverse()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>222</td>
+<td>218</td>
 <td>No short description for method reset()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>233</td>
+<td>230</td>
 <td>No short description for method getResourceUrl()</td>
 </tr>
 </tbody>
@@ -686,7 +655,7 @@
 </tr></thead>
 <tbody><tr class="error">
 <td>error</td>
-<td>47</td>
+<td>44</td>
 <td>No short description for method getResourceUrl()</td>
 </tr></tbody>
 </table></div>
@@ -707,17 +676,17 @@
 <tbody>
 <tr class="error">
 <td>error</td>
-<td>47</td>
+<td>44</td>
 <td>No short description for method generateToken()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>47</td>
+<td>44</td>
 <td>Argument $url is missing from the Docblock of generateToken()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>47</td>
+<td>44</td>
 <td>Argument $key is missing from the Docblock of generateToken()</td>
 </tr>
 </tbody>
@@ -725,7 +694,7 @@
 </div>
 <div class="package-contents">
 <a name="Url/Images/Image.php" id="Url/Images/Image.php"></a><h3>
-<i class="icon-file"></i>Url/Images/Image.php<small style="float: right;padding-right: 10px;">20</small>
+<i class="icon-file"></i>Url/Images/Image.php<small style="float: right;padding-right: 10px;">10</small>
 </h3>
 <div><table class="table markers table-bordered">
 <thead><tr>
@@ -736,102 +705,52 @@
 <tbody>
 <tr class="error">
 <td>error</td>
-<td>53</td>
-<td>No DocBlock was found for property $identifier</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>60</td>
-<td>No DocBlock was found for property $size</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>67</td>
-<td>No DocBlock was found for property $extension</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>74</td>
-<td>No DocBlock was found for property $mimeType</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>81</td>
-<td>No DocBlock was found for property $addedDate</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>88</td>
-<td>No DocBlock was found for property $updatedDate</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>95</td>
-<td>No DocBlock was found for property $width</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>102</td>
-<td>No DocBlock was found for property $height</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>109</td>
-<td>No DocBlock was found for property $checksum</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>116</td>
-<td>No DocBlock was found for property $publicKey</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>150</td>
+<td>147</td>
 <td>No short description for method getIdentifier()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>157</td>
+<td>154</td>
 <td>No short description for method getSize()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>164</td>
+<td>161</td>
 <td>No short description for method getExtension()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>171</td>
+<td>168</td>
 <td>No short description for method getMimeType()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>178</td>
+<td>175</td>
 <td>No short description for method getAddedDate()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>185</td>
+<td>182</td>
 <td>No short description for method getUpdatedDate()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>192</td>
+<td>189</td>
 <td>No short description for method getWidth()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>199</td>
+<td>196</td>
 <td>No short description for method getHeight()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>206</td>
+<td>203</td>
 <td>No short description for method getChecksum()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>213</td>
+<td>210</td>
 <td>No short description for method getPublicKey()</td>
 </tr>
 </tbody>
@@ -851,12 +770,12 @@
 <tbody>
 <tr class="error">
 <td>error</td>
-<td>94</td>
+<td>88</td>
 <td>Name of argument $to does not match with the DocBlock's name $from in to()</td>
 </tr>
 <tr class="notice">
 <td>notice</td>
-<td>94</td>
+<td>88</td>
 <td>Parameter $from could not be found in to()</td>
 </tr>
 </tbody>
@@ -864,7 +783,7 @@
 </div>
 <div class="package-contents">
 <a name="Url/Images/Query.php" id="Url/Images/Query.php"></a><h3>
-<i class="icon-file"></i>Url/Images/Query.php<small style="float: right;padding-right: 10px;">18</small>
+<i class="icon-file"></i>Url/Images/Query.php<small style="float: right;padding-right: 10px;">12</small>
 </h3>
 <div><table class="table markers table-bordered">
 <thead><tr>
@@ -875,92 +794,62 @@
 <tbody>
 <tr class="error">
 <td>error</td>
-<td>51</td>
-<td>No DocBlock was found for property $page</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>58</td>
-<td>No DocBlock was found for property $limit</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>65</td>
-<td>No DocBlock was found for property $returnMetadata</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>72</td>
-<td>No DocBlock was found for property $metadataQuery</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>79</td>
-<td>No DocBlock was found for property $from</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>86</td>
-<td>No DocBlock was found for property $to</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>91</td>
+<td>88</td>
 <td>No short description for method page()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>91</td>
+<td>88</td>
 <td>Argument $page is missing from the Docblock of page()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>104</td>
+<td>101</td>
 <td>No short description for method limit()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>104</td>
+<td>101</td>
 <td>Argument $limit is missing from the Docblock of limit()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>117</td>
+<td>114</td>
 <td>No short description for method returnMetadata()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>117</td>
+<td>114</td>
 <td>Argument $returnMetadata is missing from the Docblock of returnMetadata()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>130</td>
+<td>127</td>
 <td>No short description for method metadataQuery()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>130</td>
+<td>127</td>
 <td>Argument $metadataQuery is missing from the Docblock of metadataQuery()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>143</td>
+<td>140</td>
 <td>No short description for method from()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>143</td>
+<td>140</td>
 <td>Argument $from is missing from the Docblock of from()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>156</td>
+<td>153</td>
 <td>No short description for method to()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>156</td>
+<td>153</td>
 <td>Argument $to is missing from the Docblock of to()</td>
 </tr>
 </tbody>
@@ -968,7 +857,7 @@
 </div>
 <div class="package-contents">
 <a name="Url/Url.php" id="Url/Url.php"></a><h3>
-<i class="icon-file"></i>Url/Url.php<small style="float: right;padding-right: 10px;">16</small>
+<i class="icon-file"></i>Url/Url.php<small style="float: right;padding-right: 10px;">11</small>
 </h3>
 <div><table class="table markers table-bordered">
 <thead><tr>
@@ -979,82 +868,57 @@
 <tbody>
 <tr class="error">
 <td>error</td>
-<td>49</td>
-<td>No DocBlock was found for property $baseUrl</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>56</td>
-<td>No DocBlock was found for property $publicKey</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>63</td>
-<td>No DocBlock was found for property $privateKey</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>70</td>
-<td>No DocBlock was found for property $accessToken</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>77</td>
-<td>No DocBlock was found for property $queryParams</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>95</td>
+<td>92</td>
 <td>No short description for method getUrl()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>116</td>
+<td>113</td>
 <td>No short description for method getUrlEncoded()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>129</td>
+<td>126</td>
 <td>No short description for method __toString()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>136</td>
+<td>133</td>
 <td>No short description for method __call()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>136</td>
+<td>133</td>
 <td>Argument $method is missing from the Docblock of __call()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>136</td>
+<td>133</td>
 <td>Argument $args is missing from the Docblock of __call()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>147</td>
+<td>144</td>
 <td>No short description for method addQueryParam()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>147</td>
+<td>144</td>
 <td>Argument $key is missing from the Docblock of addQueryParam()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>147</td>
+<td>144</td>
 <td>Argument $value is missing from the Docblock of addQueryParam()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>156</td>
+<td>153</td>
 <td>No short description for method reset()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>184</td>
+<td>178</td>
 <td>Argument $accessToken is missing from the Docblock of setAccessToken()</td>
 </tr>
 </tbody>
@@ -1072,16 +936,14 @@
 </tr></thead>
 <tbody><tr class="error">
 <td>error</td>
-<td>47</td>
+<td>44</td>
 <td>No short description for method getResourceUrl()</td>
 </tr></tbody>
 </table></div>
 </div>
-<div class="package-contents"></div>
-<div class="package-contents"></div>
 <div class="package-contents">
-<a name="Driver/Curl.php" id="Driver/Curl.php"></a><h3>
-<i class="icon-file"></i>Driver/Curl.php<small style="float: right;padding-right: 10px;">23</small>
+<a name="ClientInterface.php" id="ClientInterface.php"></a><h3>
+<i class="icon-file"></i>ClientInterface.php<small style="float: right;padding-right: 10px;">3</small>
 </h3>
 <div><table class="table markers table-bordered">
 <thead><tr>
@@ -1092,118 +954,143 @@
 <tbody>
 <tr class="error">
 <td>error</td>
-<td>55</td>
-<td>No DocBlock was found for property $curlHandle</td>
+<td>57</td>
+<td>The type hint of the argument is incorrect for the type definition of the @param tag with argument $driver in setDriver()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>62</td>
-<td>No DocBlock was found for property $headers</td>
+<td>197</td>
+<td>The type hint of the argument is incorrect for the type definition of the @param tag with argument $query in getImages()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>71</td>
-<td>No DocBlock was found for property $params</td>
+<td>219</td>
+<td>The type hint of the argument is incorrect for the type definition of the @param tag with argument $url in getImageDataFromUrl()</td>
 </tr>
+</tbody>
+</table></div>
+</div>
+<div class="package-contents"></div>
+<div class="package-contents">
+<a name="Driver/cURL.php" id="Driver/cURL.php"></a><h3>
+<i class="icon-file"></i>Driver/cURL.php<small style="float: right;padding-right: 10px;">22</small>
+</h3>
+<div><table class="table markers table-bordered">
+<thead><tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
 <tr class="error">
 <td>error</td>
-<td>123</td>
+<td>122</td>
 <td>No short description for method post()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>123</td>
+<td>122</td>
 <td>Argument $url is missing from the Docblock of post()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>123</td>
+<td>122</td>
 <td>Argument $metadata is missing from the Docblock of post()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>137</td>
+<td>122</td>
+<td>Argument $headers is missing from the Docblock of post()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>136</td>
 <td>No short description for method get()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>137</td>
+<td>136</td>
 <td>Argument $url is missing from the Docblock of get()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>150</td>
+<td>149</td>
 <td>No short description for method head()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>150</td>
+<td>149</td>
 <td>Argument $url is missing from the Docblock of head()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>164</td>
+<td>163</td>
 <td>No short description for method delete()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>164</td>
+<td>163</td>
 <td>Argument $url is missing from the Docblock of delete()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>177</td>
+<td>176</td>
 <td>No short description for method put()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>177</td>
+<td>176</td>
 <td>Argument $url is missing from the Docblock of put()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>177</td>
+<td>176</td>
 <td>Argument $filePath is missing from the Docblock of put()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>194</td>
+<td>193</td>
 <td>No short description for method putData()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>194</td>
+<td>193</td>
 <td>Argument $url is missing from the Docblock of putData()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>194</td>
+<td>193</td>
 <td>Argument $data is missing from the Docblock of putData()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>208</td>
-<td>No short description for method addRequestHeader()</td>
+<td>193</td>
+<td>Argument $headers is missing from the Docblock of putData()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>208</td>
-<td>Argument $key is missing from the Docblock of addRequestHeader()</td>
+<td>207</td>
+<td>No short description for method setRequestHeader()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>208</td>
-<td>Argument $value is missing from the Docblock of addRequestHeader()</td>
+<td>207</td>
+<td>Argument $key is missing from the Docblock of setRequestHeader()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>217</td>
-<td>No short description for method addRequestHeaders()</td>
+<td>207</td>
+<td>Argument $value is missing from the Docblock of setRequestHeader()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>217</td>
-<td>Argument $headers is missing from the Docblock of addRequestHeaders()</td>
+<td>216</td>
+<td>No short description for method setRequestHeaders()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>216</td>
+<td>Argument $headers is missing from the Docblock of setRequestHeaders()</td>
 </tr>
 </tbody>
 </table></div>
@@ -1211,7 +1098,7 @@
 <div class="package-contents"></div>
 <div class="package-contents">
 <a name="Http/Response/Response.php" id="Http/Response/Response.php"></a><h3>
-<i class="icon-file"></i>Http/Response/Response.php<small style="float: right;padding-right: 10px;">17</small>
+<i class="icon-file"></i>Http/Response/Response.php<small style="float: right;padding-right: 10px;">15</small>
 </h3>
 <div><table class="table markers table-bordered">
 <thead><tr>
@@ -1222,96 +1109,102 @@
 <tbody>
 <tr class="error">
 <td>error</td>
-<td>52</td>
-<td>No DocBlock was found for property $headers</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>59</td>
-<td>No DocBlock was found for property $body</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>66</td>
-<td>No DocBlock was found for property $statusCode</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>71</td>
+<td>68</td>
 <td>No short description for method getHeaders()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>78</td>
+<td>75</td>
 <td>No short description for method setHeaders()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>78</td>
+<td>75</td>
 <td>Argument $headers is missing from the Docblock of setHeaders()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>87</td>
+<td>84</td>
 <td>No short description for method getBody()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>94</td>
+<td>91</td>
 <td>No short description for method setBody()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>94</td>
+<td>91</td>
 <td>Argument $body is missing from the Docblock of setBody()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>103</td>
+<td>100</td>
 <td>No short description for method getStatusCode()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>110</td>
+<td>107</td>
 <td>No short description for method setStatusCode()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>110</td>
+<td>107</td>
 <td>Argument $code is missing from the Docblock of setStatusCode()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>119</td>
+<td>116</td>
 <td>No short description for method getImboErrorCode()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>136</td>
+<td>133</td>
 <td>No short description for method isSuccess()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>145</td>
+<td>142</td>
+<td>No short description for method isError()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>149</td>
 <td>No short description for method getImageIdentifier()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>152</td>
+<td>156</td>
 <td>No short description for method asArray()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>159</td>
+<td>163</td>
 <td>No short description for method asObject()</td>
 </tr>
 </tbody>
 </table></div>
 </div>
-<div class="package-contents"></div>
+<div class="package-contents">
+<a name="Http/Response/ResponseInterface.php" id="Http/Response/ResponseInterface.php"></a><h3>
+<i class="icon-file"></i>Http/Response/ResponseInterface.php<small style="float: right;padding-right: 10px;">1</small>
+</h3>
+<div><table class="table markers table-bordered">
+<thead><tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr class="error">
+<td>error</td>
+<td>76</td>
+<td>The type hint of the argument is incorrect for the type definition of the @param tag with argument $headers in setHeaders()</td>
+</tr></tbody>
+</table></div>
+</div>
 <div class="package-contents">
 <a name="Http/HeaderContainer.php" id="Http/HeaderContainer.php"></a><h3>
-<i class="icon-file"></i>Http/HeaderContainer.php<small style="float: right;padding-right: 10px;">12</small>
+<i class="icon-file"></i>Http/HeaderContainer.php<small style="float: right;padding-right: 10px;">11</small>
 </h3>
 <div><table class="table markers table-bordered">
 <thead><tr>
@@ -1322,73 +1215,69 @@
 <tbody>
 <tr class="error">
 <td>error</td>
-<td>51</td>
-<td>No DocBlock was found for property $parameters</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>67</td>
+<td>64</td>
 <td>No short description for method getAll()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>74</td>
+<td>71</td>
 <td>No short description for method set()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>74</td>
+<td>71</td>
 <td>Argument $key is missing from the Docblock of set()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>74</td>
+<td>71</td>
 <td>Argument $value is missing from the Docblock of set()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>84</td>
+<td>81</td>
 <td>No short description for method get()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>84</td>
+<td>81</td>
 <td>Argument $key is missing from the Docblock of get()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>84</td>
+<td>81</td>
 <td>Argument $default is missing from the Docblock of get()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>93</td>
+<td>90</td>
 <td>No short description for method remove()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>93</td>
+<td>90</td>
 <td>Argument $key is missing from the Docblock of remove()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>103</td>
+<td>100</td>
 <td>No short description for method has()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>103</td>
+<td>100</td>
 <td>Argument $key is missing from the Docblock of has()</td>
 </tr>
 </tbody>
 </table></div>
 </div>
+<div class="package-contents"></div>
 </div>
 </div>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
-            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a5</a> and<br>
-            generated on 2012-06-21T22:53:28+02:00.<br></footer></div>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a10</a> and<br>
+            generated on 2012-08-31T13:33:30+02:00.<br></footer></div>
 </div>
 </body>
 </html>
