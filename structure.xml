@@ -263,7 +263,7 @@ IN THE SOFTWARE.</p>]]></long-description>
       </method>
     </class>
   </file>
-  <file path="Client.php" hash="52abd2387086d781feae77144bac9322" package="Client">
+  <file path="Client.php" hash="21913202610a66245eaa9bf943e0ccc2" package="Client">
     <docblock line="2">
       <description><![CDATA[ImboClient]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2011-2012, Christer Edvartsen <a href="&#x6d;&#x61;&#105;&#108;&#x74;&#x6f;&#58;&#99;o&#x67;&#x6f;&#64;&#115;&#x74;&#x61;&#114;&#122;i&#x6e;&#x67;&#101;&#114;&#x2e;&#x6e;&#101;&#116;">&#99;o&#x67;&#x6f;&#64;&#115;&#x74;&#x61;&#114;&#122;i&#x6e;&#x67;&#101;&#114;&#x2e;&#x6e;&#101;&#116;</a></p>
@@ -299,334 +299,321 @@ IN THE SOFTWARE.</p>]]></long-description>
     <namespace-alias name="Image">ImboClient\Url\Images\Image</namespace-alias>
     <namespace-alias name="QueryInterface">ImboClient\Url\Images\QueryInterface</namespace-alias>
     <namespace-alias name="InvalidArgumentException">ImboClient\Exception\InvalidArgumentException</namespace-alias>
-    <class final="false" abstract="false" namespace="ImboClient" line="52" package="Client">
+    <namespace-alias name="ServerException">ImboClient\Exception\ServerException</namespace-alias>
+    <class final="false" abstract="false" namespace="ImboClient" line="53" package="Client">
       <extends/>
       <implements>\ImboClient\ClientInterface</implements>
       <name>Client</name>
       <full_name>\ImboClient\Client</full_name>
-      <docblock line="41">
+      <docblock line="42">
         <description><![CDATA[Client that interacts with Imbo servers]]></description>
         <long-description><![CDATA[<p>This client includes methods that can be used to easily interact with Imbo servers.</p>]]></long-description>
-        <tag line="41" name="package" description="Client"/>
-        <tag line="41" name="author" description="Christer Edvartsen &lt;cogo@starzinger.net&gt;"/>
-        <tag line="41" name="copyright" description="Copyright (c) 2011-2012, Christer Edvartsen &lt;cogo@starzinger.net&gt;"/>
-        <tag line="41" name="license" description="http://www.opensource.org/licenses/mit-license MIT License"/>
-        <tag line="41" name="link" description="https://github.com/imbo/imboclient-php" link="https://github.com/imbo/imboclient-php"/>
+        <tag line="42" name="package" description="Client"/>
+        <tag line="42" name="author" description="Christer Edvartsen &lt;cogo@starzinger.net&gt;"/>
+        <tag line="42" name="copyright" description="Copyright (c) 2011-2012, Christer Edvartsen &lt;cogo@starzinger.net&gt;"/>
+        <tag line="42" name="license" description="http://www.opensource.org/licenses/mit-license MIT License"/>
+        <tag line="42" name="link" description="https://github.com/imbo/imboclient-php" link="https://github.com/imbo/imboclient-php"/>
       </docblock>
-      <property final="false" static="false" visibility="private" line="58" namespace="ImboClient" package="Default">
+      <property final="false" static="false" visibility="private" line="59" namespace="ImboClient" package="Default">
         <name>$serverUrls</name>
         <default><![CDATA[]]></default>
-        <docblock line="53">
+        <docblock line="54">
           <description><![CDATA[The server URLs]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="53" name="var" description="" type="array">
+          <tag line="54" name="var" description="" type="array">
             <type by_reference="false">array</type>
           </tag>
         </docblock>
       </property>
-      <property final="false" static="false" visibility="private" line="65" namespace="ImboClient" package="Default">
+      <property final="false" static="false" visibility="private" line="66" namespace="ImboClient" package="Default">
         <name>$driver</name>
         <default><![CDATA[]]></default>
-        <docblock line="60">
+        <docblock line="61">
           <description><![CDATA[Driver used by the client]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="60" name="var" description="" type="\ImboClient\ImboClient\Driver\DriverInterface">
+          <tag line="61" name="var" description="" type="\ImboClient\ImboClient\Driver\DriverInterface">
             <type by_reference="false">\ImboClient\ImboClient\Driver\DriverInterface</type>
           </tag>
         </docblock>
       </property>
-      <property final="false" static="false" visibility="private" line="72" namespace="ImboClient" package="Default">
+      <property final="false" static="false" visibility="private" line="73" namespace="ImboClient" package="Default">
         <name>$publicKey</name>
         <default><![CDATA[]]></default>
-        <docblock line="67">
+        <docblock line="68">
           <description><![CDATA[Public key used for signed requests]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="67" name="var" description="" type="string">
+          <tag line="68" name="var" description="" type="string">
             <type by_reference="false">string</type>
           </tag>
         </docblock>
       </property>
-      <property final="false" static="false" visibility="private" line="79" namespace="ImboClient" package="Default">
+      <property final="false" static="false" visibility="private" line="80" namespace="ImboClient" package="Default">
         <name>$privateKey</name>
         <default><![CDATA[]]></default>
-        <docblock line="74">
+        <docblock line="75">
           <description><![CDATA[Private key used for signed requests]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="74" name="var" description="" type="string">
+          <tag line="75" name="var" description="" type="string">
             <type by_reference="false">string</type>
           </tag>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient" line="90" package="Client">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient" line="91" package="Client">
         <name>__construct</name>
         <full_name>__construct</full_name>
-        <docblock line="81">
+        <docblock line="82">
           <description><![CDATA[Class constructor]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="81" name="param" description="One or more URLs to the Imbo server, including protocol" type="array|string" variable="$serverUrls">
+          <tag line="82" name="param" description="One or more URLs to the Imbo server, including protocol" type="array|string" variable="$serverUrls">
             <type by_reference="false">array</type>
             <type by_reference="false">string</type>
           </tag>
-          <tag line="81" name="param" description="The public key to use" type="string" variable="$publicKey">
+          <tag line="82" name="param" description="The public key to use" type="string" variable="$publicKey">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="81" name="param" description="The private key to use" type="string" variable="$privateKey">
+          <tag line="82" name="param" description="The private key to use" type="string" variable="$privateKey">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="81" name="param" description="Optional driver to set" type="\ImboClient\ImboClient\Driver\DriverInterface" variable="$driver">
+          <tag line="82" name="param" description="Optional driver to set" type="\ImboClient\ImboClient\Driver\DriverInterface" variable="$driver">
             <type by_reference="false">\ImboClient\ImboClient\Driver\DriverInterface</type>
           </tag>
-          <tag line="81" name="param" description="A version instance" type="\ImboClient\ImboClient\Version" variable="$version">
+          <tag line="82" name="param" description="A version instance" type="\ImboClient\ImboClient\Version" variable="$version">
             <type by_reference="false">\ImboClient\ImboClient\Version</type>
           </tag>
         </docblock>
-        <argument line="90">
+        <argument line="91">
           <name>$serverUrls</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
-        <argument line="90">
+        <argument line="91">
           <name>$publicKey</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
-        <argument line="90">
+        <argument line="91">
           <name>$privateKey</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
-        <argument line="90">
+        <argument line="91">
           <name>$driver</name>
           <default><![CDATA[null]]></default>
           <type>\ImboClient\Driver\DriverInterface</type>
         </argument>
-        <argument line="90">
+        <argument line="91">
           <name>$version</name>
           <default><![CDATA[null]]></default>
           <type>\ImboClient\Version</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient" line="114" package="Client">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient" line="115" package="Client">
         <name>getServerUrls</name>
         <full_name>getServerUrls</full_name>
-        <docblock line="111">
+        <docblock line="112">
           <description><![CDATA[]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="111" name="see" description="\ImboClient\ClientInterface::getServerUrls()" refers="\ImboClient\ClientInterface::getServerUrls()"/>
+          <tag line="112" name="see" description="\ImboClient\ClientInterface::getServerUrls()" refers="\ImboClient\ClientInterface::getServerUrls()"/>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient" line="121" package="Client">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient" line="122" package="Client">
         <name>setDriver</name>
         <full_name>setDriver</full_name>
-        <docblock line="118">
+        <docblock line="119">
           <description><![CDATA[]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="118" name="see" description="\ImboClient\ClientInterface::setDriver()" refers="\ImboClient\ClientInterface::setDriver()"/>
+          <tag line="119" name="see" description="\ImboClient\ClientInterface::setDriver()" refers="\ImboClient\ClientInterface::setDriver()"/>
         </docblock>
-        <argument line="121">
+        <argument line="122">
           <name>$driver</name>
           <default><![CDATA[]]></default>
           <type>\ImboClient\Driver\DriverInterface</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient" line="130" package="Client">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient" line="131" package="Client">
         <name>getStatusUrl</name>
         <full_name>getStatusUrl</full_name>
-        <docblock line="127">
+        <docblock line="128">
           <description><![CDATA[]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="127" name="see" description="\ImboClient\ClientInterface::getStatusUrl()" refers="\ImboClient\ClientInterface::getStatusUrl()"/>
+          <tag line="128" name="see" description="\ImboClient\ClientInterface::getStatusUrl()" refers="\ImboClient\ClientInterface::getStatusUrl()"/>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient" line="137" package="Client">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient" line="138" package="Client">
         <name>getUserUrl</name>
         <full_name>getUserUrl</full_name>
-        <docblock line="134">
+        <docblock line="135">
           <description><![CDATA[]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="134" name="see" description="\ImboClient\ClientInterface::getUserUrl()" refers="\ImboClient\ClientInterface::getUserUrl()"/>
+          <tag line="135" name="see" description="\ImboClient\ClientInterface::getUserUrl()" refers="\ImboClient\ClientInterface::getUserUrl()"/>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient" line="144" package="Client">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient" line="145" package="Client">
         <name>getImagesUrl</name>
         <full_name>getImagesUrl</full_name>
-        <docblock line="141">
+        <docblock line="142">
           <description><![CDATA[]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="141" name="see" description="\ImboClient\ClientInterface::getImagesUrl()" refers="\ImboClient\ClientInterface::getImagesUrl()"/>
+          <tag line="142" name="see" description="\ImboClient\ClientInterface::getImagesUrl()" refers="\ImboClient\ClientInterface::getImagesUrl()"/>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient" line="151" package="Client">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient" line="152" package="Client">
         <name>getImageUrl</name>
         <full_name>getImageUrl</full_name>
-        <docblock line="148">
+        <docblock line="149">
           <description><![CDATA[]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="148" name="see" description="\ImboClient\ClientInterface::getImageUrl()" refers="\ImboClient\ClientInterface::getImageUrl()"/>
+          <tag line="149" name="see" description="\ImboClient\ClientInterface::getImageUrl()" refers="\ImboClient\ClientInterface::getImageUrl()"/>
         </docblock>
-        <argument line="151">
+        <argument line="152">
           <name>$imageIdentifier</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient" line="160" package="Client">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient" line="161" package="Client">
         <name>getMetadataUrl</name>
         <full_name>getMetadataUrl</full_name>
-        <docblock line="157">
+        <docblock line="158">
           <description><![CDATA[]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="157" name="see" description="\ImboClient\ClientInterface::getMetadataUrl()" refers="\ImboClient\ClientInterface::getMetadataUrl()"/>
+          <tag line="158" name="see" description="\ImboClient\ClientInterface::getMetadataUrl()" refers="\ImboClient\ClientInterface::getMetadataUrl()"/>
         </docblock>
-        <argument line="160">
+        <argument line="161">
           <name>$imageIdentifier</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient" line="169" package="Client">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient" line="170" package="Client">
         <name>addImage</name>
         <full_name>addImage</full_name>
-        <docblock line="166">
+        <docblock line="167">
           <description><![CDATA[]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="166" name="see" description="\ImboClient\ClientInterface::addImage()" refers="\ImboClient\ClientInterface::addImage()"/>
+          <tag line="167" name="see" description="\ImboClient\ClientInterface::addImage()" refers="\ImboClient\ClientInterface::addImage()"/>
         </docblock>
-        <argument line="169">
+        <argument line="170">
           <name>$path</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient" line="181" package="Client">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient" line="182" package="Client">
         <name>addImageFromString</name>
         <full_name>addImageFromString</full_name>
-        <docblock line="178">
+        <docblock line="179">
           <description><![CDATA[]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="178" name="see" description="\ImboClient\ClientInterface::addImageFromString()" refers="\ImboClient\ClientInterface::addImageFromString()"/>
+          <tag line="179" name="see" description="\ImboClient\ClientInterface::addImageFromString()" refers="\ImboClient\ClientInterface::addImageFromString()"/>
         </docblock>
-        <argument line="181">
+        <argument line="182">
           <name>$image</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient" line="193" package="Client">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient" line="194" package="Client">
         <name>addImageFromUrl</name>
         <full_name>addImageFromUrl</full_name>
-        <docblock line="190">
+        <docblock line="191">
           <description><![CDATA[]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="190" name="see" description="\ImboClient\ClientInterface::addImageFromUrl()" refers="\ImboClient\ClientInterface::addImageFromUrl()"/>
+          <tag line="191" name="see" description="\ImboClient\ClientInterface::addImageFromUrl()" refers="\ImboClient\ClientInterface::addImageFromUrl()"/>
         </docblock>
-        <argument line="193">
+        <argument line="194">
           <name>$url</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient" line="211" package="Client">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient" line="212" package="Client">
         <name>imageExists</name>
         <full_name>imageExists</full_name>
-        <docblock line="208">
+        <docblock line="209">
           <description><![CDATA[]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="208" name="see" description="\ImboClient\ClientInterface::imageExists()" refers="\ImboClient\ClientInterface::imageExists()"/>
+          <tag line="209" name="see" description="\ImboClient\ClientInterface::imageExists()" refers="\ImboClient\ClientInterface::imageExists()"/>
         </docblock>
-        <argument line="211">
+        <argument line="212">
           <name>$path</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient" line="221" package="Client">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient" line="231" package="Client">
         <name>headImage</name>
         <full_name>headImage</full_name>
-        <docblock line="218">
+        <docblock line="228">
           <description><![CDATA[]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="218" name="see" description="\ImboClient\ClientInterface::headImage()" refers="\ImboClient\ClientInterface::headImage()"/>
+          <tag line="228" name="see" description="\ImboClient\ClientInterface::headImage()" refers="\ImboClient\ClientInterface::headImage()"/>
         </docblock>
-        <argument line="221">
-          <name>$imageIdentifier</name>
-          <default><![CDATA[]]></default>
-          <type/>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient" line="230" package="Client">
-        <name>deleteImage</name>
-        <full_name>deleteImage</full_name>
-        <docblock line="227">
-          <description><![CDATA[]]></description>
-          <long-description><![CDATA[]]></long-description>
-          <tag line="227" name="see" description="\ImboClient\ClientInterface::deleteImage()" refers="\ImboClient\ClientInterface::deleteImage()"/>
-        </docblock>
-        <argument line="230">
+        <argument line="231">
           <name>$imageIdentifier</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
       </method>
       <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient" line="240" package="Client">
-        <name>editMetadata</name>
-        <full_name>editMetadata</full_name>
+        <name>deleteImage</name>
+        <full_name>deleteImage</full_name>
         <docblock line="237">
           <description><![CDATA[]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="237" name="see" description="\ImboClient\ClientInterface::editMetadata()" refers="\ImboClient\ClientInterface::editMetadata()"/>
+          <tag line="237" name="see" description="\ImboClient\ClientInterface::deleteImage()" refers="\ImboClient\ClientInterface::deleteImage()"/>
         </docblock>
         <argument line="240">
           <name>$imageIdentifier</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
-        <argument line="240">
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient" line="250" package="Client">
+        <name>editMetadata</name>
+        <full_name>editMetadata</full_name>
+        <docblock line="247">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="247" name="see" description="\ImboClient\ClientInterface::editMetadata()" refers="\ImboClient\ClientInterface::editMetadata()"/>
+        </docblock>
+        <argument line="250">
+          <name>$imageIdentifier</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="250">
           <name>$metadata</name>
           <default><![CDATA[]]></default>
           <type>array</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient" line="256" package="Client">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient" line="266" package="Client">
         <name>replaceMetadata</name>
         <full_name>replaceMetadata</full_name>
-        <docblock line="253">
+        <docblock line="263">
           <description><![CDATA[]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="253" name="see" description="\ImboClient\ClientInterface::replaceMetadata()" refers="\ImboClient\ClientInterface::replaceMetadata()"/>
+          <tag line="263" name="see" description="\ImboClient\ClientInterface::replaceMetadata()" refers="\ImboClient\ClientInterface::replaceMetadata()"/>
         </docblock>
-        <argument line="256">
+        <argument line="266">
           <name>$imageIdentifier</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
-        <argument line="256">
+        <argument line="266">
           <name>$metadata</name>
           <default><![CDATA[]]></default>
           <type>array</type>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient" line="272" package="Client">
-        <name>deleteMetadata</name>
-        <full_name>deleteMetadata</full_name>
-        <docblock line="269">
-          <description><![CDATA[]]></description>
-          <long-description><![CDATA[]]></long-description>
-          <tag line="269" name="see" description="\ImboClient\ClientInterface::deleteMetadata()" refers="\ImboClient\ClientInterface::deleteMetadata()"/>
-        </docblock>
-        <argument line="272">
-          <name>$imageIdentifier</name>
-          <default><![CDATA[]]></default>
-          <type/>
         </argument>
       </method>
       <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient" line="282" package="Client">
-        <name>getMetadata</name>
-        <full_name>getMetadata</full_name>
+        <name>deleteMetadata</name>
+        <full_name>deleteMetadata</full_name>
         <docblock line="279">
           <description><![CDATA[]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="279" name="see" description="\ImboClient\ClientInterface::getMetadata()" refers="\ImboClient\ClientInterface::getMetadata()"/>
+          <tag line="279" name="see" description="\ImboClient\ClientInterface::deleteMetadata()" refers="\ImboClient\ClientInterface::deleteMetadata()"/>
         </docblock>
         <argument line="282">
           <name>$imageIdentifier</name>
@@ -634,242 +621,256 @@ IN THE SOFTWARE.</p>]]></long-description>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient" line="291" package="Client">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient" line="292" package="Client">
+        <name>getMetadata</name>
+        <full_name>getMetadata</full_name>
+        <docblock line="289">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="289" name="see" description="\ImboClient\ClientInterface::getMetadata()" refers="\ImboClient\ClientInterface::getMetadata()"/>
+        </docblock>
+        <argument line="292">
+          <name>$imageIdentifier</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient" line="301" package="Client">
         <name>getNumImages</name>
         <full_name>getNumImages</full_name>
-        <docblock line="288">
+        <docblock line="298">
           <description><![CDATA[]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="288" name="see" description="\ImboClient\ClientInterface::getNumImages()" refers="\ImboClient\ClientInterface::getNumImages()"/>
+          <tag line="298" name="see" description="\ImboClient\ClientInterface::getNumImages()" refers="\ImboClient\ClientInterface::getNumImages()"/>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient" line="307" package="Client">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient" line="317" package="Client">
         <name>getImages</name>
         <full_name>getImages</full_name>
-        <docblock line="304">
+        <docblock line="314">
           <description><![CDATA[]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="304" name="see" description="\ImboClient\ClientInterface::getImages()" refers="\ImboClient\ClientInterface::getImages()"/>
+          <tag line="314" name="see" description="\ImboClient\ClientInterface::getImages()" refers="\ImboClient\ClientInterface::getImages()"/>
         </docblock>
-        <argument line="307">
+        <argument line="317">
           <name>$query</name>
           <default><![CDATA[null]]></default>
           <type>\ImboClient\Url\Images\QueryInterface</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient" line="356" package="Client">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient" line="366" package="Client">
         <name>getImageData</name>
         <full_name>getImageData</full_name>
-        <docblock line="353">
+        <docblock line="363">
           <description><![CDATA[]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="353" name="see" description="\ImboClient\ClientInterface::getImageData()" refers="\ImboClient\ClientInterface::getImageData()"/>
+          <tag line="363" name="see" description="\ImboClient\ClientInterface::getImageData()" refers="\ImboClient\ClientInterface::getImageData()"/>
         </docblock>
-        <argument line="356">
+        <argument line="366">
           <name>$imageIdentifier</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient" line="365" package="Client">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient" line="375" package="Client">
         <name>getImageDataFromUrl</name>
         <full_name>getImageDataFromUrl</full_name>
-        <docblock line="362">
+        <docblock line="372">
           <description><![CDATA[]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="362" name="see" description="\ImboClient\ClientInterface::getImageDataFromUrl()" refers="\ImboClient\ClientInterface::getImageDataFromUrl()"/>
+          <tag line="372" name="see" description="\ImboClient\ClientInterface::getImageDataFromUrl()" refers="\ImboClient\ClientInterface::getImageDataFromUrl()"/>
         </docblock>
-        <argument line="365">
+        <argument line="375">
           <name>$url</name>
           <default><![CDATA[]]></default>
           <type>\ImboClient\Url\ImageInterface</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient" line="378" package="Client">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient" line="388" package="Client">
         <name>getImageProperties</name>
         <full_name>getImageProperties</full_name>
-        <docblock line="375">
+        <docblock line="385">
           <description><![CDATA[]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="375" name="see" description="\ImboClient\ClientInterface::getImageProperties()" refers="\ImboClient\ClientInterface::getImageProperties()"/>
+          <tag line="385" name="see" description="\ImboClient\ClientInterface::getImageProperties()" refers="\ImboClient\ClientInterface::getImageProperties()"/>
         </docblock>
-        <argument line="378">
+        <argument line="388">
           <name>$imageIdentifier</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient" line="397" package="Client">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient" line="407" package="Client">
         <name>getImageIdentifier</name>
         <full_name>getImageIdentifier</full_name>
-        <docblock line="394">
+        <docblock line="404">
           <description><![CDATA[]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="394" name="see" description="\ImboClient\ClientInterface::getImageIdentifier()" refers="\ImboClient\ClientInterface::getImageIdentifier()"/>
+          <tag line="404" name="see" description="\ImboClient\ClientInterface::getImageIdentifier()" refers="\ImboClient\ClientInterface::getImageIdentifier()"/>
         </docblock>
-        <argument line="397">
+        <argument line="407">
           <name>$path</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient" line="408" package="Client">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient" line="418" package="Client">
         <name>getImageIdentifierFromString</name>
         <full_name>getImageIdentifierFromString</full_name>
-        <docblock line="405">
+        <docblock line="415">
           <description><![CDATA[]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="405" name="see" description="\ImboClient\ClientInterface::getImageIdentifierFromString()" refers="\ImboClient\ClientInterface::getImageIdentifierFromString()"/>
+          <tag line="415" name="see" description="\ImboClient\ClientInterface::getImageIdentifierFromString()" refers="\ImboClient\ClientInterface::getImageIdentifierFromString()"/>
         </docblock>
-        <argument line="408">
+        <argument line="418">
           <name>$image</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient" line="415" package="Client">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="ImboClient" line="425" package="Client">
         <name>getServerStatus</name>
         <full_name>getServerStatus</full_name>
-        <docblock line="412">
+        <docblock line="422">
           <description><![CDATA[]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="412" name="see" description="\ImboClient\ClientInterface::getServerStatus()" refers="\ImboClient\ClientInterface::getServerStatus()"/>
+          <tag line="422" name="see" description="\ImboClient\ClientInterface::getServerStatus()" refers="\ImboClient\ClientInterface::getServerStatus()"/>
         </docblock>
       </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="ImboClient" line="428" package="Client">
+      <method final="false" abstract="false" static="false" visibility="private" namespace="ImboClient" line="438" package="Client">
         <name>generateImageIdentifier</name>
         <full_name>generateImageIdentifier</full_name>
-        <docblock line="422">
+        <docblock line="432">
           <description><![CDATA[Generate an image identifier based on the data of the image]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="422" name="param" description="The actual image data" type="string" variable="$data">
-            <type by_reference="false">string</type>
-          </tag>
-          <tag line="422" name="return" description="" type="string">
-            <type by_reference="false">string</type>
-          </tag>
-        </docblock>
-        <argument line="428">
-          <name>$data</name>
-          <default><![CDATA[]]></default>
-          <type/>
-        </argument>
-      </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="ImboClient" line="440" package="Client">
-        <name>generateSignature</name>
-        <full_name>generateSignature</full_name>
-        <docblock line="432">
-          <description><![CDATA[Generate a signature that can be sent to the server]]></description>
-          <long-description><![CDATA[]]></long-description>
-          <tag line="432" name="param" description="HTTP method (PUT, POST or DELETE)" type="string" variable="$method">
-            <type by_reference="false">string</type>
-          </tag>
-          <tag line="432" name="param" description="The URL to send a request to" type="string" variable="$url">
-            <type by_reference="false">string</type>
-          </tag>
-          <tag line="432" name="param" description="UTC timestamp" type="string" variable="$timestamp">
+          <tag line="432" name="param" description="The actual image data" type="string" variable="$data">
             <type by_reference="false">string</type>
           </tag>
           <tag line="432" name="return" description="" type="string">
             <type by_reference="false">string</type>
           </tag>
         </docblock>
-        <argument line="440">
+        <argument line="438">
+          <name>$data</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="ImboClient" line="450" package="Client">
+        <name>generateSignature</name>
+        <full_name>generateSignature</full_name>
+        <docblock line="442">
+          <description><![CDATA[Generate a signature that can be sent to the server]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="442" name="param" description="HTTP method (PUT, POST or DELETE)" type="string" variable="$method">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="442" name="param" description="The URL to send a request to" type="string" variable="$url">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="442" name="param" description="UTC timestamp" type="string" variable="$timestamp">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="442" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="450">
           <name>$method</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
-        <argument line="440">
+        <argument line="450">
           <name>$url</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
-        <argument line="440">
+        <argument line="450">
           <name>$timestamp</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="ImboClient" line="456" package="Client">
+      <method final="false" abstract="false" static="false" visibility="private" namespace="ImboClient" line="466" package="Client">
         <name>getSignedUrl</name>
         <full_name>getSignedUrl</full_name>
-        <docblock line="449">
+        <docblock line="459">
           <description><![CDATA[Get a signed URL]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="449" name="param" description="HTTP method" type="string" variable="$method">
+          <tag line="459" name="param" description="HTTP method" type="string" variable="$method">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="449" name="param" description="The URL to send a request to" type="string" variable="$url">
+          <tag line="459" name="param" description="The URL to send a request to" type="string" variable="$url">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="449" name="return" description="Returns a string with the necessary parts for authenticating" type="string">
+          <tag line="459" name="return" description="Returns a string with the necessary parts for authenticating" type="string">
             <type by_reference="false">string</type>
           </tag>
         </docblock>
-        <argument line="456">
+        <argument line="466">
           <name>$method</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
-        <argument line="456">
+        <argument line="466">
           <name>$url</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="ImboClient" line="477" package="Client">
+      <method final="false" abstract="false" static="false" visibility="private" namespace="ImboClient" line="487" package="Client">
         <name>validateLocalFile</name>
         <full_name>validateLocalFile</full_name>
-        <docblock line="471">
+        <docblock line="481">
           <description><![CDATA[Helper method to make sure a local file exists, and that it is not empty]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="471" name="param" description="The path to a local file" type="string" variable="$path">
+          <tag line="481" name="param" description="The path to a local file" type="string" variable="$path">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="471" name="throws" description="" type="\ImboClient\Exception\InvalidArgumentException">
+          <tag line="481" name="throws" description="" type="\ImboClient\Exception\InvalidArgumentException">
             <type by_reference="false">\ImboClient\Exception\InvalidArgumentException</type>
           </tag>
         </docblock>
-        <argument line="477">
+        <argument line="487">
           <name>$path</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="ImboClient" line="493" package="Client">
+      <method final="false" abstract="false" static="false" visibility="private" namespace="ImboClient" line="503" package="Client">
         <name>getHostForImageIdentifier</name>
         <full_name>getHostForImageIdentifier</full_name>
-        <docblock line="487">
+        <docblock line="497">
           <description><![CDATA[Get a predictable hostname for the given image identifier]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="487" name="param" description="The image identifier" type="string" variable="$imageIdentifier">
+          <tag line="497" name="param" description="The image identifier" type="string" variable="$imageIdentifier">
             <type by_reference="false">string</type>
           </tag>
-          <tag line="487" name="return" description="" type="string">
+          <tag line="497" name="return" description="" type="string">
             <type by_reference="false">string</type>
           </tag>
         </docblock>
-        <argument line="493">
+        <argument line="503">
           <name>$imageIdentifier</name>
           <default><![CDATA[]]></default>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="ImboClient" line="505" package="Client">
+      <method final="false" abstract="false" static="false" visibility="private" namespace="ImboClient" line="515" package="Client">
         <name>parseUrls</name>
         <full_name>parseUrls</full_name>
-        <docblock line="499">
+        <docblock line="509">
           <description><![CDATA[Parse server host URLs and prepare them for usage]]></description>
           <long-description><![CDATA[]]></long-description>
-          <tag line="499" name="param" description="One or more URLs to an Imbo server" type="array|string" variable="$urls">
+          <tag line="509" name="param" description="One or more URLs to an Imbo server" type="array|string" variable="$urls">
             <type by_reference="false">array</type>
             <type by_reference="false">string</type>
           </tag>
-          <tag line="499" name="return" description="Returns an array of URLs" type="array">
+          <tag line="509" name="return" description="Returns an array of URLs" type="array">
             <type by_reference="false">array</type>
           </tag>
         </docblock>
-        <argument line="505">
+        <argument line="515">
           <name>$urls</name>
           <default><![CDATA[]]></default>
           <type/>
@@ -877,54 +878,54 @@ IN THE SOFTWARE.</p>]]></long-description>
       </method>
     </class>
     <parse_markers>
-      <error line="81" code="50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $driver in __construct()</error>
-      <error line="81" code="50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $version in __construct()</error>
-      <error line="111" code="50012">No short description for method getServerUrls()</error>
-      <error line="118" code="50012">No short description for method setDriver()</error>
-      <error line="118" code="50015">Argument $driver is missing from the Docblock of setDriver()</error>
-      <error line="127" code="50012">No short description for method getStatusUrl()</error>
-      <error line="134" code="50012">No short description for method getUserUrl()</error>
-      <error line="141" code="50012">No short description for method getImagesUrl()</error>
-      <error line="148" code="50012">No short description for method getImageUrl()</error>
-      <error line="148" code="50015">Argument $imageIdentifier is missing from the Docblock of getImageUrl()</error>
-      <error line="157" code="50012">No short description for method getMetadataUrl()</error>
-      <error line="157" code="50015">Argument $imageIdentifier is missing from the Docblock of getMetadataUrl()</error>
-      <error line="166" code="50012">No short description for method addImage()</error>
-      <error line="166" code="50015">Argument $path is missing from the Docblock of addImage()</error>
-      <error line="178" code="50012">No short description for method addImageFromString()</error>
-      <error line="178" code="50015">Argument $image is missing from the Docblock of addImageFromString()</error>
-      <error line="190" code="50012">No short description for method addImageFromUrl()</error>
-      <error line="190" code="50015">Argument $url is missing from the Docblock of addImageFromUrl()</error>
-      <error line="208" code="50012">No short description for method imageExists()</error>
-      <error line="208" code="50015">Argument $path is missing from the Docblock of imageExists()</error>
-      <error line="218" code="50012">No short description for method headImage()</error>
-      <error line="218" code="50015">Argument $imageIdentifier is missing from the Docblock of headImage()</error>
-      <error line="227" code="50012">No short description for method deleteImage()</error>
-      <error line="227" code="50015">Argument $imageIdentifier is missing from the Docblock of deleteImage()</error>
-      <error line="237" code="50012">No short description for method editMetadata()</error>
-      <error line="237" code="50015">Argument $imageIdentifier is missing from the Docblock of editMetadata()</error>
-      <error line="237" code="50015">Argument $metadata is missing from the Docblock of editMetadata()</error>
-      <error line="253" code="50012">No short description for method replaceMetadata()</error>
-      <error line="253" code="50015">Argument $imageIdentifier is missing from the Docblock of replaceMetadata()</error>
-      <error line="253" code="50015">Argument $metadata is missing from the Docblock of replaceMetadata()</error>
-      <error line="269" code="50012">No short description for method deleteMetadata()</error>
-      <error line="269" code="50015">Argument $imageIdentifier is missing from the Docblock of deleteMetadata()</error>
-      <error line="279" code="50012">No short description for method getMetadata()</error>
-      <error line="279" code="50015">Argument $imageIdentifier is missing from the Docblock of getMetadata()</error>
-      <error line="288" code="50012">No short description for method getNumImages()</error>
-      <error line="304" code="50012">No short description for method getImages()</error>
-      <error line="304" code="50015">Argument $query is missing from the Docblock of getImages()</error>
-      <error line="353" code="50012">No short description for method getImageData()</error>
-      <error line="353" code="50015">Argument $imageIdentifier is missing from the Docblock of getImageData()</error>
-      <error line="362" code="50012">No short description for method getImageDataFromUrl()</error>
-      <error line="362" code="50015">Argument $url is missing from the Docblock of getImageDataFromUrl()</error>
-      <error line="375" code="50012">No short description for method getImageProperties()</error>
-      <error line="375" code="50015">Argument $imageIdentifier is missing from the Docblock of getImageProperties()</error>
-      <error line="394" code="50012">No short description for method getImageIdentifier()</error>
-      <error line="394" code="50015">Argument $path is missing from the Docblock of getImageIdentifier()</error>
-      <error line="405" code="50012">No short description for method getImageIdentifierFromString()</error>
-      <error line="405" code="50015">Argument $image is missing from the Docblock of getImageIdentifierFromString()</error>
-      <error line="412" code="50012">No short description for method getServerStatus()</error>
+      <error line="82" code="50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $driver in __construct()</error>
+      <error line="82" code="50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $version in __construct()</error>
+      <error line="112" code="50012">No short description for method getServerUrls()</error>
+      <error line="119" code="50012">No short description for method setDriver()</error>
+      <error line="119" code="50015">Argument $driver is missing from the Docblock of setDriver()</error>
+      <error line="128" code="50012">No short description for method getStatusUrl()</error>
+      <error line="135" code="50012">No short description for method getUserUrl()</error>
+      <error line="142" code="50012">No short description for method getImagesUrl()</error>
+      <error line="149" code="50012">No short description for method getImageUrl()</error>
+      <error line="149" code="50015">Argument $imageIdentifier is missing from the Docblock of getImageUrl()</error>
+      <error line="158" code="50012">No short description for method getMetadataUrl()</error>
+      <error line="158" code="50015">Argument $imageIdentifier is missing from the Docblock of getMetadataUrl()</error>
+      <error line="167" code="50012">No short description for method addImage()</error>
+      <error line="167" code="50015">Argument $path is missing from the Docblock of addImage()</error>
+      <error line="179" code="50012">No short description for method addImageFromString()</error>
+      <error line="179" code="50015">Argument $image is missing from the Docblock of addImageFromString()</error>
+      <error line="191" code="50012">No short description for method addImageFromUrl()</error>
+      <error line="191" code="50015">Argument $url is missing from the Docblock of addImageFromUrl()</error>
+      <error line="209" code="50012">No short description for method imageExists()</error>
+      <error line="209" code="50015">Argument $path is missing from the Docblock of imageExists()</error>
+      <error line="228" code="50012">No short description for method headImage()</error>
+      <error line="228" code="50015">Argument $imageIdentifier is missing from the Docblock of headImage()</error>
+      <error line="237" code="50012">No short description for method deleteImage()</error>
+      <error line="237" code="50015">Argument $imageIdentifier is missing from the Docblock of deleteImage()</error>
+      <error line="247" code="50012">No short description for method editMetadata()</error>
+      <error line="247" code="50015">Argument $imageIdentifier is missing from the Docblock of editMetadata()</error>
+      <error line="247" code="50015">Argument $metadata is missing from the Docblock of editMetadata()</error>
+      <error line="263" code="50012">No short description for method replaceMetadata()</error>
+      <error line="263" code="50015">Argument $imageIdentifier is missing from the Docblock of replaceMetadata()</error>
+      <error line="263" code="50015">Argument $metadata is missing from the Docblock of replaceMetadata()</error>
+      <error line="279" code="50012">No short description for method deleteMetadata()</error>
+      <error line="279" code="50015">Argument $imageIdentifier is missing from the Docblock of deleteMetadata()</error>
+      <error line="289" code="50012">No short description for method getMetadata()</error>
+      <error line="289" code="50015">Argument $imageIdentifier is missing from the Docblock of getMetadata()</error>
+      <error line="298" code="50012">No short description for method getNumImages()</error>
+      <error line="314" code="50012">No short description for method getImages()</error>
+      <error line="314" code="50015">Argument $query is missing from the Docblock of getImages()</error>
+      <error line="363" code="50012">No short description for method getImageData()</error>
+      <error line="363" code="50015">Argument $imageIdentifier is missing from the Docblock of getImageData()</error>
+      <error line="372" code="50012">No short description for method getImageDataFromUrl()</error>
+      <error line="372" code="50015">Argument $url is missing from the Docblock of getImageDataFromUrl()</error>
+      <error line="385" code="50012">No short description for method getImageProperties()</error>
+      <error line="385" code="50015">Argument $imageIdentifier is missing from the Docblock of getImageProperties()</error>
+      <error line="404" code="50012">No short description for method getImageIdentifier()</error>
+      <error line="404" code="50015">Argument $path is missing from the Docblock of getImageIdentifier()</error>
+      <error line="415" code="50012">No short description for method getImageIdentifierFromString()</error>
+      <error line="415" code="50015">Argument $image is missing from the Docblock of getImageIdentifierFromString()</error>
+      <error line="422" code="50012">No short description for method getServerStatus()</error>
     </parse_markers>
   </file>
   <file path="Url/Status.php" hash="224ed769f420d34208102a92bcac3d28" package="Url">
@@ -4419,7 +4420,7 @@ IN THE SOFTWARE.</p>]]></long-description>
       </method>
     </interface>
   </file>
-  <file path="Driver/cURL.php" hash="cbd8ff322cd7efe457664740f0c24d4d" package="Driver">
+  <file path="Driver/cURL.php" hash="eba0e80ebc2be4dfbfdd81c1e376cbd9" package="Driver">
     <docblock line="2">
       <description><![CDATA[ImboClient]]></description>
       <long-description><![CDATA[<p>Copyright (c) 2011-2012, Christer Edvartsen <a href="&#x6d;&#x61;&#105;&#108;&#x74;&#x6f;&#58;&#99;o&#x67;&#x6f;&#64;&#115;&#x74;&#x61;&#114;&#122;i&#x6e;&#x67;&#101;&#114;&#x2e;&#x6e;&#101;&#116;">&#99;o&#x67;&#x6f;&#64;&#115;&#x74;&#x61;&#114;&#122;i&#x6e;&#x67;&#101;&#114;&#x2e;&#x6e;&#101;&#116;</a></p>
