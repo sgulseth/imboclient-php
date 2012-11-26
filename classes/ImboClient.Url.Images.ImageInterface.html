@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
@@ -22,12 +22,7 @@
 <li><a>Namespaces</a></li>
 <li><a href="../namespaces/ImboClient.html"><i class="icon-th"></i> ImboClient</a></li>
 <li><a>Packages</a></li>
-<li><a href="../packages/Client.html"><i class="icon-folder-open"></i> Client</a></li>
-<li><a href="../packages/Driver.html"><i class="icon-folder-open"></i> Driver</a></li>
-<li><a href="../packages/Exceptions.html"><i class="icon-folder-open"></i> Exceptions</a></li>
-<li><a href="../packages/Http.html"><i class="icon-folder-open"></i> Http</a></li>
-<li><a href="../packages/Interfaces.html"><i class="icon-folder-open"></i> Interfaces</a></li>
-<li><a href="../packages/Url.html"><i class="icon-folder-open"></i> Url</a></li>
+<li><a href="../packages/ImboClient.html"><i class="icon-folder-open"></i> ImboClient</a></li>
 </ul>
 </li>
 <li class="dropdown" id="charts-menu">
@@ -38,7 +33,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">192</span></a></li>
+                <span class="label label-info">96</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -59,45 +54,46 @@
 <span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
 <button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
 </div>
-<ul class="side-nav nav nav-list">
-<li class="nav-header">
-<i class="icon-custom icon-method"></i> Methods</li>
-<li class="method public "><a href="#getAddedDate" title="getAddedDate :: Returns the date which the image which added"><span class="description">Returns the date which the image which added</span><pre>getAddedDate()</pre></a></li>
-<li class="method public "><a href="#getChecksum" title="getChecksum :: Returns an MD5 checksum of the image data"><span class="description">Returns an MD5 checksum of the image data</span><pre>getChecksum()</pre></a></li>
-<li class="method public "><a href="#getExtension" title="getExtension :: Returns the original extension for the image"><span class="description">Returns the original extension for the image</span><pre>getExtension()</pre></a></li>
-<li class="method public "><a href="#getHeight" title="getHeight :: Returns the height of the image, in pixels"><span class="description">Returns the height of the image, in pixels</span><pre>getHeight()</pre></a></li>
-<li class="method public "><a href="#getIdentifier" title="getIdentifier :: Returns the image identifier for the image"><span class="description">Returns the image identifier for the image</span><pre>getIdentifier()</pre></a></li>
-<li class="method public "><a href="#getMimeType" title="getMimeType :: Returns the mime type of the image"><span class="description">Returns the mime type of the image</span><pre>getMimeType()</pre></a></li>
-<li class="method public "><a href="#getPublicKey" title="getPublicKey :: Returns the public key in which the image is catalogued under"><span class="description">Returns the public key in which the image is catalogued under</span><pre>getPublicKey()</pre></a></li>
-<li class="method public "><a href="#getSize" title="getSize :: Returns the size of the image, in bytes"><span class="description">Returns the size of the image, in bytes</span><pre>getSize()</pre></a></li>
-<li class="method public "><a href="#getUpdatedDate" title="getUpdatedDate :: Returns the date which the image was last updated"><span class="description">Returns the date which the image was last updated</span><pre>getUpdatedDate()</pre></a></li>
-<li class="method public "><a href="#getWidth" title="getWidth :: Returns the width of the image, in pixels"><span class="description">Returns the width of the image, in pixels</span><pre>getWidth()</pre></a></li>
+<ul class="side-nav nav nav-list"><li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method_getAddedDate" title="getAddedDate :: Returns the date on which the image was added"><span class="description">Returns the date on which the image was added</span><pre>getAddedDate()</pre></a></li>
+<li class="method public "><a href="#method_getChecksum" title="getChecksum :: Returns an MD5 checksum of the image data"><span class="description">Returns an MD5 checksum of the image data</span><pre>getChecksum()</pre></a></li>
+<li class="method public "><a href="#method_getExtension" title="getExtension :: Returns the original extension for the image"><span class="description">Returns the original extension for the image</span><pre>getExtension()</pre></a></li>
+<li class="method public "><a href="#method_getHeight" title="getHeight :: Returns the height of the image, in pixels"><span class="description">Returns the height of the image, in pixels</span><pre>getHeight()</pre></a></li>
+<li class="method public "><a href="#method_getIdentifier" title="getIdentifier :: Returns the image identifier for the image"><span class="description">Returns the image identifier for the image</span><pre>getIdentifier()</pre></a></li>
+<li class="method public "><a href="#method_getMimeType" title="getMimeType :: Returns the mime type of the image"><span class="description">Returns the mime type of the image</span><pre>getMimeType()</pre></a></li>
+<li class="method public "><a href="#method_getPublicKey" title="getPublicKey :: Returns the public key in which the image is cataloged under"><span class="description">Returns the public key in which the image is cataloged under</span><pre>getPublicKey()</pre></a></li>
+<li class="method public "><a href="#method_getSize" title="getSize :: Returns the size of the image, in bytes"><span class="description">Returns the size of the image, in bytes</span><pre>getSize()</pre></a></li>
+<li class="method public "><a href="#method_getUpdatedDate" title="getUpdatedDate :: Returns the date on which the image was last updated"><span class="description">Returns the date on which the image was last updated</span><pre>getUpdatedDate()</pre></a></li>
+<li class="method public "><a href="#method_getWidth" title="getWidth :: Returns the width of the image, in pixels"><span class="description">Returns the width of the image, in pixels</span><pre>getWidth()</pre></a></li>
 </ul>
+</li></ul>
 </div>
 <div class="span8">
-<a name="%5CImboClient%5CUrl%5CImages%5CImageInterface" id="\ImboClient\Url\Images\ImageInterface"></a><ul class="breadcrumb">
+<a id="\ImboClient\Url\Images\ImageInterface"></a><ul class="breadcrumb">
 <li>
 <a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
 </li>
 <li><a href="../namespaces/ImboClient.html">ImboClient</a></li>
-<span class="divider">\</span><li><a href="../namespaces/ImboClient.Url.html">Url</a></li>
-<span class="divider">\</span><li><a href="../namespaces/ImboClient.Url.Images.html">Images</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/ImboClient.Url.html">Url</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/ImboClient.Url.Images.html">Images</a>
+</li>
 <li class="active">
 <span class="divider">\</span><a href="../classes/ImboClient.Url.Images.ImageInterface.html">ImageInterface</a>
 </li>
 </ul>
-<div href="../classes/ImboClient.Url.Images.ImageInterface.html" class="element interface">
+<div class="element interface">
 <p class="short_description">Interface for an image found in a response to an images query</p>
 <div class="details">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <table class="table table-bordered">
 <tr>
 <th>package</th>
-<td><a href="../packages/Interfaces.Url.Images.html">Interfaces</a></td>
-</tr>
-<tr>
-<th>subpackage</th>
-<td>Url\Images</td>
+<td><a href="../packages/ImboClient.Interfaces.html">ImboClient\Interfaces</a></td>
 </tr>
 <tr>
 <th>author</th>
@@ -122,102 +118,102 @@
 </table>
 <h3>
 <i class="icon-custom icon-method"></i> Methods</h3>
-<a name="getAddedDate" id="getAddedDate"></a><div class="element clickable method public getAddedDate" data-toggle="collapse" data-target=".getAddedDate .collapse">
-<h2>Returns the date which the image which added</h2>
-<pre>getAddedDate() : \ImboClient\Url\Images\DateTime</pre>
+<a id="method_getAddedDate"></a><div class="element clickable method public method_getAddedDate" data-toggle="collapse" data-target=".method_getAddedDate .collapse">
+<h2>Returns the date on which the image was added</h2>
+<pre>getAddedDate() : <a href="http://php.net/manual/en/class.datetime.php">\DateTime</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Returns</h3>
-<div class="subelement response"><code>\ImboClient\Url\Images\DateTime</code></div>
+<div class="subelement response"><code><a href="http://php.net/manual/en/class.datetime.php">\DateTime</a></code></div>
 </div></div>
 </div>
-<a name="getChecksum" id="getChecksum"></a><div class="element clickable method public getChecksum" data-toggle="collapse" data-target=".getChecksum .collapse">
+<a id="method_getChecksum"></a><div class="element clickable method public method_getChecksum" data-toggle="collapse" data-target=".method_getChecksum .collapse">
 <h2>Returns an MD5 checksum of the image data</h2>
 <pre>getChecksum() : string</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Returns</h3>
 <div class="subelement response"><code>string</code></div>
 </div></div>
 </div>
-<a name="getExtension" id="getExtension"></a><div class="element clickable method public getExtension" data-toggle="collapse" data-target=".getExtension .collapse">
+<a id="method_getExtension"></a><div class="element clickable method public method_getExtension" data-toggle="collapse" data-target=".method_getExtension .collapse">
 <h2>Returns the original extension for the image</h2>
 <pre>getExtension() : string</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Returns</h3>
 <div class="subelement response"><code>string</code></div>
 </div></div>
 </div>
-<a name="getHeight" id="getHeight"></a><div class="element clickable method public getHeight" data-toggle="collapse" data-target=".getHeight .collapse">
+<a id="method_getHeight"></a><div class="element clickable method public method_getHeight" data-toggle="collapse" data-target=".method_getHeight .collapse">
 <h2>Returns the height of the image, in pixels</h2>
 <pre>getHeight() : int</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Returns</h3>
 <div class="subelement response"><code>int</code></div>
 </div></div>
 </div>
-<a name="getIdentifier" id="getIdentifier"></a><div class="element clickable method public getIdentifier" data-toggle="collapse" data-target=".getIdentifier .collapse">
+<a id="method_getIdentifier"></a><div class="element clickable method public method_getIdentifier" data-toggle="collapse" data-target=".method_getIdentifier .collapse">
 <h2>Returns the image identifier for the image</h2>
 <pre>getIdentifier() : string</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Returns</h3>
 <div class="subelement response"><code>string</code></div>
 </div></div>
 </div>
-<a name="getMimeType" id="getMimeType"></a><div class="element clickable method public getMimeType" data-toggle="collapse" data-target=".getMimeType .collapse">
+<a id="method_getMimeType"></a><div class="element clickable method public method_getMimeType" data-toggle="collapse" data-target=".method_getMimeType .collapse">
 <h2>Returns the mime type of the image</h2>
 <pre>getMimeType() : string</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Returns</h3>
 <div class="subelement response"><code>string</code></div>
 </div></div>
 </div>
-<a name="getPublicKey" id="getPublicKey"></a><div class="element clickable method public getPublicKey" data-toggle="collapse" data-target=".getPublicKey .collapse">
-<h2>Returns the public key in which the image is catalogued under</h2>
+<a id="method_getPublicKey"></a><div class="element clickable method public method_getPublicKey" data-toggle="collapse" data-target=".method_getPublicKey .collapse">
+<h2>Returns the public key in which the image is cataloged under</h2>
 <pre>getPublicKey() : string</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Returns</h3>
 <div class="subelement response"><code>string</code></div>
 </div></div>
 </div>
-<a name="getSize" id="getSize"></a><div class="element clickable method public getSize" data-toggle="collapse" data-target=".getSize .collapse">
+<a id="method_getSize"></a><div class="element clickable method public method_getSize" data-toggle="collapse" data-target=".method_getSize .collapse">
 <h2>Returns the size of the image, in bytes</h2>
 <pre>getSize() : int</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Returns</h3>
 <div class="subelement response"><code>int</code></div>
 </div></div>
 </div>
-<a name="getUpdatedDate" id="getUpdatedDate"></a><div class="element clickable method public getUpdatedDate" data-toggle="collapse" data-target=".getUpdatedDate .collapse">
-<h2>Returns the date which the image was last updated</h2>
-<pre>getUpdatedDate() : \ImboClient\Url\Images\DateTime</pre>
+<a id="method_getUpdatedDate"></a><div class="element clickable method public method_getUpdatedDate" data-toggle="collapse" data-target=".method_getUpdatedDate .collapse">
+<h2>Returns the date on which the image was last updated</h2>
+<pre>getUpdatedDate() : <a href="http://php.net/manual/en/class.datetime.php">\DateTime</a></pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Returns</h3>
-<div class="subelement response"><code>\ImboClient\Url\Images\DateTime</code></div>
+<div class="subelement response"><code><a href="http://php.net/manual/en/class.datetime.php">\DateTime</a></code></div>
 </div></div>
 </div>
-<a name="getWidth" id="getWidth"></a><div class="element clickable method public getWidth" data-toggle="collapse" data-target=".getWidth .collapse">
+<a id="method_getWidth"></a><div class="element clickable method public method_getWidth" data-toggle="collapse" data-target=".method_getWidth .collapse">
 <h2>Returns the width of the image, in pixels</h2>
 <pre>getWidth() : int</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
-<p class="long_description"></p>
+<div class="long_description"></div>
 <h3>Returns</h3>
 <div class="subelement response"><code>int</code></div>
 </div></div>
@@ -228,8 +224,8 @@
 </div>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
-            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a10</a> and<br>
-            generated on 2012-09-19T11:32:07+02:00.<br></footer></div>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a11</a> and<br>
+            generated on 2012-11-26T18:25:07+01:00.<br></footer></div>
 </div>
 </body>
 </html>

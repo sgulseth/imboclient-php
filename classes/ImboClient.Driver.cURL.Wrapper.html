@@ -3,7 +3,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
 <meta charset="utf-8">
-<title>phpDocumentor » \ImboClient\Http\HeaderContainer</title>
+<title>phpDocumentor » \ImboClient\Driver\cURL\Wrapper</title>
 <meta name="author" content="Mike van Riel">
 <meta name="description" content="">
 <link href="../css/template.css" rel="stylesheet" media="all">
@@ -59,46 +59,48 @@
 <i class="icon-custom icon-method"></i> Methods
                     <ul>
 <li class="method public "><a href="#method___construct" title="__construct :: Class constructor"><span class="description">Class constructor</span><pre>__construct()</pre></a></li>
-<li class="method public "><a href="#method_get" title="get :: Get a parameter value"><span class="description">Get a parameter value</span><pre>get()</pre></a></li>
-<li class="method public "><a href="#method_getAll" title="getAll :: Get all parameters as an associative array"><span class="description">Get all parameters as an associative array</span><pre>getAll()</pre></a></li>
-<li class="method public "><a href="#method_has" title="has :: See if the container has a given key"><span class="description">See if the container has a given key</span><pre>has()</pre></a></li>
-<li class="method public "><a href="#method_remove" title="remove :: Remove a single value from the parameter list"><span class="description">Remove a single value from the parameter list</span><pre>remove()</pre></a></li>
-<li class="method public "><a href="#method_set" title="set :: Set a parameter value"><span class="description">Set a parameter value</span><pre>set()</pre></a></li>
+<li class="method public "><a href="#method_close" title="close :: Close the current handle"><span class="description">Close the current handle</span><pre>close()</pre></a></li>
+<li class="method public "><a href="#method_copy" title="copy :: Copy the current handle"><span class="description">Copy the current handle</span><pre>copy()</pre></a></li>
+<li class="method public "><a href="#method_exec" title="exec :: Execute a handle"><span class="description">Execute a handle</span><pre>exec()</pre></a></li>
+<li class="method public "><a href="#method_getInfo" title="getInfo :: Fetch info from the handle"><span class="description">Fetch info from the handle</span><pre>getInfo()</pre></a></li>
+<li class="method public "><a href="#method_init" title="init :: Initialize the current handle"><span class="description">Initialize the current handle</span><pre>init()</pre></a></li>
+<li class="method public "><a href="#method_setOpt" title="setOpt :: Set an option"><span class="description">Set an option</span><pre>setOpt()</pre></a></li>
+<li class="method public "><a href="#method_setOptArray" title="setOptArray :: Set multiple options"><span class="description">Set multiple options</span><pre>setOptArray()</pre></a></li>
 </ul>
-</li>
-<li class="nav-header private">» Private
-                    <ul><li class="method private "><a href="#method_getName" title="getName :: Normalize the header name"><span class="description">Normalize the header name</span><pre>getName()</pre></a></li></ul>
 </li>
 <li class="nav-header">
 <i class="icon-custom icon-property"></i> Properties
                     <ul></ul>
 </li>
 <li class="nav-header private">» Private
-                    <ul><li class="property private "><a href="#property_parameters" title="$parameters :: Parameters in the container"><span class="description"></span><pre>$parameters</pre></a></li></ul>
+                    <ul><li class="property private "><a href="#property_handle" title="$handle :: "><span class="description"></span><pre>$handle</pre></a></li></ul>
 </li>
 </ul>
 </div>
 <div class="span8">
-<a id="\ImboClient\Http\HeaderContainer"></a><ul class="breadcrumb">
+<a id="\ImboClient\Driver\cURL\Wrapper"></a><ul class="breadcrumb">
 <li>
 <a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
 </li>
 <li><a href="../namespaces/ImboClient.html">ImboClient</a></li>
 <li>
-<span class="divider">\</span><a href="../namespaces/ImboClient.Http.html">Http</a>
+<span class="divider">\</span><a href="../namespaces/ImboClient.Driver.html">Driver</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/ImboClient.Driver.cURL.html">cURL</a>
 </li>
 <li class="active">
-<span class="divider">\</span><a href="../classes/ImboClient.Http.HeaderContainer.html">HeaderContainer</a>
+<span class="divider">\</span><a href="../classes/ImboClient.Driver.cURL.Wrapper.html">Wrapper</a>
 </li>
 </ul>
 <div class="element class">
-<p class="short_description">Header container</p>
+<p class="short_description">Wrapper for some of the curl_* functions</p>
 <div class="details">
-<div class="long_description"><p>This container contains HTTP headers along with some methods for normalizing the header names.</p></div>
+<div class="long_description"></div>
 <table class="table table-bordered">
 <tr>
 <th>package</th>
-<td><a href="../packages/ImboClient.Http.html">ImboClient\Http</a></td>
+<td><a href="../packages/ImboClient.Drivers.cURL.html">ImboClient\Drivers\cURL</a></td>
 </tr>
 <tr>
 <th>author</th>
@@ -116,114 +118,132 @@
 <th>link</th>
 <td><a href="https://github.com/imbo/imboclient-php">https://github.com/imbo/imboclient-php</a></td>
 </tr>
+<tr>
+<th>codeCoverageIgnore</th>
+<td></td>
+</tr>
 </table>
 <h3>
 <i class="icon-custom icon-method"></i> Methods</h3>
 <a id="method___construct"></a><div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
 <h2>Class constructor</h2>
-<pre>__construct(array $parameters) </pre>
+<pre>__construct(boolean $init) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
-<h4>$parameters</h4>
-<code>array</code><p>Parameters to store in the container</p></div>
+<h4>$init</h4>
+<code>boolean</code><p>Whether or not to initialize the cURL handle</p></div>
 </div></div>
 </div>
-<a id="method_get"></a><div class="element clickable method public method_get" data-toggle="collapse" data-target=".method_get .collapse">
-<h2>Get a parameter value</h2>
-<pre>get(string $key, mixed $default) : mixed</pre>
+<a id="method_close"></a><div class="element clickable method public method_close" data-toggle="collapse" data-target=".method_close .collapse">
+<h2>Close the current handle</h2>
+<pre>close(resource $handle) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
-<h4>$key</h4>
-<code>string</code><p>The key to fetch</p></div>
+<h4>$handle</h4>
+<code>resource</code><p>Optional cURL handle</p></div>
+</div></div>
+</div>
+<a id="method_copy"></a><div class="element clickable method public method_copy" data-toggle="collapse" data-target=".method_copy .collapse">
+<h2>Copy the current handle</h2>
+<pre>copy(resource $handle) : resource</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
 <div class="subelement argument">
-<h4>$default</h4>
-<code>mixed</code><p>If the key does not exist, return this value instead</p></div>
+<h4>$handle</h4>
+<code>resource</code><p>Optional cURL handle</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>resource</code></div>
+</div></div>
+</div>
+<a id="method_exec"></a><div class="element clickable method public method_exec" data-toggle="collapse" data-target=".method_exec .collapse">
+<h2>Execute a handle</h2>
+<pre>exec(resource $handle) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$handle</h4>
+<code>resource</code><p>Optional cURL handle</p></div>
 <h3>Returns</h3>
 <div class="subelement response"><code>mixed</code></div>
 </div></div>
 </div>
-<a id="method_getAll"></a><div class="element clickable method public method_getAll" data-toggle="collapse" data-target=".method_getAll .collapse">
-<h2>Get all parameters as an associative array</h2>
-<pre>getAll() : array</pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description">
-<div class="long_description"></div>
-<h3>Returns</h3>
-<div class="subelement response"><code>array</code></div>
-</div></div>
-</div>
-<a id="method_has"></a><div class="element clickable method public method_has" data-toggle="collapse" data-target=".method_has .collapse">
-<h2>See if the container has a given key</h2>
-<pre>has(string $key) : boolean</pre>
+<a id="method_getInfo"></a><div class="element clickable method public method_getInfo" data-toggle="collapse" data-target=".method_getInfo .collapse">
+<h2>Fetch info from the handle</h2>
+<pre>getInfo(string $opt, resource $handle) : mixed</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
-<h4>$key</h4>
-<code>string</code><p>The key to check for</p></div>
+<h4>$opt</h4>
+<code>string</code><p>One of the CURLINFO_* constants</p>
+</div>
+<div class="subelement argument">
+<h4>$handle</h4>
+<code>resource</code><p>Optional cURL handle</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>mixed</code></div>
+</div></div>
+</div>
+<a id="method_init"></a><div class="element clickable method public method_init" data-toggle="collapse" data-target=".method_init .collapse">
+<h2>Initialize the current handle</h2>
+<pre>init() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_setOpt"></a><div class="element clickable method public method_setOpt" data-toggle="collapse" data-target=".method_setOpt .collapse">
+<h2>Set an option</h2>
+<pre>setOpt(int $opt, mixed $value, resource $handle) : boolean</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$opt</h4>
+<code>int</code><p>A CURLOPT_* constant</p>
+</div>
+<div class="subelement argument">
+<h4>$value</h4>
+<code>mixed</code><p>The value to set</p></div>
+<div class="subelement argument">
+<h4>$handle</h4>
+<code>resource</code><p>Optional cURL handle</p></div>
 <h3>Returns</h3>
 <div class="subelement response"><code>boolean</code></div>
 </div></div>
 </div>
-<a id="method_remove"></a><div class="element clickable method public method_remove" data-toggle="collapse" data-target=".method_remove .collapse">
-<h2>Remove a single value from the parameter list</h2>
-<pre>remove(string $key) : <a href="../classes/ImboClient.Http.HeaderContainerInterface.html">\ImboClient\Http\HeaderContainerInterface</a></pre>
+<a id="method_setOptArray"></a><div class="element clickable method public method_setOptArray" data-toggle="collapse" data-target=".method_setOptArray .collapse">
+<h2>Set multiple options</h2>
+<pre>setOptArray(array $options, resource $handle) : boolean</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument">
-<h4>$key</h4>
-<code>string</code><p>The key to remove</p></div>
-<h3>Returns</h3>
-<div class="subelement response"><code><a href="../classes/ImboClient.Http.HeaderContainerInterface.html">\ImboClient\Http\HeaderContainerInterface</a></code></div>
-</div></div>
-</div>
-<a id="method_set"></a><div class="element clickable method public method_set" data-toggle="collapse" data-target=".method_set .collapse">
-<h2>Set a parameter value</h2>
-<pre>set(string $key, mixed $value) : <a href="../classes/ImboClient.Http.HeaderContainerInterface.html">\ImboClient\Http\HeaderContainerInterface</a></pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description">
-<div class="long_description"></div>
-<h3>Parameters</h3>
+<h4>$options</h4>
+<code>array</code><p>An array of options</p></div>
 <div class="subelement argument">
-<h4>$key</h4>
-<code>string</code><p>The key to store the value to</p></div>
-<div class="subelement argument">
-<h4>$value</h4>
-<code>mixed</code><p>The value itself</p></div>
+<h4>$handle</h4>
+<code>resource</code><p>An optional cURL handle</p></div>
 <h3>Returns</h3>
-<div class="subelement response"><code><a href="../classes/ImboClient.Http.HeaderContainerInterface.html">\ImboClient\Http\HeaderContainerInterface</a></code></div>
-</div></div>
-</div>
-<a id="method_getName"></a><div class="element clickable method private method_getName" data-toggle="collapse" data-target=".method_getName .collapse">
-<h2>Normalize the header name</h2>
-<pre>getName(string $name) : string</pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description">
-<div class="long_description"></div>
-<h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$name</h4>
-<code>string</code><p>The name to normalize, for instance "IF_MODIFIED_SINCE"</p>
-</div>
-<h3>Returns</h3>
-<div class="subelement response">
-<code>string</code>The normalized name, for instance "if-modified-since"</div>
+<div class="subelement response"><code>boolean</code></div>
 </div></div>
 </div>
 <h3>
 <i class="icon-custom icon-property"></i> Properties</h3>
-<a id="property_parameters"> </a><div class="element clickable property private property_parameters" data-toggle="collapse" data-target=".property_parameters .collapse">
+<a id="property_handle"> </a><div class="element clickable property private property_handle" data-toggle="collapse" data-target=".property_handle .collapse">
 <h2></h2>
-<pre>$parameters : array</pre>
+<pre>$handle : resource</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>

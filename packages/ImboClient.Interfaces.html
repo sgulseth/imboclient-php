@@ -3,7 +3,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
 <meta charset="utf-8">
-<title>phpDocumentor » ImboClient\Http</title>
+<title>phpDocumentor » ImboClient\Interfaces</title>
 <meta name="author" content="Mike van Riel">
 <meta name="description" content="">
 <link href="../css/template.css" rel="stylesheet" media="all">
@@ -56,27 +56,55 @@
 </div>
 <ul class="side-nav nav nav-list">
 <li class="nav-header">
-<i class="icon-map-marker"></i> Namespaces</li>
+<i class="icon-map-marker"></i> Packages</li>
 <li>
-<a href="../namespaces/ImboClient.Http.html" title="Http"><i class="icon-th"></i>Http</a><ul class="nav nav-list nav-namespaces"><li>
-<a href="../namespaces/ImboClient.Http.Response.html" title="Response"><i class="icon-th"></i>Response</a><ul class="nav nav-list nav-namespaces"></ul>
-</li></ul>
+<a href="../packages/ImboClient.Interfaces.html" title="Interfaces"><i class="icon-folder-open"></i>Interfaces</a><ul class="nav nav-list nav-packages"></ul>
 </li>
+<li class="nav-header">
+<i class="icon-custom icon-interface"></i> Interfaces</li>
+<li><a href="#ClientInterface" title="Interface for the client">ClientInterface</a></li>
+<li><a href="#ImageInterface" title="Custom Interface for image URL's">ImageInterface</a></li>
+<li><a href="#AccessTokenInterface" title="Access token interface">AccessTokenInterface</a></li>
+<li><a href="#UrlInterface" title="Base interface for imbo URL's">UrlInterface</a></li>
+<li><a href="#ImageInterface" title="Interface for an image found in a response to an images query">ImageInterface</a></li>
+<li><a href="#QueryInterface" title="Images query interface">QueryInterface</a></li>
+<li><a href="#Exception" title="Base exception interface">Exception</a></li>
+<li><a href="#DriverInterface" title="Client driver interface">DriverInterface</a></li>
+<li><a href="#HeaderContainerInterface" title="Parameter container interface">HeaderContainerInterface</a></li>
+<li><a href="#ResponseInterface" title="Client response interface">ResponseInterface</a></li>
 </ul>
 </div>
-<div class="span8 namespace-contents">
-<ul class="breadcrumb">
-<li>
-<a href="../index.html"><i class="icon-th"></i></a><span class="divider">\</span>
-</li>
-<li><a href="../namespaces/ImboClient.html">ImboClient</a></li>
+<div class="span8 package-contents">
+<ul class="breadcrumb"><li>
+<a href="../index.html"><i class="icon-folder-open"></i></a><span class="divider">\</span><li><a href="../packages/ImboClient.html">ImboClient</a></li>
 <li class="active">
-<span class="divider">\</span><a href="../namespaces/ImboClient.Http.html">Http</a>
+<span class="divider">\</span><a href="../packages/ImboClient.Interfaces.html">Interfaces</a>
 </li>
-</ul>
-<div class="namespace-indent">
+</li></ul>
+<div class="package-indent">
 <h3>
 <i class="icon-custom icon-class"></i> Classes and interfaces</h3>
+<div id="ClientInterface" class="element ajax clickable interface">
+<h1>ClientInterface<a href="../classes/ImboClient.ClientInterface.html">¶</a>
+</h1>
+<p class="short_description">Interface for the client</p>
+<div class="details collapse"></div>
+<a href="../classes/ImboClient.ClientInterface.html" class="more">« More »</a>
+</div>
+<div id="DriverInterface" class="element ajax clickable interface">
+<h1>DriverInterface<a href="../classes/ImboClient.Driver.DriverInterface.html">¶</a>
+</h1>
+<p class="short_description">Client driver interface</p>
+<div class="details collapse"></div>
+<a href="../classes/ImboClient.Driver.DriverInterface.html" class="more">« More »</a>
+</div>
+<div id="Exception" class="element ajax clickable interface">
+<h1>Exception<a href="../classes/ImboClient.Exception.html">¶</a>
+</h1>
+<p class="short_description">Base exception interface</p>
+<div class="details collapse"></div>
+<a href="../classes/ImboClient.Exception.html" class="more">« More »</a>
+</div>
 <div id="HeaderContainerInterface" class="element ajax clickable interface">
 <h1>HeaderContainerInterface<a href="../classes/ImboClient.Http.HeaderContainerInterface.html">¶</a>
 </h1>
@@ -84,28 +112,6 @@
 <div class="details collapse"></div>
 <a href="../classes/ImboClient.Http.HeaderContainerInterface.html" class="more">« More »</a>
 </div>
-<div id="HeaderContainer" class="element ajax clickable class">
-<h1>HeaderContainer<a href="../classes/ImboClient.Http.HeaderContainer.html">¶</a>
-</h1>
-<p class="short_description">Header container</p>
-<div class="details collapse"></div>
-<a href="../classes/ImboClient.Http.HeaderContainer.html" class="more">« More »</a>
-</div>
-<ul class="breadcrumb">
-<li>
-<a href="../index.html"><i class="icon-th"></i></a><span class="divider">\</span>
-</li>
-<li><a href="../namespaces/ImboClient.html">ImboClient</a></li>
-<li>
-<span class="divider">\</span><a href="../namespaces/ImboClient.Http.html">Http</a>
-</li>
-<li class="active">
-<span class="divider">\</span><a href="../namespaces/ImboClient.Http.Response.html">Response</a>
-</li>
-</ul>
-<div class="namespace-indent">
-<h3>
-<i class="icon-custom icon-class"></i> Classes and interfaces</h3>
 <div id="ResponseInterface" class="element ajax clickable interface">
 <h1>ResponseInterface<a href="../classes/ImboClient.Http.Response.ResponseInterface.html">¶</a>
 </h1>
@@ -113,13 +119,40 @@
 <div class="details collapse"></div>
 <a href="../classes/ImboClient.Http.Response.ResponseInterface.html" class="more">« More »</a>
 </div>
-<div id="Response" class="element ajax clickable class">
-<h1>Response<a href="../classes/ImboClient.Http.Response.Response.html">¶</a>
+<div id="AccessTokenInterface" class="element ajax clickable interface">
+<h1>AccessTokenInterface<a href="../classes/ImboClient.Url.AccessTokenInterface.html">¶</a>
 </h1>
-<p class="short_description">Client response</p>
+<p class="short_description">Access token interface</p>
 <div class="details collapse"></div>
-<a href="../classes/ImboClient.Http.Response.Response.html" class="more">« More »</a>
+<a href="../classes/ImboClient.Url.AccessTokenInterface.html" class="more">« More »</a>
 </div>
+<div id="ImageInterface" class="element ajax clickable interface">
+<h1>ImageInterface<a href="../classes/ImboClient.Url.ImageInterface.html">¶</a>
+</h1>
+<p class="short_description">Custom Interface for image URL's</p>
+<div class="details collapse"></div>
+<a href="../classes/ImboClient.Url.ImageInterface.html" class="more">« More »</a>
+</div>
+<div id="ImageInterface" class="element ajax clickable interface">
+<h1>ImageInterface<a href="../classes/ImboClient.Url.Images.ImageInterface.html">¶</a>
+</h1>
+<p class="short_description">Interface for an image found in a response to an images query</p>
+<div class="details collapse"></div>
+<a href="../classes/ImboClient.Url.Images.ImageInterface.html" class="more">« More »</a>
+</div>
+<div id="QueryInterface" class="element ajax clickable interface">
+<h1>QueryInterface<a href="../classes/ImboClient.Url.Images.QueryInterface.html">¶</a>
+</h1>
+<p class="short_description">Images query interface</p>
+<div class="details collapse"></div>
+<a href="../classes/ImboClient.Url.Images.QueryInterface.html" class="more">« More »</a>
+</div>
+<div id="UrlInterface" class="element ajax clickable interface">
+<h1>UrlInterface<a href="../classes/ImboClient.Url.UrlInterface.html">¶</a>
+</h1>
+<p class="short_description">Base interface for imbo URL's</p>
+<div class="details collapse"></div>
+<a href="../classes/ImboClient.Url.UrlInterface.html" class="more">« More »</a>
 </div>
 </div>
 </div>
