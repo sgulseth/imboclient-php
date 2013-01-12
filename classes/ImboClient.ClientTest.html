@@ -1,0 +1,1502 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>ImboClient API documentation » \ImboClient\ClientTest</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">ImboClient API documentation</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/ImboClient.html"><i class="icon-th"></i> ImboClient</a></li>
+<li><a>Packages</a></li>
+<li><a href="../packages/Client.html"><i class="icon-folder-open"></i> Client</a></li>
+<li><a href="../packages/Drivers.html"><i class="icon-folder-open"></i> Drivers</a></li>
+<li><a href="../packages/Exceptions.html"><i class="icon-folder-open"></i> Exceptions</a></li>
+<li><a href="../packages/Http.html"><i class="icon-folder-open"></i> Http</a></li>
+<li><a href="../packages/Test%20suite.html"><i class="icon-folder-open"></i> Test suite</a></li>
+<li><a href="../packages/Urls.html"><i class="icon-folder-open"></i> Urls</a></li>
+<li><a href="../packages/Version.html"><i class="icon-folder-open"></i> Version</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">191</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method_getImageData" title="getImageData :: Get images data provider"><span class="description">Get images data provider</span><pre>getImageData()</pre></a></li>
+<li class="method public "><a href="#method_getImageIdentifiers" title="getImageIdentifiers :: Get image paths and MD5 sums"><span class="description">Get image paths and MD5 sums</span><pre>getImageIdentifiers()</pre></a></li>
+<li class="method public "><a href="#method_getImageResponseHeaders" title="getImageResponseHeaders :: "><span class="description">getImageResponseHeaders()
+        </span><pre>getImageResponseHeaders()</pre></a></li>
+<li class="method public "><a href="#method_getMultiHostServers" title="getMultiHostServers :: Server hostname data provider"><span class="description">Server hostname data provider</span><pre>getMultiHostServers()</pre></a></li>
+<li class="method public "><a href="#method_getServerUrls" title="getServerUrls :: Server URLs data provider"><span class="description">Server URLs data provider</span><pre>getServerUrls()</pre></a></li>
+<li class="method public "><a href="#method_getSignatureData" title="getSignatureData :: Data provider for testing signature generation"><span class="description">Data provider for testing signature generation</span><pre>getSignatureData()</pre></a></li>
+<li class="method public "><a href="#method_getUrls" title="getUrls :: Fetch different URLs"><span class="description">Fetch different URLs</span><pre>getUrls()</pre></a></li>
+<li class="method public "><a href="#method_setUp" title="setUp :: Set up the client and the driver mock"><span class="description">Set up the client and the driver mock</span><pre>setUp()</pre></a></li>
+<li class="method public "><a href="#method_tearDown" title="tearDown :: Tear down the client and the driver mock"><span class="description">Tear down the client and the driver mock</span><pre>tearDown()</pre></a></li>
+<li class="method public "><a href="#method_testAcceptsDifferentTypesOfHostUrlsInTheConstructor" title="testAcceptsDifferentTypesOfHostUrlsInTheConstructor :: The client must be able to parse different URLs"><span class="description">The client must be able to parse different URLs</span><pre>testAcceptsDifferentTypesOfHostUrlsInTheConstructor()</pre></a></li>
+<li class="method public "><a href="#method_testCanFetchBinaryImageDataBasedOnAnImageIdentifier" title="testCanFetchBinaryImageDataBasedOnAnImageIdentifier :: The client must be able to return the binary image data from a remote image using an image identifier"><span class="description">The client must be able to return the binary image data from a remote image using an image identifier</span><pre>testCanFetchBinaryImageDataBasedOnAnImageIdentifier()</pre></a></li>
+<li class="method public "><a href="#method_testCanFetchBinaryImageDataBasedOnAnImageUrlInstance" title="testCanFetchBinaryImageDataBasedOnAnImageUrlInstance :: The client must be able to return the binary image data from a remote image using an URL"><span class="description">The client must be able to return the binary image data from a remote image using an URL</span><pre>testCanFetchBinaryImageDataBasedOnAnImageUrlInstance()</pre></a></li>
+<li class="method public "><a href="#method_testCanFetchImagesUsingAQueryObject" title="testCanFetchImagesUsingAQueryObject :: The client must be able to fetch images using a query object"><span class="description">The client must be able to fetch images using a query object</span><pre>testCanFetchImagesUsingAQueryObject()</pre></a></li>
+<li class="method public "><a href="#method_testCanFetchImagesWithoutUsingAQueryObject" title="testCanFetchImagesWithoutUsingAQueryObject :: The client must be able to fetch images using no particular query"><span class="description">The client must be able to fetch images using no particular query</span><pre>testCanFetchImagesWithoutUsingAQueryObject()</pre></a></li>
+<li class="method public "><a href="#method_testCanFetchNumberOfImagesAUserHas" title="testCanFetchNumberOfImagesAUserHas :: The client must be able to return the number of images a user has stored remotely"><span class="description">The client must be able to return the number of images a user has stored remotely</span><pre>testCanFetchNumberOfImagesAUserHas()</pre></a></li>
+<li class="method public "><a href="#method_testCanGenerateAMetadataUrlInstanceBasedOnAnImageIdentifier" title="testCanGenerateAMetadataUrlInstanceBasedOnAnImageIdentifier :: The client must be able to return an ImboClient\Url\Metadata instance based on an image
+identifier"><span class="description">The client must be able to return an ImboClient\Url\Metadata instance based on an image
+identifier</span><pre>testCanGenerateAMetadataUrlInstanceBasedOnAnImageIdentifier()</pre></a></li>
+<li class="method public "><a href="#method_testCanGenerateAStatusUrlInstanceBasedOnParametersToConstructor" title="testCanGenerateAStatusUrlInstanceBasedOnParametersToConstructor :: The client must be able to return an ImboClient\Url\Status instance based on the info given
+in the constructor"><span class="description">The client must be able to return an ImboClient\Url\Status instance based on the info given
+in the constructor</span><pre>testCanGenerateAStatusUrlInstanceBasedOnParametersToConstructor()</pre></a></li>
+<li class="method public "><a href="#method_testCanGenerateAnImageIdentifierBasedOnAString" title="testCanGenerateAnImageIdentifierBasedOnAString :: The client must be able to generate an image identifier based on a string (binary image
+data)"><span class="description">The client must be able to generate an image identifier based on a string (binary image
+data)</span><pre>testCanGenerateAnImageIdentifierBasedOnAString()</pre></a></li>
+<li class="method public "><a href="#method_testCanGenerateAnImageIdentifierBasedOnAValidLocalImage" title="testCanGenerateAnImageIdentifierBasedOnAValidLocalImage :: The client must be able to generate an image identifier using a valid local image"><span class="description">The client must be able to generate an image identifier using a valid local image</span><pre>testCanGenerateAnImageIdentifierBasedOnAValidLocalImage()</pre></a></li>
+<li class="method public "><a href="#method_testCanGenerateAnImageUrlInstanceBasedOnAnImageIdentifier" title="testCanGenerateAnImageUrlInstanceBasedOnAnImageIdentifier :: The client must be able to return an ImboClient\Url\Image instance based on an image
+identifier"><span class="description">The client must be able to return an ImboClient\Url\Image instance based on an image
+identifier</span><pre>testCanGenerateAnImageUrlInstanceBasedOnAnImageIdentifier()</pre></a></li>
+<li class="method public "><a href="#method_testCanGenerateAnImagesUrlInstanceBasedOnParametersToConstructor" title="testCanGenerateAnImagesUrlInstanceBasedOnParametersToConstructor :: The client must be able to return an ImboClient\Url\Images instance based on the info given
+in the constructor"><span class="description">The client must be able to return an ImboClient\Url\Images instance based on the info given
+in the constructor</span><pre>testCanGenerateAnImagesUrlInstanceBasedOnParametersToConstructor()</pre></a></li>
+<li class="method public "><a href="#method_testCanGenerateAnUserUrlInstanceBasedOnParametersToConstructor" title="testCanGenerateAnUserUrlInstanceBasedOnParametersToConstructor :: The client must be able to return an ImboClient\Url\User instance based on the info given in
+the constructor"><span class="description">The client must be able to return an ImboClient\Url\User instance based on the info given in
+the constructor</span><pre>testCanGenerateAnUserUrlInstanceBasedOnParametersToConstructor()</pre></a></li>
+<li class="method public "><a href="#method_testCanGenerateValidSignaturesForRemoteWriteOperations" title="testCanGenerateValidSignaturesForRemoteWriteOperations :: The client must be able to correctly generate signatures based on the HTTP method, the URL
+and a timestamp"><span class="description">The client must be able to correctly generate signatures based on the HTTP method, the URL
+and a timestamp</span><pre>testCanGenerateValidSignaturesForRemoteWriteOperations()</pre></a></li>
+<li class="method public "><a href="#method_testCanGetServerStatusWhenServerRespondsWithHttp200" title="testCanGetServerStatusWhenServerRespondsWithHttp200 :: The client must be able to fetch server status"><span class="description">The client must be able to fetch server status</span><pre>testCanGetServerStatusWhenServerRespondsWithHttp200()</pre></a></li>
+<li class="method public "><a href="#method_testCanGetServerStatusWhenServerRespondsWithHttp500" title="testCanGetServerStatusWhenServerRespondsWithHttp500 :: The client must be able to fetch server status when the server response with HTTP 500
+Internal Server Error"><span class="description">The client must be able to fetch server status when the server response with HTTP 500
+Internal Server Error</span><pre>testCanGetServerStatusWhenServerRespondsWithHttp500()</pre></a></li>
+<li class="method public "><a href="#method_testCanGetUserInfoWhenServerRespondsWithHttp200" title="testCanGetUserInfoWhenServerRespondsWithHttp200 :: The client must be able to fetch user information"><span class="description">The client must be able to fetch user information</span><pre>testCanGetUserInfoWhenServerRespondsWithHttp200()</pre></a></li>
+<li class="method public "><a href="#method_testCanParseUrlsMissingHttp" title='testCanParseUrlsMissingHttp :: The client must be able to parse different types of "lazy" URLs passed to the constructor'><span class="description">The client must be able to parse different types of "lazy" URLs passed to the constructor</span><pre>testCanParseUrlsMissingHttp()</pre></a></li>
+<li class="method public "><a href="#method_testCanReturnImagePropertiesOfAnExistingImage" title="testCanReturnImagePropertiesOfAnExistingImage :: The client must be able to return image properties of an existing remote image"><span class="description">The client must be able to return image properties of an existing remote image</span><pre>testCanReturnImagePropertiesOfAnExistingImage()</pre></a></li>
+<li class="method public "><a href="#method_testReturnsArrayWithMetadataWhenFetchingMetadata" title="testReturnsArrayWithMetadataWhenFetchingMetadata :: The client must return metadata as an array when fetching metadata"><span class="description">The client must return metadata as an array when fetching metadata</span><pre>testReturnsArrayWithMetadataWhenFetchingMetadata()</pre></a></li>
+<li class="method public "><a href="#method_testReturnsFalseWhenCheckingIfARemoteImageExistsAndTheImageDoesNotExist" title="testReturnsFalseWhenCheckingIfARemoteImageExistsAndTheImageDoesNotExist :: When checking if a remote image does not exist using a valid local file the client must
+return false"><span class="description">When checking if a remote image does not exist using a valid local file the client must
+return false</span><pre>testReturnsFalseWhenCheckingIfARemoteImageExistsAndTheImageDoesNotExist()</pre></a></li>
+<li class="method public "><a href="#method_testReturnsFalseWhenCheckingIfARemoteImageIdentifierExistsAndTheImageDoesNotExist" title="testReturnsFalseWhenCheckingIfARemoteImageIdentifierExistsAndTheImageDoesNotExist :: When checking if an image identifier exists on the server and it does not,
+the client must return false"><span class="description">When checking if an image identifier exists on the server and it does not,
+the client must return false</span><pre>testReturnsFalseWhenCheckingIfARemoteImageIdentifierExistsAndTheImageDoesNotExist()</pre></a></li>
+<li class="method public "><a href="#method_testReturnsResponseAfterDeletingAnImage" title="testReturnsResponseAfterDeletingAnImage :: The client must return a valid response after deleting a remote image"><span class="description">The client must return a valid response after deleting a remote image</span><pre>testReturnsResponseAfterDeletingAnImage()</pre></a></li>
+<li class="method public "><a href="#method_testReturnsResponseAfterDeletingMetadata" title="testReturnsResponseAfterDeletingMetadata :: The client must return a valid response after having deleted metadata"><span class="description">The client must return a valid response after having deleted metadata</span><pre>testReturnsResponseAfterDeletingMetadata()</pre></a></li>
+<li class="method public "><a href="#method_testReturnsResponseAfterEditingMetadata" title="testReturnsResponseAfterEditingMetadata :: The client must return a valid response after editing metadata"><span class="description">The client must return a valid response after editing metadata</span><pre>testReturnsResponseAfterEditingMetadata()</pre></a></li>
+<li class="method public "><a href="#method_testReturnsResponseAfterReplacingMetadata" title="testReturnsResponseAfterReplacingMetadata :: The client must return a valid response after having replaced metadata"><span class="description">The client must return a valid response after having replaced metadata</span><pre>testReturnsResponseAfterReplacingMetadata()</pre></a></li>
+<li class="method public "><a href="#method_testReturnsResponseAfterRequestingImageUsingHttpHead" title="testReturnsResponseAfterRequestingImageUsingHttpHead :: The client must return a valid response after requesting an image using HEAD"><span class="description">The client must return a valid response after requesting an image using HEAD</span><pre>testReturnsResponseAfterRequestingImageUsingHttpHead()</pre></a></li>
+<li class="method public "><a href="#method_testReturnsResponseWhenAddingARemoteImage" title="testReturnsResponseWhenAddingARemoteImage :: The client must be able to fetch an image from an URL and add it"><span class="description">The client must be able to fetch an image from an URL and add it</span><pre>testReturnsResponseWhenAddingARemoteImage()</pre></a></li>
+<li class="method public "><a href="#method_testReturnsResponseWhenAddingARemoteImageSpecifiedByImageUrlInstance" title="testReturnsResponseWhenAddingARemoteImageSpecifiedByImageUrlInstance :: The client must be able to fetch an image from an URL specified by an ImboClient\Url\Image
+instance and add it"><span class="description">The client must be able to fetch an image from an URL specified by an ImboClient\Url\Image
+instance and add it</span><pre>testReturnsResponseWhenAddingARemoteImageSpecifiedByImageUrlInstance()</pre></a></li>
+<li class="method public "><a href="#method_testReturnsResponseWhenAddingInMemoryImage" title="testReturnsResponseWhenAddingInMemoryImage :: The client must be able to add an in-memory image"><span class="description">The client must be able to add an in-memory image</span><pre>testReturnsResponseWhenAddingInMemoryImage()</pre></a></li>
+<li class="method public "><a href="#method_testReturnsResponseWhenAddingValidLocalImage" title="testReturnsResponseWhenAddingValidLocalImage :: The client must be able to add a valid local image"><span class="description">The client must be able to add a valid local image</span><pre>testReturnsResponseWhenAddingValidLocalImage()</pre></a></li>
+<li class="method public "><a href="#method_testReturnsTrueWhenCheckingIfARemoteImageExistsAndTheImageExists" title="testReturnsTrueWhenCheckingIfARemoteImageExistsAndTheImageExists :: The client must return true when the remote image exists"><span class="description">The client must return true when the remote image exists</span><pre>testReturnsTrueWhenCheckingIfARemoteImageExistsAndTheImageExists()</pre></a></li>
+<li class="method public "><a href="#method_testReturnsTrueWhenCheckingIfARemoteImageIdentifierExistsAndTheImageExists" title="testReturnsTrueWhenCheckingIfARemoteImageIdentifierExistsAndTheImageExists :: When checking if an image identifier exists on the server and it does,
+the client must return true"><span class="description">When checking if an image identifier exists on the server and it does,
+the client must return true</span><pre>testReturnsTrueWhenCheckingIfARemoteImageIdentifierExistsAndTheImageExists()</pre></a></li>
+<li class="method public "><a href="#method_testSelectsTheFirstUrlInTheSetWhenGeneratingAStatusUrlInstance" title="testSelectsTheFirstUrlInTheSetWhenGeneratingAStatusUrlInstance :: The client always selects the first URL in the set when generating an ImboClient\Url\Images
+instance"><span class="description">The client always selects the first URL in the set when generating an ImboClient\Url\Images
+instance</span><pre>testSelectsTheFirstUrlInTheSetWhenGeneratingAStatusUrlInstance()</pre></a></li>
+<li class="method public "><a href="#method_testSelectsTheFirstUrlInTheSetWhenGeneratingAnImagesUrlInstance" title="testSelectsTheFirstUrlInTheSetWhenGeneratingAnImagesUrlInstance :: The client always selects the first URL in the set when generating an ImboClient\Url\Images
+instance"><span class="description">The client always selects the first URL in the set when generating an ImboClient\Url\Images
+instance</span><pre>testSelectsTheFirstUrlInTheSetWhenGeneratingAnImagesUrlInstance()</pre></a></li>
+<li class="method public "><a href="#method_testSelectsTheFirstUrlInTheSetWhenGeneratingAnUserUrlInstance" title="testSelectsTheFirstUrlInTheSetWhenGeneratingAnUserUrlInstance :: The client always selects the first URL in the set when generating an ImboClient\Url\Images
+instance"><span class="description">The client always selects the first URL in the set when generating an ImboClient\Url\Images
+instance</span><pre>testSelectsTheFirstUrlInTheSetWhenGeneratingAnUserUrlInstance()</pre></a></li>
+<li class="method public "><a href="#method_testSelectsTheSameHostFromASetOfHostsBasedOnAnImageIdentifierEveryTime" title="testSelectsTheSameHostFromASetOfHostsBasedOnAnImageIdentifierEveryTime :: The client must be able to pick the same host from a set of hosts based on an image
+identifier every time"><span class="description">The client must be able to pick the same host from a set of hosts based on an image
+identifier every time</span><pre>testSelectsTheSameHostFromASetOfHostsBasedOnAnImageIdentifierEveryTime()</pre></a></li>
+<li class="method public "><a href="#method_testThrowsExceptionWhenCheckingIfAnImageExistsAndTheServerRespondsWithAnErrorOtherThan404" title="testThrowsExceptionWhenCheckingIfAnImageExistsAndTheServerRespondsWithAnErrorOtherThan404 :: If the server responds with an error other than 404 the client must re-throw the exception"><span class="description">If the server responds with an error other than 404 the client must re-throw the exception</span><pre>testThrowsExceptionWhenCheckingIfAnImageExistsAndTheServerRespondsWithAnErrorOtherThan404()</pre></a></li>
+<li class="method public "><a href="#method_testThrowsExceptionWhenCheckingIfAnImageExistsUsingALocalImageThatDoesNotExist" title="testThrowsExceptionWhenCheckingIfAnImageExistsUsingALocalImageThatDoesNotExist :: The client must throw an exception when checking if an image exists using a local image that
+does not exist"><span class="description">The client must throw an exception when checking if an image exists using a local image that
+does not exist</span><pre>testThrowsExceptionWhenCheckingIfAnImageExistsUsingALocalImageThatDoesNotExist()</pre></a></li>
+<li class="method public "><a href="#method_testThrowsExceptionWhenCheckingIfAnImageExistsUsingAnEmptyLocalImage" title="testThrowsExceptionWhenCheckingIfAnImageExistsUsingAnEmptyLocalImage :: The client must throw an exception when checking if an image exists using an empty local
+image"><span class="description">The client must throw an exception when checking if an image exists using an empty local
+image</span><pre>testThrowsExceptionWhenCheckingIfAnImageExistsUsingAnEmptyLocalImage()</pre></a></li>
+<li class="method public "><a href="#method_testThrowsExceptionWhenCheckingIfAnImageIdentifierExistsAndTheServerRespondsWithAnErrorOtherThan404" title="testThrowsExceptionWhenCheckingIfAnImageIdentifierExistsAndTheServerRespondsWithAnErrorOtherThan404 :: If the server responds with an error other than 404 the client must re-throw the exception"><span class="description">If the server responds with an error other than 404 the client must re-throw the exception</span><pre>testThrowsExceptionWhenCheckingIfAnImageIdentifierExistsAndTheServerRespondsWithAnErrorOtherThan404()</pre></a></li>
+<li class="method public "><a href="#method_testThrowsExceptionWhenTryingToAddEmptyInMemoryImage" title="testThrowsExceptionWhenTryingToAddEmptyInMemoryImage :: The client must throw an exception when trying to add an empty in-memory image"><span class="description">The client must throw an exception when trying to add an empty in-memory image</span><pre>testThrowsExceptionWhenTryingToAddEmptyInMemoryImage()</pre></a></li>
+<li class="method public "><a href="#method_testThrowsExceptionWhenTryingToAddEmptyLocalImage" title="testThrowsExceptionWhenTryingToAddEmptyLocalImage :: When trying to add an empty local image the client must throw an exception"><span class="description">When trying to add an empty local image the client must throw an exception</span><pre>testThrowsExceptionWhenTryingToAddEmptyLocalImage()</pre></a></li>
+<li class="method public "><a href="#method_testThrowsExceptionWhenTryingToAddEmptyRemoteImage" title="testThrowsExceptionWhenTryingToAddEmptyRemoteImage :: The client must throw an exception when trying to add an empty remote image"><span class="description">The client must throw an exception when trying to add an empty remote image</span><pre>testThrowsExceptionWhenTryingToAddEmptyRemoteImage()</pre></a></li>
+<li class="method public "><a href="#method_testThrowsExceptionWhenTryingToAddLocalImageThatDoesNotExist" title="testThrowsExceptionWhenTryingToAddLocalImageThatDoesNotExist :: When trying to add a local image that does not exist the client must throw an exception"><span class="description">When trying to add a local image that does not exist the client must throw an exception</span><pre>testThrowsExceptionWhenTryingToAddLocalImageThatDoesNotExist()</pre></a></li>
+<li class="method public "><a href="#method_testThrowsExceptionWhenTryingToGenerateImageIdentifierBasedOnALocalImageThatDoesNotExist" title="testThrowsExceptionWhenTryingToGenerateImageIdentifierBasedOnALocalImageThatDoesNotExist :: The client must throw an exception when trying to generate an image identifier based on a
+non-existing local image"><span class="description">The client must throw an exception when trying to generate an image identifier based on a
+non-existing local image</span><pre>testThrowsExceptionWhenTryingToGenerateImageIdentifierBasedOnALocalImageThatDoesNotExist()</pre></a></li>
+<li class="method public "><a href="#method_testThrowsExceptionWhenTryingToGenerateImageIdentifierBasedOnAnEmptyLocalImage" title="testThrowsExceptionWhenTryingToGenerateImageIdentifierBasedOnAnEmptyLocalImage :: The client must throw an exception when trying to generate an image identifier based on an
+empty local image"><span class="description">The client must throw an exception when trying to generate an image identifier based on an
+empty local image</span><pre>testThrowsExceptionWhenTryingToGenerateImageIdentifierBasedOnAnEmptyLocalImage()</pre></a></li>
+<li class="method public "><a href="#method_testThrowsExceptionWhenTryingToGetServerStatusAndServerDoesNotRespond" title="testThrowsExceptionWhenTryingToGetServerStatusAndServerDoesNotRespond :: When trying to fetch server status and the server does not respond the client must throw an
+exception"><span class="description">When trying to fetch server status and the server does not respond the client must throw an
+exception</span><pre>testThrowsExceptionWhenTryingToGetServerStatusAndServerDoesNotRespond()</pre></a></li>
+<li class="method public "><a href="#method_testThrowsExceptionWhenTryingToGetServerStatusAndServerRespondsWithErrorOtherThanHttp500" title="testThrowsExceptionWhenTryingToGetServerStatusAndServerRespondsWithErrorOtherThanHttp500 :: When trying to fetch server status and the server responds with an error (other than HTTP
+500 Internal Server Error) the client must throw an exception"><span class="description">When trying to fetch server status and the server responds with an error (other than HTTP
+500 Internal Server Error) the client must throw an exception</span><pre>testThrowsExceptionWhenTryingToGetServerStatusAndServerRespondsWithErrorOtherThanHttp500()</pre></a></li>
+<li class="method public "><a href="#method_testUsesCurlAsADefaultDriver" title="testUsesCurlAsADefaultDriver :: "><span class="description">testUsesCurlAsADefaultDriver()
+        </span><pre>testUsesCurlAsADefaultDriver()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header private">» Private
+                    <ul><li class="method private "><a href="#method_getResponseMock" title="getResponseMock :: Get a mock of the response interface"><span class="description">Get a mock of the response interface</span><pre>getResponseMock()</pre></a></li></ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header private">» Private
+                    <ul>
+<li class="property private "><a href="#property_client" title="$client :: Client instance"><span class="description"></span><pre>$client</pre></a></li>
+<li class="property private "><a href="#property_imageIdentifier" title="$imageIdentifier :: Image identifier used for tests"><span class="description"></span><pre>$imageIdentifier</pre></a></li>
+<li class="property private "><a href="#property_privateKey" title="$privateKey :: Private key"><span class="description"></span><pre>$privateKey</pre></a></li>
+<li class="property private "><a href="#property_publicKey" title="$publicKey :: Public key"><span class="description"></span><pre>$publicKey</pre></a></li>
+<li class="property private "><a href="#property_serverUrl" title="$serverUrl :: The server URL passed to the constructor"><span class="description"></span><pre>$serverUrl</pre></a></li>
+<li class="property private "><a href="#property_signedUrlPattern" title="$signedUrlPattern :: Regexp pattern that matches the end of a signed URL"><span class="description"></span><pre>$signedUrlPattern</pre></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\ImboClient\ClientTest"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/ImboClient.html">ImboClient</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/ImboClient.ClientTest.html">ClientTest</a>
+</li>
+</ul>
+<div class="element class">
+<p class="short_description"></p>
+<div class="details">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/Test%20suite.html">Test suite</a></td>
+</tr>
+<tr>
+<th>author</th>
+<td><a href="mailto:cogo@starzinger.net">Christer Edvartsen</a></td>
+</tr>
+</table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method_getImageData"></a><div class="element clickable method public method_getImageData" data-toggle="collapse" data-target=".method_getImageData .collapse">
+<h2>Get images data provider</h2>
+<pre>getImageData() : array[]</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>This data provider returns data in the format the images resource on the imbo server does</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array[]</code></div>
+</div></div>
+</div>
+<a id="method_getImageIdentifiers"></a><div class="element clickable method public method_getImageIdentifiers" data-toggle="collapse" data-target=".method_getImageIdentifiers .collapse">
+<h2>Get image paths and MD5 sums</h2>
+<pre>getImageIdentifiers() : array[]</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array[]</code></div>
+</div></div>
+</div>
+<a id="method_getImageResponseHeaders"></a><div class="element clickable method public method_getImageResponseHeaders" data-toggle="collapse" data-target=".method_getImageResponseHeaders .collapse">
+<h2>getImageResponseHeaders()
+        </h2>
+<pre>getImageResponseHeaders() : array[]</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array[]</code></div>
+</div></div>
+</div>
+<a id="method_getMultiHostServers"></a><div class="element clickable method public method_getMultiHostServers" data-toggle="collapse" data-target=".method_getMultiHostServers .collapse">
+<h2>Server hostname data provider</h2>
+<pre>getMultiHostServers() : array[]</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array[]</code></div>
+</div></div>
+</div>
+<a id="method_getServerUrls"></a><div class="element clickable method public method_getServerUrls" data-toggle="collapse" data-target=".method_getServerUrls .collapse">
+<h2>Server URLs data provider</h2>
+<pre>getServerUrls() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_getSignatureData"></a><div class="element clickable method public method_getSignatureData" data-toggle="collapse" data-target=".method_getSignatureData .collapse">
+<h2>Data provider for testing signature generation</h2>
+<pre>getSignatureData() : array[]</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array[]</code></div>
+</div></div>
+</div>
+<a id="method_getUrls"></a><div class="element clickable method public method_getUrls" data-toggle="collapse" data-target=".method_getUrls .collapse">
+<h2>Fetch different URLs</h2>
+<pre>getUrls() : array[]</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array[]</code></div>
+</div></div>
+</div>
+<a id="method_setUp"></a><div class="element clickable method public method_setUp" data-toggle="collapse" data-target=".method_setUp .collapse">
+<h2>Set up the client and the driver mock</h2>
+<pre>setUp() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::__construct</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::setDriver</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Version::getVersionString</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Version::getVersionNumber</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_tearDown"></a><div class="element clickable method public method_tearDown" data-toggle="collapse" data-target=".method_tearDown .collapse">
+<h2>Tear down the client and the driver mock</h2>
+<pre>tearDown() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_testAcceptsDifferentTypesOfHostUrlsInTheConstructor"></a><div class="element clickable method public method_testAcceptsDifferentTypesOfHostUrlsInTheConstructor" data-toggle="collapse" data-target=".method_testAcceptsDifferentTypesOfHostUrlsInTheConstructor .collapse">
+<h2>The client must be able to parse different URLs</h2>
+<pre>testAcceptsDifferentTypesOfHostUrlsInTheConstructor($url, $expected) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>dataProvider</th>
+<td>getServerUrls()</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::__construct</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::getServerUrls</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::parseUrls</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$url</h4></div>
+<div class="subelement argument"><h4>$expected</h4></div>
+</div></div>
+</div>
+<a id="method_testCanFetchBinaryImageDataBasedOnAnImageIdentifier"></a><div class="element clickable method public method_testCanFetchBinaryImageDataBasedOnAnImageIdentifier" data-toggle="collapse" data-target=".method_testCanFetchBinaryImageDataBasedOnAnImageIdentifier .collapse">
+<h2>The client must be able to return the binary image data from a remote image using an image identifier</h2>
+<pre>testCanFetchBinaryImageDataBasedOnAnImageIdentifier() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::getImageData</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::getImageUrl</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::getImageDataFromUrl</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_testCanFetchBinaryImageDataBasedOnAnImageUrlInstance"></a><div class="element clickable method public method_testCanFetchBinaryImageDataBasedOnAnImageUrlInstance" data-toggle="collapse" data-target=".method_testCanFetchBinaryImageDataBasedOnAnImageUrlInstance .collapse">
+<h2>The client must be able to return the binary image data from a remote image using an URL</h2>
+<pre>testCanFetchBinaryImageDataBasedOnAnImageUrlInstance() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>covers</th>
+<td>\ImboClient\Client::getImageDataFromUrl</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_testCanFetchImagesUsingAQueryObject"></a><div class="element clickable method public method_testCanFetchImagesUsingAQueryObject" data-toggle="collapse" data-target=".method_testCanFetchImagesUsingAQueryObject .collapse">
+<h2>The client must be able to fetch images using a query object</h2>
+<pre>testCanFetchImagesUsingAQueryObject($data) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>dataProvider</th>
+<td>getImageData()</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::getImages</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::getImagesUrl</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$data</h4></div>
+</div></div>
+</div>
+<a id="method_testCanFetchImagesWithoutUsingAQueryObject"></a><div class="element clickable method public method_testCanFetchImagesWithoutUsingAQueryObject" data-toggle="collapse" data-target=".method_testCanFetchImagesWithoutUsingAQueryObject .collapse">
+<h2>The client must be able to fetch images using no particular query</h2>
+<pre>testCanFetchImagesWithoutUsingAQueryObject($data) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>dataProvider</th>
+<td>getImageData()</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::getImages</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::getImagesUrl</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$data</h4></div>
+</div></div>
+</div>
+<a id="method_testCanFetchNumberOfImagesAUserHas"></a><div class="element clickable method public method_testCanFetchNumberOfImagesAUserHas" data-toggle="collapse" data-target=".method_testCanFetchNumberOfImagesAUserHas .collapse">
+<h2>The client must be able to return the number of images a user has stored remotely</h2>
+<pre>testCanFetchNumberOfImagesAUserHas() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::getNumImages</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::getUserUrl</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_testCanGenerateAMetadataUrlInstanceBasedOnAnImageIdentifier"></a><div class="element clickable method public method_testCanGenerateAMetadataUrlInstanceBasedOnAnImageIdentifier" data-toggle="collapse" data-target=".method_testCanGenerateAMetadataUrlInstanceBasedOnAnImageIdentifier .collapse">
+<h2>The client must be able to return an ImboClient\Url\Metadata instance based on an image
+identifier</h2>
+<pre>testCanGenerateAMetadataUrlInstanceBasedOnAnImageIdentifier() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::getMetadataUrl</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::getHostForImageIdentifier</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_testCanGenerateAStatusUrlInstanceBasedOnParametersToConstructor"></a><div class="element clickable method public method_testCanGenerateAStatusUrlInstanceBasedOnParametersToConstructor" data-toggle="collapse" data-target=".method_testCanGenerateAStatusUrlInstanceBasedOnParametersToConstructor .collapse">
+<h2>The client must be able to return an ImboClient\Url\Status instance based on the info given
+in the constructor</h2>
+<pre>testCanGenerateAStatusUrlInstanceBasedOnParametersToConstructor() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>covers</th>
+<td>\ImboClient\Client::getStatusUrl</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_testCanGenerateAnImageIdentifierBasedOnAString"></a><div class="element clickable method public method_testCanGenerateAnImageIdentifierBasedOnAString" data-toggle="collapse" data-target=".method_testCanGenerateAnImageIdentifierBasedOnAString .collapse">
+<h2>The client must be able to generate an image identifier based on a string (binary image
+data)</h2>
+<pre>testCanGenerateAnImageIdentifierBasedOnAString($path, $checksum) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>dataProvider</th>
+<td>getImageIdentifiers</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::getImageIdentifierFromString</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::generateImageIdentifier</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$path</h4></div>
+<div class="subelement argument"><h4>$checksum</h4></div>
+</div></div>
+</div>
+<a id="method_testCanGenerateAnImageIdentifierBasedOnAValidLocalImage"></a><div class="element clickable method public method_testCanGenerateAnImageIdentifierBasedOnAValidLocalImage" data-toggle="collapse" data-target=".method_testCanGenerateAnImageIdentifierBasedOnAValidLocalImage .collapse">
+<h2>The client must be able to generate an image identifier using a valid local image</h2>
+<pre>testCanGenerateAnImageIdentifierBasedOnAValidLocalImage($path, $checksum) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>dataProvider</th>
+<td>getImageIdentifiers</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::getImageIdentifier</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::validateLocalFile</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::generateImageIdentifier</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$path</h4></div>
+<div class="subelement argument"><h4>$checksum</h4></div>
+</div></div>
+</div>
+<a id="method_testCanGenerateAnImageUrlInstanceBasedOnAnImageIdentifier"></a><div class="element clickable method public method_testCanGenerateAnImageUrlInstanceBasedOnAnImageIdentifier" data-toggle="collapse" data-target=".method_testCanGenerateAnImageUrlInstanceBasedOnAnImageIdentifier .collapse">
+<h2>The client must be able to return an ImboClient\Url\Image instance based on an image
+identifier</h2>
+<pre>testCanGenerateAnImageUrlInstanceBasedOnAnImageIdentifier() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::getImageUrl</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::getHostForImageIdentifier</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_testCanGenerateAnImagesUrlInstanceBasedOnParametersToConstructor"></a><div class="element clickable method public method_testCanGenerateAnImagesUrlInstanceBasedOnParametersToConstructor" data-toggle="collapse" data-target=".method_testCanGenerateAnImagesUrlInstanceBasedOnParametersToConstructor .collapse">
+<h2>The client must be able to return an ImboClient\Url\Images instance based on the info given
+in the constructor</h2>
+<pre>testCanGenerateAnImagesUrlInstanceBasedOnParametersToConstructor() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>covers</th>
+<td>\ImboClient\Client::getImagesUrl</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_testCanGenerateAnUserUrlInstanceBasedOnParametersToConstructor"></a><div class="element clickable method public method_testCanGenerateAnUserUrlInstanceBasedOnParametersToConstructor" data-toggle="collapse" data-target=".method_testCanGenerateAnUserUrlInstanceBasedOnParametersToConstructor .collapse">
+<h2>The client must be able to return an ImboClient\Url\User instance based on the info given in
+the constructor</h2>
+<pre>testCanGenerateAnUserUrlInstanceBasedOnParametersToConstructor() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>covers</th>
+<td>\ImboClient\Client::getUserUrl</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_testCanGenerateValidSignaturesForRemoteWriteOperations"></a><div class="element clickable method public method_testCanGenerateValidSignaturesForRemoteWriteOperations" data-toggle="collapse" data-target=".method_testCanGenerateValidSignaturesForRemoteWriteOperations .collapse">
+<h2>The client must be able to correctly generate signatures based on the HTTP method, the URL
+and a timestamp</h2>
+<pre>testCanGenerateValidSignaturesForRemoteWriteOperations($httpMethod, $url, $timestamp, $expected) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>dataProvider</th>
+<td>getSignatureData</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::generateSignature</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$httpMethod</h4></div>
+<div class="subelement argument"><h4>$url</h4></div>
+<div class="subelement argument"><h4>$timestamp</h4></div>
+<div class="subelement argument"><h4>$expected</h4></div>
+</div></div>
+</div>
+<a id="method_testCanGetServerStatusWhenServerRespondsWithHttp200"></a><div class="element clickable method public method_testCanGetServerStatusWhenServerRespondsWithHttp200" data-toggle="collapse" data-target=".method_testCanGetServerStatusWhenServerRespondsWithHttp200 .collapse">
+<h2>The client must be able to fetch server status</h2>
+<pre>testCanGetServerStatusWhenServerRespondsWithHttp200() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::getServerStatus</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::getStatusUrl</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_testCanGetServerStatusWhenServerRespondsWithHttp500"></a><div class="element clickable method public method_testCanGetServerStatusWhenServerRespondsWithHttp500" data-toggle="collapse" data-target=".method_testCanGetServerStatusWhenServerRespondsWithHttp500 .collapse">
+<h2>The client must be able to fetch server status when the server response with HTTP 500
+Internal Server Error</h2>
+<pre>testCanGetServerStatusWhenServerRespondsWithHttp500() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::getServerStatus</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::getStatusUrl</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_testCanGetUserInfoWhenServerRespondsWithHttp200"></a><div class="element clickable method public method_testCanGetUserInfoWhenServerRespondsWithHttp200" data-toggle="collapse" data-target=".method_testCanGetUserInfoWhenServerRespondsWithHttp200 .collapse">
+<h2>The client must be able to fetch user information</h2>
+<pre>testCanGetUserInfoWhenServerRespondsWithHttp200() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::getUserInfo</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::getUserUrl</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_testCanParseUrlsMissingHttp"></a><div class="element clickable method public method_testCanParseUrlsMissingHttp" data-toggle="collapse" data-target=".method_testCanParseUrlsMissingHttp .collapse">
+<h2>The client must be able to parse different types of "lazy" URLs passed to the constructor</h2>
+<pre>testCanParseUrlsMissingHttp($url, $expected) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>dataProvider</th>
+<td>getUrls()</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::__construct</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::parseUrls</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$url</h4></div>
+<div class="subelement argument"><h4>$expected</h4></div>
+</div></div>
+</div>
+<a id="method_testCanReturnImagePropertiesOfAnExistingImage"></a><div class="element clickable method public method_testCanReturnImagePropertiesOfAnExistingImage" data-toggle="collapse" data-target=".method_testCanReturnImagePropertiesOfAnExistingImage .collapse">
+<h2>The client must be able to return image properties of an existing remote image</h2>
+<pre>testCanReturnImagePropertiesOfAnExistingImage($width, $height, $size, $mime, $extension) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>dataProvider</th>
+<td>getImageResponseHeaders</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::getImageProperties</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::headImage</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$width</h4></div>
+<div class="subelement argument"><h4>$height</h4></div>
+<div class="subelement argument"><h4>$size</h4></div>
+<div class="subelement argument"><h4>$mime</h4></div>
+<div class="subelement argument"><h4>$extension</h4></div>
+</div></div>
+</div>
+<a id="method_testReturnsArrayWithMetadataWhenFetchingMetadata"></a><div class="element clickable method public method_testReturnsArrayWithMetadataWhenFetchingMetadata" data-toggle="collapse" data-target=".method_testReturnsArrayWithMetadataWhenFetchingMetadata .collapse">
+<h2>The client must return metadata as an array when fetching metadata</h2>
+<pre>testReturnsArrayWithMetadataWhenFetchingMetadata() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::getMetadata</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::getMetadataUrl</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_testReturnsFalseWhenCheckingIfARemoteImageExistsAndTheImageDoesNotExist"></a><div class="element clickable method public method_testReturnsFalseWhenCheckingIfARemoteImageExistsAndTheImageDoesNotExist" data-toggle="collapse" data-target=".method_testReturnsFalseWhenCheckingIfARemoteImageExistsAndTheImageDoesNotExist .collapse">
+<h2>When checking if a remote image does not exist using a valid local file the client must
+return false</h2>
+<pre>testReturnsFalseWhenCheckingIfARemoteImageExistsAndTheImageDoesNotExist() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::imageExists</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::getImageIdentifier</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::headImage</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_testReturnsFalseWhenCheckingIfARemoteImageIdentifierExistsAndTheImageDoesNotExist"></a><div class="element clickable method public method_testReturnsFalseWhenCheckingIfARemoteImageIdentifierExistsAndTheImageDoesNotExist" data-toggle="collapse" data-target=".method_testReturnsFalseWhenCheckingIfARemoteImageIdentifierExistsAndTheImageDoesNotExist .collapse">
+<h2>When checking if an image identifier exists on the server and it does not,
+the client must return false</h2>
+<pre>testReturnsFalseWhenCheckingIfARemoteImageIdentifierExistsAndTheImageDoesNotExist() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::imageIdentifierExists</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::headImage</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_testReturnsResponseAfterDeletingAnImage"></a><div class="element clickable method public method_testReturnsResponseAfterDeletingAnImage" data-toggle="collapse" data-target=".method_testReturnsResponseAfterDeletingAnImage .collapse">
+<h2>The client must return a valid response after deleting a remote image</h2>
+<pre>testReturnsResponseAfterDeletingAnImage() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::deleteImage</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::getImageUrl</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::getSignedUrl</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_testReturnsResponseAfterDeletingMetadata"></a><div class="element clickable method public method_testReturnsResponseAfterDeletingMetadata" data-toggle="collapse" data-target=".method_testReturnsResponseAfterDeletingMetadata .collapse">
+<h2>The client must return a valid response after having deleted metadata</h2>
+<pre>testReturnsResponseAfterDeletingMetadata() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::deleteMetadata</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::getMetadataUrl</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::getSignedUrl</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_testReturnsResponseAfterEditingMetadata"></a><div class="element clickable method public method_testReturnsResponseAfterEditingMetadata" data-toggle="collapse" data-target=".method_testReturnsResponseAfterEditingMetadata .collapse">
+<h2>The client must return a valid response after editing metadata</h2>
+<pre>testReturnsResponseAfterEditingMetadata() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::editMetadata</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::getMetadataUrl</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::getSignedUrl</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_testReturnsResponseAfterReplacingMetadata"></a><div class="element clickable method public method_testReturnsResponseAfterReplacingMetadata" data-toggle="collapse" data-target=".method_testReturnsResponseAfterReplacingMetadata .collapse">
+<h2>The client must return a valid response after having replaced metadata</h2>
+<pre>testReturnsResponseAfterReplacingMetadata() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::replaceMetadata</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::getMetadataUrl</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::getSignedUrl</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_testReturnsResponseAfterRequestingImageUsingHttpHead"></a><div class="element clickable method public method_testReturnsResponseAfterRequestingImageUsingHttpHead" data-toggle="collapse" data-target=".method_testReturnsResponseAfterRequestingImageUsingHttpHead .collapse">
+<h2>The client must return a valid response after requesting an image using HEAD</h2>
+<pre>testReturnsResponseAfterRequestingImageUsingHttpHead() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::headImage</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::getImageUrl</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_testReturnsResponseWhenAddingARemoteImage"></a><div class="element clickable method public method_testReturnsResponseWhenAddingARemoteImage" data-toggle="collapse" data-target=".method_testReturnsResponseWhenAddingARemoteImage .collapse">
+<h2>The client must be able to fetch an image from an URL and add it</h2>
+<pre>testReturnsResponseWhenAddingARemoteImage() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::addImageFromUrl</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::addImageFromString</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_testReturnsResponseWhenAddingARemoteImageSpecifiedByImageUrlInstance"></a><div class="element clickable method public method_testReturnsResponseWhenAddingARemoteImageSpecifiedByImageUrlInstance" data-toggle="collapse" data-target=".method_testReturnsResponseWhenAddingARemoteImageSpecifiedByImageUrlInstance .collapse">
+<h2>The client must be able to fetch an image from an URL specified by an ImboClient\Url\Image
+instance and add it</h2>
+<pre>testReturnsResponseWhenAddingARemoteImageSpecifiedByImageUrlInstance() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::addImageFromUrl</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::addImageFromString</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_testReturnsResponseWhenAddingInMemoryImage"></a><div class="element clickable method public method_testReturnsResponseWhenAddingInMemoryImage" data-toggle="collapse" data-target=".method_testReturnsResponseWhenAddingInMemoryImage .collapse">
+<h2>The client must be able to add an in-memory image</h2>
+<pre>testReturnsResponseWhenAddingInMemoryImage() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::addImageFromString</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::getImageIdentifierFromString</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::getImageUrl</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::getSignedUrl</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_testReturnsResponseWhenAddingValidLocalImage"></a><div class="element clickable method public method_testReturnsResponseWhenAddingValidLocalImage" data-toggle="collapse" data-target=".method_testReturnsResponseWhenAddingValidLocalImage .collapse">
+<h2>The client must be able to add a valid local image</h2>
+<pre>testReturnsResponseWhenAddingValidLocalImage() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::addImage</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::getImageUrl</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::getImageIdentifier</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::validateLocalFile</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::getSignedUrl</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_testReturnsTrueWhenCheckingIfARemoteImageExistsAndTheImageExists"></a><div class="element clickable method public method_testReturnsTrueWhenCheckingIfARemoteImageExistsAndTheImageExists" data-toggle="collapse" data-target=".method_testReturnsTrueWhenCheckingIfARemoteImageExistsAndTheImageExists .collapse">
+<h2>The client must return true when the remote image exists</h2>
+<pre>testReturnsTrueWhenCheckingIfARemoteImageExistsAndTheImageExists() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::imageExists</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::getImageIdentifier</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::headImage</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_testReturnsTrueWhenCheckingIfARemoteImageIdentifierExistsAndTheImageExists"></a><div class="element clickable method public method_testReturnsTrueWhenCheckingIfARemoteImageIdentifierExistsAndTheImageExists" data-toggle="collapse" data-target=".method_testReturnsTrueWhenCheckingIfARemoteImageIdentifierExistsAndTheImageExists .collapse">
+<h2>When checking if an image identifier exists on the server and it does,
+the client must return true</h2>
+<pre>testReturnsTrueWhenCheckingIfARemoteImageIdentifierExistsAndTheImageExists() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::imageIdentifierExists</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::headImage</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_testSelectsTheFirstUrlInTheSetWhenGeneratingAStatusUrlInstance"></a><div class="element clickable method public method_testSelectsTheFirstUrlInTheSetWhenGeneratingAStatusUrlInstance" data-toggle="collapse" data-target=".method_testSelectsTheFirstUrlInTheSetWhenGeneratingAStatusUrlInstance .collapse">
+<h2>The client always selects the first URL in the set when generating an ImboClient\Url\Images
+instance</h2>
+<pre>testSelectsTheFirstUrlInTheSetWhenGeneratingAStatusUrlInstance() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>covers</th>
+<td>\ImboClient\Client::getStatusUrl</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_testSelectsTheFirstUrlInTheSetWhenGeneratingAnImagesUrlInstance"></a><div class="element clickable method public method_testSelectsTheFirstUrlInTheSetWhenGeneratingAnImagesUrlInstance" data-toggle="collapse" data-target=".method_testSelectsTheFirstUrlInTheSetWhenGeneratingAnImagesUrlInstance .collapse">
+<h2>The client always selects the first URL in the set when generating an ImboClient\Url\Images
+instance</h2>
+<pre>testSelectsTheFirstUrlInTheSetWhenGeneratingAnImagesUrlInstance() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>covers</th>
+<td>\ImboClient\Client::getImagesUrl</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_testSelectsTheFirstUrlInTheSetWhenGeneratingAnUserUrlInstance"></a><div class="element clickable method public method_testSelectsTheFirstUrlInTheSetWhenGeneratingAnUserUrlInstance" data-toggle="collapse" data-target=".method_testSelectsTheFirstUrlInTheSetWhenGeneratingAnUserUrlInstance .collapse">
+<h2>The client always selects the first URL in the set when generating an ImboClient\Url\Images
+instance</h2>
+<pre>testSelectsTheFirstUrlInTheSetWhenGeneratingAnUserUrlInstance() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>covers</th>
+<td>\ImboClient\Client::getUserUrl</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_testSelectsTheSameHostFromASetOfHostsBasedOnAnImageIdentifierEveryTime"></a><div class="element clickable method public method_testSelectsTheSameHostFromASetOfHostsBasedOnAnImageIdentifierEveryTime" data-toggle="collapse" data-target=".method_testSelectsTheSameHostFromASetOfHostsBasedOnAnImageIdentifierEveryTime .collapse">
+<h2>The client must be able to pick the same host from a set of hosts based on an image
+identifier every time</h2>
+<pre>testSelectsTheSameHostFromASetOfHostsBasedOnAnImageIdentifierEveryTime($hosts, $imageIdentifier, $expected) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>dataProvider</th>
+<td>getMultiHostServers()</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::__construct</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::parseUrls</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::getHostForImageIdentifier</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$hosts</h4></div>
+<div class="subelement argument"><h4>$imageIdentifier</h4></div>
+<div class="subelement argument"><h4>$expected</h4></div>
+</div></div>
+</div>
+<a id="method_testThrowsExceptionWhenCheckingIfAnImageExistsAndTheServerRespondsWithAnErrorOtherThan404"></a><div class="element clickable method public method_testThrowsExceptionWhenCheckingIfAnImageExistsAndTheServerRespondsWithAnErrorOtherThan404" data-toggle="collapse" data-target=".method_testThrowsExceptionWhenCheckingIfAnImageExistsAndTheServerRespondsWithAnErrorOtherThan404 .collapse">
+<h2>If the server responds with an error other than 404 the client must re-throw the exception</h2>
+<pre>testThrowsExceptionWhenCheckingIfAnImageExistsAndTheServerRespondsWithAnErrorOtherThan404() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>expectedException</th>
+<td>ImboClient\Exception\ServerException</td>
+</tr>
+<tr>
+<th>expectedExceptionMessage</th>
+<td>Internal Server Error</td>
+</tr>
+<tr>
+<th>expectedExceptionCode</th>
+<td>500</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::imageExists</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::getImageIdentifier</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::headImage</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_testThrowsExceptionWhenCheckingIfAnImageExistsUsingALocalImageThatDoesNotExist"></a><div class="element clickable method public method_testThrowsExceptionWhenCheckingIfAnImageExistsUsingALocalImageThatDoesNotExist" data-toggle="collapse" data-target=".method_testThrowsExceptionWhenCheckingIfAnImageExistsUsingALocalImageThatDoesNotExist .collapse">
+<h2>The client must throw an exception when checking if an image exists using a local image that
+does not exist</h2>
+<pre>testThrowsExceptionWhenCheckingIfAnImageExistsUsingALocalImageThatDoesNotExist() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>expectedException</th>
+<td>InvalidArgumentException</td>
+</tr>
+<tr>
+<th>expectedExceptionMessage</th>
+<td>File does not exist: foobar</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::imageExists</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::getImageIdentifier</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::validateLocalFile</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_testThrowsExceptionWhenCheckingIfAnImageExistsUsingAnEmptyLocalImage"></a><div class="element clickable method public method_testThrowsExceptionWhenCheckingIfAnImageExistsUsingAnEmptyLocalImage" data-toggle="collapse" data-target=".method_testThrowsExceptionWhenCheckingIfAnImageExistsUsingAnEmptyLocalImage .collapse">
+<h2>The client must throw an exception when checking if an image exists using an empty local
+image</h2>
+<pre>testThrowsExceptionWhenCheckingIfAnImageExistsUsingAnEmptyLocalImage() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>expectedException</th>
+<td>InvalidArgumentException</td>
+</tr>
+<tr>
+<th>expectedExceptionMessage</th>
+<td>File is of zero length:</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::imageExists</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::getImageIdentifier</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::validateLocalFile</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_testThrowsExceptionWhenCheckingIfAnImageIdentifierExistsAndTheServerRespondsWithAnErrorOtherThan404"></a><div class="element clickable method public method_testThrowsExceptionWhenCheckingIfAnImageIdentifierExistsAndTheServerRespondsWithAnErrorOtherThan404" data-toggle="collapse" data-target=".method_testThrowsExceptionWhenCheckingIfAnImageIdentifierExistsAndTheServerRespondsWithAnErrorOtherThan404 .collapse">
+<h2>If the server responds with an error other than 404 the client must re-throw the exception</h2>
+<pre>testThrowsExceptionWhenCheckingIfAnImageIdentifierExistsAndTheServerRespondsWithAnErrorOtherThan404() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>expectedException</th>
+<td>ImboClient\Exception\ServerException</td>
+</tr>
+<tr>
+<th>expectedExceptionMessage</th>
+<td>Internal Server Error</td>
+</tr>
+<tr>
+<th>expectedExceptionCode</th>
+<td>500</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::imageIdentifierExists</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::headImage</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_testThrowsExceptionWhenTryingToAddEmptyInMemoryImage"></a><div class="element clickable method public method_testThrowsExceptionWhenTryingToAddEmptyInMemoryImage" data-toggle="collapse" data-target=".method_testThrowsExceptionWhenTryingToAddEmptyInMemoryImage .collapse">
+<h2>The client must throw an exception when trying to add an empty in-memory image</h2>
+<pre>testThrowsExceptionWhenTryingToAddEmptyInMemoryImage() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>expectedException</th>
+<td>ImboClient\Exception\InvalidArgumentException</td>
+</tr>
+<tr>
+<th>expectedExceptionMessage</th>
+<td>Specified image is empty</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::addImageFromString</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_testThrowsExceptionWhenTryingToAddEmptyLocalImage"></a><div class="element clickable method public method_testThrowsExceptionWhenTryingToAddEmptyLocalImage" data-toggle="collapse" data-target=".method_testThrowsExceptionWhenTryingToAddEmptyLocalImage .collapse">
+<h2>When trying to add an empty local image the client must throw an exception</h2>
+<pre>testThrowsExceptionWhenTryingToAddEmptyLocalImage() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>expectedException</th>
+<td>InvalidArgumentException</td>
+</tr>
+<tr>
+<th>expectedExceptionMessage</th>
+<td>File is of zero length:</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::addImage</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::getImageIdentifier</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::validateLocalFile</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_testThrowsExceptionWhenTryingToAddEmptyRemoteImage"></a><div class="element clickable method public method_testThrowsExceptionWhenTryingToAddEmptyRemoteImage" data-toggle="collapse" data-target=".method_testThrowsExceptionWhenTryingToAddEmptyRemoteImage .collapse">
+<h2>The client must throw an exception when trying to add an empty remote image</h2>
+<pre>testThrowsExceptionWhenTryingToAddEmptyRemoteImage() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>expectedException</th>
+<td>ImboClient\Exception\InvalidArgumentException</td>
+</tr>
+<tr>
+<th>expectedExceptionMessage</th>
+<td>Specified image is empty</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::addImageFromUrl</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::addImageFromString</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_testThrowsExceptionWhenTryingToAddLocalImageThatDoesNotExist"></a><div class="element clickable method public method_testThrowsExceptionWhenTryingToAddLocalImageThatDoesNotExist" data-toggle="collapse" data-target=".method_testThrowsExceptionWhenTryingToAddLocalImageThatDoesNotExist .collapse">
+<h2>When trying to add a local image that does not exist the client must throw an exception</h2>
+<pre>testThrowsExceptionWhenTryingToAddLocalImageThatDoesNotExist() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>expectedException</th>
+<td>InvalidArgumentException</td>
+</tr>
+<tr>
+<th>expectedExceptionMessage</th>
+<td>File does not exist: foobar</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::addImage</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::getImageIdentifier</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::validateLocalFile</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_testThrowsExceptionWhenTryingToGenerateImageIdentifierBasedOnALocalImageThatDoesNotExist"></a><div class="element clickable method public method_testThrowsExceptionWhenTryingToGenerateImageIdentifierBasedOnALocalImageThatDoesNotExist" data-toggle="collapse" data-target=".method_testThrowsExceptionWhenTryingToGenerateImageIdentifierBasedOnALocalImageThatDoesNotExist .collapse">
+<h2>The client must throw an exception when trying to generate an image identifier based on a
+non-existing local image</h2>
+<pre>testThrowsExceptionWhenTryingToGenerateImageIdentifierBasedOnALocalImageThatDoesNotExist() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>expectedException</th>
+<td>InvalidArgumentException</td>
+</tr>
+<tr>
+<th>expectedExceptionMessage</th>
+<td>File does not exist: foobar</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::getImageIdentifier</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::validateLocalFile</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_testThrowsExceptionWhenTryingToGenerateImageIdentifierBasedOnAnEmptyLocalImage"></a><div class="element clickable method public method_testThrowsExceptionWhenTryingToGenerateImageIdentifierBasedOnAnEmptyLocalImage" data-toggle="collapse" data-target=".method_testThrowsExceptionWhenTryingToGenerateImageIdentifierBasedOnAnEmptyLocalImage .collapse">
+<h2>The client must throw an exception when trying to generate an image identifier based on an
+empty local image</h2>
+<pre>testThrowsExceptionWhenTryingToGenerateImageIdentifierBasedOnAnEmptyLocalImage() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>expectedException</th>
+<td>InvalidArgumentException</td>
+</tr>
+<tr>
+<th>expectedExceptionMessage</th>
+<td>File is of zero length:</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::getImageIdentifier</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::validateLocalFile</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_testThrowsExceptionWhenTryingToGetServerStatusAndServerDoesNotRespond"></a><div class="element clickable method public method_testThrowsExceptionWhenTryingToGetServerStatusAndServerDoesNotRespond" data-toggle="collapse" data-target=".method_testThrowsExceptionWhenTryingToGetServerStatusAndServerDoesNotRespond .collapse">
+<h2>When trying to fetch server status and the server does not respond the client must throw an
+exception</h2>
+<pre>testThrowsExceptionWhenTryingToGetServerStatusAndServerDoesNotRespond() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>expectedException</th>
+<td>ImboClient\Exception\RuntimeException</td>
+</tr>
+<tr>
+<th>expectedExceptionMessage</th>
+<td>An error occured</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::getServerStatus</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::getStatusUrl</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_testThrowsExceptionWhenTryingToGetServerStatusAndServerRespondsWithErrorOtherThanHttp500"></a><div class="element clickable method public method_testThrowsExceptionWhenTryingToGetServerStatusAndServerRespondsWithErrorOtherThanHttp500" data-toggle="collapse" data-target=".method_testThrowsExceptionWhenTryingToGetServerStatusAndServerRespondsWithErrorOtherThanHttp500 .collapse">
+<h2>When trying to fetch server status and the server responds with an error (other than HTTP
+500 Internal Server Error) the client must throw an exception</h2>
+<pre>testThrowsExceptionWhenTryingToGetServerStatusAndServerRespondsWithErrorOtherThanHttp500() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>expectedException</th>
+<td>ImboClient\Exception\ServerException</td>
+</tr>
+<tr>
+<th>expectedExceptionMessage</th>
+<td>Bad Request</td>
+</tr>
+<tr>
+<th>expectedExceptionCode</th>
+<td>400</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::getServerStatus</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Client::getStatusUrl</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_testUsesCurlAsADefaultDriver"></a><div class="element clickable method public method_testUsesCurlAsADefaultDriver" data-toggle="collapse" data-target=".method_testUsesCurlAsADefaultDriver .collapse">
+<h2>testUsesCurlAsADefaultDriver()
+        </h2>
+<pre>testUsesCurlAsADefaultDriver() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>covers</th>
+<td>\ImboClient\Client::__construct</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_getResponseMock"></a><div class="element clickable method private method_getResponseMock" data-toggle="collapse" data-target=".method_getResponseMock .collapse">
+<h2>Get a mock of the response interface</h2>
+<pre>getResponseMock() : \ImboClient\ImboClient\Http\Response\ResponseInterface</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>\ImboClient\ImboClient\Http\Response\ResponseInterface</code></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_client"> </a><div class="element clickable property private property_client" data-toggle="collapse" data-target=".property_client .collapse">
+<h2></h2>
+<pre>$client : <a href="../classes/ImboClient.Client.html">\ImboClient\Client</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_imageIdentifier"> </a><div class="element clickable property private property_imageIdentifier" data-toggle="collapse" data-target=".property_imageIdentifier .collapse">
+<h2></h2>
+<pre>$imageIdentifier : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_privateKey"> </a><div class="element clickable property private property_privateKey" data-toggle="collapse" data-target=".property_privateKey .collapse">
+<h2></h2>
+<pre>$privateKey : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_publicKey"> </a><div class="element clickable property private property_publicKey" data-toggle="collapse" data-target=".property_publicKey .collapse">
+<h2></h2>
+<pre>$publicKey : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_serverUrl"> </a><div class="element clickable property private property_serverUrl" data-toggle="collapse" data-target=".property_serverUrl .collapse">
+<h2></h2>
+<pre>$serverUrl : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_signedUrlPattern"> </a><div class="element clickable property private property_signedUrlPattern" data-toggle="collapse" data-target=".property_signedUrlPattern .collapse">
+<h2></h2>
+<pre>$signedUrlPattern : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"><p>This value is used in some matchers in this test case.</p></div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2013-01-12T20:53:55+01:00.<br></footer></div>
+</div>
+</body>
+</html>

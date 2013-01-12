@@ -1,0 +1,217 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>ImboClient API documentation » Test suite</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">ImboClient API documentation</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/ImboClient.html"><i class="icon-th"></i> ImboClient</a></li>
+<li><a>Packages</a></li>
+<li><a href="../packages/Client.html"><i class="icon-folder-open"></i> Client</a></li>
+<li><a href="../packages/Drivers.html"><i class="icon-folder-open"></i> Drivers</a></li>
+<li><a href="../packages/Exceptions.html"><i class="icon-folder-open"></i> Exceptions</a></li>
+<li><a href="../packages/Http.html"><i class="icon-folder-open"></i> Http</a></li>
+<li><a href="../packages/Test%20suite.html"><i class="icon-folder-open"></i> Test suite</a></li>
+<li><a href="../packages/Urls.html"><i class="icon-folder-open"></i> Urls</a></li>
+<li><a href="../packages/Version.html"><i class="icon-folder-open"></i> Version</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">191</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-map-marker"></i> Packages</li>
+<li>
+<a href="../packages/Test%20suite.html" title="Test suite"><i class="icon-folder-open"></i>Test suite</a><ul class="nav nav-list nav-packages"></ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-class"></i> Classes</li>
+<li><a href="#VersionTest" title="">VersionTest</a></li>
+<li><a href="#ClientTest" title="">ClientTest</a></li>
+<li><a href="#UrlTest" title="">UrlTest</a></li>
+<li><a href="#UrlImplementation" title="URL implementation used for this test case">UrlImplementation</a></li>
+<li><a href="#QueryTest" title="">QueryTest</a></li>
+<li><a href="#ImageTest" title="">ImageTest</a></li>
+<li><a href="#UserTest" title="">UserTest</a></li>
+<li><a href="#AccessTokenTest" title="">AccessTokenTest</a></li>
+<li><a href="#MetadataTest" title="">MetadataTest</a></li>
+<li><a href="#ImageTest" title="">ImageTest</a></li>
+<li><a href="#StatusTest" title="">StatusTest</a></li>
+<li><a href="#ImagesTest" title="">ImagesTest</a></li>
+<li><a href="#cURLTest" title="">cURLTest</a></li>
+<li><a href="#ServerExceptionTest" title="">ServerExceptionTest</a></li>
+<li><a href="#HeaderContainerTest" title="">HeaderContainerTest</a></li>
+<li><a href="#ResponseTest" title="">ResponseTest</a></li>
+</ul>
+</div>
+<div class="span8 package-contents">
+<ul class="breadcrumb"><li>
+<a href="../index.html"><i class="icon-folder-open"></i></a><span class="divider">\</span><li class="active"><a href="../packages/Test%20suite.html">Test suite</a></li>
+</li></ul>
+<div class="package-indent">
+<h3>
+<i class="icon-custom icon-class"></i> Classes and interfaces</h3>
+<div id="ClientTest" class="element ajax clickable class">
+<h1>ClientTest<a href="../classes/ImboClient.ClientTest.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/ImboClient.ClientTest.html" class="more">« More »</a>
+</div>
+<div id="cURLTest" class="element ajax clickable class">
+<h1>cURLTest<a href="../classes/ImboClient.Driver.cURLTest.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/ImboClient.Driver.cURLTest.html" class="more">« More »</a>
+</div>
+<div id="ServerExceptionTest" class="element ajax clickable class">
+<h1>ServerExceptionTest<a href="../classes/ImboClient.Exception.ServerExceptionTest.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/ImboClient.Exception.ServerExceptionTest.html" class="more">« More »</a>
+</div>
+<div id="HeaderContainerTest" class="element ajax clickable class">
+<h1>HeaderContainerTest<a href="../classes/ImboClient.Http.HeaderContainerTest.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/ImboClient.Http.HeaderContainerTest.html" class="more">« More »</a>
+</div>
+<div id="ResponseTest" class="element ajax clickable class">
+<h1>ResponseTest<a href="../classes/ImboClient.Http.Response.ResponseTest.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/ImboClient.Http.Response.ResponseTest.html" class="more">« More »</a>
+</div>
+<div id="AccessTokenTest" class="element ajax clickable class">
+<h1>AccessTokenTest<a href="../classes/ImboClient.Url.AccessTokenTest.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/ImboClient.Url.AccessTokenTest.html" class="more">« More »</a>
+</div>
+<div id="ImageTest" class="element ajax clickable class">
+<h1>ImageTest<a href="../classes/ImboClient.Url.ImageTest.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/ImboClient.Url.ImageTest.html" class="more">« More »</a>
+</div>
+<div id="ImagesTest" class="element ajax clickable class">
+<h1>ImagesTest<a href="../classes/ImboClient.Url.ImagesTest.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/ImboClient.Url.ImagesTest.html" class="more">« More »</a>
+</div>
+<div id="ImageTest" class="element ajax clickable class">
+<h1>ImageTest<a href="../classes/ImboClient.Url.Images.ImageTest.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/ImboClient.Url.Images.ImageTest.html" class="more">« More »</a>
+</div>
+<div id="QueryTest" class="element ajax clickable class">
+<h1>QueryTest<a href="../classes/ImboClient.Url.Images.QueryTest.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/ImboClient.Url.Images.QueryTest.html" class="more">« More »</a>
+</div>
+<div id="MetadataTest" class="element ajax clickable class">
+<h1>MetadataTest<a href="../classes/ImboClient.Url.MetadataTest.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/ImboClient.Url.MetadataTest.html" class="more">« More »</a>
+</div>
+<div id="StatusTest" class="element ajax clickable class">
+<h1>StatusTest<a href="../classes/ImboClient.Url.StatusTest.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/ImboClient.Url.StatusTest.html" class="more">« More »</a>
+</div>
+<div id="UrlImplementation" class="element ajax clickable class">
+<h1>UrlImplementation<a href="../classes/ImboClient.Url.UrlImplementation.html">¶</a>
+</h1>
+<p class="short_description">URL implementation used for this test case</p>
+<div class="details collapse"></div>
+<a href="../classes/ImboClient.Url.UrlImplementation.html" class="more">« More »</a>
+</div>
+<div id="UrlTest" class="element ajax clickable class">
+<h1>UrlTest<a href="../classes/ImboClient.Url.UrlTest.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/ImboClient.Url.UrlTest.html" class="more">« More »</a>
+</div>
+<div id="UserTest" class="element ajax clickable class">
+<h1>UserTest<a href="../classes/ImboClient.Url.UserTest.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/ImboClient.Url.UserTest.html" class="more">« More »</a>
+</div>
+<div id="VersionTest" class="element ajax clickable class">
+<h1>VersionTest<a href="../classes/ImboClient.VersionTest.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/ImboClient.VersionTest.html" class="more">« More »</a>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2013-01-12T20:53:55+01:00.<br></footer></div>
+</div>
+</body>
+</html>

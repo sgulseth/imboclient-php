@@ -1,0 +1,314 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>ImboClient API documentation » \ImboClient\Url\Images\QueryTest</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">ImboClient API documentation</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/ImboClient.html"><i class="icon-th"></i> ImboClient</a></li>
+<li><a>Packages</a></li>
+<li><a href="../packages/Client.html"><i class="icon-folder-open"></i> Client</a></li>
+<li><a href="../packages/Drivers.html"><i class="icon-folder-open"></i> Drivers</a></li>
+<li><a href="../packages/Exceptions.html"><i class="icon-folder-open"></i> Exceptions</a></li>
+<li><a href="../packages/Http.html"><i class="icon-folder-open"></i> Http</a></li>
+<li><a href="../packages/Test%20suite.html"><i class="icon-folder-open"></i> Test suite</a></li>
+<li><a href="../packages/Urls.html"><i class="icon-folder-open"></i> Urls</a></li>
+<li><a href="../packages/Version.html"><i class="icon-folder-open"></i> Version</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">191</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method_setUp" title="setUp :: Set up the query instance"><span class="description">Set up the query instance</span><pre>setUp()</pre></a></li>
+<li class="method public "><a href="#method_tearDown" title="tearDown :: Tear down the query instance"><span class="description">Tear down the query instance</span><pre>tearDown()</pre></a></li>
+<li class="method public "><a href="#method_testCanSetAndGetAMetadataQuery" title="testCanSetAndGetAMetadataQuery :: "><span class="description">testCanSetAndGetAMetadataQuery()
+        </span><pre>testCanSetAndGetAMetadataQuery()</pre></a></li>
+<li class="method public "><a href="#method_testCanSetAndGetTheFromValue" title="testCanSetAndGetTheFromValue :: "><span class="description">testCanSetAndGetTheFromValue()
+        </span><pre>testCanSetAndGetTheFromValue()</pre></a></li>
+<li class="method public "><a href="#method_testCanSetAndGetTheLimitValue" title="testCanSetAndGetTheLimitValue :: The query instance must be able to set and get the limit value"><span class="description">The query instance must be able to set and get the limit value</span><pre>testCanSetAndGetTheLimitValue()</pre></a></li>
+<li class="method public "><a href="#method_testCanSetAndGetThePageValue" title="testCanSetAndGetThePageValue :: The query instance must be able to set and get the page value"><span class="description">The query instance must be able to set and get the page value</span><pre>testCanSetAndGetThePageValue()</pre></a></li>
+<li class="method public "><a href="#method_testCanSetAndGetTheReturnmetadataValue" title="testCanSetAndGetTheReturnmetadataValue :: "><span class="description">testCanSetAndGetTheReturnmetadataValue()
+        </span><pre>testCanSetAndGetTheReturnmetadataValue()</pre></a></li>
+<li class="method public "><a href="#method_testCanSetAndGetTheToValue" title="testCanSetAndGetTheToValue :: "><span class="description">testCanSetAndGetTheToValue()
+        </span><pre>testCanSetAndGetTheToValue()</pre></a></li>
+<li class="method public "><a href="#method_testSetsADefaultFromValueOfNull" title="testSetsADefaultFromValueOfNull :: "><span class="description">testSetsADefaultFromValueOfNull()
+        </span><pre>testSetsADefaultFromValueOfNull()</pre></a></li>
+<li class="method public "><a href="#method_testSetsADefaultLimitValueOf20" title="testSetsADefaultLimitValueOf20 :: The default limit is 20"><span class="description">The default limit is 20</span><pre>testSetsADefaultLimitValueOf20()</pre></a></li>
+<li class="method public "><a href="#method_testSetsADefaultPageValueOf1" title="testSetsADefaultPageValueOf1 :: The default page value is 1"><span class="description">The default page value is 1</span><pre>testSetsADefaultPageValueOf1()</pre></a></li>
+<li class="method public "><a href="#method_testSetsADefaultReturnmetadataValueOfFalse" title="testSetsADefaultReturnmetadataValueOfFalse :: "><span class="description">testSetsADefaultReturnmetadataValueOfFalse()
+        </span><pre>testSetsADefaultReturnmetadataValueOfFalse()</pre></a></li>
+<li class="method public "><a href="#method_testSetsADefaultToValueOfNull" title="testSetsADefaultToValueOfNull :: "><span class="description">testSetsADefaultToValueOfNull()
+        </span><pre>testSetsADefaultToValueOfNull()</pre></a></li>
+<li class="method public "><a href="#method_testSetsAnEmptyDefaultMetadataQuery" title="testSetsAnEmptyDefaultMetadataQuery :: "><span class="description">testSetsAnEmptyDefaultMetadataQuery()
+        </span><pre>testSetsAnEmptyDefaultMetadataQuery()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header private">» Private
+                    <ul><li class="property private "><a href="#property_query" title="$query :: "><span class="description"></span><pre>$query</pre></a></li></ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\ImboClient\Url\Images\QueryTest"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/ImboClient.html">ImboClient</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/ImboClient.Url.html">Url</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/ImboClient.Url.Images.html">Images</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/ImboClient.Url.Images.QueryTest.html">QueryTest</a>
+</li>
+</ul>
+<div class="element class">
+<p class="short_description"></p>
+<div class="details">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/Test%20suite.html">Test suite</a></td>
+</tr>
+<tr>
+<th>author</th>
+<td><a href="mailto:cogo@starzinger.net">Christer Edvartsen</a></td>
+</tr>
+</table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method_setUp"></a><div class="element clickable method public method_setUp" data-toggle="collapse" data-target=".method_setUp .collapse">
+<h2>Set up the query instance</h2>
+<pre>setUp() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_tearDown"></a><div class="element clickable method public method_tearDown" data-toggle="collapse" data-target=".method_tearDown .collapse">
+<h2>Tear down the query instance</h2>
+<pre>tearDown() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_testCanSetAndGetAMetadataQuery"></a><div class="element clickable method public method_testCanSetAndGetAMetadataQuery" data-toggle="collapse" data-target=".method_testCanSetAndGetAMetadataQuery .collapse">
+<h2>testCanSetAndGetAMetadataQuery()
+        </h2>
+<pre>testCanSetAndGetAMetadataQuery() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>covers</th>
+<td>\ImboClient\Url\Images\Query::metadataQuery</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_testCanSetAndGetTheFromValue"></a><div class="element clickable method public method_testCanSetAndGetTheFromValue" data-toggle="collapse" data-target=".method_testCanSetAndGetTheFromValue .collapse">
+<h2>testCanSetAndGetTheFromValue()
+        </h2>
+<pre>testCanSetAndGetTheFromValue() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>covers</th>
+<td>\ImboClient\Url\Images\Query::from</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_testCanSetAndGetTheLimitValue"></a><div class="element clickable method public method_testCanSetAndGetTheLimitValue" data-toggle="collapse" data-target=".method_testCanSetAndGetTheLimitValue .collapse">
+<h2>The query instance must be able to set and get the limit value</h2>
+<pre>testCanSetAndGetTheLimitValue() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>covers</th>
+<td>\ImboClient\Url\Images\Query::limit</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_testCanSetAndGetThePageValue"></a><div class="element clickable method public method_testCanSetAndGetThePageValue" data-toggle="collapse" data-target=".method_testCanSetAndGetThePageValue .collapse">
+<h2>The query instance must be able to set and get the page value</h2>
+<pre>testCanSetAndGetThePageValue() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>covers</th>
+<td>\ImboClient\Url\Images\Query::page</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_testCanSetAndGetTheReturnmetadataValue"></a><div class="element clickable method public method_testCanSetAndGetTheReturnmetadataValue" data-toggle="collapse" data-target=".method_testCanSetAndGetTheReturnmetadataValue .collapse">
+<h2>testCanSetAndGetTheReturnmetadataValue()
+        </h2>
+<pre>testCanSetAndGetTheReturnmetadataValue() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>covers</th>
+<td>\ImboClient\Url\Images\Query::returnMetadata</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_testCanSetAndGetTheToValue"></a><div class="element clickable method public method_testCanSetAndGetTheToValue" data-toggle="collapse" data-target=".method_testCanSetAndGetTheToValue .collapse">
+<h2>testCanSetAndGetTheToValue()
+        </h2>
+<pre>testCanSetAndGetTheToValue() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>covers</th>
+<td>\ImboClient\Url\Images\Query::to</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_testSetsADefaultFromValueOfNull"></a><div class="element clickable method public method_testSetsADefaultFromValueOfNull" data-toggle="collapse" data-target=".method_testSetsADefaultFromValueOfNull .collapse">
+<h2>testSetsADefaultFromValueOfNull()
+        </h2>
+<pre>testSetsADefaultFromValueOfNull() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>covers</th>
+<td>\ImboClient\Url\Images\Query::from</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_testSetsADefaultLimitValueOf20"></a><div class="element clickable method public method_testSetsADefaultLimitValueOf20" data-toggle="collapse" data-target=".method_testSetsADefaultLimitValueOf20 .collapse">
+<h2>The default limit is 20</h2>
+<pre>testSetsADefaultLimitValueOf20() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>covers</th>
+<td>\ImboClient\Url\Images\Query::limit</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_testSetsADefaultPageValueOf1"></a><div class="element clickable method public method_testSetsADefaultPageValueOf1" data-toggle="collapse" data-target=".method_testSetsADefaultPageValueOf1 .collapse">
+<h2>The default page value is 1</h2>
+<pre>testSetsADefaultPageValueOf1() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>covers</th>
+<td>\ImboClient\Url\Images\Query::page</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_testSetsADefaultReturnmetadataValueOfFalse"></a><div class="element clickable method public method_testSetsADefaultReturnmetadataValueOfFalse" data-toggle="collapse" data-target=".method_testSetsADefaultReturnmetadataValueOfFalse .collapse">
+<h2>testSetsADefaultReturnmetadataValueOfFalse()
+        </h2>
+<pre>testSetsADefaultReturnmetadataValueOfFalse() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>covers</th>
+<td>\ImboClient\Url\Images\Query::returnMetadata</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_testSetsADefaultToValueOfNull"></a><div class="element clickable method public method_testSetsADefaultToValueOfNull" data-toggle="collapse" data-target=".method_testSetsADefaultToValueOfNull .collapse">
+<h2>testSetsADefaultToValueOfNull()
+        </h2>
+<pre>testSetsADefaultToValueOfNull() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>covers</th>
+<td>\ImboClient\Url\Images\Query::to</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_testSetsAnEmptyDefaultMetadataQuery"></a><div class="element clickable method public method_testSetsAnEmptyDefaultMetadataQuery" data-toggle="collapse" data-target=".method_testSetsAnEmptyDefaultMetadataQuery .collapse">
+<h2>testSetsAnEmptyDefaultMetadataQuery()
+        </h2>
+<pre>testSetsAnEmptyDefaultMetadataQuery() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>covers</th>
+<td>\ImboClient\Url\Images\Query::metadataQuery</td>
+</tr></table>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_query"> </a><div class="element clickable property private property_query" data-toggle="collapse" data-target=".property_query .collapse">
+<h2></h2>
+<pre>$query : \ImboClient\Url\Images\ImboClient\Url\Images\Query</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2013-01-12T20:53:55+01:00.<br></footer></div>
+</div>
+</body>
+</html>

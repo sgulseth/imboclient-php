@@ -1,0 +1,912 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>ImboClient API documentation » \ImboClient\Url\ImageTest</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">ImboClient API documentation</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/ImboClient.html"><i class="icon-th"></i> ImboClient</a></li>
+<li><a>Packages</a></li>
+<li><a href="../packages/Client.html"><i class="icon-folder-open"></i> Client</a></li>
+<li><a href="../packages/Drivers.html"><i class="icon-folder-open"></i> Drivers</a></li>
+<li><a href="../packages/Exceptions.html"><i class="icon-folder-open"></i> Exceptions</a></li>
+<li><a href="../packages/Http.html"><i class="icon-folder-open"></i> Http</a></li>
+<li><a href="../packages/Test%20suite.html"><i class="icon-folder-open"></i> Test suite</a></li>
+<li><a href="../packages/Urls.html"><i class="icon-folder-open"></i> Urls</a></li>
+<li><a href="../packages/Version.html"><i class="icon-folder-open"></i> Version</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">191</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method_getExtensions" title="getExtensions :: Get different extensions"><span class="description">Get different extensions</span><pre>getExtensions()</pre></a></li>
+<li class="method public "><a href="#method_getUrlData" title="getUrlData :: Data provider for testGetUrl()"><span class="description">Data provider for testGetUrl()</span><pre>getUrlData()</pre></a></li>
+<li class="method public "><a href="#method_setUp" title="setUp :: Set up the image URL instance"><span class="description">Set up the image URL instance</span><pre>setUp()</pre></a></li>
+<li class="method public "><a href="#method_tearDown" title="tearDown :: Tear down the image URL instance"><span class="description">Tear down the image URL instance</span><pre>tearDown()</pre></a></li>
+<li class="method public "><a href="#method_testCanApplyTheBorderTransformationUsingCustomParameters" title="testCanApplyTheBorderTransformationUsingCustomParameters :: The image URL must be able to apply the border transformation with custom parameters"><span class="description">The image URL must be able to apply the border transformation with custom parameters</span><pre>testCanApplyTheBorderTransformationUsingCustomParameters()</pre></a></li>
+<li class="method public "><a href="#method_testCanApplyTheBorderTransformationUsingDefaultParameters" title="testCanApplyTheBorderTransformationUsingDefaultParameters :: The image URL must be able to apply the border transformation with no custom parameters"><span class="description">The image URL must be able to apply the border transformation with no custom parameters</span><pre>testCanApplyTheBorderTransformationUsingDefaultParameters()</pre></a></li>
+<li class="method public "><a href="#method_testCanApplyTheCanvasTransformationUsingAllParameters" title="testCanApplyTheCanvasTransformationUsingAllParameters :: The image URL must be able to apply the canvas transformation using all parameters"><span class="description">The image URL must be able to apply the canvas transformation using all parameters</span><pre>testCanApplyTheCanvasTransformationUsingAllParameters()</pre></a></li>
+<li class="method public "><a href="#method_testCanApplyTheCanvasTransformationUsingOnlyRequiredParameters" title="testCanApplyTheCanvasTransformationUsingOnlyRequiredParameters :: The image URL must be able to apply the canvas transformation using only required parameters"><span class="description">The image URL must be able to apply the canvas transformation using only required parameters</span><pre>testCanApplyTheCanvasTransformationUsingOnlyRequiredParameters()</pre></a></li>
+<li class="method public "><a href="#method_testCanApplyTheCompressTransformationUsingCustomParameters" title="testCanApplyTheCompressTransformationUsingCustomParameters :: The image URL must be able to apply the compress transformation with custom parameters"><span class="description">The image URL must be able to apply the compress transformation with custom parameters</span><pre>testCanApplyTheCompressTransformationUsingCustomParameters()</pre></a></li>
+<li class="method public "><a href="#method_testCanApplyTheCompressTransformationUsingDefaultParameters" title="testCanApplyTheCompressTransformationUsingDefaultParameters :: The image URL must be able to apply the compress transformation with no custom parameters"><span class="description">The image URL must be able to apply the compress transformation with no custom parameters</span><pre>testCanApplyTheCompressTransformationUsingDefaultParameters()</pre></a></li>
+<li class="method public "><a href="#method_testCanApplyTheConvertTransformationUsingACustomExtension" title="testCanApplyTheConvertTransformationUsingACustomExtension :: The image URL must be able to apply the convert transformation using custom extensions"><span class="description">The image URL must be able to apply the convert transformation using custom extensions</span><pre>testCanApplyTheConvertTransformationUsingACustomExtension()</pre></a></li>
+<li class="method public "><a href="#method_testCanApplyTheConvertTransformationUsingTheGifConvenienceMethod" title="testCanApplyTheConvertTransformationUsingTheGifConvenienceMethod :: The image URL must be able to apply the convert transformation using the gif() convenience
+method"><span class="description">The image URL must be able to apply the convert transformation using the gif() convenience
+method</span><pre>testCanApplyTheConvertTransformationUsingTheGifConvenienceMethod()</pre></a></li>
+<li class="method public "><a href="#method_testCanApplyTheConvertTransformationUsingTheJpgConvenienceMethod" title="testCanApplyTheConvertTransformationUsingTheJpgConvenienceMethod :: The image URL must be able to apply the convert transformation using the jpg() convenience
+method"><span class="description">The image URL must be able to apply the convert transformation using the jpg() convenience
+method</span><pre>testCanApplyTheConvertTransformationUsingTheJpgConvenienceMethod()</pre></a></li>
+<li class="method public "><a href="#method_testCanApplyTheConvertTransformationUsingThePngConvenienceMethod" title="testCanApplyTheConvertTransformationUsingThePngConvenienceMethod :: The image URL must be able to apply the convert transformation using the png() convenience
+method"><span class="description">The image URL must be able to apply the convert transformation using the png() convenience
+method</span><pre>testCanApplyTheConvertTransformationUsingThePngConvenienceMethod()</pre></a></li>
+<li class="method public "><a href="#method_testCanApplyTheCropTransformationWithParameters" title="testCanApplyTheCropTransformationWithParameters :: The image URL must be able to apply the crop transformation with parameters"><span class="description">The image URL must be able to apply the crop transformation with parameters</span><pre>testCanApplyTheCropTransformationWithParameters()</pre></a></li>
+<li class="method public "><a href="#method_testCanApplyTheDesaturateTransformation" title="testCanApplyTheDesaturateTransformation :: The image URL must be able to apply the desaturate transformation"><span class="description">The image URL must be able to apply the desaturate transformation</span><pre>testCanApplyTheDesaturateTransformation()</pre></a></li>
+<li class="method public "><a href="#method_testCanApplyTheFliphorizontallyTransformation" title="testCanApplyTheFliphorizontallyTransformation :: The image URL must be able to apply the flipHorizontally transformation"><span class="description">The image URL must be able to apply the flipHorizontally transformation</span><pre>testCanApplyTheFliphorizontallyTransformation()</pre></a></li>
+<li class="method public "><a href="#method_testCanApplyTheFlipverticallyTransformation" title="testCanApplyTheFlipverticallyTransformation :: The image URL must be able to apply the flipVertically transformation"><span class="description">The image URL must be able to apply the flipVertically transformation</span><pre>testCanApplyTheFlipverticallyTransformation()</pre></a></li>
+<li class="method public "><a href="#method_testCanApplyTheMaxsizeTransformationUsingBothWidthAndHeight" title="testCanApplyTheMaxsizeTransformationUsingBothWidthAndHeight :: The image URL must be able to apply the maxSize transformation using both width and height"><span class="description">The image URL must be able to apply the maxSize transformation using both width and height</span><pre>testCanApplyTheMaxsizeTransformationUsingBothWidthAndHeight()</pre></a></li>
+<li class="method public "><a href="#method_testCanApplyTheMaxsizeTransformationUsingOnlyHeight" title="testCanApplyTheMaxsizeTransformationUsingOnlyHeight :: The image URL must be able to apply the maxSize transformation using only height"><span class="description">The image URL must be able to apply the maxSize transformation using only height</span><pre>testCanApplyTheMaxsizeTransformationUsingOnlyHeight()</pre></a></li>
+<li class="method public "><a href="#method_testCanApplyTheMaxsizeTransformationUsingOnlyWidth" title="testCanApplyTheMaxsizeTransformationUsingOnlyWidth :: The image URL must be able to apply the maxSize transformation using only width"><span class="description">The image URL must be able to apply the maxSize transformation using only width</span><pre>testCanApplyTheMaxsizeTransformationUsingOnlyWidth()</pre></a></li>
+<li class="method public "><a href="#method_testCanApplyTheResizeTransformationUsingBothWidthAndHeight" title="testCanApplyTheResizeTransformationUsingBothWidthAndHeight :: The image URL must be able to apply the resize transformation using both width and height"><span class="description">The image URL must be able to apply the resize transformation using both width and height</span><pre>testCanApplyTheResizeTransformationUsingBothWidthAndHeight()</pre></a></li>
+<li class="method public "><a href="#method_testCanApplyTheResizeTransformationUsingOnlyHeight" title="testCanApplyTheResizeTransformationUsingOnlyHeight :: The image URL must be able to apply the resize transformation using only height"><span class="description">The image URL must be able to apply the resize transformation using only height</span><pre>testCanApplyTheResizeTransformationUsingOnlyHeight()</pre></a></li>
+<li class="method public "><a href="#method_testCanApplyTheResizeTransformationUsingOnlyWidth" title="testCanApplyTheResizeTransformationUsingOnlyWidth :: The image URL must be able to apply the resize transformation using only width"><span class="description">The image URL must be able to apply the resize transformation using only width</span><pre>testCanApplyTheResizeTransformationUsingOnlyWidth()</pre></a></li>
+<li class="method public "><a href="#method_testCanApplyTheRotateTransformationUsingAngleAndBackground" title="testCanApplyTheRotateTransformationUsingAngleAndBackground :: The image URL must be able to apply the rotate transformation using angle and bg"><span class="description">The image URL must be able to apply the rotate transformation using angle and bg</span><pre>testCanApplyTheRotateTransformationUsingAngleAndBackground()</pre></a></li>
+<li class="method public "><a href="#method_testCanApplyTheRotateTransformationUsingOnlyAngle" title="testCanApplyTheRotateTransformationUsingOnlyAngle :: The image URL must be able to apply the rotate transformation using only angle"><span class="description">The image URL must be able to apply the rotate transformation using only angle</span><pre>testCanApplyTheRotateTransformationUsingOnlyAngle()</pre></a></li>
+<li class="method public "><a href="#method_testCanApplyTheThumbnailTransformationUsingCustomParameters" title="testCanApplyTheThumbnailTransformationUsingCustomParameters :: The image URL must be able to apply the thumbnail transformation using custom parameters"><span class="description">The image URL must be able to apply the thumbnail transformation using custom parameters</span><pre>testCanApplyTheThumbnailTransformationUsingCustomParameters()</pre></a></li>
+<li class="method public "><a href="#method_testCanApplyTheThumbnailTransformationUsingDefaultParameters" title="testCanApplyTheThumbnailTransformationUsingDefaultParameters :: The image URL must be able to apply the thumbnail transformation using the default parameters"><span class="description">The image URL must be able to apply the thumbnail transformation using the default parameters</span><pre>testCanApplyTheThumbnailTransformationUsingDefaultParameters()</pre></a></li>
+<li class="method public "><a href="#method_testCanApplyTheTransposeTransformation" title="testCanApplyTheTransposeTransformation :: The image URL must be able to apply the transpose transformation"><span class="description">The image URL must be able to apply the transpose transformation</span><pre>testCanApplyTheTransposeTransformation()</pre></a></li>
+<li class="method public "><a href="#method_testCanApplyTheTransverseTransformation" title="testCanApplyTheTransverseTransformation :: The image URL must be able to apply the transverse transformation"><span class="description">The image URL must be able to apply the transverse transformation</span><pre>testCanApplyTheTransverseTransformation()</pre></a></li>
+<li class="method public "><a href="#method_testCanChainAllTransformations" title="testCanChainAllTransformations :: The image URL must be able to chain all available transformations"><span class="description">The image URL must be able to chain all available transformations</span><pre>testCanChainAllTransformations()</pre></a></li>
+<li class="method public "><a href="#method_testCanGenerateACompleteUrlIncludingAnAccessToken" title="testCanGenerateACompleteUrlIncludingAnAccessToken :: The image URL must be able to generate a complete URL with an access token appended"><span class="description">The image URL must be able to generate a complete URL with an access token appended</span><pre>testCanGenerateACompleteUrlIncludingAnAccessToken()</pre></a></li>
+<li class="method public "><a href="#method_testCanResetAllAppliedTransformations" title="testCanResetAllAppliedTransformations :: The image URL must be able to reset all applied transformations"><span class="description">The image URL must be able to reset all applied transformations</span><pre>testCanResetAllAppliedTransformations()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header private">» Private
+                    <ul>
+<li class="property private "><a href="#property_baseUrl" title="$baseUrl :: "><span class="description"></span><pre>$baseUrl</pre></a></li>
+<li class="property private "><a href="#property_imageIdentifier" title="$imageIdentifier :: "><span class="description"></span><pre>$imageIdentifier</pre></a></li>
+<li class="property private "><a href="#property_privateKey" title="$privateKey :: "><span class="description"></span><pre>$privateKey</pre></a></li>
+<li class="property private "><a href="#property_publicKey" title="$publicKey :: "><span class="description"></span><pre>$publicKey</pre></a></li>
+<li class="property private "><a href="#property_url" title="$url :: "><span class="description"></span><pre>$url</pre></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\ImboClient\Url\ImageTest"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/ImboClient.html">ImboClient</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/ImboClient.Url.html">Url</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/ImboClient.Url.ImageTest.html">ImageTest</a>
+</li>
+</ul>
+<div class="element class">
+<p class="short_description"></p>
+<div class="details">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/Test%20suite.html">Test suite</a></td>
+</tr>
+<tr>
+<th>author</th>
+<td><a href="mailto:cogo@starzinger.net">Christer Edvartsen</a></td>
+</tr>
+</table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method_getExtensions"></a><div class="element clickable method public method_getExtensions" data-toggle="collapse" data-target=".method_getExtensions .collapse">
+<h2>Get different extensions</h2>
+<pre>getExtensions() : array[]</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array[]</code></div>
+</div></div>
+</div>
+<a id="method_getUrlData"></a><div class="element clickable method public method_getUrlData" data-toggle="collapse" data-target=".method_getUrlData .collapse">
+<h2>Data provider for testGetUrl()</h2>
+<pre>getUrlData() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a id="method_setUp"></a><div class="element clickable method public method_setUp" data-toggle="collapse" data-target=".method_setUp .collapse">
+<h2>Set up the image URL instance</h2>
+<pre>setUp() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>covers</th>
+<td>\ImboClient\Url\Image::__construct</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_tearDown"></a><div class="element clickable method public method_tearDown" data-toggle="collapse" data-target=".method_tearDown .collapse">
+<h2>Tear down the image URL instance</h2>
+<pre>tearDown() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_testCanApplyTheBorderTransformationUsingCustomParameters"></a><div class="element clickable method public method_testCanApplyTheBorderTransformationUsingCustomParameters" data-toggle="collapse" data-target=".method_testCanApplyTheBorderTransformationUsingCustomParameters .collapse">
+<h2>The image URL must be able to apply the border transformation with custom parameters</h2>
+<pre>testCanApplyTheBorderTransformationUsingCustomParameters() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Image::border</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::addQueryParam</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::getUrl</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_testCanApplyTheBorderTransformationUsingDefaultParameters"></a><div class="element clickable method public method_testCanApplyTheBorderTransformationUsingDefaultParameters" data-toggle="collapse" data-target=".method_testCanApplyTheBorderTransformationUsingDefaultParameters .collapse">
+<h2>The image URL must be able to apply the border transformation with no custom parameters</h2>
+<pre>testCanApplyTheBorderTransformationUsingDefaultParameters() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Image::border</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::addQueryParam</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::getUrl</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_testCanApplyTheCanvasTransformationUsingAllParameters"></a><div class="element clickable method public method_testCanApplyTheCanvasTransformationUsingAllParameters" data-toggle="collapse" data-target=".method_testCanApplyTheCanvasTransformationUsingAllParameters .collapse">
+<h2>The image URL must be able to apply the canvas transformation using all parameters</h2>
+<pre>testCanApplyTheCanvasTransformationUsingAllParameters() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Image::canvas</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::addQueryParam</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::getUrl</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_testCanApplyTheCanvasTransformationUsingOnlyRequiredParameters"></a><div class="element clickable method public method_testCanApplyTheCanvasTransformationUsingOnlyRequiredParameters" data-toggle="collapse" data-target=".method_testCanApplyTheCanvasTransformationUsingOnlyRequiredParameters .collapse">
+<h2>The image URL must be able to apply the canvas transformation using only required parameters</h2>
+<pre>testCanApplyTheCanvasTransformationUsingOnlyRequiredParameters() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Image::canvas</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::addQueryParam</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::getUrl</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_testCanApplyTheCompressTransformationUsingCustomParameters"></a><div class="element clickable method public method_testCanApplyTheCompressTransformationUsingCustomParameters" data-toggle="collapse" data-target=".method_testCanApplyTheCompressTransformationUsingCustomParameters .collapse">
+<h2>The image URL must be able to apply the compress transformation with custom parameters</h2>
+<pre>testCanApplyTheCompressTransformationUsingCustomParameters() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Image::compress</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::addQueryParam</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::getUrl</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_testCanApplyTheCompressTransformationUsingDefaultParameters"></a><div class="element clickable method public method_testCanApplyTheCompressTransformationUsingDefaultParameters" data-toggle="collapse" data-target=".method_testCanApplyTheCompressTransformationUsingDefaultParameters .collapse">
+<h2>The image URL must be able to apply the compress transformation with no custom parameters</h2>
+<pre>testCanApplyTheCompressTransformationUsingDefaultParameters() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Image::compress</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::addQueryParam</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::getUrl</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_testCanApplyTheConvertTransformationUsingACustomExtension"></a><div class="element clickable method public method_testCanApplyTheConvertTransformationUsingACustomExtension" data-toggle="collapse" data-target=".method_testCanApplyTheConvertTransformationUsingACustomExtension .collapse">
+<h2>The image URL must be able to apply the convert transformation using custom extensions</h2>
+<pre>testCanApplyTheConvertTransformationUsingACustomExtension($extension) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>dataProvider</th>
+<td>getExtensions</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Image::convert</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::getUrl</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$extension</h4></div>
+</div></div>
+</div>
+<a id="method_testCanApplyTheConvertTransformationUsingTheGifConvenienceMethod"></a><div class="element clickable method public method_testCanApplyTheConvertTransformationUsingTheGifConvenienceMethod" data-toggle="collapse" data-target=".method_testCanApplyTheConvertTransformationUsingTheGifConvenienceMethod .collapse">
+<h2>The image URL must be able to apply the convert transformation using the gif() convenience
+method</h2>
+<pre>testCanApplyTheConvertTransformationUsingTheGifConvenienceMethod() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Image::gif</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::getUrl</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_testCanApplyTheConvertTransformationUsingTheJpgConvenienceMethod"></a><div class="element clickable method public method_testCanApplyTheConvertTransformationUsingTheJpgConvenienceMethod" data-toggle="collapse" data-target=".method_testCanApplyTheConvertTransformationUsingTheJpgConvenienceMethod .collapse">
+<h2>The image URL must be able to apply the convert transformation using the jpg() convenience
+method</h2>
+<pre>testCanApplyTheConvertTransformationUsingTheJpgConvenienceMethod() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Image::jpg</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::getUrl</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_testCanApplyTheConvertTransformationUsingThePngConvenienceMethod"></a><div class="element clickable method public method_testCanApplyTheConvertTransformationUsingThePngConvenienceMethod" data-toggle="collapse" data-target=".method_testCanApplyTheConvertTransformationUsingThePngConvenienceMethod .collapse">
+<h2>The image URL must be able to apply the convert transformation using the png() convenience
+method</h2>
+<pre>testCanApplyTheConvertTransformationUsingThePngConvenienceMethod() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Image::png</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::getUrl</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_testCanApplyTheCropTransformationWithParameters"></a><div class="element clickable method public method_testCanApplyTheCropTransformationWithParameters" data-toggle="collapse" data-target=".method_testCanApplyTheCropTransformationWithParameters .collapse">
+<h2>The image URL must be able to apply the crop transformation with parameters</h2>
+<pre>testCanApplyTheCropTransformationWithParameters() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Image::crop</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::addQueryParam</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::getUrl</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_testCanApplyTheDesaturateTransformation"></a><div class="element clickable method public method_testCanApplyTheDesaturateTransformation" data-toggle="collapse" data-target=".method_testCanApplyTheDesaturateTransformation .collapse">
+<h2>The image URL must be able to apply the desaturate transformation</h2>
+<pre>testCanApplyTheDesaturateTransformation() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Image::desaturate</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::addQueryParam</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::getUrl</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_testCanApplyTheFliphorizontallyTransformation"></a><div class="element clickable method public method_testCanApplyTheFliphorizontallyTransformation" data-toggle="collapse" data-target=".method_testCanApplyTheFliphorizontallyTransformation .collapse">
+<h2>The image URL must be able to apply the flipHorizontally transformation</h2>
+<pre>testCanApplyTheFliphorizontallyTransformation() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Image::flipHorizontally</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::addQueryParam</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::getUrl</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_testCanApplyTheFlipverticallyTransformation"></a><div class="element clickable method public method_testCanApplyTheFlipverticallyTransformation" data-toggle="collapse" data-target=".method_testCanApplyTheFlipverticallyTransformation .collapse">
+<h2>The image URL must be able to apply the flipVertically transformation</h2>
+<pre>testCanApplyTheFlipverticallyTransformation() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Image::flipVertically</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::addQueryParam</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::getUrl</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_testCanApplyTheMaxsizeTransformationUsingBothWidthAndHeight"></a><div class="element clickable method public method_testCanApplyTheMaxsizeTransformationUsingBothWidthAndHeight" data-toggle="collapse" data-target=".method_testCanApplyTheMaxsizeTransformationUsingBothWidthAndHeight .collapse">
+<h2>The image URL must be able to apply the maxSize transformation using both width and height</h2>
+<pre>testCanApplyTheMaxsizeTransformationUsingBothWidthAndHeight() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Image::maxSize</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::addQueryParam</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::getUrl</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_testCanApplyTheMaxsizeTransformationUsingOnlyHeight"></a><div class="element clickable method public method_testCanApplyTheMaxsizeTransformationUsingOnlyHeight" data-toggle="collapse" data-target=".method_testCanApplyTheMaxsizeTransformationUsingOnlyHeight .collapse">
+<h2>The image URL must be able to apply the maxSize transformation using only height</h2>
+<pre>testCanApplyTheMaxsizeTransformationUsingOnlyHeight() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Image::maxSize</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::addQueryParam</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::getUrl</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_testCanApplyTheMaxsizeTransformationUsingOnlyWidth"></a><div class="element clickable method public method_testCanApplyTheMaxsizeTransformationUsingOnlyWidth" data-toggle="collapse" data-target=".method_testCanApplyTheMaxsizeTransformationUsingOnlyWidth .collapse">
+<h2>The image URL must be able to apply the maxSize transformation using only width</h2>
+<pre>testCanApplyTheMaxsizeTransformationUsingOnlyWidth() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Image::maxSize</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::addQueryParam</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::getUrl</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_testCanApplyTheResizeTransformationUsingBothWidthAndHeight"></a><div class="element clickable method public method_testCanApplyTheResizeTransformationUsingBothWidthAndHeight" data-toggle="collapse" data-target=".method_testCanApplyTheResizeTransformationUsingBothWidthAndHeight .collapse">
+<h2>The image URL must be able to apply the resize transformation using both width and height</h2>
+<pre>testCanApplyTheResizeTransformationUsingBothWidthAndHeight() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Image::resize</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::addQueryParam</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::getUrl</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_testCanApplyTheResizeTransformationUsingOnlyHeight"></a><div class="element clickable method public method_testCanApplyTheResizeTransformationUsingOnlyHeight" data-toggle="collapse" data-target=".method_testCanApplyTheResizeTransformationUsingOnlyHeight .collapse">
+<h2>The image URL must be able to apply the resize transformation using only height</h2>
+<pre>testCanApplyTheResizeTransformationUsingOnlyHeight() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Image::resize</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::addQueryParam</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::getUrl</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_testCanApplyTheResizeTransformationUsingOnlyWidth"></a><div class="element clickable method public method_testCanApplyTheResizeTransformationUsingOnlyWidth" data-toggle="collapse" data-target=".method_testCanApplyTheResizeTransformationUsingOnlyWidth .collapse">
+<h2>The image URL must be able to apply the resize transformation using only width</h2>
+<pre>testCanApplyTheResizeTransformationUsingOnlyWidth() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Image::resize</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::addQueryParam</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::getUrl</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_testCanApplyTheRotateTransformationUsingAngleAndBackground"></a><div class="element clickable method public method_testCanApplyTheRotateTransformationUsingAngleAndBackground" data-toggle="collapse" data-target=".method_testCanApplyTheRotateTransformationUsingAngleAndBackground .collapse">
+<h2>The image URL must be able to apply the rotate transformation using angle and bg</h2>
+<pre>testCanApplyTheRotateTransformationUsingAngleAndBackground() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Image::rotate</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::addQueryParam</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::getUrl</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_testCanApplyTheRotateTransformationUsingOnlyAngle"></a><div class="element clickable method public method_testCanApplyTheRotateTransformationUsingOnlyAngle" data-toggle="collapse" data-target=".method_testCanApplyTheRotateTransformationUsingOnlyAngle .collapse">
+<h2>The image URL must be able to apply the rotate transformation using only angle</h2>
+<pre>testCanApplyTheRotateTransformationUsingOnlyAngle() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Image::rotate</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::addQueryParam</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::getUrl</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_testCanApplyTheThumbnailTransformationUsingCustomParameters"></a><div class="element clickable method public method_testCanApplyTheThumbnailTransformationUsingCustomParameters" data-toggle="collapse" data-target=".method_testCanApplyTheThumbnailTransformationUsingCustomParameters .collapse">
+<h2>The image URL must be able to apply the thumbnail transformation using custom parameters</h2>
+<pre>testCanApplyTheThumbnailTransformationUsingCustomParameters() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Image::thumbnail</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::addQueryParam</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::getUrl</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_testCanApplyTheThumbnailTransformationUsingDefaultParameters"></a><div class="element clickable method public method_testCanApplyTheThumbnailTransformationUsingDefaultParameters" data-toggle="collapse" data-target=".method_testCanApplyTheThumbnailTransformationUsingDefaultParameters .collapse">
+<h2>The image URL must be able to apply the thumbnail transformation using the default parameters</h2>
+<pre>testCanApplyTheThumbnailTransformationUsingDefaultParameters() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Image::thumbnail</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::addQueryParam</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::getUrl</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_testCanApplyTheTransposeTransformation"></a><div class="element clickable method public method_testCanApplyTheTransposeTransformation" data-toggle="collapse" data-target=".method_testCanApplyTheTransposeTransformation .collapse">
+<h2>The image URL must be able to apply the transpose transformation</h2>
+<pre>testCanApplyTheTransposeTransformation() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Image::transpose</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::addQueryParam</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::getUrl</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_testCanApplyTheTransverseTransformation"></a><div class="element clickable method public method_testCanApplyTheTransverseTransformation" data-toggle="collapse" data-target=".method_testCanApplyTheTransverseTransformation .collapse">
+<h2>The image URL must be able to apply the transverse transformation</h2>
+<pre>testCanApplyTheTransverseTransformation() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Image::transverse</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::addQueryParam</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::getUrl</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_testCanChainAllTransformations"></a><div class="element clickable method public method_testCanChainAllTransformations" data-toggle="collapse" data-target=".method_testCanChainAllTransformations .collapse">
+<h2>The image URL must be able to chain all available transformations</h2>
+<pre>testCanChainAllTransformations() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Image::border</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Image::compress</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Image::convert</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Image::crop</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Image::flipHorizontally</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Image::flipVertically</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Image::resize</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Image::maxSize</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Image::rotate</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Image::thumbnail</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Image::canvas</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Image::transpose</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Image::transverse</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Image::desaturate</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_testCanGenerateACompleteUrlIncludingAnAccessToken"></a><div class="element clickable method public method_testCanGenerateACompleteUrlIncludingAnAccessToken" data-toggle="collapse" data-target=".method_testCanGenerateACompleteUrlIncludingAnAccessToken .collapse">
+<h2>The image URL must be able to generate a complete URL with an access token appended</h2>
+<pre>testCanGenerateACompleteUrlIncludingAnAccessToken($host, $publicKey, $imageIdentifier, $expected) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>dataProvider</th>
+<td>getUrlData</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::getUrl</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Image::getResourceUrl</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$host</h4></div>
+<div class="subelement argument"><h4>$publicKey</h4></div>
+<div class="subelement argument"><h4>$imageIdentifier</h4></div>
+<div class="subelement argument"><h4>$expected</h4></div>
+</div></div>
+</div>
+<a id="method_testCanResetAllAppliedTransformations"></a><div class="element clickable method public method_testCanResetAllAppliedTransformations" data-toggle="collapse" data-target=".method_testCanResetAllAppliedTransformations .collapse">
+<h2>The image URL must be able to reset all applied transformations</h2>
+<pre>testCanResetAllAppliedTransformations() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Image::reset</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Image::gif</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::getUrl</td>
+</tr>
+</table>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_baseUrl"> </a><div class="element clickable property private property_baseUrl" data-toggle="collapse" data-target=".property_baseUrl .collapse">
+<h2></h2>
+<pre>$baseUrl : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_imageIdentifier"> </a><div class="element clickable property private property_imageIdentifier" data-toggle="collapse" data-target=".property_imageIdentifier .collapse">
+<h2></h2>
+<pre>$imageIdentifier : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_privateKey"> </a><div class="element clickable property private property_privateKey" data-toggle="collapse" data-target=".property_privateKey .collapse">
+<h2></h2>
+<pre>$privateKey : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_publicKey"> </a><div class="element clickable property private property_publicKey" data-toggle="collapse" data-target=".property_publicKey .collapse">
+<h2></h2>
+<pre>$publicKey : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_url"> </a><div class="element clickable property private property_url" data-toggle="collapse" data-target=".property_url .collapse">
+<h2></h2>
+<pre>$url : <a href="../classes/ImboClient.Url.Image.html">\ImboClient\Url\Image</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2013-01-12T20:53:55+01:00.<br></footer></div>
+</div>
+</body>
+</html>

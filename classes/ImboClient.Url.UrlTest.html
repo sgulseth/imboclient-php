@@ -1,0 +1,344 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>ImboClient API documentation » \ImboClient\Url\UrlTest</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">ImboClient API documentation</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/ImboClient.html"><i class="icon-th"></i> ImboClient</a></li>
+<li><a>Packages</a></li>
+<li><a href="../packages/Client.html"><i class="icon-folder-open"></i> Client</a></li>
+<li><a href="../packages/Drivers.html"><i class="icon-folder-open"></i> Drivers</a></li>
+<li><a href="../packages/Exceptions.html"><i class="icon-folder-open"></i> Exceptions</a></li>
+<li><a href="../packages/Http.html"><i class="icon-folder-open"></i> Http</a></li>
+<li><a href="../packages/Test%20suite.html"><i class="icon-folder-open"></i> Test suite</a></li>
+<li><a href="../packages/Urls.html"><i class="icon-folder-open"></i> Urls</a></li>
+<li><a href="../packages/Version.html"><i class="icon-folder-open"></i> Version</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">191</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method_getQueryParams" title="getQueryParams :: Fetch query parameters"><span class="description">Fetch query parameters</span><pre>getQueryParams()</pre></a></li>
+<li class="method public "><a href="#method_setUp" title="setUp :: Set up the url instance"><span class="description">Set up the url instance</span><pre>setUp()</pre></a></li>
+<li class="method public "><a href="#method_tearDown" title="tearDown :: Tear down the url instance"><span class="description">Tear down the url instance</span><pre>tearDown()</pre></a></li>
+<li class="method public "><a href="#method_testAddMultipleQueryParamsAndReset" title="testAddMultipleQueryParamsAndReset :: The url instance must be able to reset the added query parameters"><span class="description">The url instance must be able to reset the added query parameters</span><pre>testAddMultipleQueryParamsAndReset()</pre></a></li>
+<li class="method public "><a href="#method_testCanAddQueryParametersThatIsAddedInTheQueryString" title="testCanAddQueryParametersThatIsAddedInTheQueryString :: The url instance must be able to add different query parameters that is added in the query
+string"><span class="description">The url instance must be able to add different query parameters that is added in the query
+string</span><pre>testCanAddQueryParametersThatIsAddedInTheQueryString()</pre></a></li>
+<li class="method public "><a href="#method_testCanAddQueryParametersUsingTheMagicCallMethod" title="testCanAddQueryParametersUsingTheMagicCallMethod :: The url instance can add query parameters using the magic __call method"><span class="description">The url instance can add query parameters using the magic __call method</span><pre>testCanAddQueryParametersUsingTheMagicCallMethod()</pre></a></li>
+<li class="method public "><a href="#method_testCanAutomaticallyCreateAnAccessTokenInstanceIfOneIsNotSet" title="testCanAutomaticallyCreateAnAccessTokenInstanceIfOneIsNotSet :: The url instance must create an access token if one does not exist when first accessed"><span class="description">The url instance must create an access token if one does not exist when first accessed</span><pre>testCanAutomaticallyCreateAnAccessTokenInstanceIfOneIsNotSet()</pre></a></li>
+<li class="method public "><a href="#method_testCanSetAndGetAnAccessTokenInstance" title="testCanSetAndGetAnAccessTokenInstance :: The url instance must be able to set and get an access token instance"><span class="description">The url instance must be able to set and get an access token instance</span><pre>testCanSetAndGetAnAccessTokenInstance()</pre></a></li>
+<li class="method public "><a href="#method_testDoesNotAppendAccessTokenIfPublicOrPrivateKeyAreMissing" title="testDoesNotAppendAccessTokenIfPublicOrPrivateKeyAreMissing :: The url instance does not append an access token if the public or private key is missing"><span class="description">The url instance does not append an access token if the public or private key is missing</span><pre>testDoesNotAppendAccessTokenIfPublicOrPrivateKeyAreMissing()</pre></a></li>
+<li class="method public "><a href="#method_testReturnsTheCompleteUrlWhenUsedInAStringContext" title="testReturnsTheCompleteUrlWhenUsedInAStringContext :: The url instance must return the complete url when used in a string context"><span class="description">The url instance must return the complete url when used in a string context</span><pre>testReturnsTheCompleteUrlWhenUsedInAStringContext()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties
+                    <ul></ul>
+</li>
+<li class="nav-header private">» Private
+                    <ul>
+<li class="property private "><a href="#property_baseUrl" title="$baseUrl :: "><span class="description"></span><pre>$baseUrl</pre></a></li>
+<li class="property private "><a href="#property_privateKey" title="$privateKey :: "><span class="description"></span><pre>$privateKey</pre></a></li>
+<li class="property private "><a href="#property_publicKey" title="$publicKey :: "><span class="description"></span><pre>$publicKey</pre></a></li>
+<li class="property private "><a href="#property_url" title="$url :: "><span class="description"></span><pre>$url</pre></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a id="\ImboClient\Url\UrlTest"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/ImboClient.html">ImboClient</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/ImboClient.Url.html">Url</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/ImboClient.Url.UrlTest.html">UrlTest</a>
+</li>
+</ul>
+<div class="element class">
+<p class="short_description"></p>
+<div class="details">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="../packages/Test%20suite.html">Test suite</a></td>
+</tr>
+<tr>
+<th>author</th>
+<td><a href="mailto:cogo@starzinger.net">Christer Edvartsen</a></td>
+</tr>
+</table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method_getQueryParams"></a><div class="element clickable method public method_getQueryParams" data-toggle="collapse" data-target=".method_getQueryParams .collapse">
+<h2>Fetch query parameters</h2>
+<pre>getQueryParams() : array[]</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array[]</code></div>
+</div></div>
+</div>
+<a id="method_setUp"></a><div class="element clickable method public method_setUp" data-toggle="collapse" data-target=".method_setUp .collapse">
+<h2>Set up the url instance</h2>
+<pre>setUp() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::__construct</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_tearDown"></a><div class="element clickable method public method_tearDown" data-toggle="collapse" data-target=".method_tearDown .collapse">
+<h2>Tear down the url instance</h2>
+<pre>tearDown() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="method_testAddMultipleQueryParamsAndReset"></a><div class="element clickable method public method_testAddMultipleQueryParamsAndReset" data-toggle="collapse" data-target=".method_testAddMultipleQueryParamsAndReset .collapse">
+<h2>The url instance must be able to reset the added query parameters</h2>
+<pre>testAddMultipleQueryParamsAndReset() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::addQueryParam</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::reset</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::getUrl</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::getUrlEncoded</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::getQueryString</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_testCanAddQueryParametersThatIsAddedInTheQueryString"></a><div class="element clickable method public method_testCanAddQueryParametersThatIsAddedInTheQueryString" data-toggle="collapse" data-target=".method_testCanAddQueryParametersThatIsAddedInTheQueryString .collapse">
+<h2>The url instance must be able to add different query parameters that is added in the query
+string</h2>
+<pre>testCanAddQueryParametersThatIsAddedInTheQueryString($key, $value, $expectedUrl, $expectedEscapedUrl) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>dataProvider</th>
+<td>getQueryParams</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::addQueryParam</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::getUrl</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::getUrlEncoded</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::getQueryString</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$key</h4></div>
+<div class="subelement argument"><h4>$value</h4></div>
+<div class="subelement argument"><h4>$expectedUrl</h4></div>
+<div class="subelement argument"><h4>$expectedEscapedUrl</h4></div>
+</div></div>
+</div>
+<a id="method_testCanAddQueryParametersUsingTheMagicCallMethod"></a><div class="element clickable method public method_testCanAddQueryParametersUsingTheMagicCallMethod" data-toggle="collapse" data-target=".method_testCanAddQueryParametersUsingTheMagicCallMethod .collapse">
+<h2>The url instance can add query parameters using the magic __call method</h2>
+<pre>testCanAddQueryParametersUsingTheMagicCallMethod() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::__call</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::addQueryParam</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::getUrl</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::getUrlEncoded</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::getQueryString</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_testCanAutomaticallyCreateAnAccessTokenInstanceIfOneIsNotSet"></a><div class="element clickable method public method_testCanAutomaticallyCreateAnAccessTokenInstanceIfOneIsNotSet" data-toggle="collapse" data-target=".method_testCanAutomaticallyCreateAnAccessTokenInstanceIfOneIsNotSet .collapse">
+<h2>The url instance must create an access token if one does not exist when first accessed</h2>
+<pre>testCanAutomaticallyCreateAnAccessTokenInstanceIfOneIsNotSet() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::getAccessToken</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_testCanSetAndGetAnAccessTokenInstance"></a><div class="element clickable method public method_testCanSetAndGetAnAccessTokenInstance" data-toggle="collapse" data-target=".method_testCanSetAndGetAnAccessTokenInstance .collapse">
+<h2>The url instance must be able to set and get an access token instance</h2>
+<pre>testCanSetAndGetAnAccessTokenInstance() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::getAccessToken</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::setAccessToken</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_testDoesNotAppendAccessTokenIfPublicOrPrivateKeyAreMissing"></a><div class="element clickable method public method_testDoesNotAppendAccessTokenIfPublicOrPrivateKeyAreMissing" data-toggle="collapse" data-target=".method_testDoesNotAppendAccessTokenIfPublicOrPrivateKeyAreMissing .collapse">
+<h2>The url instance does not append an access token if the public or private key is missing</h2>
+<pre>testDoesNotAppendAccessTokenIfPublicOrPrivateKeyAreMissing() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::getUrl</td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_testReturnsTheCompleteUrlWhenUsedInAStringContext"></a><div class="element clickable method public method_testReturnsTheCompleteUrlWhenUsedInAStringContext" data-toggle="collapse" data-target=".method_testReturnsTheCompleteUrlWhenUsedInAStringContext .collapse">
+<h2>The url instance must return the complete url when used in a string context</h2>
+<pre>testReturnsTheCompleteUrlWhenUsedInAStringContext() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::__toString</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::getUrl</td>
+</tr>
+</table>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_baseUrl"> </a><div class="element clickable property private property_baseUrl" data-toggle="collapse" data-target=".property_baseUrl .collapse">
+<h2></h2>
+<pre>$baseUrl : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_privateKey"> </a><div class="element clickable property private property_privateKey" data-toggle="collapse" data-target=".property_privateKey .collapse">
+<h2></h2>
+<pre>$privateKey : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_publicKey"> </a><div class="element clickable property private property_publicKey" data-toggle="collapse" data-target=".property_publicKey .collapse">
+<h2></h2>
+<pre>$publicKey : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_url"> </a><div class="element clickable property private property_url" data-toggle="collapse" data-target=".property_url .collapse">
+<h2></h2>
+<pre>$url : \ImboClient\Url\ImboClient\Url\Url</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2013-01-12T20:53:55+01:00.<br></footer></div>
+</div>
+</body>
+</html>
