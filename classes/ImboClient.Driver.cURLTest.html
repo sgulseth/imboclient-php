@@ -82,6 +82,7 @@ override the default values</span><pre>testAcceptsCustomParametersThroughConstru
 <li class="method public "><a href="#method_testDoesNotSendDuplicateRequestHeaders" title="testDoesNotSendDuplicateRequestHeaders :: The driver must not include duplicate request headers"><span class="description">The driver must not include duplicate request headers</span><pre>testDoesNotSendDuplicateRequestHeaders()</pre></a></li>
 <li class="method public "><a href="#method_testDoesNotSetEmptySslOptions" title="testDoesNotSetEmptySslOptions :: Make sure that the driver does not set some of the SSL options if they don't have any values"><span class="description">Make sure that the driver does not set some of the SSL options if they don't have any values</span><pre>testDoesNotSetEmptySslOptions()</pre></a></li>
 <li class="method public "><a href="#method_testFollowsRedirects" title="testFollowsRedirects :: The driver must follow redirects"><span class="description">The driver must follow redirects</span><pre>testFollowsRedirects()</pre></a></li>
+<li class="method public "><a href="#method_testGracefullyHandlesNonJsonResponseBodies" title="testGracefullyHandlesNonJsonResponseBodies :: Make sure that the driver handles incorrectly serialized data in the response"><span class="description">Make sure that the driver handles incorrectly serialized data in the response</span><pre>testGracefullyHandlesNonJsonResponseBodies()</pre></a></li>
 <li class="method public "><a href="#method_testSetSsslOptionsWhenAValueHasBeenSpecified" title="testSetSsslOptionsWhenAValueHasBeenSpecified :: Make sure that the driver sets all SSL options when they have been given values"><span class="description">Make sure that the driver sets all SSL options when they have been given values</span><pre>testSetSsslOptionsWhenAValueHasBeenSpecified()</pre></a></li>
 <li class="method public "><a href="#method_testSetsADefaultErrorMessageWhenTheServerRespondsWithAnErrorAndAnEmptyResponseBody" title="testSetsADefaultErrorMessageWhenTheServerRespondsWithAnErrorAndAnEmptyResponseBody :: The driver must set a default error message when the server responds with an error and an
 empty body (typically a response to a HEAD request)"><span class="description">The driver must set a default error message when the server responds with an error and an
@@ -424,6 +425,32 @@ override the default values</h2>
 </table>
 </div></div>
 </div>
+<a id="method_testGracefullyHandlesNonJsonResponseBodies"></a><div class="element clickable method public method_testGracefullyHandlesNonJsonResponseBodies" data-toggle="collapse" data-target=".method_testGracefullyHandlesNonJsonResponseBodies .collapse">
+<h2>Make sure that the driver handles incorrectly serialized data in the response</h2>
+<pre>testGracefullyHandlesNonJsonResponseBodies() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>expectedException</th>
+<td>ImboClient\Exception\ServerException</td>
+</tr>
+<tr>
+<th>expectedExceptionMessage</th>
+<td>Invalid response body. Expected JSON serialized data</td>
+</tr>
+<tr>
+<th>expectedExceptionCode</th>
+<td>404</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Driver\cURL::request</td>
+</tr>
+</table>
+</div></div>
+</div>
 <a id="method_testSetSsslOptionsWhenAValueHasBeenSpecified"></a><div class="element clickable method public method_testSetSsslOptionsWhenAValueHasBeenSpecified" data-toggle="collapse" data-target=".method_testSetSsslOptionsWhenAValueHasBeenSpecified .collapse">
 <h2>Make sure that the driver sets all SSL options when they have been given values</h2>
 <pre>testSetSsslOptionsWhenAValueHasBeenSpecified() </pre>
@@ -634,7 +661,7 @@ the response available through the exception</h2>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
-            generated on 2013-01-12T20:53:55+01:00.<br></footer></div>
+            generated on 2013-05-12T12:38:01+02:00.<br></footer></div>
 </div>
 </body>
 </html>

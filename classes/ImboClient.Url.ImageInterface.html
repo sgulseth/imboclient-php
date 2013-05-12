@@ -83,6 +83,7 @@
 <li class="method public inherited"><a href="#method_reset" title="reset :: Resets the URL - removes all query parameters"><span class="description">Resets the URL - removes all query parameters</span><pre>reset()</pre></a></li>
 <li class="method public "><a href="#method_resize" title="resize :: Append a resize transformation query parameter to the URL"><span class="description">Append a resize transformation query parameter to the URL</span><pre>resize()</pre></a></li>
 <li class="method public "><a href="#method_rotate" title="rotate :: Append a rotate transformation query parameter to the URL"><span class="description">Append a rotate transformation query parameter to the URL</span><pre>rotate()</pre></a></li>
+<li class="method public "><a href="#method_sepia" title="sepia :: Append a sepia transformation query parameter to the URL"><span class="description">Append a sepia transformation query parameter to the URL</span><pre>sepia()</pre></a></li>
 <li class="method public "><a href="#method_thumbnail" title="thumbnail :: Append a thumbnail transformation query parameter to the URL"><span class="description">Append a thumbnail transformation query parameter to the URL</span><pre>thumbnail()</pre></a></li>
 <li class="method public "><a href="#method_transpose" title="transpose :: Append a transpose transformation query parameter to the URL"><span class="description">Append a transpose transformation query parameter to the URL</span><pre>transpose()</pre></a></li>
 <li class="method public "><a href="#method_transverse" title="transverse :: Append a transverse transformation query parameter to the URL"><span class="description">Append a transverse transformation query parameter to the URL</span><pre>transverse()</pre></a></li>
@@ -438,6 +439,21 @@ echo $url; // http://imbo/users/publicKey/images?page=2&amp;limit=10
 <div class="subelement response"><code><a href="../classes/ImboClient.Url.ImageInterface.html">\ImboClient\Url\ImageInterface</a></code></div>
 </div></div>
 </div>
+<a id="method_sepia"></a><div class="element clickable method public method_sepia" data-toggle="collapse" data-target=".method_sepia .collapse">
+<h2>Append a sepia transformation query parameter to the URL</h2>
+<pre>sepia(int $threshold) : <a href="../classes/ImboClient.Url.ImageInterface.html">\ImboClient\Url\ImageInterface</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$threshold</h4>
+<code>int</code><p>Measure of the extent of sepia toning (ranges from 0 to QuantumRange)</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code><a href="../classes/ImboClient.Url.ImageInterface.html">\ImboClient\Url\ImageInterface</a></code></div>
+</div></div>
+</div>
 <a id="method_thumbnail"></a><div class="element clickable method public method_thumbnail" data-toggle="collapse" data-target=".method_thumbnail .collapse">
 <h2>Append a thumbnail transformation query parameter to the URL</h2>
 <pre>thumbnail(int $width, int $height, string $fit) : <a href="../classes/ImboClient.Url.ImageInterface.html">\ImboClient\Url\ImageInterface</a></pre>
@@ -486,7 +502,7 @@ echo $url; // http://imbo/users/publicKey/images?page=2&amp;limit=10
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
-            generated on 2013-01-12T20:53:55+01:00.<br></footer></div>
+            generated on 2013-05-12T12:38:01+02:00.<br></footer></div>
 </div>
 </body>
 </html>

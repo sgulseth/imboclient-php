@@ -96,6 +96,8 @@ method</span><pre>testCanApplyTheConvertTransformationUsingThePngConvenienceMeth
 <li class="method public "><a href="#method_testCanApplyTheResizeTransformationUsingOnlyWidth" title="testCanApplyTheResizeTransformationUsingOnlyWidth :: The image URL must be able to apply the resize transformation using only width"><span class="description">The image URL must be able to apply the resize transformation using only width</span><pre>testCanApplyTheResizeTransformationUsingOnlyWidth()</pre></a></li>
 <li class="method public "><a href="#method_testCanApplyTheRotateTransformationUsingAngleAndBackground" title="testCanApplyTheRotateTransformationUsingAngleAndBackground :: The image URL must be able to apply the rotate transformation using angle and bg"><span class="description">The image URL must be able to apply the rotate transformation using angle and bg</span><pre>testCanApplyTheRotateTransformationUsingAngleAndBackground()</pre></a></li>
 <li class="method public "><a href="#method_testCanApplyTheRotateTransformationUsingOnlyAngle" title="testCanApplyTheRotateTransformationUsingOnlyAngle :: The image URL must be able to apply the rotate transformation using only angle"><span class="description">The image URL must be able to apply the rotate transformation using only angle</span><pre>testCanApplyTheRotateTransformationUsingOnlyAngle()</pre></a></li>
+<li class="method public "><a href="#method_testCanApplyTheSepiaTransformationUsingCustomParameters" title="testCanApplyTheSepiaTransformationUsingCustomParameters :: The image URL must be able to apply the sepia transformation with custom parameters"><span class="description">The image URL must be able to apply the sepia transformation with custom parameters</span><pre>testCanApplyTheSepiaTransformationUsingCustomParameters()</pre></a></li>
+<li class="method public "><a href="#method_testCanApplyTheSepiaTransformationUsingDefaultParameters" title="testCanApplyTheSepiaTransformationUsingDefaultParameters :: The image URL must be able to apply the sepia transformation with no custom parameters"><span class="description">The image URL must be able to apply the sepia transformation with no custom parameters</span><pre>testCanApplyTheSepiaTransformationUsingDefaultParameters()</pre></a></li>
 <li class="method public "><a href="#method_testCanApplyTheThumbnailTransformationUsingCustomParameters" title="testCanApplyTheThumbnailTransformationUsingCustomParameters :: The image URL must be able to apply the thumbnail transformation using custom parameters"><span class="description">The image URL must be able to apply the thumbnail transformation using custom parameters</span><pre>testCanApplyTheThumbnailTransformationUsingCustomParameters()</pre></a></li>
 <li class="method public "><a href="#method_testCanApplyTheThumbnailTransformationUsingDefaultParameters" title="testCanApplyTheThumbnailTransformationUsingDefaultParameters :: The image URL must be able to apply the thumbnail transformation using the default parameters"><span class="description">The image URL must be able to apply the thumbnail transformation using the default parameters</span><pre>testCanApplyTheThumbnailTransformationUsingDefaultParameters()</pre></a></li>
 <li class="method public "><a href="#method_testCanApplyTheTransposeTransformation" title="testCanApplyTheTransposeTransformation :: The image URL must be able to apply the transpose transformation"><span class="description">The image URL must be able to apply the transpose transformation</span><pre>testCanApplyTheTransposeTransformation()</pre></a></li>
@@ -664,6 +666,50 @@ method</h2>
 </table>
 </div></div>
 </div>
+<a id="method_testCanApplyTheSepiaTransformationUsingCustomParameters"></a><div class="element clickable method public method_testCanApplyTheSepiaTransformationUsingCustomParameters" data-toggle="collapse" data-target=".method_testCanApplyTheSepiaTransformationUsingCustomParameters .collapse">
+<h2>The image URL must be able to apply the sepia transformation with custom parameters</h2>
+<pre>testCanApplyTheSepiaTransformationUsingCustomParameters() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Image::sepia</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::addQueryParam</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::getUrl</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a id="method_testCanApplyTheSepiaTransformationUsingDefaultParameters"></a><div class="element clickable method public method_testCanApplyTheSepiaTransformationUsingDefaultParameters" data-toggle="collapse" data-target=".method_testCanApplyTheSepiaTransformationUsingDefaultParameters .collapse">
+<h2>The image URL must be able to apply the sepia transformation with no custom parameters</h2>
+<pre>testCanApplyTheSepiaTransformationUsingDefaultParameters() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Image::sepia</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::addQueryParam</td>
+</tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Url::getUrl</td>
+</tr>
+</table>
+</div></div>
+</div>
 <a id="method_testCanApplyTheThumbnailTransformationUsingCustomParameters"></a><div class="element clickable method public method_testCanApplyTheThumbnailTransformationUsingCustomParameters" data-toggle="collapse" data-target=".method_testCanApplyTheThumbnailTransformationUsingCustomParameters .collapse">
 <h2>The image URL must be able to apply the thumbnail transformation using custom parameters</h2>
 <pre>testCanApplyTheThumbnailTransformationUsingCustomParameters() </pre>
@@ -815,6 +861,10 @@ method</h2>
 <th>covers</th>
 <td>\ImboClient\Url\Image::desaturate</td>
 </tr>
+<tr>
+<th>covers</th>
+<td>\ImboClient\Url\Image::sepia</td>
+</tr>
 </table>
 </div></div>
 </div>
@@ -906,7 +956,7 @@ method</h2>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
-            generated on 2013-01-12T20:53:55+01:00.<br></footer></div>
+            generated on 2013-05-12T12:38:01+02:00.<br></footer></div>
 </div>
 </body>
 </html>
