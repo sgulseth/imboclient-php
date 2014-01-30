@@ -1,0 +1,1615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
+    <meta charset="utf-8"/>
+    <title>    ImboClient API documentation &raquo; \ImboClient\ImboClient
+</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+            <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+        <![endif]-->
+        <script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script>
+        <script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
+        <script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script>
+        <script src="../js/bootstrap.js" type="text/javascript"></script>
+        <script src="../js/template.js" type="text/javascript"></script>
+        <script src="../js/prettify/prettify.min.js" type="text/javascript"></script>
+    
+            <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+            <link rel="shortcut icon" href="../img/favicon.ico"/>
+        <link rel="apple-touch-icon" href="../img/apple-touch-icon.png"/>
+        <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png"/>
+        <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png"/>
+    </head>
+<body>
+
+        <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> </a>
+                <a class="brand" href="../index.html">ImboClient API documentation</a>
+
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li class="dropdown">
+                            <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                API Documentation <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                                                    <li><a>Namespaces</a></li>
+                                                                        <li><a href="../namespaces/ImboClient.html">ImboClient</a></li>
+                                                                                                                                </ul>
+                        </li>
+                        <li class="dropdown" id="charts-menu">
+                            <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                Charts <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../graph_class.html">
+                                        <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown" id="reports-menu">
+                            <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                Reports <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../errors.html">
+                                        <i class="icon-list-alt"></i>&#160;Errors
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../markers.html">
+                                        <i class="icon-list-alt"></i>&#160;Markers
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../deprecated.html">
+                                        <i class="icon-list-alt"></i>&#160;Deprecated
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="go_to_top">
+            <a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>
+        </div>
+    </div>
+    
+    <div id="___" class="container">
+        <noscript>
+            <div class="alert alert-warning">
+                Javascript is disabled; several features are only available if Javascript is enabled.
+            </div>
+        </noscript>
+
+        
+            <div class="row">
+        <div class="span4">
+                    <span class="btn-group visibility" data-toggle="buttons-checkbox">
+        <button class="btn public active" title="Show public elements">Public</button>
+        <button class="btn protected" title="Show protected elements">Protected</button>
+        <button class="btn private" title="Show private elements">Private</button>
+        <button class="btn inherited active" title="Show inherited elements">Inherited</button>
+    </span>
+    <div class="btn-group view pull-right" data-toggle="buttons-radio">
+        <button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button>
+        <button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+    </div>
+
+        <ul class="side-nav nav nav-list">
+        <li class="nav-header">
+            <i class="icon-custom icon-method"></i> Methods
+            <ul>
+                                                                                    <li class="method public">
+        <a href="#method___construct" title="__construct :: Class constructor">
+            <span class="description">Class constructor</span><pre>__construct</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_setServerUrls" title="setServerUrls :: Set the server URL&#039;s">
+            <span class="description">Set the server URL&#039;s</span><pre>setServerUrls</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_factory" title="factory :: Client factory">
+            <span class="description">Client factory</span><pre>factory</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getPublicKey" title="getPublicKey :: Get the current public key">
+            <span class="description">Get the current public key</span><pre>getPublicKey</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_addImage" title="addImage :: Add an image from a path">
+            <span class="description">Add an image from a path</span><pre>addImage</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_addImageFromUrl" title="addImageFromUrl :: Add an image from a URL">
+            <span class="description">Add an image from a URL</span><pre>addImageFromUrl</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_addImageFromString" title="addImageFromString :: Add an image from memory">
+            <span class="description">Add an image from memory</span><pre>addImageFromString</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getServerStats" title="getServerStats :: Get the server stats">
+            <span class="description">Get the server stats</span><pre>getServerStats</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getServerStatus" title="getServerStatus :: Get the server status">
+            <span class="description">Get the server status</span><pre>getServerStatus</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getUserInfo" title="getUserInfo :: Fetch the user info of the current user">
+            <span class="description">Fetch the user info of the current user</span><pre>getUserInfo</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_deleteImage" title="deleteImage :: Delete an image">
+            <span class="description">Delete an image</span><pre>deleteImage</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getImageProperties" title="getImageProperties :: Get properties about an image stored in Imbo">
+            <span class="description">Get properties about an image stored in Imbo</span><pre>getImageProperties</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_editMetadata" title="editMetadata :: Edit metadata of an image">
+            <span class="description">Edit metadata of an image</span><pre>editMetadata</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_replaceMetadata" title="replaceMetadata :: Replace metadata of an image">
+            <span class="description">Replace metadata of an image</span><pre>replaceMetadata</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getMetadata" title="getMetadata :: Get metadata attached to an image">
+            <span class="description">Get metadata attached to an image</span><pre>getMetadata</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getImages" title="getImages :: Get images owned by a user">
+            <span class="description">Get images owned by a user</span><pre>getImages</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_deleteMetadata" title="deleteMetadata :: Delete metadata from an image">
+            <span class="description">Delete metadata from an image</span><pre>deleteMetadata</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getServerUrls" title="getServerUrls :: Get all server URL&#039;s">
+            <span class="description">Get all server URL&#039;s</span><pre>getServerUrls</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getStatusUrl" title="getStatusUrl :: Get a URL for the status endpoint">
+            <span class="description">Get a URL for the status endpoint</span><pre>getStatusUrl</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getStatsUrl" title="getStatsUrl :: Get a URL for the stats endpoint">
+            <span class="description">Get a URL for the stats endpoint</span><pre>getStatsUrl</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getUserUrl" title="getUserUrl :: Get a URL for the user endpoint">
+            <span class="description">Get a URL for the user endpoint</span><pre>getUserUrl</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getImagesUrl" title="getImagesUrl :: Get a URL for the images resource">
+            <span class="description">Get a URL for the images resource</span><pre>getImagesUrl</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getImageUrl" title="getImageUrl :: Get a URL for the image resource">
+            <span class="description">Get a URL for the image resource</span><pre>getImageUrl</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getMetadataUrl" title="getMetadataUrl :: Get a URL for the metadata resource">
+            <span class="description">Get a URL for the metadata resource</span><pre>getMetadataUrl</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getShortUrl" title="getShortUrl :: Get the short URL of an image (with optional transformations)">
+            <span class="description">Get the short URL of an image (with optional transformations)</span><pre>getShortUrl</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getNumImages" title="getNumImages :: Fetch the number of images the current user has">
+            <span class="description">Fetch the number of images the current user has</span><pre>getNumImages</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_imageExists" title="imageExists :: Checks if a given image exists on the server already by specifying a local path">
+            <span class="description">Checks if a given image exists on the server already by specifying a local path</span><pre>imageExists</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_imageIdentifierExists" title="imageIdentifierExists :: Checks if a given image exists on the server already by specifying an image identifier">
+            <span class="description">Checks if a given image exists on the server already by specifying an image identifier</span><pre>imageIdentifierExists</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getImageData" title="getImageData :: Get the binary data of an image stored on the server">
+            <span class="description">Get the binary data of an image stored on the server</span><pre>getImageData</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_getImageDataFromUrl" title="getImageDataFromUrl :: Get the binary data of an image stored on the server">
+            <span class="description">Get the binary data of an image stored on the server</span><pre>getImageDataFromUrl</pre>
+        </a>
+    </li>
+
+                                                                                                                                                                                                                        </ul>
+        </li>
+        <li class="nav-header protected">» Protected
+            <ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </ul>
+        </li>
+        <li class="nav-header private">» Private
+            <ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <li class="method private">
+                            <a href="#method_getHostForImageIdentifier" title="getHostForImageIdentifier :: Get a predictable hostname for the given image identifier">
+                                <span class="description">Get a predictable hostname for the given image identifier</span><pre>getHostForImageIdentifier</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method private">
+                            <a href="#method_parseUrls" title="parseUrls :: Parse server URLs and prepare them for usage">
+                                <span class="description">Parse server URLs and prepare them for usage</span><pre>parseUrls</pre>
+                            </a>
+                        </li>
+                                                                                <li class="method private">
+                            <a href="#method_validateLocalFile" title="validateLocalFile :: Helper method to make sure a local file exists, and that it is not empty">
+                                <span class="description">Helper method to make sure a local file exists, and that it is not empty</span><pre>validateLocalFile</pre>
+                            </a>
+                        </li>
+                                                </ul>
+        </li>
+        <li class="nav-header">
+            <i class="icon-custom icon-constant"></i> Constants
+            <ul>
+                            </ul>
+        </li>
+    </ul>
+
+
+        </div>
+
+        <div class="span8">
+            <div class="element class">
+                <h1>ImboClient</h1>
+                <small style="display: block; text-align: right">
+                                            Extends \Guzzle\Service\Client
+                                                        </small>
+                <p class="short_description">Client that interacts with Imbo servers</p>
+                <div class="details">
+                    <div class="long_description">
+                        <p>This client includes methods that can be used to easily interact with Imbo servers.</p>
+
+                    </div>
+                    <table class="table table-bordered">
+                                                                                    <tr>
+                                    <th>
+                                        package
+                                                                            </th>
+                                    <td>
+                                                                                <p>Client</p>
+
+                                    </td>
+                                </tr>
+                                                                                                                <tr>
+                                    <th>
+                                        author
+                                                                            </th>
+                                    <td>
+                                                                                <p>Christer Edvartsen <a href="&#x6d;&#x61;&#105;&#108;&#x74;&#x6f;&#58;&#99;o&#x67;&#x6f;&#64;&#115;&#x74;&#x61;&#114;&#122;i&#x6e;&#x67;&#101;&#114;&#x2e;&#x6e;&#101;&#116;">&#99;o&#x67;&#x6f;&#64;&#115;&#x74;&#x61;&#114;&#122;i&#x6e;&#x67;&#101;&#114;&#x2e;&#x6e;&#101;&#116;</a></p>
+
+                                    </td>
+                                </tr>
+                                                                        </table>
+
+                    <h3><i class="icon-custom icon-method"></i> Methods</h3>
+                                                                <a id="method___construct"></a>
+                        <div class="element clickable method public method___construct" data-toggle="collapse" data-target=".method___construct .collapse">
+                            <h2>Class constructor</h2>
+                            <pre>__construct(string $baseUrl, array|\Guzzle\Common\Collection $config) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Call parent constructor and attach an event listener that in turn will attach listeners to
+the request based on the command being called.</p>
+</div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$baseUrl</h4>
+                                                <code>string</code><p><p>The base URL to Imbo</p>
+</p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$config</h4>
+                                                <code>array|\Guzzle\Common\Collection</code><p><p>Client configuration</p>
+</p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <a id="method_setServerUrls"></a>
+                        <div class="element clickable method public method_setServerUrls" data-toggle="collapse" data-target=".method_setServerUrls .collapse">
+                            <h2>Set the server URL&#039;s</h2>
+                            <pre>setServerUrls(array $urls) : self</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description">
+</div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$urls</h4>
+                                                <code>array</code><p><p>The URL's to the Imbo server</p>
+</p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>self</code><p>
+</p>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <a id="method_factory"></a>
+                        <div class="element clickable method public method_factory" data-toggle="collapse" data-target=".method_factory .collapse">
+                            <h2>Client factory</h2>
+                            <pre>factory(array $config = array()) : \ImboClient\ImboClient</pre>
+                            <div class="labels">
+                                                                <span class="label">static</span>                                                                                                                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description">
+</div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    throws
+                                                </th>
+                                                <td>
+                                                                                                                                                                    
+
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$config</h4>
+                                                <code>array</code><p><p>Client configuration</p>
+</p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/ImboClient.ImboClient.html">\ImboClient\ImboClient</a></code><p>
+</p>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <a id="method_getPublicKey"></a>
+                        <div class="element clickable method public method_getPublicKey" data-toggle="collapse" data-target=".method_getPublicKey .collapse">
+                            <h2>Get the current public key</h2>
+                            <pre>getPublicKey() : string</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description">
+</div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>string</code><p>
+</p>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <a id="method_addImage"></a>
+                        <div class="element clickable method public method_addImage" data-toggle="collapse" data-target=".method_addImage .collapse">
+                            <h2>Add an image from a path</h2>
+                            <pre>addImage(string $path) : \Guzzle\Service\Resource\Model</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description">
+</div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    throws
+                                                </th>
+                                                <td>
+                                                                                                                                                                    
+
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$path</h4>
+                                                <code>string</code><p><p>A path to an image</p>
+</p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>\Guzzle\Service\Resource\Model</code><p>
+</p>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <a id="method_addImageFromUrl"></a>
+                        <div class="element clickable method public method_addImageFromUrl" data-toggle="collapse" data-target=".method_addImageFromUrl .collapse">
+                            <h2>Add an image from a URL</h2>
+                            <pre>addImageFromUrl(\Guzzle\Http\Url|string $url) : \Guzzle\Service\Resource\Model</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description">
+</div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$url</h4>
+                                                <code>\Guzzle\Http\Url|string</code><p><p>A URL to an image</p>
+</p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>\Guzzle\Service\Resource\Model</code><p>
+</p>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <a id="method_addImageFromString"></a>
+                        <div class="element clickable method public method_addImageFromString" data-toggle="collapse" data-target=".method_addImageFromString .collapse">
+                            <h2>Add an image from memory</h2>
+                            <pre>addImageFromString(string $image) : \Guzzle\Service\Resource\Model</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description">
+</div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    throws
+                                                </th>
+                                                <td>
+                                                                                                                                                                    
+
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$image</h4>
+                                                <code>string</code><p><p>An image in memory</p>
+</p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>\Guzzle\Service\Resource\Model</code><p>
+</p>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <a id="method_getServerStats"></a>
+                        <div class="element clickable method public method_getServerStats" data-toggle="collapse" data-target=".method_getServerStats .collapse">
+                            <h2>Get the server stats</h2>
+                            <pre>getServerStats() : array</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description">
+</div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>array</code><p>
+</p>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <a id="method_getServerStatus"></a>
+                        <div class="element clickable method public method_getServerStatus" data-toggle="collapse" data-target=".method_getServerStatus .collapse">
+                            <h2>Get the server status</h2>
+                            <pre>getServerStatus() : \Guzzle\Service\Resource\Model</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description">
+</div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>\Guzzle\Service\Resource\Model</code><p>
+</p>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <a id="method_getUserInfo"></a>
+                        <div class="element clickable method public method_getUserInfo" data-toggle="collapse" data-target=".method_getUserInfo .collapse">
+                            <h2>Fetch the user info of the current user</h2>
+                            <pre>getUserInfo() : \Guzzle\Service\Resource\Model</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description">
+</div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>\Guzzle\Service\Resource\Model</code><p>
+</p>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <a id="method_deleteImage"></a>
+                        <div class="element clickable method public method_deleteImage" data-toggle="collapse" data-target=".method_deleteImage .collapse">
+                            <h2>Delete an image</h2>
+                            <pre>deleteImage(string $imageIdentifier) : \Guzzle\Service\Resource\Model</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description">
+</div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$imageIdentifier</h4>
+                                                <code>string</code><p><p>The identifier of the image we want to delete</p>
+</p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>\Guzzle\Service\Resource\Model</code><p>
+</p>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <a id="method_getImageProperties"></a>
+                        <div class="element clickable method public method_getImageProperties" data-toggle="collapse" data-target=".method_getImageProperties .collapse">
+                            <h2>Get properties about an image stored in Imbo</h2>
+                            <pre>getImageProperties(string $imageIdentifier) : \Guzzle\Service\Resource\Model</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description">
+</div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$imageIdentifier</h4>
+                                                <code>string</code><p><p>The identifier of the image we want properties about</p>
+</p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>\Guzzle\Service\Resource\Model</code><p>
+</p>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <a id="method_editMetadata"></a>
+                        <div class="element clickable method public method_editMetadata" data-toggle="collapse" data-target=".method_editMetadata .collapse">
+                            <h2>Edit metadata of an image</h2>
+                            <pre>editMetadata(string $imageIdentifier, array $metadata) : \Guzzle\Service\Resource\Model</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description">
+</div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$imageIdentifier</h4>
+                                                <code>string</code><p><p>The identifier of the image</p>
+</p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$metadata</h4>
+                                                <code>array</code><p><p>The metadata to set</p>
+</p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>\Guzzle\Service\Resource\Model</code><p>
+</p>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <a id="method_replaceMetadata"></a>
+                        <div class="element clickable method public method_replaceMetadata" data-toggle="collapse" data-target=".method_replaceMetadata .collapse">
+                            <h2>Replace metadata of an image</h2>
+                            <pre>replaceMetadata(string $imageIdentifier, array $metadata) : \Guzzle\Service\Resource\Model</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description">
+</div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$imageIdentifier</h4>
+                                                <code>string</code><p><p>The identifier of the image</p>
+</p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$metadata</h4>
+                                                <code>array</code><p><p>The metadata to set</p>
+</p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>\Guzzle\Service\Resource\Model</code><p>
+</p>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <a id="method_getMetadata"></a>
+                        <div class="element clickable method public method_getMetadata" data-toggle="collapse" data-target=".method_getMetadata .collapse">
+                            <h2>Get metadata attached to an image</h2>
+                            <pre>getMetadata(string $imageIdentifier) : array</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description">
+</div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$imageIdentifier</h4>
+                                                <code>string</code><p><p>The identifier of the image</p>
+</p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>array</code><p>
+</p>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <a id="method_getImages"></a>
+                        <div class="element clickable method public method_getImages" data-toggle="collapse" data-target=".method_getImages .collapse">
+                            <h2>Get images owned by a user</h2>
+                            <pre>getImages(\ImboClient\ImagesQuery $query = null) : \Guzzle\Service\Resource\Model</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description">
+</div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$query</h4>
+                                                <code><a href="../classes/ImboClient.ImagesQuery.html">\ImboClient\ImagesQuery</a></code><p><p>An optional images query object</p>
+</p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>\Guzzle\Service\Resource\Model</code><p>
+</p>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <a id="method_deleteMetadata"></a>
+                        <div class="element clickable method public method_deleteMetadata" data-toggle="collapse" data-target=".method_deleteMetadata .collapse">
+                            <h2>Delete metadata from an image</h2>
+                            <pre>deleteMetadata(string $imageIdentifier) : \Guzzle\Service\Resource\Model</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description">
+</div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$imageIdentifier</h4>
+                                                <code>string</code><p><p>The identifier of the image</p>
+</p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>\Guzzle\Service\Resource\Model</code><p>
+</p>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <a id="method_getServerUrls"></a>
+                        <div class="element clickable method public method_getServerUrls" data-toggle="collapse" data-target=".method_getServerUrls .collapse">
+                            <h2>Get all server URL&#039;s</h2>
+                            <pre>getServerUrls() : string[]</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description">
+</div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>string[]</code><p>
+</p>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <a id="method_getStatusUrl"></a>
+                        <div class="element clickable method public method_getStatusUrl" data-toggle="collapse" data-target=".method_getStatusUrl .collapse">
+                            <h2>Get a URL for the status endpoint</h2>
+                            <pre>getStatusUrl() : \ImboClient\Http\StatusUrl</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description">
+</div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/ImboClient.Http.StatusUrl.html">\ImboClient\Http\StatusUrl</a></code><p>
+</p>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <a id="method_getStatsUrl"></a>
+                        <div class="element clickable method public method_getStatsUrl" data-toggle="collapse" data-target=".method_getStatsUrl .collapse">
+                            <h2>Get a URL for the stats endpoint</h2>
+                            <pre>getStatsUrl() : \ImboClient\Http\StatsUrl</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description">
+</div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/ImboClient.Http.StatsUrl.html">\ImboClient\Http\StatsUrl</a></code><p>
+</p>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <a id="method_getUserUrl"></a>
+                        <div class="element clickable method public method_getUserUrl" data-toggle="collapse" data-target=".method_getUserUrl .collapse">
+                            <h2>Get a URL for the user endpoint</h2>
+                            <pre>getUserUrl() : \ImboClient\Http\UserUrl</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description">
+</div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/ImboClient.Http.UserUrl.html">\ImboClient\Http\UserUrl</a></code><p>
+</p>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <a id="method_getImagesUrl"></a>
+                        <div class="element clickable method public method_getImagesUrl" data-toggle="collapse" data-target=".method_getImagesUrl .collapse">
+                            <h2>Get a URL for the images resource</h2>
+                            <pre>getImagesUrl() : \ImboClient\Http\ImagesUrl</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description">
+</div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/ImboClient.Http.ImagesUrl.html">\ImboClient\Http\ImagesUrl</a></code><p>
+</p>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <a id="method_getImageUrl"></a>
+                        <div class="element clickable method public method_getImageUrl" data-toggle="collapse" data-target=".method_getImageUrl .collapse">
+                            <h2>Get a URL for the image resource</h2>
+                            <pre>getImageUrl($imageIdentifier) : \ImboClient\Http\ImageUrl</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description">
+</div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$imageIdentifier</h4>
+                                                <code></code><p>
+</p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/ImboClient.Http.ImageUrl.html">\ImboClient\Http\ImageUrl</a></code><p>
+</p>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <a id="method_getMetadataUrl"></a>
+                        <div class="element clickable method public method_getMetadataUrl" data-toggle="collapse" data-target=".method_getMetadataUrl .collapse">
+                            <h2>Get a URL for the metadata resource</h2>
+                            <pre>getMetadataUrl($imageIdentifier) : \ImboClient\Http\MetadataUrl</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description">
+</div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$imageIdentifier</h4>
+                                                <code></code><p>
+</p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/ImboClient.Http.MetadataUrl.html">\ImboClient\Http\MetadataUrl</a></code><p>
+</p>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <a id="method_getShortUrl"></a>
+                        <div class="element clickable method public method_getShortUrl" data-toggle="collapse" data-target=".method_getShortUrl .collapse">
+                            <h2>Get the short URL of an image (with optional transformations)</h2>
+                            <pre>getShortUrl(\ImboClient\Http\ImageUrl $imageUrl, boolean $asString = false) : \Guzzle\Http\Url|string</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description">
+</div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    throws
+                                                </th>
+                                                <td>
+                                                                                                                                                                    
+
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$imageUrl</h4>
+                                                <code><a href="../classes/ImboClient.Http.ImageUrl.html">\ImboClient\Http\ImageUrl</a></code><p><p>An instance of an imageUrl</p>
+</p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$asString</h4>
+                                                <code>boolean</code><p><p>Set to true to return the URL as a string</p>
+</p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>\Guzzle\Http\Url|string</code><p>
+</p>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <a id="method_getNumImages"></a>
+                        <div class="element clickable method public method_getNumImages" data-toggle="collapse" data-target=".method_getNumImages .collapse">
+                            <h2>Fetch the number of images the current user has</h2>
+                            <pre>getNumImages() : int</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description">
+</div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>int</code><p>
+</p>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <a id="method_imageExists"></a>
+                        <div class="element clickable method public method_imageExists" data-toggle="collapse" data-target=".method_imageExists .collapse">
+                            <h2>Checks if a given image exists on the server already by specifying a local path</h2>
+                            <pre>imageExists(string $path) : boolean</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description">
+</div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    throws
+                                                </th>
+                                                <td>
+                                                                                                                                                                    <p>Throws an exception if the specified file does not exist or
+                                 is of zero length</p>
+
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$path</h4>
+                                                <code>string</code><p><p>Path to the local image</p>
+</p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>boolean</code><p>
+</p>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <a id="method_imageIdentifierExists"></a>
+                        <div class="element clickable method public method_imageIdentifierExists" data-toggle="collapse" data-target=".method_imageIdentifierExists .collapse">
+                            <h2>Checks if a given image exists on the server already by specifying an image identifier</h2>
+                            <pre>imageIdentifierExists(string $imageIdentifier) : boolean</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description">
+</div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$imageIdentifier</h4>
+                                                <code>string</code><p><p>The image identifier</p>
+</p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>boolean</code><p>
+</p>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <a id="method_getImageData"></a>
+                        <div class="element clickable method public method_getImageData" data-toggle="collapse" data-target=".method_getImageData .collapse">
+                            <h2>Get the binary data of an image stored on the server</h2>
+                            <pre>getImageData(string $imageIdentifier) : string</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description">
+</div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$imageIdentifier</h4>
+                                                <code>string</code><p><p>The image identifier</p>
+</p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>string</code><p>
+</p>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <a id="method_getImageDataFromUrl"></a>
+                        <div class="element clickable method public method_getImageDataFromUrl" data-toggle="collapse" data-target=".method_getImageDataFromUrl .collapse">
+                            <h2>Get the binary data of an image stored on the server</h2>
+                            <pre>getImageDataFromUrl(\ImboClient\Http\ImageUrl $imageUrl) : string</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description">
+</div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$imageUrl</h4>
+                                                <code><a href="../classes/ImboClient.Http.ImageUrl.html">\ImboClient\Http\ImageUrl</a></code><p>
+</p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>string</code><p>
+</p>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <a id="method_getHostForImageIdentifier"></a>
+                        <div class="element clickable method private method_getHostForImageIdentifier" data-toggle="collapse" data-target=".method_getHostForImageIdentifier .collapse">
+                            <h2>Get a predictable hostname for the given image identifier</h2>
+                            <pre>getHostForImageIdentifier(string $imageIdentifier) : string</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description">
+</div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$imageIdentifier</h4>
+                                                <code>string</code><p><p>The image identifier</p>
+</p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>string</code><p>
+</p>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <a id="method_parseUrls"></a>
+                        <div class="element clickable method private method_parseUrls" data-toggle="collapse" data-target=".method_parseUrls .collapse">
+                            <h2>Parse server URLs and prepare them for usage</h2>
+                            <pre>parseUrls(array|string $urls) : array</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description">
+</div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$urls</h4>
+                                                <code>array|string</code><p><p>One or more URLs to an Imbo server</p>
+</p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>array</code><p><p>Returns an array of URLs</p>
+</p>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <a id="method_validateLocalFile"></a>
+                        <div class="element clickable method private method_validateLocalFile" data-toggle="collapse" data-target=".method_validateLocalFile .collapse">
+                            <h2>Helper method to make sure a local file exists, and that it is not empty</h2>
+                            <pre>validateLocalFile(string $path) </pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description">
+</div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    throws
+                                                </th>
+                                                <td>
+                                                                                                                                                                    
+
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$path</h4>
+                                                <code>string</code><p><p>The path to a local file</p>
+</p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+                        </div>
+                    
+                    
+                                                                <h3><i class="icon-custom icon-property"></i> Properties</h3>
+                                                    <a id="property_serverUrls"> </a>
+                            <div class="element clickable property private property_serverUrls" data-toggle="collapse" data-target=".property_serverUrls .collapse">
+                                <h2>URLs to the Imbo server</h2>
+                                <pre>serverUrls</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description">
+</div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+
+                                                                                                            </td>
+                                                </tr>
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <a id="property_currentCommand"> </a>
+                            <div class="element clickable property private property_currentCommand" data-toggle="collapse" data-target=".property_currentCommand .collapse">
+                                <h2>The name of the current command</h2>
+                                <pre>currentCommand</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description"><p>This property is used with error handling</p>
+</div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+
+                                                                                                            </td>
+                                                </tr>
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                                            </div>
+            </div>
+            <a id="\ImboClient\ImboClient"></a>
+            <ul class="breadcrumb">
+                <li><a href="../index.html"><i class="icon-custom icon-class"></i></a></li>
+                    
+    
+    <li><span class="divider">\</span><a href="../namespaces/ImboClient.html">ImboClient</a></li>
+
+                <li class="active"><span class="divider">\</span><a href="../classes/ImboClient.ImboClient.html">ImboClient</a></li>
+            </ul>
+        </div>
+    </div>
+
+    </div>
+
+        <footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
+            <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
+            generated on Thu, 30 Jan 2014 12:09:24 +0100.<br/>
+    </footer>
+    </body>
+</html>

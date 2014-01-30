@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
     <meta charset="utf-8"/>
-    <title>    ImboClient API documentation &raquo; \ImboClient\Version
+    <title>    ImboClient API documentation &raquo; \ImboClient\Http\StatusUrl
 </title>
     <meta name="author" content=""/>
     <meta name="description" content=""/>
@@ -113,24 +113,37 @@
         <li class="nav-header">
             <i class="icon-custom icon-method"></i> Methods
             <ul>
-                            </ul>
+                                                                                    <li class="method public inherited">
+        <a href="#method_factory" title="factory :: Factory method">
+            <span class="description">Factory method</span><pre>factory</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method___toString" title="__toString :: Return the URL as a string">
+            <span class="description">Return the URL as a string</span><pre>__toString</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_setPrivateKey" title="setPrivateKey :: Set the private key">
+            <span class="description">Set the private key</span><pre>setPrivateKey</pre>
+        </a>
+    </li>
+
+                                                </ul>
         </li>
         <li class="nav-header protected">» Protected
             <ul>
-                            </ul>
+                                                                                                                                        </ul>
         </li>
         <li class="nav-header private">» Private
             <ul>
-                            </ul>
+                                                                                                                                        </ul>
         </li>
         <li class="nav-header">
             <i class="icon-custom icon-constant"></i> Constants
             <ul>
-                                <li class="constant ">
-                    <a href="#constant_VERSION" title="VERSION :: The current version">
-                        <span class="description">The current version</span><pre>VERSION</pre>
-                    </a>
-                </li>
                             </ul>
         </li>
     </ul>
@@ -140,10 +153,11 @@
 
         <div class="span8">
             <div class="element class">
-                <h1>Version</h1>
+                <h1>StatusUrl</h1>
                 <small style="display: block; text-align: right">
+                                            Extends <a href="../classes/ImboClient.Http.Url.html">\ImboClient\Http\Url</a>
                                                         </small>
-                <p class="short_description">Version class</p>
+                <p class="short_description">Status URL</p>
                 <div class="details">
                     <div class="long_description">
                         
@@ -155,7 +169,7 @@
                                         package
                                                                             </th>
                                     <td>
-                                                                                <p>Client</p>
+                                                                                <p>Client\Urls</p>
 
                                     </td>
                                 </tr>
@@ -171,18 +185,125 @@
                                                                         </table>
 
                     <h3><i class="icon-custom icon-method"></i> Methods</h3>
-                                        
-                                            <h3><i class="icon-custom icon-constant"></i> Constants</h3>
-                                                    <a id="constant_VERSION"> </a>
-                            <div class="element clickable constant  constant_VERSION" data-toggle="collapse" data-target=".constant_VERSION .collapse">
-                                <h2>The current version</h2>
-                                <pre>VERSION</pre>
-                                <div class="labels">
+                                                                <a id="method_factory"></a>
+                        <div class="element clickable method public method_factory inherited" data-toggle="collapse" data-target=".method_factory .collapse">
+                            <h2>Factory method</h2>
+                            <pre>factory(string $url, string $privateKey = null) : \ImboClient\Http\Url</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                <span class="label">static</span>                                                                                                                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description">
+</div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$url</h4>
+                                                <code>string</code><p><p>URL as a string</p>
+</p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$privateKey</h4>
+                                                <code>string</code><p><p>Optional private key</p>
+</p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/ImboClient.Http.Url.html">\ImboClient\Http\Url</a></code><p>
+</p>
                                                                     </div>
+                            </div>
+                        </div>
+                                            <a id="method___toString"></a>
+                        <div class="element clickable method public method___toString inherited" data-toggle="collapse" data-target=".method___toString .collapse">
+                            <h2>Return the URL as a string</h2>
+                            <pre>__toString() : string</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description">
+</div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>string</code><p>
+</p>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <a id="method_setPrivateKey"></a>
+                        <div class="element clickable method public method_setPrivateKey inherited" data-toggle="collapse" data-target=".method_setPrivateKey .collapse">
+                            <h2>Set the private key</h2>
+                            <pre>setPrivateKey(string $privateKey) </pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description">
+</div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$privateKey</h4>
+                                                <code>string</code><p><p>The private key to use when appending access tokens to the URL's</p>
+</p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+                        </div>
+                    
+                    
+                                                                <h3><i class="icon-custom icon-property"></i> Properties</h3>
+                                                    <a id="property_privateKey"> </a>
+                            <div class="element clickable property private property_privateKey inherited" data-toggle="collapse" data-target=".property_privateKey .collapse">
+                                <h2>Private key of a user</h2>
+                                <pre>privateKey</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
                                 <div class="row collapse">
                                     <div class="detail-description">
                                         <div class="long_description">
 </div>
+
                                         <table class="table">
                                                                                             <tr>
                                                     <th>
@@ -204,17 +325,16 @@
                                     </div>
                                 </div>
                             </div>
-                                            
-                                                        </div>
+                                                            </div>
             </div>
-            <a id="\ImboClient\Version"></a>
+            <a id="\ImboClient\Http\StatusUrl"></a>
             <ul class="breadcrumb">
                 <li><a href="../index.html"><i class="icon-custom icon-class"></i></a></li>
                     
     
-    <li><span class="divider">\</span><a href="../namespaces/ImboClient.html">ImboClient</a></li>
+    <li><span class="divider">\</span><a href="../namespaces/ImboClient.Http.html">Http</a></li>
 
-                <li class="active"><span class="divider">\</span><a href="../classes/ImboClient.Version.html">Version</a></li>
+                <li class="active"><span class="divider">\</span><a href="../classes/ImboClient.Http.StatusUrl.html">StatusUrl</a></li>
             </ul>
         </div>
     </div>

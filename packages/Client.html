@@ -1,107 +1,325 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
-<meta charset="utf-8">
-<title>ImboClient API documentation » Client</title>
-<meta name="author" content="Mike van Riel">
-<meta name="description" content="">
-<link href="../css/template.css" rel="stylesheet" media="all">
-<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
-<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
-<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
-</head>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
+    <meta charset="utf-8"/>
+    <title>     &raquo; \Client
+</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+            <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+        <![endif]-->
+        <script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script>
+        <script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
+        <script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script>
+        <script src="../js/bootstrap.js" type="text/javascript"></script>
+        <script src="../js/template.js" type="text/javascript"></script>
+        <script src="../js/prettify/prettify.min.js" type="text/javascript"></script>
+    
+            <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+            <link rel="shortcut icon" href="../img/favicon.ico"/>
+        <link rel="apple-touch-icon" href="../img/apple-touch-icon.png"/>
+        <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png"/>
+        <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png"/>
+    </head>
 <body>
-<div class="navbar navbar-fixed-top">
-<div class="navbar-inner"><div class="container">
-<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">ImboClient API documentation</a><div class="nav-collapse"><ul class="nav">
-<li class="dropdown">
-<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
-                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
-<li><a>Namespaces</a></li>
-<li><a href="../namespaces/ImboClient.html"><i class="icon-th"></i> ImboClient</a></li>
-<li><a>Packages</a></li>
-<li><a href="../packages/Client.html"><i class="icon-folder-open"></i> Client</a></li>
-<li><a href="../packages/Drivers.html"><i class="icon-folder-open"></i> Drivers</a></li>
-<li><a href="../packages/Exceptions.html"><i class="icon-folder-open"></i> Exceptions</a></li>
-<li><a href="../packages/Http.html"><i class="icon-folder-open"></i> Http</a></li>
-<li><a href="../packages/Test%20suite.html"><i class="icon-folder-open"></i> Test suite</a></li>
-<li><a href="../packages/Urls.html"><i class="icon-folder-open"></i> Urls</a></li>
-<li><a href="../packages/Version.html"><i class="icon-folder-open"></i> Version</a></li>
-</ul>
-</li>
-<li class="dropdown" id="charts-menu">
-<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
-                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
-</li>
-<li class="dropdown" id="reports-menu">
-<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
-                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
-<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">191</span></a></li>
-<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
-                <ul></ul></a></li>
-<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
-                <span class="label label-info">0</span></a></li>
-</ul>
-</li>
-</ul></div>
-</div></div>
-<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
-</div>
-<div id="___" class="container">
-<noscript><div class="alert alert-warning">
-                            Javascript is disabled; several features are only available
-                            if Javascript is enabled.
-                        </div></noscript>
-<div class="row">
-<div class="span4">
-<div class="btn-group view pull-right" data-toggle="buttons-radio">
-<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
-</div>
-<ul class="side-nav nav nav-list">
-<li class="nav-header">
-<i class="icon-map-marker"></i> Packages</li>
-<li>
-<a href="../packages/Client.html" title="Client"><i class="icon-folder-open"></i>Client</a><ul class="nav nav-list nav-packages"></ul>
-</li>
-<li class="nav-header">
-<i class="icon-custom icon-interface"></i> Interfaces</li>
-<li><a href="#ClientInterface" title="Interface for the client">ClientInterface</a></li>
-<li class="nav-header">
-<i class="icon-custom icon-class"></i> Classes</li>
-<li><a href="#Client" title="Client that interacts with Imbo servers">Client</a></li>
-</ul>
-</div>
-<div class="span8 package-contents">
-<ul class="breadcrumb"><li>
-<a href="../index.html"><i class="icon-folder-open"></i></a><span class="divider">\</span><li class="active"><a href="../packages/Client.html">Client</a></li>
-</li></ul>
-<div class="package-indent">
-<h3>
-<i class="icon-custom icon-class"></i> Classes and interfaces</h3>
-<div id="ClientInterface" class="element ajax clickable interface">
-<h1>ClientInterface<a href="../classes/ImboClient.ClientInterface.html">¶</a>
-</h1>
-<p class="short_description">Interface for the client</p>
-<div class="details collapse"></div>
-<a href="../classes/ImboClient.ClientInterface.html" class="more">« More »</a>
-</div>
-<div id="Client" class="element ajax clickable class">
-<h1>Client<a href="../classes/ImboClient.Client.html">¶</a>
-</h1>
-<p class="short_description">Client that interacts with Imbo servers</p>
-<div class="details collapse"></div>
-<a href="../classes/ImboClient.Client.html" class="more">« More »</a>
-</div>
-</div>
-</div>
-</div>
-<div class="row"><footer class="span12">
-            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
-            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
-            generated on 2013-05-12T12:38:01+02:00.<br></footer></div>
-</div>
-</body>
+
+        <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> </a>
+                <a class="brand" href="../index.html">ImboClient API documentation</a>
+
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li class="dropdown">
+                            <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                API Documentation <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                                                    <li><a>Namespaces</a></li>
+                                                                        <li><a href="../namespaces/ImboClient.html">ImboClient</a></li>
+                                                                                                                                </ul>
+                        </li>
+                        <li class="dropdown" id="charts-menu">
+                            <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                Charts <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../graph_class.html">
+                                        <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown" id="reports-menu">
+                            <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                Reports <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../errors.html">
+                                        <i class="icon-list-alt"></i>&#160;Errors
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../markers.html">
+                                        <i class="icon-list-alt"></i>&#160;Markers
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../deprecated.html">
+                                        <i class="icon-list-alt"></i>&#160;Deprecated
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="go_to_top">
+            <a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>
+        </div>
+    </div>
+    
+    <div id="___" class="container">
+        <noscript>
+            <div class="alert alert-warning">
+                Javascript is disabled; several features are only available if Javascript is enabled.
+            </div>
+        </noscript>
+
+        
+            
+    <div class="row">
+
+        <div class="span4">
+            <div class="btn-group view pull-right" data-toggle="buttons-radio">
+                <button class="btn details" title="Show descriptions and method names">
+                    <i class="icon-list"></i></button><button class="btn simple" title="Show only method names">
+                    <i class="icon-align-justify"></i>
+                </button>
+            </div>
+            <ul class="side-nav nav nav-list">
+                <li class="nav-header">
+                    <i class="icon-map-marker"></i> Packages
+                </li>
+                    
+        <li>
+        <a href="../packages/Client.Urls.html" title="Urls">
+            <i class="icon-th"></i> Urls
+        </a>
+        <ul class="nav nav-list nav-packages">
+                
+    
+        </ul>
+    </li>
+        <li>
+        <a href="../packages/Client.Event subscribers.html" title="Event subscribers">
+            <i class="icon-th"></i> Event subscribers
+        </a>
+        <ul class="nav nav-list nav-packages">
+                
+    
+        </ul>
+    </li>
+    
+            </ul>
+        </div>
+
+        <div class="span8 package-contents">
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/default.html"></a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Client.html">Client</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="package-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="Version" class="element ajax clickable class">
+        <h1>Version<a href="../classes/ImboClient.Version.html">¶</a></h1>
+        <p class="short_description">Version class</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ImboClient.Version.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ImagesQuery" class="element ajax clickable class">
+        <h1>ImagesQuery<a href="../classes/ImboClient.ImagesQuery.html">¶</a></h1>
+        <p class="short_description">Query object for the GetImages command</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ImboClient.ImagesQuery.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ImboClient" class="element ajax clickable class">
+        <h1>ImboClient<a href="../classes/ImboClient.ImboClient.html">¶</a></h1>
+        <p class="short_description">Client that interacts with Imbo servers</p>
+        <div class="details collapse">This client includes methods that can be used to easily interact with Imbo servers.</div>
+        <a href="../classes/ImboClient.ImboClient.html" class="more">« More »</a>
+    </div>
+
+                            </div>
+            
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/default.html"></a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Client.html">Client</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Client.Urls.html">Urls</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="package-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="MetadataUrl" class="element ajax clickable class">
+        <h1>MetadataUrl<a href="../classes/ImboClient.Http.MetadataUrl.html">¶</a></h1>
+        <p class="short_description">Metadata URL</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ImboClient.Http.MetadataUrl.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ImagesUrl" class="element ajax clickable class">
+        <h1>ImagesUrl<a href="../classes/ImboClient.Http.ImagesUrl.html">¶</a></h1>
+        <p class="short_description">Images URL</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ImboClient.Http.ImagesUrl.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="StatsUrl" class="element ajax clickable class">
+        <h1>StatsUrl<a href="../classes/ImboClient.Http.StatsUrl.html">¶</a></h1>
+        <p class="short_description">Stats URL</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ImboClient.Http.StatsUrl.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="UserUrl" class="element ajax clickable class">
+        <h1>UserUrl<a href="../classes/ImboClient.Http.UserUrl.html">¶</a></h1>
+        <p class="short_description">User URL</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ImboClient.Http.UserUrl.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="Url" class="element ajax clickable class">
+        <h1>Url<a href="../classes/ImboClient.Http.Url.html">¶</a></h1>
+        <p class="short_description">Base URL class</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ImboClient.Http.Url.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="StatusUrl" class="element ajax clickable class">
+        <h1>StatusUrl<a href="../classes/ImboClient.Http.StatusUrl.html">¶</a></h1>
+        <p class="short_description">Status URL</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ImboClient.Http.StatusUrl.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="ImageUrl" class="element ajax clickable class">
+        <h1>ImageUrl<a href="../classes/ImboClient.Http.ImageUrl.html">¶</a></h1>
+        <p class="short_description">Image URL</p>
+        <div class="details collapse"></div>
+        <a href="../classes/ImboClient.Http.ImageUrl.html" class="more">« More »</a>
+    </div>
+
+                            </div>
+            
+    
+                
+    
+        <ul class="breadcrumb">
+            <li><a href="../index.html"><i class="icon-th"></i></a></li>
+                
+                
+                
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/default.html"></a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Client.html">Client</a>
+    </li>
+
+    
+    <li>
+        <span class="divider">\</span><a href="../packages/Client.Event subscribers.html">Event subscribers</a>
+    </li>
+
+        </ul>
+
+        
+        
+                    <div class="package-indent">
+                <h3><i class="icon-custom icon-class"></i> Classes, interfaces and traits</h3>
+                
+                
+                                        <div id="AccessToken" class="element ajax clickable class">
+        <h1>AccessToken<a href="../classes/ImboClient.EventSubscriber.AccessToken.html">¶</a></h1>
+        <p class="short_description">Access token event subscriber</p>
+        <div class="details collapse">This subscriber is used to append an access token query parameter to URL&#039;s that require this</div>
+        <a href="../classes/ImboClient.EventSubscriber.AccessToken.html" class="more">« More »</a>
+    </div>
+
+                                        <div id="Authenticate" class="element ajax clickable class">
+        <h1>Authenticate<a href="../classes/ImboClient.EventSubscriber.Authenticate.html">¶</a></h1>
+        <p class="short_description">Authenticate event subscriber</p>
+        <div class="details collapse">This subscriber is used to sign the request with authentication info</div>
+        <a href="../classes/ImboClient.EventSubscriber.Authenticate.html" class="more">« More »</a>
+    </div>
+
+                            </div>
+            
+    
+    
+        </div>
+    </div>
+    </div>
+
+        <footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
+            <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
+            generated on Thu, 30 Jan 2014 12:09:24 +0100.<br/>
+    </footer>
+    </body>
 </html>

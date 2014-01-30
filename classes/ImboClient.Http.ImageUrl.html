@@ -1,0 +1,1447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
+    <meta charset="utf-8"/>
+    <title>    ImboClient API documentation &raquo; \ImboClient\Http\ImageUrl
+</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+            <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+        <![endif]-->
+        <script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script>
+        <script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
+        <script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script>
+        <script src="../js/bootstrap.js" type="text/javascript"></script>
+        <script src="../js/template.js" type="text/javascript"></script>
+        <script src="../js/prettify/prettify.min.js" type="text/javascript"></script>
+    
+            <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+            <link rel="shortcut icon" href="../img/favicon.ico"/>
+        <link rel="apple-touch-icon" href="../img/apple-touch-icon.png"/>
+        <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png"/>
+        <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png"/>
+    </head>
+<body>
+
+        <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> </a>
+                <a class="brand" href="../index.html">ImboClient API documentation</a>
+
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li class="dropdown">
+                            <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                API Documentation <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                                                    <li><a>Namespaces</a></li>
+                                                                        <li><a href="../namespaces/ImboClient.html">ImboClient</a></li>
+                                                                                                                                </ul>
+                        </li>
+                        <li class="dropdown" id="charts-menu">
+                            <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                Charts <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../graph_class.html">
+                                        <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown" id="reports-menu">
+                            <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                Reports <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../errors.html">
+                                        <i class="icon-list-alt"></i>&#160;Errors
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../markers.html">
+                                        <i class="icon-list-alt"></i>&#160;Markers
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../deprecated.html">
+                                        <i class="icon-list-alt"></i>&#160;Deprecated
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="go_to_top">
+            <a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>
+        </div>
+    </div>
+    
+    <div id="___" class="container">
+        <noscript>
+            <div class="alert alert-warning">
+                Javascript is disabled; several features are only available if Javascript is enabled.
+            </div>
+        </noscript>
+
+        
+            <div class="row">
+        <div class="span4">
+                    <span class="btn-group visibility" data-toggle="buttons-checkbox">
+        <button class="btn public active" title="Show public elements">Public</button>
+        <button class="btn protected" title="Show protected elements">Protected</button>
+        <button class="btn private" title="Show private elements">Private</button>
+        <button class="btn inherited active" title="Show inherited elements">Inherited</button>
+    </span>
+    <div class="btn-group view pull-right" data-toggle="buttons-radio">
+        <button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button>
+        <button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+    </div>
+
+        <ul class="side-nav nav nav-list">
+        <li class="nav-header">
+            <i class="icon-custom icon-method"></i> Methods
+            <ul>
+                                                                                    <li class="method public">
+        <a href="#method_addTransformation" title="addTransformation :: Add a transformation">
+            <span class="description">Add a transformation</span><pre>addTransformation</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_autoRotate" title="autoRotate :: Add an auto rotate transformation">
+            <span class="description">Add an auto rotate transformation</span><pre>autoRotate</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_border" title="border :: Add a border transformation">
+            <span class="description">Add a border transformation</span><pre>border</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_canvas" title="canvas :: Add a canvas transformation">
+            <span class="description">Add a canvas transformation</span><pre>canvas</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_compress" title="compress :: Add a compress transformation">
+            <span class="description">Add a compress transformation</span><pre>compress</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_convert" title="convert :: Specify the image extension">
+            <span class="description">Specify the image extension</span><pre>convert</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_crop" title="crop :: Add a crop transformation">
+            <span class="description">Add a crop transformation</span><pre>crop</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_desaturate" title="desaturate :: Add a desaturate transformation">
+            <span class="description">Add a desaturate transformation</span><pre>desaturate</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_flipHorizontally" title="flipHorizontally :: Add a flipHorizontally transformation">
+            <span class="description">Add a flipHorizontally transformation</span><pre>flipHorizontally</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_flipVertically" title="flipVertically :: Add a flipVertically transformation">
+            <span class="description">Add a flipVertically transformation</span><pre>flipVertically</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_maxSize" title="maxSize :: Add a maxSize transformation">
+            <span class="description">Add a maxSize transformation</span><pre>maxSize</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_progressive" title="progressive :: Add a progressive transformation">
+            <span class="description">Add a progressive transformation</span><pre>progressive</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_resize" title="resize :: Add a resize transformation">
+            <span class="description">Add a resize transformation</span><pre>resize</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_rotate" title="rotate :: Add a rotate transformation">
+            <span class="description">Add a rotate transformation</span><pre>rotate</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_sepia" title="sepia :: Add a sepia transformation">
+            <span class="description">Add a sepia transformation</span><pre>sepia</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_strip" title="strip :: Add a strip transformation">
+            <span class="description">Add a strip transformation</span><pre>strip</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_thumbnail" title="thumbnail :: Add a thumbnail transformation">
+            <span class="description">Add a thumbnail transformation</span><pre>thumbnail</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_transpose" title="transpose :: Add a transpose transformation">
+            <span class="description">Add a transpose transformation</span><pre>transpose</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_transverse" title="transverse :: Add a transverse transformation">
+            <span class="description">Add a transverse transformation</span><pre>transverse</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_watermark" title="watermark :: Add a watermark transformation">
+            <span class="description">Add a watermark transformation</span><pre>watermark</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_gif" title="gif :: Convert to &#039;gif&#039;">
+            <span class="description">Convert to &#039;gif&#039;</span><pre>gif</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_jpg" title="jpg :: Convert to &#039;jpg&#039;">
+            <span class="description">Convert to &#039;jpg&#039;</span><pre>jpg</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_png" title="png :: Convert to &#039;png&#039;">
+            <span class="description">Convert to &#039;png&#039;</span><pre>png</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method___toString" title="__toString :: Convert the URL to a string">
+            <span class="description">Convert the URL to a string</span><pre>__toString</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_reset" title="reset :: Reset the URL">
+            <span class="description">Reset the URL</span><pre>reset</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_factory" title="factory :: Factory method">
+            <span class="description">Factory method</span><pre>factory</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
+        <a href="#method_setPrivateKey" title="setPrivateKey :: Set the private key">
+            <span class="description">Set the private key</span><pre>setPrivateKey</pre>
+        </a>
+    </li>
+
+                                                </ul>
+        </li>
+        <li class="nav-header protected">» Protected
+            <ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </ul>
+        </li>
+        <li class="nav-header private">» Private
+            <ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </ul>
+        </li>
+        <li class="nav-header">
+            <i class="icon-custom icon-constant"></i> Constants
+            <ul>
+                            </ul>
+        </li>
+    </ul>
+
+
+        </div>
+
+        <div class="span8">
+            <div class="element class">
+                <h1>ImageUrl</h1>
+                <small style="display: block; text-align: right">
+                                            Extends <a href="../classes/ImboClient.Http.Url.html">\ImboClient\Http\Url</a>
+                                                        </small>
+                <p class="short_description">Image URL</p>
+                <div class="details">
+                    <div class="long_description">
+                        
+
+                    </div>
+                    <table class="table table-bordered">
+                                                                                    <tr>
+                                    <th>
+                                        package
+                                                                            </th>
+                                    <td>
+                                                                                <p>Client\Urls</p>
+
+                                    </td>
+                                </tr>
+                                                                                                                <tr>
+                                    <th>
+                                        author
+                                                                            </th>
+                                    <td>
+                                                                                <p>Christer Edvartsen <a href="&#x6d;&#x61;&#105;&#108;&#x74;&#x6f;&#58;&#99;o&#x67;&#x6f;&#64;&#115;&#x74;&#x61;&#114;&#122;i&#x6e;&#x67;&#101;&#114;&#x2e;&#x6e;&#101;&#116;">&#99;o&#x67;&#x6f;&#64;&#115;&#x74;&#x61;&#114;&#122;i&#x6e;&#x67;&#101;&#114;&#x2e;&#x6e;&#101;&#116;</a></p>
+
+                                    </td>
+                                </tr>
+                                                                        </table>
+
+                    <h3><i class="icon-custom icon-method"></i> Methods</h3>
+                                                                <a id="method_addTransformation"></a>
+                        <div class="element clickable method public method_addTransformation" data-toggle="collapse" data-target=".method_addTransformation .collapse">
+                            <h2>Add a transformation</h2>
+                            <pre>addTransformation(string $transformation) : self</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description">
+</div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$transformation</h4>
+                                                <code>string</code><p><p>A transformation</p>
+</p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>self</code><p>
+</p>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <a id="method_autoRotate"></a>
+                        <div class="element clickable method public method_autoRotate" data-toggle="collapse" data-target=".method_autoRotate .collapse">
+                            <h2>Add an auto rotate transformation</h2>
+                            <pre>autoRotate() : self</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description">
+</div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>self</code><p>
+</p>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <a id="method_border"></a>
+                        <div class="element clickable method public method_border" data-toggle="collapse" data-target=".method_border .collapse">
+                            <h2>Add a border transformation</h2>
+                            <pre>border(string $color = &#039;000000&#039;, int $width = 1, int $height = 1, string $mode = &#039;outbound&#039;) : self</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description">
+</div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$color</h4>
+                                                <code>string</code><p><p>Color of the border</p>
+</p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$width</h4>
+                                                <code>int</code><p><p>Width of the left and right sides of the border</p>
+</p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$height</h4>
+                                                <code>int</code><p><p>Height of the top and bottom sides of the border</p>
+</p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$mode</h4>
+                                                <code>string</code><p><p>The mode of the border, "inline" or "outbound"</p>
+</p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>self</code><p>
+</p>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <a id="method_canvas"></a>
+                        <div class="element clickable method public method_canvas" data-toggle="collapse" data-target=".method_canvas .collapse">
+                            <h2>Add a canvas transformation</h2>
+                            <pre>canvas(int $width, int $height, string $mode = null, int $x = null, int $y = null, string $bg = null) : self</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description">
+</div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    throws
+                                                </th>
+                                                <td>
+                                                                                                                                                                    
+
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$width</h4>
+                                                <code>int</code><p><p>Width of the canvas</p>
+</p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$height</h4>
+                                                <code>int</code><p><p>Height of the canvas</p>
+</p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$mode</h4>
+                                                <code>string</code><p><p>The placement mode, "free", "center", "center-x" or "center-y"</p>
+</p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$x</h4>
+                                                <code>int</code><p><p>X coordinate of the placement of the upper left corner of the existing image</p>
+</p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$y</h4>
+                                                <code>int</code><p><p>Y coordinate of the placement of the upper left corner of the existing image</p>
+</p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$bg</h4>
+                                                <code>string</code><p><p>Background color of the canvas</p>
+</p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>self</code><p>
+</p>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <a id="method_compress"></a>
+                        <div class="element clickable method public method_compress" data-toggle="collapse" data-target=".method_compress .collapse">
+                            <h2>Add a compress transformation</h2>
+                            <pre>compress(int $level = 75) : self</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description">
+</div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$level</h4>
+                                                <code>int</code><p><p>A value between 0 and 100 where 100 is the best</p>
+</p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>self</code><p>
+</p>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <a id="method_convert"></a>
+                        <div class="element clickable method public method_convert" data-toggle="collapse" data-target=".method_convert .collapse">
+                            <h2>Specify the image extension</h2>
+                            <pre>convert(string $type) : self</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description">
+</div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$type</h4>
+                                                <code>string</code><p><p>The type to convert to, "png", "jpg" or "gif"</p>
+</p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>self</code><p>
+</p>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <a id="method_crop"></a>
+                        <div class="element clickable method public method_crop" data-toggle="collapse" data-target=".method_crop .collapse">
+                            <h2>Add a crop transformation</h2>
+                            <pre>crop(int $x, int $y, int $width, int $height) : self</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description">
+</div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$x</h4>
+                                                <code>int</code><p><p>X coordinate of the top left corner of the crop</p>
+</p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$y</h4>
+                                                <code>int</code><p><p>Y coordinate of the top left corner of the crop</p>
+</p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$width</h4>
+                                                <code>int</code><p><p>Width of the crop</p>
+</p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$height</h4>
+                                                <code>int</code><p><p>Height of the crop</p>
+</p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>self</code><p>
+</p>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <a id="method_desaturate"></a>
+                        <div class="element clickable method public method_desaturate" data-toggle="collapse" data-target=".method_desaturate .collapse">
+                            <h2>Add a desaturate transformation</h2>
+                            <pre>desaturate() : self</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description">
+</div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>self</code><p>
+</p>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <a id="method_flipHorizontally"></a>
+                        <div class="element clickable method public method_flipHorizontally" data-toggle="collapse" data-target=".method_flipHorizontally .collapse">
+                            <h2>Add a flipHorizontally transformation</h2>
+                            <pre>flipHorizontally() : self</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description">
+</div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>self</code><p>
+</p>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <a id="method_flipVertically"></a>
+                        <div class="element clickable method public method_flipVertically" data-toggle="collapse" data-target=".method_flipVertically .collapse">
+                            <h2>Add a flipVertically transformation</h2>
+                            <pre>flipVertically() : self</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description">
+</div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>self</code><p>
+</p>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <a id="method_maxSize"></a>
+                        <div class="element clickable method public method_maxSize" data-toggle="collapse" data-target=".method_maxSize .collapse">
+                            <h2>Add a maxSize transformation</h2>
+                            <pre>maxSize(int $maxWidth = null, int $maxHeight = null) : self</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description">
+</div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    throws
+                                                </th>
+                                                <td>
+                                                                                                                                                                    
+
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$maxWidth</h4>
+                                                <code>int</code><p><p>Max width of the resized image</p>
+</p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$maxHeight</h4>
+                                                <code>int</code><p><p>Max height of the resized image</p>
+</p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>self</code><p>
+</p>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <a id="method_progressive"></a>
+                        <div class="element clickable method public method_progressive" data-toggle="collapse" data-target=".method_progressive .collapse">
+                            <h2>Add a progressive transformation</h2>
+                            <pre>progressive() : self</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description">
+</div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>self</code><p>
+</p>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <a id="method_resize"></a>
+                        <div class="element clickable method public method_resize" data-toggle="collapse" data-target=".method_resize .collapse">
+                            <h2>Add a resize transformation</h2>
+                            <pre>resize(int $width = null, int $height = null) : self</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description">
+</div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    throws
+                                                </th>
+                                                <td>
+                                                                                                                                                                    
+
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$width</h4>
+                                                <code>int</code><p><p>Width of the resized image</p>
+</p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$height</h4>
+                                                <code>int</code><p><p>Height of the resized image</p>
+</p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>self</code><p>
+</p>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <a id="method_rotate"></a>
+                        <div class="element clickable method public method_rotate" data-toggle="collapse" data-target=".method_rotate .collapse">
+                            <h2>Add a rotate transformation</h2>
+                            <pre>rotate(float $angle, string $bg = &#039;000000&#039;) : self</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description">
+</div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    throws
+                                                </th>
+                                                <td>
+                                                                                                                                                                    
+
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$angle</h4>
+                                                <code>float</code><p><p>The angle to rotate</p>
+</p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$bg</h4>
+                                                <code>string</code><p><p>Background color of the rotated image</p>
+</p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>self</code><p>
+</p>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <a id="method_sepia"></a>
+                        <div class="element clickable method public method_sepia" data-toggle="collapse" data-target=".method_sepia .collapse">
+                            <h2>Add a sepia transformation</h2>
+                            <pre>sepia(int $threshold = 80) : self</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description">
+</div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$threshold</h4>
+                                                <code>int</code><p><p>Measure of the extent of sepia toning (ranges from 0 to QuantumRange)</p>
+</p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>self</code><p>
+</p>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <a id="method_strip"></a>
+                        <div class="element clickable method public method_strip" data-toggle="collapse" data-target=".method_strip .collapse">
+                            <h2>Add a strip transformation</h2>
+                            <pre>strip() : self</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description">
+</div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>self</code><p>
+</p>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <a id="method_thumbnail"></a>
+                        <div class="element clickable method public method_thumbnail" data-toggle="collapse" data-target=".method_thumbnail .collapse">
+                            <h2>Add a thumbnail transformation</h2>
+                            <pre>thumbnail(int $width = 50, int $height = 50, string $fit = &#039;outbound&#039;) : self</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description">
+</div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$width</h4>
+                                                <code>int</code><p><p>Width of the thumbnail</p>
+</p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$height</h4>
+                                                <code>int</code><p><p>Height of the thumbnail</p>
+</p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$fit</h4>
+                                                <code>string</code><p><p>Fit type. 'outbound' or 'inset'</p>
+</p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>self</code><p>
+</p>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <a id="method_transpose"></a>
+                        <div class="element clickable method public method_transpose" data-toggle="collapse" data-target=".method_transpose .collapse">
+                            <h2>Add a transpose transformation</h2>
+                            <pre>transpose() : self</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description">
+</div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>self</code><p>
+</p>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <a id="method_transverse"></a>
+                        <div class="element clickable method public method_transverse" data-toggle="collapse" data-target=".method_transverse .collapse">
+                            <h2>Add a transverse transformation</h2>
+                            <pre>transverse() : self</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description">
+</div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>self</code><p>
+</p>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <a id="method_watermark"></a>
+                        <div class="element clickable method public method_watermark" data-toggle="collapse" data-target=".method_watermark .collapse">
+                            <h2>Add a watermark transformation</h2>
+                            <pre>watermark(string $img = null, int $width = null, int $height = null, string $position = &#039;top-left&#039;, int $x, int $y) : self</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description">
+</div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$img</h4>
+                                                <code>string</code><p><p>The identifier of the image to be used as a watermark. Can be omitted if
+                   the server is configured with a default watermark.</p>
+</p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$width</h4>
+                                                <code>int</code><p><p>The width of the watermark</p>
+</p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$height</h4>
+                                                <code>int</code><p><p>The height of the watermark</p>
+</p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$position</h4>
+                                                <code>string</code><p><p>The position of the watermark on the original image, 'top-left',
+                        'top-right', 'bottom-left', 'bottom-right' or 'center'. Defaults to
+                        'top-left'.</p>
+</p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$x</h4>
+                                                <code>int</code><p><p>Offset in the X-axis relative to the $position parameter. Defaults to 0</p>
+</p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$y</h4>
+                                                <code>int</code><p><p>Offset in the Y-axis relative to the $position parameter. Defaults to 0</p>
+</p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>self</code><p>
+</p>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <a id="method_gif"></a>
+                        <div class="element clickable method public method_gif" data-toggle="collapse" data-target=".method_gif .collapse">
+                            <h2>Convert to &#039;gif&#039;</h2>
+                            <pre>gif() : self</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description">
+</div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>self</code><p>
+</p>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <a id="method_jpg"></a>
+                        <div class="element clickable method public method_jpg" data-toggle="collapse" data-target=".method_jpg .collapse">
+                            <h2>Convert to &#039;jpg&#039;</h2>
+                            <pre>jpg() : self</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description">
+</div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>self</code><p>
+</p>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <a id="method_png"></a>
+                        <div class="element clickable method public method_png" data-toggle="collapse" data-target=".method_png .collapse">
+                            <h2>Convert to &#039;png&#039;</h2>
+                            <pre>png() : self</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description">
+</div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>self</code><p>
+</p>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <a id="method___toString"></a>
+                        <div class="element clickable method public method___toString" data-toggle="collapse" data-target=".method___toString .collapse">
+                            <h2>Convert the URL to a string</h2>
+                            <pre>__toString() : string</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description">
+</div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>string</code><p>
+</p>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <a id="method_reset"></a>
+                        <div class="element clickable method public method_reset" data-toggle="collapse" data-target=".method_reset .collapse">
+                            <h2>Reset the URL</h2>
+                            <pre>reset() : self</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"><p>Effectively removes added transformations and an optional extension.</p>
+</div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>self</code><p>
+</p>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <a id="method_factory"></a>
+                        <div class="element clickable method public method_factory inherited" data-toggle="collapse" data-target=".method_factory .collapse">
+                            <h2>Factory method</h2>
+                            <pre>factory(string $url, string $privateKey = null) : \ImboClient\Http\Url</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                <span class="label">static</span>                                                                                                                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description">
+</div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$url</h4>
+                                                <code>string</code><p><p>URL as a string</p>
+</p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$privateKey</h4>
+                                                <code>string</code><p><p>Optional private key</p>
+</p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code><a href="../classes/ImboClient.Http.Url.html">\ImboClient\Http\Url</a></code><p>
+</p>
+                                                                    </div>
+                            </div>
+                        </div>
+                                            <a id="method_setPrivateKey"></a>
+                        <div class="element clickable method public method_setPrivateKey inherited" data-toggle="collapse" data-target=".method_setPrivateKey .collapse">
+                            <h2>Set the private key</h2>
+                            <pre>setPrivateKey(string $privateKey) </pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description">
+</div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$privateKey</h4>
+                                                <code>string</code><p><p>The private key to use when appending access tokens to the URL's</p>
+</p>
+                                            </div>
+                                                                            
+                                                                    </div>
+                            </div>
+                        </div>
+                    
+                    
+                                                                <h3><i class="icon-custom icon-property"></i> Properties</h3>
+                                                    <a id="property_transformations"> </a>
+                            <div class="element clickable property private property_transformations" data-toggle="collapse" data-target=".property_transformations .collapse">
+                                <h2>Transformations</h2>
+                                <pre>transformations</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description">
+</div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+
+                                                                                                            </td>
+                                                </tr>
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <a id="property_extension"> </a>
+                            <div class="element clickable property private property_extension" data-toggle="collapse" data-target=".property_extension .collapse">
+                                <h2>Image extension</h2>
+                                <pre>extension</pre>
+                                <div class="labels">
+                                                                                                        </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description">
+</div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+
+                                                                                                            </td>
+                                                </tr>
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                                    <a id="property_privateKey"> </a>
+                            <div class="element clickable property private property_privateKey inherited" data-toggle="collapse" data-target=".property_privateKey .collapse">
+                                <h2>Private key of a user</h2>
+                                <pre>privateKey</pre>
+                                <div class="labels">
+                                    <span class="label">inherited</span>                                                                    </div>
+                                <div class="row collapse">
+                                    <div class="detail-description">
+                                        <div class="long_description">
+</div>
+
+                                        <table class="table">
+                                                                                            <tr>
+                                                    <th>
+                                                        var
+                                                    </th>
+                                                    <td>
+                                                                                                                    
+
+                                                                                                            </td>
+                                                </tr>
+                                                                                            <tr>
+                                                    <th>
+                                                        
+                                                    </th>
+                                                    <td>
+                                                                                                            </td>
+                                                </tr>
+                                                                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                                                            </div>
+            </div>
+            <a id="\ImboClient\Http\ImageUrl"></a>
+            <ul class="breadcrumb">
+                <li><a href="../index.html"><i class="icon-custom icon-class"></i></a></li>
+                    
+    
+    <li><span class="divider">\</span><a href="../namespaces/ImboClient.Http.html">Http</a></li>
+
+                <li class="active"><span class="divider">\</span><a href="../classes/ImboClient.Http.ImageUrl.html">ImageUrl</a></li>
+            </ul>
+        </div>
+    </div>
+
+    </div>
+
+        <footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
+            <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
+            generated on Thu, 30 Jan 2014 12:09:24 +0100.<br/>
+    </footer>
+    </body>
+</html>
