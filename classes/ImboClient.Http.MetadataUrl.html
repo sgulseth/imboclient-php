@@ -1,351 +1,2028 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
     <meta charset="utf-8"/>
-    <title>    ImboClient API documentation &raquo; \ImboClient\Http\MetadataUrl
-</title>
+    <title>ImboClient API documentation</title>
     <meta name="author" content=""/>
     <meta name="description" content=""/>
-            <!--[if lt IE 9]>
-        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
-        <![endif]-->
-        <script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script>
-        <script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
-        <script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script>
-        <script src="../js/bootstrap.js" type="text/javascript"></script>
-        <script src="../js/template.js" type="text/javascript"></script>
-        <script src="../js/prettify/prettify.min.js" type="text/javascript"></script>
+
+    <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/prism.css" rel="stylesheet" media="all"/>
+    <link href="../css/template.css" rel="stylesheet" media="all"/>
     
-            <link href="../css/template.css" rel="stylesheet" media="all"/>
-    
-            <link rel="shortcut icon" href="../img/favicon.ico"/>
-        <link rel="apple-touch-icon" href="../img/apple-touch-icon.png"/>
-        <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png"/>
-        <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png"/>
-    </head>
+    <!--[if lt IE 9]>
+    <script src="https://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+    <![endif]-->
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+    <script src="../js/jquery.smooth-scroll.js"></script>
+    <script src="../js/prism.min.js"></script>
+    <!-- TODO: Add http://jscrollpane.kelvinluck.com/ to style the scrollbars for browsers not using webkit-->
+    <script type="text/javascript">
+    function loadExternalCodeSnippets() {
+        Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach(function (pre) {
+            var src = pre.getAttribute('data-src');
+            var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
+            var language = 'php';
+
+            var code = document.createElement('code');
+            code.className = 'language-' + language;
+
+            pre.textContent = '';
+
+            code.textContent = 'Loading…';
+
+            pre.appendChild(code);
+
+            var xhr = new XMLHttpRequest();
+
+            xhr.open('GET', src, true);
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4) {
+
+                    if (xhr.status < 400 && xhr.responseText) {
+                        code.textContent = xhr.responseText;
+
+                        Prism.highlightElement(code);
+                    }
+                    else if (xhr.status >= 400) {
+                        code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
+                    }
+                    else {
+                        code.textContent = '✖ Error: File does not exist or is empty';
+                    }
+                }
+            };
+
+            xhr.send(null);
+        });
+    }
+
+    $(document).ready(function(){
+        loadExternalCodeSnippets();
+    });
+    $('#source-view').on('shown', function () {
+        loadExternalCodeSnippets();
+    })
+</script>
+
+    <link rel="shortcut icon" href="../images/favicon.ico"/>
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+</head>
 <body>
 
-        <div class="navbar navbar-fixed-top">
-        <div class="navbar-inner">
-            <div class="container">
-                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                    <span class="icon-bar"></span> <span class="icon-bar"></span>
-                    <span class="icon-bar"></span> </a>
-                <a class="brand" href="../index.html">ImboClient API documentation</a>
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <i class="icon-ellipsis-vertical"></i>
+            </a>
+            <a class="brand" href="../index.html">ImboClient API documentation</a>
 
-                <div class="nav-collapse">
-                    <ul class="nav">
-                        <li class="dropdown">
-                            <a href="#api" class="dropdown-toggle" data-toggle="dropdown">
-                                API Documentation <b class="caret"></b>
-                            </a>
-                            <ul class="dropdown-menu">
-                                                                    <li><a>Namespaces</a></li>
-                                                                        <li><a href="../namespaces/ImboClient.html">ImboClient</a></li>
-                                                                                                                                </ul>
-                        </li>
-                        <li class="dropdown" id="charts-menu">
-                            <a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
-                                Charts <b class="caret"></b>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="../graph_class.html">
-                                        <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="dropdown" id="reports-menu">
-                            <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
-                                Reports <b class="caret"></b>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="../errors.html">
-                                        <i class="icon-list-alt"></i>&#160;Errors
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="../markers.html">
-                                        <i class="icon-list-alt"></i>&#160;Markers
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="../deprecated.html">
-                                        <i class="icon-list-alt"></i>&#160;Deprecated
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
+            <div class="nav-collapse">
+                <ul class="nav pull-right">
+                                        <li class="dropdown">
+                        <a href="../index.html" class="dropdown-toggle" data-toggle="dropdown">
+                            API Documentation <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                                                        <li><a href="../namespaces/ImboClient.html">\ImboClient</a></li>
+                                                    </ul>
+                    </li>
+                                        <li class="dropdown" id="charts-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Charts <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../graphs/class.html">
+                                    <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown" id="reports-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Reports <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../reports/errors.html">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">2</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/markers.html">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <i class="icon-list-alt"></i>&#160;Markers <span class="label label-info pull-right">0</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/deprecated.html">
+                                                                                                            <i class="icon-list-alt"></i>&#160;Deprecated <span class="label label-info pull-right">0</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--<div class="go_to_top">-->
+    <!--<a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>-->
+    <!--</div>-->
+</div>
+
+<div id="___" class="container-fluid">
+        <section class="row-fluid">
+        <div class="span2 sidebar">
+                                <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-530343397"></a>
+                                <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
+            </div>
+            <div id="namespace-530343397" class="accordion-body collapse in">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-316998731"></a>
+                                <a href="../namespaces/ImboClient.html" style="margin-left: 30px; padding-left: 0">ImboClient</a>
+            </div>
+            <div id="namespace-316998731" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-344346353"></a>
+                                <a href="../namespaces/ImboClient.EventSubscriber.html" style="margin-left: 30px; padding-left: 0">EventSubscriber</a>
+            </div>
+            <div id="namespace-344346353" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/ImboClient.EventSubscriber.AccessToken.html">AccessToken</a></li>
+                                                    <li class="class"><a href="../classes/ImboClient.EventSubscriber.Authenticate.html">Authenticate</a></li>
+                                            </ul>
                 </div>
             </div>
         </div>
-        <div class="go_to_top">
-            <a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>
-        </div>
     </div>
-    
-    <div id="___" class="container">
-        <noscript>
-            <div class="alert alert-warning">
-                Javascript is disabled; several features are only available if Javascript is enabled.
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-930218763"></a>
+                                <a href="../namespaces/ImboClient.Http.html" style="margin-left: 30px; padding-left: 0">Http</a>
             </div>
-        </noscript>
+            <div id="namespace-930218763" class="accordion-body collapse ">
+                <div class="accordion-inner">
 
-        
-            <div class="row">
-        <div class="span4">
-                    <span class="btn-group visibility" data-toggle="buttons-checkbox">
-        <button class="btn public active" title="Show public elements">Public</button>
-        <button class="btn protected" title="Show protected elements">Protected</button>
-        <button class="btn private" title="Show private elements">Private</button>
-        <button class="btn inherited active" title="Show inherited elements">Inherited</button>
-    </span>
-    <div class="btn-group view pull-right" data-toggle="buttons-radio">
-        <button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button>
-        <button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/ImboClient.Http.ImagesUrl.html">ImagesUrl</a></li>
+                                                    <li class="class"><a href="../classes/ImboClient.Http.ImageUrl.html">ImageUrl</a></li>
+                                                    <li class="class"><a href="../classes/ImboClient.Http.MetadataUrl.html">MetadataUrl</a></li>
+                                                    <li class="class"><a href="../classes/ImboClient.Http.StatsUrl.html">StatsUrl</a></li>
+                                                    <li class="class"><a href="../classes/ImboClient.Http.StatusUrl.html">StatusUrl</a></li>
+                                                    <li class="class"><a href="../classes/ImboClient.Http.Url.html">Url</a></li>
+                                                    <li class="class"><a href="../classes/ImboClient.Http.UserUrl.html">UserUrl</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
     </div>
 
-        <ul class="side-nav nav nav-list">
-        <li class="nav-header">
-            <i class="icon-custom icon-method"></i> Methods
-            <ul>
-                                                                                    <li class="method public inherited">
-        <a href="#method_factory" title="factory :: Factory method">
-            <span class="description">Factory method</span><pre>factory</pre>
-        </a>
-    </li>
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/ImboClient.ImagesQuery.html">ImagesQuery</a></li>
+                                                    <li class="class"><a href="../classes/ImboClient.ImboClient.html">ImboClient</a></li>
+                                                    <li class="class"><a href="../classes/ImboClient.Version.html">Version</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 
-                                                                                                        <li class="method public inherited">
-        <a href="#method___toString" title="__toString :: Return the URL as a string">
-            <span class="description">Return the URL as a string</span><pre>__toString</pre>
-        </a>
-    </li>
-
-                                                                                                        <li class="method public inherited">
-        <a href="#method_setPrivateKey" title="setPrivateKey :: Set the private key">
-            <span class="description">Set the private key</span><pre>setPrivateKey</pre>
-        </a>
-    </li>
-
-                                                </ul>
-        </li>
-        <li class="nav-header protected">» Protected
-            <ul>
-                                                                                                                                        </ul>
-        </li>
-        <li class="nav-header private">» Private
-            <ul>
-                                                                                                                                        </ul>
-        </li>
-        <li class="nav-header">
-            <i class="icon-custom icon-constant"></i> Constants
-            <ul>
-                            </ul>
-        </li>
-    </ul>
-
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 
         </div>
+    </section>
+    <section class="row-fluid">
+        <div class="span10 offset2">
+            <div class="row-fluid">
+                <div class="span8 content class">
+                    <nav>
+                                                <a href="../namespaces/ImboClient.Http.html">\ImboClient\Http</a> <i class="icon-level-up"></i>
+                                            </nav>
+                    <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal"><i class="icon-code"></i></a>
 
-        <div class="span8">
-            <div class="element class">
-                <h1>MetadataUrl</h1>
-                <small style="display: block; text-align: right">
-                                            Extends <a href="../classes/ImboClient.Http.Url.html">\ImboClient\Http\Url</a>
-                                                        </small>
-                <p class="short_description">Metadata URL</p>
-                <div class="details">
-                    <div class="long_description">
+                    <h1><small>\ImboClient\Http</small>MetadataUrl</h1>
+                    <p><em>Metadata URL</em></p>
+                    
+
+                    <section id="summary">
+                        <h2>Summary</h2>
+                        <section class="row-fluid heading">
+                            <section class="span4">
+                                <a href="#methods">Methods</a>
+                            </section>
+                            <section class="span4">
+                                <a href="#properties">Properties</a>
+                            </section>
+                            <section class="span4">
+                                <a href="#constants">Constants</a>
+                            </section>
+                        </section>
+                        <section class="row-fluid public">
+                            <section class="span4">
+                                                                    <a href="../classes/ImboClient.Http.ImageUrl.html#method_addTransformation" class="">addTransformation()</a><br />
+                                                                    <a href="../classes/ImboClient.Http.ImageUrl.html#method_autoRotate" class="">autoRotate()</a><br />
+                                                                    <a href="../classes/ImboClient.Http.ImageUrl.html#method_border" class="">border()</a><br />
+                                                                    <a href="../classes/ImboClient.Http.ImageUrl.html#method_canvas" class="">canvas()</a><br />
+                                                                    <a href="../classes/ImboClient.Http.ImageUrl.html#method_compress" class="">compress()</a><br />
+                                                                    <a href="../classes/ImboClient.Http.ImageUrl.html#method_convert" class="">convert()</a><br />
+                                                                    <a href="../classes/ImboClient.Http.ImageUrl.html#method_getExtension" class="">getExtension()</a><br />
+                                                                    <a href="../classes/ImboClient.Http.ImageUrl.html#method_getTransformations" class="">getTransformations()</a><br />
+                                                                    <a href="../classes/ImboClient.Http.ImageUrl.html#method_crop" class="">crop()</a><br />
+                                                                    <a href="../classes/ImboClient.Http.ImageUrl.html#method_desaturate" class="">desaturate()</a><br />
+                                                                    <a href="../classes/ImboClient.Http.ImageUrl.html#method_flipHorizontally" class="">flipHorizontally()</a><br />
+                                                                    <a href="../classes/ImboClient.Http.ImageUrl.html#method_flipVertically" class="">flipVertically()</a><br />
+                                                                    <a href="../classes/ImboClient.Http.ImageUrl.html#method_histogram" class="">histogram()</a><br />
+                                                                    <a href="../classes/ImboClient.Http.ImageUrl.html#method_maxSize" class="">maxSize()</a><br />
+                                                                    <a href="../classes/ImboClient.Http.ImageUrl.html#method_modulate" class="">modulate()</a><br />
+                                                                    <a href="../classes/ImboClient.Http.ImageUrl.html#method_progressive" class="">progressive()</a><br />
+                                                                    <a href="../classes/ImboClient.Http.ImageUrl.html#method_resize" class="">resize()</a><br />
+                                                                    <a href="../classes/ImboClient.Http.ImageUrl.html#method_rotate" class="">rotate()</a><br />
+                                                                    <a href="../classes/ImboClient.Http.ImageUrl.html#method_sepia" class="">sepia()</a><br />
+                                                                    <a href="../classes/ImboClient.Http.ImageUrl.html#method_strip" class="">strip()</a><br />
+                                                                    <a href="../classes/ImboClient.Http.ImageUrl.html#method_thumbnail" class="">thumbnail()</a><br />
+                                                                    <a href="../classes/ImboClient.Http.ImageUrl.html#method_transpose" class="">transpose()</a><br />
+                                                                    <a href="../classes/ImboClient.Http.ImageUrl.html#method_transverse" class="">transverse()</a><br />
+                                                                    <a href="../classes/ImboClient.Http.ImageUrl.html#method_watermark" class="">watermark()</a><br />
+                                                                    <a href="../classes/ImboClient.Http.ImageUrl.html#method_gif" class="">gif()</a><br />
+                                                                    <a href="../classes/ImboClient.Http.ImageUrl.html#method_jpg" class="">jpg()</a><br />
+                                                                    <a href="../classes/ImboClient.Http.ImageUrl.html#method_png" class="">png()</a><br />
+                                                                    <a href="../classes/ImboClient.Http.Url.html#method___toString" class="">__toString()</a><br />
+                                                                    <a href="../classes/ImboClient.Http.ImageUrl.html#method_reset" class="">reset()</a><br />
+                                                                    <a href="../classes/ImboClient.Http.ImageUrl.html#method_getImageIdentifier" class="">getImageIdentifier()</a><br />
+                                                                    <a href="../classes/ImboClient.Http.UserUrl.html#method_getPublicKey" class="">getPublicKey()</a><br />
+                                                                    <a href="../classes/ImboClient.Http.Url.html#method_factory" class="">factory()</a><br />
+                                                                    <a href="../classes/ImboClient.Http.Url.html#method_setPrivateKey" class="">setPrivateKey()</a><br />
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No public properties found</em>
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No constants found</em>
+                                                            </section>
+                        </section>
+                        <section class="row-fluid protected">
+                            <section class="span4">
+                                                                    <em>No protected methods found</em>
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No protected properties found</em>
+                                                            </section>
+                            <section class="span4">
+                                <em>N/A</em>
+                            </section>
+                        </section>
+                        <section class="row-fluid private">
+                            <section class="span4">
+                                                                    <em>No private methods found</em>
+                                                            </section>
+                            <section class="span4">
+                                                                    <a href="../classes/ImboClient.Http.ImageUrl.html#property_transformations" class="">$transformations</a><br />
+                                                                    <a href="../classes/ImboClient.Http.ImageUrl.html#property_extension" class="">$extension</a><br />
+                                                                    <a href="../classes/ImboClient.Http.Url.html#property_privateKey" class="">$privateKey</a><br />
+                                                            </section>
+                            <section class="span4">
+                                <em>N/A</em>
+                            </section>
+                        </section>
+                    </section>
+                </div>
+                <aside class="span4 detailsbar">
+                                        
+                    
+                    <dl>
+                        <dt>File</dt>
+                            <dd><a href="../files/Http.MetadataUrl.php.html"><div class="path-wrapper">Http/MetadataUrl.php</div></a></dd>
+                                                <dt>Package</dt>
+                            <dd><div class="namespace-wrapper">\Client\Urls</div></dd>
+                                                <dt>Class hierarchy</dt>
+                            <dd class="hierarchy">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                                        <div class="namespace-wrapper">\Guzzle\Http\Url</div>
+                                                                    
+                                        <div class="namespace-wrapper"><a href="../classes/ImboClient.Http.Url.html">\ImboClient\Http\Url</a></div>
+                                                                    
+                                        <div class="namespace-wrapper"><a href="../classes/ImboClient.Http.UserUrl.html">\ImboClient\Http\UserUrl</a></div>
+                                                                    
+                                        <div class="namespace-wrapper"><a href="../classes/ImboClient.Http.ImagesUrl.html">\ImboClient\Http\ImagesUrl</a></div>
+                                                                    
+                                        <div class="namespace-wrapper"><a href="../classes/ImboClient.Http.ImageUrl.html">\ImboClient\Http\ImageUrl</a></div>
+                                                                                                    <div class="namespace-wrapper">\ImboClient\Http\MetadataUrl</div>
+                            </dd>
+
                         
-
-                    </div>
-                    <table class="table table-bordered">
-                                                                                    <tr>
-                                    <th>
-                                        package
-                                                                            </th>
-                                    <td>
-                                                                                <p>Client\Urls</p>
-
-                                    </td>
-                                </tr>
-                                                                                                                <tr>
-                                    <th>
-                                        author
-                                                                            </th>
-                                    <td>
-                                                                                <p>Christer Edvartsen <a href="&#x6d;&#x61;&#105;&#108;&#x74;&#x6f;&#58;&#99;o&#x67;&#x6f;&#64;&#115;&#x74;&#x61;&#114;&#122;i&#x6e;&#x67;&#101;&#114;&#x2e;&#x6e;&#101;&#116;">&#99;o&#x67;&#x6f;&#64;&#115;&#x74;&#x61;&#114;&#122;i&#x6e;&#x67;&#101;&#114;&#x2e;&#x6e;&#101;&#116;</a></p>
-
-                                    </td>
-                                </tr>
-                                                                        </table>
-
-                    <h3><i class="icon-custom icon-method"></i> Methods</h3>
-                                                                <a id="method_factory"></a>
-                        <div class="element clickable method public method_factory inherited" data-toggle="collapse" data-target=".method_factory .collapse">
-                            <h2>Factory method</h2>
-                            <pre>factory(string $url, string $privateKey = null) : \ImboClient\Http\Url</pre>
-                            <div class="labels">
-                                <span class="label">inherited</span>                                <span class="label">static</span>                                                                                                                            </div>
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description">
-</div>
-
-                                    <table class="table">
-                                                                                    <tr>
-                                                <th>
-                                                    
-                                                </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
-                                                                            </table>
-
-                                                                            <h3>Arguments</h3>
-                                                                                    <div class="subelement argument">
-                                                <h4>$url</h4>
-                                                <code>string</code><p><p>URL as a string</p>
-</p>
-                                            </div>
-                                                                                    <div class="subelement argument">
-                                                <h4>$privateKey</h4>
-                                                <code>string</code><p><p>Optional private key</p>
-</p>
-                                            </div>
-                                                                            
-                                                                            <h3>Response</h3>
-                                        <code><a href="../classes/ImboClient.Http.Url.html">\ImboClient\Http\Url</a></code><p>
-</p>
-                                                                    </div>
-                            </div>
-                        </div>
-                                            <a id="method___toString"></a>
-                        <div class="element clickable method public method___toString inherited" data-toggle="collapse" data-target=".method___toString .collapse">
-                            <h2>Return the URL as a string</h2>
-                            <pre>__toString() : string</pre>
-                            <div class="labels">
-                                <span class="label">inherited</span>                                                                                                                                                            </div>
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description">
-</div>
-
-                                    <table class="table">
-                                                                                    <tr>
-                                                <th>
-                                                    
-                                                </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
-                                                                            </table>
-
-                                    
-                                                                            <h3>Response</h3>
-                                        <code>string</code><p>
-</p>
-                                                                    </div>
-                            </div>
-                        </div>
-                                            <a id="method_setPrivateKey"></a>
-                        <div class="element clickable method public method_setPrivateKey inherited" data-toggle="collapse" data-target=".method_setPrivateKey .collapse">
-                            <h2>Set the private key</h2>
-                            <pre>setPrivateKey(string $privateKey) </pre>
-                            <div class="labels">
-                                <span class="label">inherited</span>                                                                                                                                                            </div>
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description">
-</div>
-
-                                    <table class="table">
-                                                                                    <tr>
-                                                <th>
-                                                    
-                                                </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
-                                                                                    <tr>
-                                                <th>
-                                                    
-                                                </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
-                                                                            </table>
-
-                                                                            <h3>Arguments</h3>
-                                                                                    <div class="subelement argument">
-                                                <h4>$privateKey</h4>
-                                                <code>string</code><p><p>The private key to use when appending access tokens to the URL's</p>
-</p>
-                                            </div>
-                                                                            
-                                                                    </div>
-                            </div>
-                        </div>
-                    
-                    
-                                                                <h3><i class="icon-custom icon-property"></i> Properties</h3>
-                                                    <a id="property_privateKey"> </a>
-                            <div class="element clickable property private property_privateKey inherited" data-toggle="collapse" data-target=".property_privateKey .collapse">
-                                <h2>Private key of a user</h2>
-                                <pre>privateKey</pre>
-                                <div class="labels">
-                                    <span class="label">inherited</span>                                                                    </div>
-                                <div class="row collapse">
-                                    <div class="detail-description">
-                                        <div class="long_description">
-</div>
-
-                                        <table class="table">
-                                                                                            <tr>
-                                                    <th>
-                                                        var
-                                                    </th>
-                                                    <td>
-                                                                                                                    
-
-                                                                                                            </td>
-                                                </tr>
-                                                                                            <tr>
-                                                    <th>
-                                                        
-                                                    </th>
-                                                    <td>
-                                                                                                            </td>
-                                                </tr>
-                                                                                    </table>
-                                    </div>
-                                </div>
-                            </div>
-                                                            </div>
+                        
+                        
+                        
+                                                                        </dl>
+                    <h2>Tags</h2>
+                    <table class="table table-condensed">
+                                            <tr>
+                            <th>
+                                author
+                            </th>
+                            <td>
+                                                                    <p>Christer Edvartsen <a href="mailto:cogo@starzinger.net">cogo@starzinger.net</a></p>
+                                                            </td>
+                        </tr>
+                                            <tr>
+                            <th>
+                                todo
+                            </th>
+                            <td>
+                                                            </td>
+                        </tr>
+                                        </table>
+                </aside>
             </div>
-            <a id="\ImboClient\Http\MetadataUrl"></a>
-            <ul class="breadcrumb">
-                <li><a href="../index.html"><i class="icon-custom icon-class"></i></a></li>
-                    
-    
-    <li><span class="divider">\</span><a href="../namespaces/ImboClient.Http.html">Http</a></li>
 
-                <li class="active"><span class="divider">\</span><a href="../classes/ImboClient.Http.MetadataUrl.html">MetadataUrl</a></li>
-            </ul>
+                        
+                                    <a id="properties" name="properties"></a>
+            <div class="row-fluid">
+                <div class="span8 content class">
+                    <h2>Properties</h2>
+                </div>
+                <aside class="span4 detailsbar"></aside>
+            </div>
+
+                                                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_transformations" name="property_transformations" class="anchor"></a>
+            <article class="property">
+                <h3 class="private ">$transformations</h3>
+                <pre class="signature">$transformations : string[]</pre>
+                <p><em>Transformations</em></p>
+                
+
+                                <h4>Type</h4>
+                string[]
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/ImboClient.Http.ImageUrl.html"><div class="path-wrapper">\ImboClient\Http\ImageUrl</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            todo
+                        </th>
+                        <td>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_extension" name="property_extension" class="anchor"></a>
+            <article class="property">
+                <h3 class="private ">$extension</h3>
+                <pre class="signature">$extension : string</pre>
+                <p><em>Image extension</em></p>
+                
+
+                                <h4>Type</h4>
+                string
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/ImboClient.Http.ImageUrl.html"><div class="path-wrapper">\ImboClient\Http\ImageUrl</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            todo
+                        </th>
+                        <td>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="property_privateKey" name="property_privateKey" class="anchor"></a>
+            <article class="property">
+                <h3 class="private ">$privateKey</h3>
+                <pre class="signature">$privateKey : string</pre>
+                <p><em>Private key of a user</em></p>
+                
+
+                                <h4>Type</h4>
+                string
+                                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/ImboClient.Http.Url.html"><div class="path-wrapper">\ImboClient\Http\Url</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            internal
+                        </th>
+                        <td>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            todo
+                        </th>
+                        <td>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                            
+                                    <a id="methods" name="methods"></a>
+            <div class="row-fluid">
+                <div class="span8 content class"><h2>Methods</h2></div>
+                <aside class="span4 detailsbar"></aside>
+            </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_addTransformation" name="method_addTransformation" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">addTransformation()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">addTransformation(string <span class="argument">$transformation</span>) : self</pre>
+                <p><em>Add a transformation</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$transformation </td>
+                                <td><p>A transformation</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    self
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/ImboClient.Http.ImageUrl.html"><div class="path-wrapper">\ImboClient\Http\ImageUrl</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            todo
+                        </th>
+                        <td>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_autoRotate" name="method_autoRotate" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">autoRotate()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">autoRotate() : self</pre>
+                <p><em>Add an auto rotate transformation</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    self
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/ImboClient.Http.ImageUrl.html"><div class="path-wrapper">\ImboClient\Http\ImageUrl</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            todo
+                        </th>
+                        <td>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_border" name="method_border" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">border()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">border(string <span class="argument">$color</span>, int <span class="argument">$width</span>, int <span class="argument">$height</span>, string <span class="argument">$mode</span>) : self</pre>
+                <p><em>Add a border transformation</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$color </td>
+                                <td><p>Color of the border</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>int</td>
+                                <td>$width </td>
+                                <td><p>Width of the left and right sides of the border</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>int</td>
+                                <td>$height </td>
+                                <td><p>Height of the top and bottom sides of the border</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>string</td>
+                                <td>$mode </td>
+                                <td><p>The mode of the border, "inline" or "outbound"</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    self
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/ImboClient.Http.ImageUrl.html"><div class="path-wrapper">\ImboClient\Http\ImageUrl</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            todo
+                        </th>
+                        <td>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_canvas" name="method_canvas" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">canvas()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">canvas(int <span class="argument">$width</span>, int <span class="argument">$height</span>, string <span class="argument">$mode</span>, int <span class="argument">$x</span>, int <span class="argument">$y</span>, string <span class="argument">$bg</span>) : self</pre>
+                <p><em>Add a canvas transformation</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>int</td>
+                                <td>$width </td>
+                                <td><p>Width of the canvas</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>int</td>
+                                <td>$height </td>
+                                <td><p>Height of the canvas</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>string</td>
+                                <td>$mode </td>
+                                <td><p>The placement mode, "free", "center", "center-x" or "center-y"</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>int</td>
+                                <td>$x </td>
+                                <td><p>X coordinate of the placement of the upper left corner of the existing image</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>int</td>
+                                <td>$y </td>
+                                <td><p>Y coordinate of the placement of the upper left corner of the existing image</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>string</td>
+                                <td>$bg </td>
+                                <td><p>Background color of the canvas</p></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\InvalidArgumentException</dt>
+                            <dd></dd>
+                                                                    </dl>
+                
+                                    <h4>Returns</h4>
+                    self
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/ImboClient.Http.ImageUrl.html"><div class="path-wrapper">\ImboClient\Http\ImageUrl</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            todo
+                        </th>
+                        <td>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_compress" name="method_compress" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">compress()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">compress(int <span class="argument">$level</span>) : self</pre>
+                <p><em>Add a compress transformation</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>int</td>
+                                <td>$level </td>
+                                <td><p>A value between 0 and 100 where 100 is the best</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    self
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/ImboClient.Http.ImageUrl.html"><div class="path-wrapper">\ImboClient\Http\ImageUrl</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            todo
+                        </th>
+                        <td>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_convert" name="method_convert" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">convert()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">convert(string <span class="argument">$type</span>) : self</pre>
+                <p><em>Specify the image extension</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$type </td>
+                                <td><p>The type to convert to, "png", "jpg" or "gif"</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    self
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/ImboClient.Http.ImageUrl.html"><div class="path-wrapper">\ImboClient\Http\ImageUrl</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            todo
+                        </th>
+                        <td>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getExtension" name="method_getExtension" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getExtension()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getExtension() : string|null</pre>
+                <p><em>Get the extension of the image</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    string|null
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/ImboClient.Http.ImageUrl.html"><div class="path-wrapper">\ImboClient\Http\ImageUrl</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            todo
+                        </th>
+                        <td>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getTransformations" name="method_getTransformations" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getTransformations()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getTransformations() : array</pre>
+                <p><em>Get the added transformations</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    array
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/ImboClient.Http.ImageUrl.html"><div class="path-wrapper">\ImboClient\Http\ImageUrl</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            todo
+                        </th>
+                        <td>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_crop" name="method_crop" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">crop()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">crop(int <span class="argument">$x</span>, int <span class="argument">$y</span>, int <span class="argument">$width</span>, int <span class="argument">$height</span>, string <span class="argument">$mode</span>) : self</pre>
+                <p><em>Add a crop transformation</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>int</td>
+                                <td>$x </td>
+                                <td><p>X coordinate of the top left corner of the crop</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>int</td>
+                                <td>$y </td>
+                                <td><p>Y coordinate of the top left corner of the crop</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>int</td>
+                                <td>$width </td>
+                                <td><p>Width of the crop</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>int</td>
+                                <td>$height </td>
+                                <td><p>Height of the crop</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>string</td>
+                                <td>$mode </td>
+                                <td><p>The crop mode. Available in Imbo >= 1.1.0.</p></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\InvalidArgumentException</dt>
+                            <dd></dd>
+                                                                    </dl>
+                
+                                    <h4>Returns</h4>
+                    self
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/ImboClient.Http.ImageUrl.html"><div class="path-wrapper">\ImboClient\Http\ImageUrl</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            todo
+                        </th>
+                        <td>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_desaturate" name="method_desaturate" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">desaturate()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">desaturate() : self</pre>
+                <p><em>Add a desaturate transformation</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    self
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/ImboClient.Http.ImageUrl.html"><div class="path-wrapper">\ImboClient\Http\ImageUrl</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            todo
+                        </th>
+                        <td>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_flipHorizontally" name="method_flipHorizontally" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">flipHorizontally()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">flipHorizontally() : self</pre>
+                <p><em>Add a flipHorizontally transformation</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    self
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/ImboClient.Http.ImageUrl.html"><div class="path-wrapper">\ImboClient\Http\ImageUrl</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            todo
+                        </th>
+                        <td>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_flipVertically" name="method_flipVertically" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">flipVertically()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">flipVertically() : self</pre>
+                <p><em>Add a flipVertically transformation</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    self
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/ImboClient.Http.ImageUrl.html"><div class="path-wrapper">\ImboClient\Http\ImageUrl</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            todo
+                        </th>
+                        <td>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_histogram" name="method_histogram" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">histogram()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">histogram(int <span class="argument">$scale</span>, float <span class="argument">$ratio</span>, string <span class="argument">$red</span>, string <span class="argument">$green</span>, string <span class="argument">$blue</span>) : self</pre>
+                <p><em>Add a histogram transformation</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>int</td>
+                                <td>$scale </td>
+                                <td><p>The amount to scale the histogram</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>float</td>
+                                <td>$ratio </td>
+                                <td><p>The ratio to use when calculating the height of the image</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>string</td>
+                                <td>$red </td>
+                                <td><p>The color to use when drawing the graph for the red channel</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>string</td>
+                                <td>$green </td>
+                                <td><p>The color to use when drawing the graph for the green channel</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>string</td>
+                                <td>$blue </td>
+                                <td><p>The color to use when drawing the graph for the blue channel</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    self
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/ImboClient.Http.ImageUrl.html"><div class="path-wrapper">\ImboClient\Http\ImageUrl</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            todo
+                        </th>
+                        <td>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_maxSize" name="method_maxSize" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">maxSize()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">maxSize(int <span class="argument">$maxWidth</span>, int <span class="argument">$maxHeight</span>) : self</pre>
+                <p><em>Add a maxSize transformation</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>int</td>
+                                <td>$maxWidth </td>
+                                <td><p>Max width of the resized image</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>int</td>
+                                <td>$maxHeight </td>
+                                <td><p>Max height of the resized image</p></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\InvalidArgumentException</dt>
+                            <dd></dd>
+                                                                    </dl>
+                
+                                    <h4>Returns</h4>
+                    self
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/ImboClient.Http.ImageUrl.html"><div class="path-wrapper">\ImboClient\Http\ImageUrl</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            todo
+                        </th>
+                        <td>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_modulate" name="method_modulate" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">modulate()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">modulate(int <span class="argument">$brightness</span>, int <span class="argument">$saturation</span>, int <span class="argument">$hue</span>) : self</pre>
+                <p><em>Add a modulate transformation</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>int</td>
+                                <td>$brightness </td>
+                                <td><p>Brightness of the image in percent</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>int</td>
+                                <td>$saturation </td>
+                                <td><p>Saturation of the image in percent</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>int</td>
+                                <td>$hue </td>
+                                <td><p>Hue percentage</p></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\InvalidArgumentException</dt>
+                            <dd></dd>
+                                                                    </dl>
+                
+                                    <h4>Returns</h4>
+                    self
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/ImboClient.Http.ImageUrl.html"><div class="path-wrapper">\ImboClient\Http\ImageUrl</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            todo
+                        </th>
+                        <td>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_progressive" name="method_progressive" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">progressive()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">progressive() : self</pre>
+                <p><em>Add a progressive transformation</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    self
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/ImboClient.Http.ImageUrl.html"><div class="path-wrapper">\ImboClient\Http\ImageUrl</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            todo
+                        </th>
+                        <td>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_resize" name="method_resize" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">resize()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">resize(int <span class="argument">$width</span>, int <span class="argument">$height</span>) : self</pre>
+                <p><em>Add a resize transformation</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>int</td>
+                                <td>$width </td>
+                                <td><p>Width of the resized image</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>int</td>
+                                <td>$height </td>
+                                <td><p>Height of the resized image</p></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\InvalidArgumentException</dt>
+                            <dd></dd>
+                                                                    </dl>
+                
+                                    <h4>Returns</h4>
+                    self
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/ImboClient.Http.ImageUrl.html"><div class="path-wrapper">\ImboClient\Http\ImageUrl</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            todo
+                        </th>
+                        <td>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_rotate" name="method_rotate" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">rotate()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">rotate(float <span class="argument">$angle</span>, string <span class="argument">$bg</span>) : self</pre>
+                <p><em>Add a rotate transformation</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>float</td>
+                                <td>$angle </td>
+                                <td><p>The angle to rotate</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>string</td>
+                                <td>$bg </td>
+                                <td><p>Background color of the rotated image</p></td>
+                            </tr>
+                                            </table>
+                
+                                    <h4>Throws</h4>
+                    <dl>
+                                                    <dt>\InvalidArgumentException</dt>
+                            <dd></dd>
+                                                                    </dl>
+                
+                                    <h4>Returns</h4>
+                    self
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/ImboClient.Http.ImageUrl.html"><div class="path-wrapper">\ImboClient\Http\ImageUrl</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            todo
+                        </th>
+                        <td>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_sepia" name="method_sepia" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">sepia()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">sepia(int <span class="argument">$threshold</span>) : self</pre>
+                <p><em>Add a sepia transformation</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>int</td>
+                                <td>$threshold </td>
+                                <td><p>Measure of the extent of sepia toning (ranges from 0 to QuantumRange)</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    self
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/ImboClient.Http.ImageUrl.html"><div class="path-wrapper">\ImboClient\Http\ImageUrl</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            todo
+                        </th>
+                        <td>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_strip" name="method_strip" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">strip()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">strip() : self</pre>
+                <p><em>Add a strip transformation</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    self
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/ImboClient.Http.ImageUrl.html"><div class="path-wrapper">\ImboClient\Http\ImageUrl</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            todo
+                        </th>
+                        <td>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_thumbnail" name="method_thumbnail" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">thumbnail()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">thumbnail(int <span class="argument">$width</span>, int <span class="argument">$height</span>, string <span class="argument">$fit</span>) : self</pre>
+                <p><em>Add a thumbnail transformation</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>int</td>
+                                <td>$width </td>
+                                <td><p>Width of the thumbnail</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>int</td>
+                                <td>$height </td>
+                                <td><p>Height of the thumbnail</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>string</td>
+                                <td>$fit </td>
+                                <td><p>Fit type. 'outbound' or 'inset'</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    self
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/ImboClient.Http.ImageUrl.html"><div class="path-wrapper">\ImboClient\Http\ImageUrl</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            todo
+                        </th>
+                        <td>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_transpose" name="method_transpose" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">transpose()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">transpose() : self</pre>
+                <p><em>Add a transpose transformation</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    self
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/ImboClient.Http.ImageUrl.html"><div class="path-wrapper">\ImboClient\Http\ImageUrl</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            todo
+                        </th>
+                        <td>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_transverse" name="method_transverse" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">transverse()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">transverse() : self</pre>
+                <p><em>Add a transverse transformation</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    self
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/ImboClient.Http.ImageUrl.html"><div class="path-wrapper">\ImboClient\Http\ImageUrl</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            todo
+                        </th>
+                        <td>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_watermark" name="method_watermark" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">watermark()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">watermark(string <span class="argument">$img</span>, int <span class="argument">$width</span>, int <span class="argument">$height</span>, string <span class="argument">$position</span>, int <span class="argument">$x</span>, int <span class="argument">$y</span>) : self</pre>
+                <p><em>Add a watermark transformation</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$img </td>
+                                <td><p>The identifier of the image to be used as a watermark. Can be omitted if</p>
+<pre><code>               the server is configured with a default watermark.</code></pre></td>
+                            </tr>
+                                                    <tr>
+                                <td>int</td>
+                                <td>$width </td>
+                                <td><p>The width of the watermark</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>int</td>
+                                <td>$height </td>
+                                <td><p>The height of the watermark</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>string</td>
+                                <td>$position </td>
+                                <td><p>The position of the watermark on the original image, 'top-left',</p>
+<pre><code>                    'top-right', 'bottom-left', 'bottom-right' or 'center'. Defaults to
+                    'top-left'.</code></pre></td>
+                            </tr>
+                                                    <tr>
+                                <td>int</td>
+                                <td>$x </td>
+                                <td><p>Offset in the X-axis relative to the $position parameter. Defaults to 0</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>int</td>
+                                <td>$y </td>
+                                <td><p>Offset in the Y-axis relative to the $position parameter. Defaults to 0</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    self
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/ImboClient.Http.ImageUrl.html"><div class="path-wrapper">\ImboClient\Http\ImageUrl</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            todo
+                        </th>
+                        <td>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_gif" name="method_gif" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">gif()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">gif() : self</pre>
+                <p><em>Convert to &#039;gif&#039;</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    self
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/ImboClient.Http.ImageUrl.html"><div class="path-wrapper">\ImboClient\Http\ImageUrl</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            todo
+                        </th>
+                        <td>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_jpg" name="method_jpg" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">jpg()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">jpg() : self</pre>
+                <p><em>Convert to &#039;jpg&#039;</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    self
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/ImboClient.Http.ImageUrl.html"><div class="path-wrapper">\ImboClient\Http\ImageUrl</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            todo
+                        </th>
+                        <td>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_png" name="method_png" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">png()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">png() : self</pre>
+                <p><em>Convert to &#039;png&#039;</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    self
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/ImboClient.Http.ImageUrl.html"><div class="path-wrapper">\ImboClient\Http\ImageUrl</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            todo
+                        </th>
+                        <td>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method___toString" name="method___toString" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">__toString()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">__toString() : string</pre>
+                <p><em>Return the URL as a string</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    string
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/ImboClient.Http.Url.html"><div class="path-wrapper">\ImboClient\Http\Url</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            internal
+                        </th>
+                        <td>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            todo
+                        </th>
+                        <td>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_reset" name="method_reset" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">reset()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">reset() : self</pre>
+                <p><em>Reset the URL</em></p>
+                <p>Effectively removes added transformations and an optional extension.</p>
+
+                
+                
+                                    <h4>Returns</h4>
+                    self
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/ImboClient.Http.ImageUrl.html"><div class="path-wrapper">\ImboClient\Http\ImageUrl</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            todo
+                        </th>
+                        <td>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getImageIdentifier" name="method_getImageIdentifier" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getImageIdentifier()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getImageIdentifier() : string|null</pre>
+                <p><em>Fetch the image identifier in the URL</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    string|null
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/ImboClient.Http.ImageUrl.html"><div class="path-wrapper">\ImboClient\Http\ImageUrl</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            todo
+                        </th>
+                        <td>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_getPublicKey" name="method_getPublicKey" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">getPublicKey()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">getPublicKey() : string|null</pre>
+                <p><em>Get the public key part of a URL</em></p>
+                
+
+                
+                
+                                    <h4>Returns</h4>
+                    string|null
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/ImboClient.Http.UserUrl.html"><div class="path-wrapper">\ImboClient\Http\UserUrl</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            todo
+                        </th>
+                        <td>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_factory" name="method_factory" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">factory()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">factory(string <span class="argument">$url</span>, string <span class="argument">$privateKey</span>) : \ImboClient\Http\Url</pre>
+                <p><em>Factory method</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$url </td>
+                                <td><p>URL as a string</p></td>
+                            </tr>
+                                                    <tr>
+                                <td>string</td>
+                                <td>$privateKey </td>
+                                <td><p>Optional private key</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                                    <h4>Returns</h4>
+                    <a href="../classes/ImboClient.Http.Url.html">\ImboClient\Http\Url</a>
+                                                </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                            <span class="label label-info">static</span>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/ImboClient.Http.Url.html"><div class="path-wrapper">\ImboClient\Http\Url</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            internal
+                        </th>
+                        <td>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            todo
+                        </th>
+                        <td>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                    <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="method_setPrivateKey" name="method_setPrivateKey" class="anchor"></a>
+            <article class="method">
+                <h3 class="public ">setPrivateKey()</h3>
+                <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal" style="font-size: 1.1em; padding: 9px 14px"><i class="icon-code"></i></a>
+                <pre class="signature" style="margin-right: 54px;">setPrivateKey(string <span class="argument">$privateKey</span>)</pre>
+                <p><em>Set the private key</em></p>
+                
+
+                                    <h4>Parameters</h4>
+                    <table class="table table-condensed table-hover">
+                                                    <tr>
+                                <td>string</td>
+                                <td>$privateKey </td>
+                                <td><p>The private key to use when appending access tokens to the URL's</p></td>
+                            </tr>
+                                            </table>
+                
+                
+                            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                                                            <dl>
+                                                    <dt>Inherited from</dt>
+                    <dd><a href="../classes/ImboClient.Http.Url.html"><div class="path-wrapper">\ImboClient\Http\Url</div></a></dd>
+                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            internal
+                        </th>
+                        <td>
+                                                    </td>
+                    </tr>
+                                    <tr>
+                        <th>
+                            todo
+                        </th>
+                        <td>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                                                    </div>
+    </section>
+
+    <div id="source-view" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="source-view-label" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="source-view-label">MetadataUrl.php</h3>
+        </div>
+        <div class="modal-body">
+            <pre data-src="../files/Http/MetadataUrl.php.txt" class="language-php line-numbers"></pre>
         </div>
     </div>
 
-    </div>
-
-        <footer class="span12">
-            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
-            <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
-            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Thu, 13 Feb 2014 14:20:41 +0100.<br/>
+    <footer class="row-fluid">
+        <section class="span10 offset2">
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <section class="row-fluid footer-sections">
+                        <section class="span4">
+                                                        <h1><i class="icon-code"></i></h1>
+                            <div>
+                                <ul>
+                                                                            <li><a href="../namespaces/ImboClient.html">\ImboClient</a></li>
+                                                                    </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-bar-chart"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="../graphs/class.html">Class Hierarchy Diagram</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-pushpin"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="../reports/errors.html">Errors</a></li>
+                                    <li><a href="../reports/markers.html">Markers</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                    </section>
+                </section>
+            </section>
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <hr />
+                    Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
+                    on April 8th, 2014 at 07:05.
+                </section>
+            </section>
+        </section>
     </footer>
-    </body>
+</div>
+
+</body>
 </html>
